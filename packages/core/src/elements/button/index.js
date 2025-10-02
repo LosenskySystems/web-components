@@ -7,14 +7,14 @@ class LSButton extends HTMLElement {
     const content = this.textContent || this.innerHTML;
     
     this.innerHTML = `
-      <button class="ls-btn ls-btn-${variant}">
+      <button class="web-btn web-btn-${variant}">
         ${content}
       </button>
     `;
   }
 }
 
-customElements.define('ls-button', LSButton);
+customElements.define('web-button', LSButton);
 console.log('🚀 LSButton component registered');
 
 export { LSButton };

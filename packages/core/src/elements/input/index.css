@@ -1,5 +1,5 @@
 /* Input component styles */
-.ls-input {
+.web-input {
   display: block;
   width: 100%;
   padding: 0.75rem 1rem;
@@ -12,21 +12,21 @@
   outline: none;
 }
 
-.ls-input:focus {
+.web-input:focus {
   border-color: #2563eb;
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
-.ls-input::placeholder {
+.web-input::placeholder {
   color: #6b7280;
 }
 
-.ls-input-disabled {
+.web-input-disabled {
   background-color: #f9fafb;
   color: #6b7280;
   cursor: not-allowed;
 }
 
-.ls-input-disabled::placeholder {
+.web-input-disabled::placeholder {
   color: #9ca3af;
 }

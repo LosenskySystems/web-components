@@ -6,13 +6,13 @@ class LSInput extends HTMLElement {
     const placeholder = this.getAttribute('placeholder') || '';
     const type = this.getAttribute('type') || 'text';
     const disabled = this.hasAttribute('disabled');
-    const disabledClass = disabled ? 'ls-input-disabled' : '';
+    const disabledClass = disabled ? 'web-input-disabled' : '';
     
     const content = this.textContent || this.innerHTML;
     
     this.innerHTML = `
       <input 
-        class="ls-input ${disabledClass}"
+        class="web-input ${disabledClass}"
         type="${type}"
         placeholder="${placeholder}"
         ${disabled ? 'disabled' : ''}
@@ -22,7 +22,7 @@ class LSInput extends HTMLElement {
   }
 }
 
-customElements.define('ls-input', LSInput);
+customElements.define('web-input', LSInput);
 console.log('🚀 LSInput component registered');
 
 export { LSInput };

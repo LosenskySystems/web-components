@@ -1,5 +1,5 @@
 /* Button component styles */
-.ls-btn {
+.web-btn {
   display: inline-block;
   padding: 0.5rem 1rem;
   font-size: 14px;
@@ -10,18 +10,18 @@
   transition: background 0.2s;
 }
 
-.ls-btn-primary {
+.web-btn-primary {
   background: #2563eb;
   color: white;
 }
-.ls-btn-primary:hover {
+.web-btn-primary:hover {
   background: #1d4ed8;
 }
 
-.ls-btn-secondary {
+.web-btn-secondary {
   background: #e5e7eb;
   color: #111827;
 }
-.ls-btn-secondary:hover {
+.web-btn-secondary:hover {
   background: #d1d5db;
 }
