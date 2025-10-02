@@ -5,7 +5,8 @@ import './constants/tokens.css';
 
 // Import and export elements
 import { LSButton } from './elements/button/index.js';
-export { LSButton };
+import { LSInput } from './elements/input/index.js';
+export { LSButton, LSInput };
 
 // Import constants for re-export
 import { colors, spacing, typography, borderRadius } from './constants/index.js';
@@ -18,6 +19,7 @@ export { debounce, throttle, formatClassNames, generateUniqueId };
 // Export convenience object
 export const core = {
   button: LSButton,
+  input: LSInput,
   constants: {
     colors,
     spacing,

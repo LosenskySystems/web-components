@@ -19,6 +19,11 @@
       "import": "./dist/utils/index.esm.js",
       "require": "./dist/utils/index.cjs.js"
     },
+    "./elements/input": {
+      "import": "./dist/elements/input/index.esm.js",
+      "require": "./dist/elements/input/index.cjs.js",
+      "style": "./dist/elements/input/index.css"
+    },
     "./elements/button": {
       "import": "./dist/elements/button/index.esm.js",
       "require": "./dist/elements/button/index.cjs.js",
@@ -29,7 +34,9 @@
       "require": "./dist/constants/index.cjs.js"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rollup --config config/rollup.config.js",
     "build:watch": "rollup --config config/rollup.config.js --watch",
