@@ -1,9 +1,9 @@
 declare module '@losensky-systems/web-components-core' {
-  export class LSButton extends HTMLElement {
+  export class Button extends HTMLElement {
     connectedCallback(): void;
   }
   
-  export class LSInput extends HTMLElement {
+  export class Input extends HTMLElement {
     connectedCallback(): void;
   }
   
@@ -35,7 +35,7 @@ declare module '@losensky-systems/web-components-core' {
   };
 }
 
-declare module '@losensky-systems/web-components-core/dist/index.css' {
+declare module '@losensky-systems/web-components-core/css' {
   const content: any;
   export default content;
 }

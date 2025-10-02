@@ -1,20 +1,20 @@
 {
-  "name": "@your-org/react-wrappers",
-  "version": "1.0.0",
+  "name": "@losensky-systems/web-components-react",
+  "version": "0.0.6",
   "type": "module",
   "description": "React wrappers for web components",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": ["dist/**/*"],
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build && tsc --project tsconfig.build.json && cp dist/types/index.d.ts dist/ && cp -r dist/types/components dist/",
     "build:lib": "vite build --mode production",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@losensky-systems/web-components-core": "^0.0.3",
+    "@losensky-systems/web-components-core": "^0.0.6",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },

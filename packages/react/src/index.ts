@@ -1,9 +1,9 @@
 // Main entry point for React wrappers
-// Note: Users need to import CSS separately:
-// import '@losensky-systems/web-components-core/dist/index.css';
+// Import styles automatically
+import '@losensky-systems/web-components-core/css';
 
-export { Button } from './components/Button.tsx';
-export { Input } from './components/Input.tsx';
+export { Button } from './components/SSRSafeButton.tsx';
+export { Input } from './components/SSRSafeInput.tsx';
 
 // Re-export types
 export type { ButtonProps } from './components/Button.tsx';

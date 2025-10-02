@@ -11,6 +11,7 @@ export default defineConfig({
       name: 'ReactWrappers',
       fileName: 'index'
     },
+    emptyOutDir: true,
     rollupOptions: {
       external: ['react', 'react-dom'],
       output: {

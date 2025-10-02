@@ -1,6 +1,6 @@
 {
   "name": "@losensky-systems/web-components-core",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "Core web components library for Losensky Systems",
   "type": "module",
   "main": "dist/index.cjs.js",
@@ -10,29 +10,11 @@
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/./index.esm.js",
-      "require": "./dist/./index.cjs.js"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs.js"
     },
-    "./styles/*": "./dist/styles/*",
-    "./package.json": "./package.json",
-    "./utils": {
-      "import": "./dist/utils/index.esm.js",
-      "require": "./dist/utils/index.cjs.js"
-    },
-    "./constants": {
-      "import": "./dist/constants/index.esm.js",
-      "require": "./dist/constants/index.cjs.js"
-    },
-    "./components/elements/input": {
-      "import": "./dist/components/elements/input/index.esm.js",
-      "require": "./dist/components/elements/input/index.cjs.js",
-      "style": "./dist/components/elements/input/index.css"
-    },
-    "./components/elements/button": {
-      "import": "./dist/components/elements/button/index.esm.js",
-      "require": "./dist/components/elements/button/index.cjs.js",
-      "style": "./dist/components/elements/button/index.css"
-    }
+    "./css": "./dist/index.css",
+    "./package.json": "./package.json"
   },
   "files": [
     "dist"
@@ -42,7 +24,6 @@
     "build:watch": "rollup --config config/rollup.config.js --watch",
     "clean": "rm -rf dist",
     "update-exports": "node scripts/update-exports.js",
-    "prebuild": "npm run update-exports",
     "serve": "npx serve . -p 3001"
   },
   "keywords": [
@@ -71,6 +52,6 @@
     "react-dom": ">=17.0.0"
   },
   "dependencies": {
-    "@losensky-systems/web-components-core": "0.0.3"
+    "@losensky-systems/web-components-core": "0.0.5"
   }
 }

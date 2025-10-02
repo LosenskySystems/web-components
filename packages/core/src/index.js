@@ -1,7 +1,7 @@
 // Main entry point for the core package
 
 // Import CSS files (these will be bundled)
-import './constants/tokens.css';
+import './index.css';
 
 // Import and export elements
 import { Button } from './components/elements/button/index.js';

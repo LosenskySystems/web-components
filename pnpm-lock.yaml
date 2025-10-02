@@ -20,6 +20,9 @@ importers:
 
   apps/web:
     dependencies:
+      '@losensky-systems/web-components-react':
+        specifier: 0.0.6
+        version: 0.0.6
       next:
         specifier: 15.5.4
         version: 15.5.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -67,8 +70,8 @@ importers:
   packages/core:
     dependencies:
       '@losensky-systems/web-components-core':
-        specifier: 0.0.3
-        version: 0.0.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+        specifier: 0.0.5
+        version: 0.0.5(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       react:
         specifier: '>=17.0.0'
         version: 19.2.0
@@ -116,8 +119,8 @@ importers:
   packages/react:
     dependencies:
       '@losensky-systems/web-components-core':
-        specifier: ^0.0.3
-        version: 0.0.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+        specifier: ^0.0.6
+        version: 0.0.6(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       react:
         specifier: ^19.1.1
         version: 19.2.0
@@ -1078,6 +1081,21 @@ packages:
     peerDependencies:
       react: '>=17.0.0'
       react-dom: '>=17.0.0'
+
+  '@losensky-systems/web-components-core@0.0.5':
+    resolution: {integrity: sha512-w6YBihBNoUeQwQ1oPL3rkTwrt+CKvcJcX5t17UwLz4qwMcYF/wggHY6BmkJ6ktGFM8h93+zJNfYLnUQdrPUwtA==}
+    peerDependencies:
+      react: '>=17.0.0'
+      react-dom: '>=17.0.0'
+
+  '@losensky-systems/web-components-core@0.0.6':
+    resolution: {integrity: sha512-xkCRXljMvftVRXhnLljGyzdbbtf5GHFNYHTofGrk0RBRqWkgShepVU5gVmP/EvLlxmlt2auRerXoOmhxx6ZzNw==}
+    peerDependencies:
+      react: '>=17.0.0'
+      react-dom: '>=17.0.0'
+
+  '@losensky-systems/web-components-react@0.0.6':
+    resolution: {integrity: sha512-r/wdEhvqfe7LdneLVCmtjLgDUEWUNHNT5i0exn6Ccw4FU2LGxXRZLTO/WSe3jCrjtbluXNq6xyTSqOXr5Vkzqw==}
 
   '@napi-rs/wasm-runtime@0.2.12':
     resolution: {integrity: sha512-ZVWUcfwY4E/yPitQJl481FjFo3K22D6qF0DuFH6Y/nbnE11GY5uguDxZMGXPQ8WQ0128MXQD7TnfHyK4oWoIJQ==}
@@ -4643,6 +4661,24 @@ snapshots:
 
   '@losensky-systems/web-components-core@0.0.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
     dependencies:
+      react: 19.2.0
+      react-dom: 19.2.0(react@19.2.0)
+
+  '@losensky-systems/web-components-core@0.0.5(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
+    dependencies:
+      '@losensky-systems/web-components-core': 0.0.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      react: 19.2.0
+      react-dom: 19.2.0(react@19.2.0)
+
+  '@losensky-systems/web-components-core@0.0.6(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
+    dependencies:
+      '@losensky-systems/web-components-core': 0.0.5(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      react: 19.2.0
+      react-dom: 19.2.0(react@19.2.0)
+
+  '@losensky-systems/web-components-react@0.0.6':
+    dependencies:
+      '@losensky-systems/web-components-core': 0.0.6(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
 
