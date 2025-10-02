@@ -1,7 +1,7 @@
 // Import CSS - will work after build
 import './index.css';
 
-class LSButton extends HTMLElement {
+class Button extends HTMLElement {
   connectedCallback() {
     const variant = this.getAttribute('variant') || 'primary';
     const content = this.textContent || this.innerHTML;
@@ -14,7 +14,6 @@ class LSButton extends HTMLElement {
   }
 }
 
-customElements.define('web-button', LSButton);
-console.log('🚀 LSButton component registered');
+customElements.define('web-button', Button);
 
-export { LSButton };
+export { Button };

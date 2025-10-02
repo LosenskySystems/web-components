@@ -1,7 +1,7 @@
 // Import CSS - will work after build
 import './index.css';
 
-class LSInput extends HTMLElement {
+class Input extends HTMLElement {
   connectedCallback() {
     const placeholder = this.getAttribute('placeholder') || '';
     const type = this.getAttribute('type') || 'text';
@@ -22,7 +22,6 @@ class LSInput extends HTMLElement {
   }
 }
 
-customElements.define('web-input', LSInput);
-console.log('🚀 LSInput component registered');
+customElements.define('web-input', Input);
 
-export { LSInput };
+export { Input };
