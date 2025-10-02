@@ -1,6 +1,6 @@
 {
   "name": "@losensky-systems/web-components-core",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Core web components library for Losensky Systems",
   "type": "module",
   "main": "dist/index.cjs.js",
@@ -19,19 +19,19 @@
       "import": "./dist/utils/index.esm.js",
       "require": "./dist/utils/index.cjs.js"
     },
-    "./elements/input": {
-      "import": "./dist/elements/input/index.esm.js",
-      "require": "./dist/elements/input/index.cjs.js",
-      "style": "./dist/elements/input/index.css"
-    },
-    "./elements/button": {
-      "import": "./dist/elements/button/index.esm.js",
-      "require": "./dist/elements/button/index.cjs.js",
-      "style": "./dist/elements/button/index.css"
-    },
     "./constants": {
       "import": "./dist/constants/index.esm.js",
       "require": "./dist/constants/index.cjs.js"
+    },
+    "./components/elements/input": {
+      "import": "./dist/components/elements/input/index.esm.js",
+      "require": "./dist/components/elements/input/index.cjs.js",
+      "style": "./dist/components/elements/input/index.css"
+    },
+    "./components/elements/button": {
+      "import": "./dist/components/elements/button/index.esm.js",
+      "require": "./dist/components/elements/button/index.cjs.js",
+      "style": "./dist/components/elements/button/index.css"
     }
   },
   "files": [

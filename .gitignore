@@ -42,3 +42,6 @@ yarn-error.log*
 
 # VS Code
 .vscode
+
+# Web Core - only for development testing
+apps/web-core/*

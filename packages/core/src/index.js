@@ -4,8 +4,8 @@
 import './constants/tokens.css';
 
 // Import and export elements
-import { LSButton } from './elements/button/index.js';
-import { LSInput } from './elements/input/index.js';
+import { LSButton } from './components/elements/button/index.js';
+import { LSInput } from './components/elements/input/index.js';
 export { LSButton, LSInput };
 
 // Import constants for re-export
