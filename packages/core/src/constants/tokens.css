@@ -1,0 +1,27 @@
+/* Design tokens */
+:root {
+  /* Colors */
+  --ls-primary-500: #2563eb;
+  --ls-primary-600: #1d4ed8;
+  --ls-gray-100: #e5e7eb;
+  --ls-gray-800: #111827;
+  
+  /* Spacing */
+  --ls-space-1: 0.25rem;
+  --ls-space-2: 0.5rem;
+  --ls-space-4: 1rem;
+  --ls-space-6: 1.5rem;
+  
+  /* Typography */
+  --ls-font-size-sm: 14px;
+  --ls-font-weight-semibold: 600;
+  --ls-font-weight-bold: 700;
+  
+  /* Borders */
+  --ls-border-radius-sm: 4px;
+  --ls-border-radius-md: 6px;
+  
+  /* Shadows */
+  --ls-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --ls-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
