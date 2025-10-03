@@ -4,6 +4,15 @@ import commonjs from '@rollup/plugin-commonjs';
 import terser from '@rollup/plugin-terser';
 import postcss from 'rollup-plugin-postcss';
 import { babel } from '@rollup/plugin-babel';
+import { copyFileSync } from 'fs';
+
+// Custom plugin to copy TypeScript declaration files
+const copyTypes = () => ({
+  name: 'copy-types',
+  writeBundle() {
+    copyFileSync('src/index.d.ts', 'dist/index.d.ts');
+  }
+});
 
 export default defineConfig([
   // ES Module build
@@ -31,6 +40,7 @@ export default defineConfig([
         exclude: 'node_modules/**',
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       }),
+      copyTypes(), // Copy TypeScript declaration files
     ],
     external: ['react', 'react-dom'], // Don't bundle peer dependencies
   },

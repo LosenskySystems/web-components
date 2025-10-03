@@ -4,9 +4,9 @@
 import './index.css';
 
 // Import and export elements
-import { Button } from './components/elements/button/index.js';
+import { WebButton } from './components/elements/button/index.js';
 import { Input } from './components/elements/input/index.js';
-export { Button, Input };
+export { WebButton as Button, Input };
 
 // Import constants for re-export
 import { colors, spacing, typography, borderRadius } from './constants/index.js';
@@ -18,7 +18,7 @@ export { debounce, throttle, formatClassNames, generateUniqueId };
 
 // Export convenience object
 export const core = {
-  button: Button,
+  button: WebButton,
   input: Input,
   constants: {
     colors,

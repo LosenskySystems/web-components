@@ -44,6 +44,9 @@ class WebButton extends HTMLElement {
   }
 }
 
-customElements.define('web-button', WebButton);
+// Only register the custom element in browser environment
+if (typeof window !== 'undefined' && window.customElements) {
+  customElements.define('web-button', WebButton);
+}
 
 export { WebButton };

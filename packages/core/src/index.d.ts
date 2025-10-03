@@ -1,4 +1,7 @@
-declare namespace JSX {
+import 'react';
+
+declare module 'react' {
+  namespace JSX {
     interface IntrinsicElements {
       'web-button': React.DetailedHTMLProps<
         React.HTMLAttributes<HTMLElement>,
@@ -9,3 +12,4 @@ declare namespace JSX {
       };
     }
   }
+}

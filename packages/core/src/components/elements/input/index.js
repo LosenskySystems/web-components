@@ -22,6 +22,9 @@ class Input extends HTMLElement {
   }
 }
 
-customElements.define('web-input', Input);
+// Only register the custom element in browser environment
+if (typeof window !== 'undefined' && window.customElements) {
+  customElements.define('web-input', Input);
+}
 
 export { Input };

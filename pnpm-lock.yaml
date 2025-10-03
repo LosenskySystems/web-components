@@ -21,8 +21,8 @@ importers:
   apps/web:
     dependencies:
       '@losensky-systems/web-components-react':
-        specifier: 0.0.6
-        version: 0.0.6
+        specifier: ^0.0.9
+        version: 0.0.9
       next:
         specifier: 15.5.4
         version: 15.5.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -119,8 +119,8 @@ importers:
   packages/react:
     dependencies:
       '@losensky-systems/web-components-core':
-        specifier: ^0.0.6
-        version: 0.0.6(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+        specifier: ^0.0.10
+        version: 0.0.10(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       react:
         specifier: ^19.1.1
         version: 19.2.0
@@ -1076,6 +1076,12 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
+  '@losensky-systems/web-components-core@0.0.10':
+    resolution: {integrity: sha512-S4eEoxem9yP+tOUTeYLyJu/KxiU4xKMReCrxgU9We6M7dsFcjBD+Q3+jK0iOibA1BoDeyW41bRr9SFfOPZEtKw==}
+    peerDependencies:
+      react: '>=17.0.0'
+      react-dom: '>=17.0.0'
+
   '@losensky-systems/web-components-core@0.0.3':
     resolution: {integrity: sha512-n2sDkqv4DSBEpI1cOzmMHOmXfQVxMfGfuKjqr9UNRRPwXJt04DE/ldjf8CgM1/kyd87MwMRqe5twCUmi5ZdorQ==}
     peerDependencies:
@@ -1088,14 +1094,8 @@ packages:
       react: '>=17.0.0'
       react-dom: '>=17.0.0'
 
-  '@losensky-systems/web-components-core@0.0.6':
-    resolution: {integrity: sha512-xkCRXljMvftVRXhnLljGyzdbbtf5GHFNYHTofGrk0RBRqWkgShepVU5gVmP/EvLlxmlt2auRerXoOmhxx6ZzNw==}
-    peerDependencies:
-      react: '>=17.0.0'
-      react-dom: '>=17.0.0'
-
-  '@losensky-systems/web-components-react@0.0.6':
-    resolution: {integrity: sha512-r/wdEhvqfe7LdneLVCmtjLgDUEWUNHNT5i0exn6Ccw4FU2LGxXRZLTO/WSe3jCrjtbluXNq6xyTSqOXr5Vkzqw==}
+  '@losensky-systems/web-components-react@0.0.9':
+    resolution: {integrity: sha512-KN7nVMQXY4X4//dGvn8s9v3MhZHHoFs5JUyvXDruOXftxswEmGDEGLLy/IrHS7skwWGCzUF6DuJ5cz8OT/Ttmg==}
 
   '@napi-rs/wasm-runtime@0.2.12':
     resolution: {integrity: sha512-ZVWUcfwY4E/yPitQJl481FjFo3K22D6qF0DuFH6Y/nbnE11GY5uguDxZMGXPQ8WQ0128MXQD7TnfHyK4oWoIJQ==}
@@ -4659,6 +4659,12 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
+  '@losensky-systems/web-components-core@0.0.10(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
+    dependencies:
+      '@losensky-systems/web-components-core': 0.0.5(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      react: 19.2.0
+      react-dom: 19.2.0(react@19.2.0)
+
   '@losensky-systems/web-components-core@0.0.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
     dependencies:
       react: 19.2.0
@@ -4670,15 +4676,9 @@ snapshots:
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
 
-  '@losensky-systems/web-components-core@0.0.6(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
+  '@losensky-systems/web-components-react@0.0.9':
     dependencies:
-      '@losensky-systems/web-components-core': 0.0.5(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
-      react: 19.2.0
-      react-dom: 19.2.0(react@19.2.0)
-
-  '@losensky-systems/web-components-react@0.0.6':
-    dependencies:
-      '@losensky-systems/web-components-core': 0.0.6(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      '@losensky-systems/web-components-core': 0.0.10(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
 
