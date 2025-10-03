@@ -1,6 +1,6 @@
 {
   "name": "@losensky-systems/web-components-react",
-  "version": "0.0.6",
+  "version": "0.0.9",
   "type": "module",
   "description": "React wrappers for web components",
   "main": "dist/index.js",
@@ -14,7 +14,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@losensky-systems/web-components-core": "^0.0.6",
+    "@losensky-systems/web-components-core": "^0.0.10",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },

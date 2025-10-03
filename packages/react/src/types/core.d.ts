@@ -18,8 +18,8 @@ declare module '@losensky-systems/web-components-core' {
   export const generateUniqueId: any;
   
   export const core: {
-    button: typeof LSButton;
-    input: typeof LSInput;
+    button: typeof Button;
+    input: typeof Input;
     constants: {
       colors: any;
       spacing: any;
