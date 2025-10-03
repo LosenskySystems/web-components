@@ -1,0 +1,122 @@
+{
+  "name": "@losensky-systems/web-components-core",
+  "version": "1.0.0",
+  "description": "React component library for Losensky Systems",
+  "structure": {
+    "components": {
+      "elements": {
+        "button": {
+          "name": "Button",
+          "path": "./components/elements/button",
+          "exports": [
+            "Button",
+            "ButtonProps"
+          ],
+          "props": {
+            "children": "React.ReactNode",
+            "variant": "'primary' | 'secondary'",
+            "onClick": "(event: React.MouseEvent<HTMLButtonElement>) => void",
+            "className": "string",
+            "disabled": "boolean",
+            "type": "'button' | 'submit' | 'reset'"
+          },
+          "css": "./components/elements/button/index.css",
+          "category": "elements",
+          "subcategory": "interactive"
+        },
+        "input": {
+          "name": "Input",
+          "path": "./components/elements/input",
+          "exports": [
+            "Input",
+            "InputProps"
+          ],
+          "props": {
+            "type": "'text' | 'email' | 'password' | 'number' | 'tel' | 'url' | 'search'",
+            "placeholder": "string",
+            "value": "string",
+            "defaultValue": "string",
+            "onChange": "(event: React.ChangeEvent<HTMLInputElement>) => void",
+            "onFocus": "(event: React.FocusEvent<HTMLInputElement>) => void",
+            "onBlur": "(event: React.FocusEvent<HTMLInputElement>) => void",
+            "className": "string",
+            "disabled": "boolean",
+            "required": "boolean",
+            "name": "string",
+            "id": "string"
+          },
+          "css": "./components/elements/input/index.css",
+          "category": "elements",
+          "subcategory": "form"
+        }
+      }
+    },
+    "constants": {
+      "colors": {
+        "path": "./constants",
+        "exports": [
+          "colors"
+        ],
+        "description": "Design system colors tokens"
+      },
+      "spacing": {
+        "path": "./constants",
+        "exports": [
+          "spacing"
+        ],
+        "description": "Design system spacing tokens"
+      },
+      "typography": {
+        "path": "./constants",
+        "exports": [
+          "typography"
+        ],
+        "description": "Design system typography tokens"
+      },
+      "borderRadius": {
+        "path": "./constants",
+        "exports": [
+          "borderRadius"
+        ],
+        "description": "Design system borderRadius tokens"
+      }
+    },
+    "utils": {
+      "debounce": {
+        "path": "./utils/helpers",
+        "signature": "(func: (...args: any[]) => any",
+        "description": "Debounce function calls"
+      },
+      "throttle": {
+        "path": "./utils/helpers",
+        "signature": "(func: (...args: any[]) => any",
+        "description": "Throttle function calls"
+      },
+      "formatClassNames": {
+        "path": "./utils/helpers",
+        "signature": "(...classes: (string | undefined | null | false) => any",
+        "description": "Format and filter class names"
+      }
+    }
+  },
+  "exports": {
+    "main": {
+      "path": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "css": "./dist/index.css"
+    }
+  },
+  "metadata": {
+    "totalComponents": 2,
+    "categories": [
+      "elements"
+    ],
+    "subcategories": [
+      "interactive",
+      "form"
+    ],
+    "generatedAt": "2025-10-03T09:19:22.912Z",
+    "buildTool": "vite",
+    "framework": "react"
+  }
+}
