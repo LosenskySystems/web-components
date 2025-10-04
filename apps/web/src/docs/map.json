@@ -1,0 +1,28 @@
+{
+    "routes": [
+      {
+        "id": "button",
+        "title": "Button",
+        "path": "/docs/button",
+        "component": "Button",
+        "category": "Components",
+        "description": "A versatile button component with multiple variants and states"
+      },
+      {
+        "id": "input",
+        "title": "Input", 
+        "path": "/docs/input",
+        "component": "Input",
+        "category": "Components",
+        "description": "A flexible text input field with various states and styling options"
+      }
+    ],
+    "categories": [
+      {
+        "id": "components",
+        "title": "Components",
+        "description": "Core UI components for building interfaces"
+      }
+    ]
+  }
+  

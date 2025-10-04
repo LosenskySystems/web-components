@@ -1,0 +1,131 @@
+# Input Component
+
+The Input component is a flexible, accessible text input field with various states and styling options.
+
+## Import
+
+```tsx
+import { Input } from '@losensky-systems/web-components-core'
+```
+
+## Basic Usage
+
+<div style={{ marginBottom: '2rem' }}>
+  <Input placeholder="Enter your text..." />
+</div>
+
+```tsx
+<Input placeholder="Enter your text..." />
+```
+
+## States
+
+### Default
+<div style={{ marginBottom: '1rem' }}>
+  <Input placeholder="Default input" />
+</div>
+
+```tsx
+<Input placeholder="Default input" />
+```
+
+### With Value
+<div style={{ marginBottom: '1rem' }}>
+  <Input value="Pre-filled value" onChange={() => {}} />
+</div>
+
+```tsx
+<Input value="Pre-filled value" onChange={handleChange} />
+```
+
+### Disabled
+<div style={{ marginBottom: '1rem' }}>
+  <Input placeholder="Disabled input" disabled />
+</div>
+
+```tsx
+<Input placeholder="Disabled input" disabled />
+```
+
+## Input Types
+
+### Text (default)
+<div style={{ marginBottom: '1rem' }}>
+  <Input type="text" placeholder="Text input" />
+</div>
+
+### Email
+<div style={{ marginBottom: '1rem' }}>
+  <Input type="email" placeholder="Email input" />
+</div>
+
+### Password
+<div style={{ marginBottom: '1rem' }}>
+  <Input type="password" placeholder="Password input" />
+</div>
+
+```tsx
+<Input type="text" placeholder="Text input" />
+<Input type="email" placeholder="Email input" />
+<Input type="password" placeholder="Password input" />
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `type` | `string` | `'text'` | Input type (text, email, password, etc.) |
+| `placeholder` | `string` | - | Placeholder text |
+| `value` | `string` | - | Input value (controlled) |
+| `defaultValue` | `string` | - | Default value (uncontrolled) |
+| `onChange` | `(event: React.ChangeEvent<HTMLInputElement>) => void` | - | Change handler |
+| `onFocus` | `(event: React.FocusEvent<HTMLInputElement>) => void` | - | Focus handler |
+| `onBlur` | `(event: React.FocusEvent<HTMLInputElement>) => void` | - | Blur handler |
+| `disabled` | `boolean` | `false` | Whether the input is disabled |
+| `className` | `string` | - | Additional CSS classes |
+
+## Examples
+
+### Controlled Input
+<div style={{ marginBottom: '1rem' }}>
+  <Input 
+    value="Controlled value" 
+    onChange={(e) => console.log(e.target.value)}
+    placeholder="Type to see console output"
+  />
+</div>
+
+```tsx
+const [value, setValue] = useState('')
+
+<Input 
+  value={value}
+  onChange={(e) => setValue(e.target.value)}
+  placeholder="Controlled input"
+/>
+```
+
+### With Event Handlers
+<div style={{ marginBottom: '1rem' }}>
+  <Input 
+    placeholder="Focus/blur events"
+    onFocus={() => console.log('Input focused')}
+    onBlur={() => console.log('Input blurred')}
+  />
+</div>
+
+```tsx
+<Input 
+  placeholder="Focus/blur events"
+  onFocus={() => console.log('Input focused')}
+  onBlur={() => console.log('Input blurred')}
+/>
+```
+
+## Accessibility
+
+- Built with semantic HTML `<input>` elements
+- Supports all standard input attributes
+- Proper focus management and keyboard navigation
+- Screen reader compatible with proper labeling when used with labels
+- Disabled state is properly communicated to assistive technologies

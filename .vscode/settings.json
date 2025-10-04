@@ -13,6 +13,6 @@
     ".vscode": true,
     ".turbo": true,
     "apps/web/.next": true,
-    "apps/web/node_modules": true
+    "apps/web/node_modules": false
   }
 }
