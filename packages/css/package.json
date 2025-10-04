@@ -1,18 +1,27 @@
 {
   "name": "@losensky-systems/web-components-css",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "CSS and design tokens for Losensky Systems web components",
   "type": "module",
   "main": "dist/index.css",
+  "types": "index.d.ts",
   "style": "dist/index.css",
   "exports": {
     ".": "./dist/index.css",
-    "./tokens": "./dist/tokens.css",
-    "./components/*": "./dist/components/*.css"
+    "./dist/index.css": "./dist/index.css",
+    
+    "./tokens": "./dist/constants/tokens.css",
+    
+    "./components/button": "./dist/components/elements/button/index.css",
+    "./components/input": "./dist/components/elements/input/index.css",
+    
+    "./components/*": "./dist/components/*/*.css",
+    "./dist/*": "./dist/*"
   },
   "files": [
     "dist",
-    "src"
+    "src",
+    "index.d.ts"
   ],
   "scripts": {
     "build": "npm run build:css",

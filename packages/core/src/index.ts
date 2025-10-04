@@ -1,7 +1,7 @@
 // Main entry point for the React component library
 
-// Import CSS from the CSS package
-import '@losensky-systems/web-components-css';
+// Import CSS from the CSS package (explicit CSS import)
+import '@losensky-systems/web-components-css/dist/index.css';
 
 // Import and export components
 import * as components from './components';
