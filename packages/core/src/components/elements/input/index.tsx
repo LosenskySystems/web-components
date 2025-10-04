@@ -1,5 +1,4 @@
 import React from 'react';
-import './index.css';
 
 export interface InputProps {
   type?: 'text' | 'email' | 'password' | 'number' | 'tel' | 'url' | 'search';

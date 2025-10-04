@@ -12,12 +12,20 @@ export default defineConfig({
       fileName: 'index'
     },
     emptyOutDir: true,
+    cssCodeSplit: false, // Bundle all CSS into one file
     rollupOptions: {
       external: ['react', 'react-dom'],
       output: {
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM'
+        },
+        // Ensure CSS is extracted properly
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name?.endsWith('.css')) {
+            return 'index.css';
+          }
+          return assetInfo.name || 'asset';
         }
       }
     }

@@ -7,5 +7,12 @@
   "workbench.colorCustomizations": {
     "minimap.background": "#00000000",
     "scrollbar.shadow": "#00000000"
+  },
+  "files.exclude": {
+    "node_modules": true,
+    ".vscode": true,
+    ".turbo": true,
+    "apps/web/.next": true,
+    "apps/web/node_modules": true
   }
 }

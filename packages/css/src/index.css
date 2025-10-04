@@ -1,0 +1,8 @@
+/* Main entry point for @losensky-systems/web-components-css */
+
+/* Import design tokens */
+@import './constants/tokens.css';
+
+/* Import component styles */
+@import './components/elements/button/index.css';
+@import './components/elements/input/index.css';
