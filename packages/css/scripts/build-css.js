@@ -3,6 +3,8 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import postcss from 'postcss';
+import postcssImport from 'postcss-import';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -34,15 +36,30 @@ function copyCSS(srcPath, distPath) {
   }
 }
 
+// Process main CSS file with PostCSS
+async function processMainCSS() {
+  const inputFile = path.join(srcDir, 'index.css');
+  const outputFile = path.join(distDir, 'index.css');
+  
+  const css = fs.readFileSync(inputFile, 'utf8');
+  const result = await postcss([postcssImport])
+    .process(css, { from: inputFile, to: outputFile });
+  
+  fs.writeFileSync(outputFile, result.css);
+}
+
 // Build process
-function build() {
+async function build() {
   console.log('🎨 Building CSS package...');
   
-  // Copy all CSS files
+  // Copy all CSS files first
   copyCSS(srcDir, distDir);
+  
+  // Process main index.css with imports
+  await processMainCSS();
   
   console.log('✅ CSS build complete!');
   console.log(`📁 Output: ${distDir}`);
 }
 
-build();
+build().catch(console.error);

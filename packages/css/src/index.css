@@ -7,6 +7,8 @@
 @import './components/elements/button/index.css';
 @import './components/elements/divider/index.css';
 @import './components/elements/label/index.css';
+@import './components/elements/loader/index.css';
 
 /* Import form styles */
 @import './components/forms/input/index.css';
+@import './components/forms/select/index.css';

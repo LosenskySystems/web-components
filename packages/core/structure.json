@@ -59,6 +59,24 @@
           "css": "./components/elements/label/index.css",
           "category": "elements",
           "subcategory": "general"
+        },
+        "loader": {
+          "name": "Loader",
+          "path": "./components/elements/loader",
+          "exports": [
+            "Loader",
+            "LoaderProps"
+          ],
+          "props": {
+            "size": "'sm' | 'md' | 'lg'",
+            "variant": "'primary' | 'secondary' | 'white'",
+            "type": "'spinner' | 'text' | 'both'",
+            "text": "string",
+            "className": "string"
+          },
+          "css": "./components/elements/loader/index.css",
+          "category": "elements",
+          "subcategory": "general"
         }
       }
     },
@@ -89,7 +107,7 @@
     }
   },
   "metadata": {
-    "totalComponents": 3,
+    "totalComponents": 4,
     "categories": [
       "elements"
     ],
@@ -97,7 +115,7 @@
       "interactive",
       "general"
     ],
-    "generatedAt": "2025-10-05T17:41:14.742Z",
+    "generatedAt": "2025-10-05T18:02:09.467Z",
     "buildTool": "vite",
     "framework": "react"
   }

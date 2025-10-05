@@ -1,6 +1,10 @@
-import { Button, Input, Label, Divider } from '@losensky-systems/web-components-core'
+import { Button, Input, Label, Divider, Loader, Select } from '@losensky-systems/web-components-core'
+import { useState } from 'react'
+import { DebugSelect } from '../DebugSelect'
 
 export function HomePage() {
+  const [selectedCountry, setSelectedCountry] = useState<string>('');
+
   return (
     <div className="py-12 px-8 max-w-4xl mx-auto font-sans">
       {/* Hero Section */}
@@ -26,6 +30,13 @@ export function HomePage() {
                 <Button variant="secondary">
                   Secondary Button
                 </Button>
+                <div className="flex items-center gap-4 flex-wrap">
+                  <Loader type="spinner" size="sm" />
+                  <Loader type="spinner" size="md" />
+                  <Loader type="spinner" size="lg" />
+                  <Loader type="text" text="Loading data..." />
+                  <Loader type="both" text="Please wait..." size="sm" />
+                </div>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -40,23 +51,41 @@ export function HomePage() {
                   />
                 </div>
                 <div>
-                  <Label htmlFor="demo-input-2">
-                    Optional Field
+                  <Label htmlFor="demo-select">
+                    Country
                   </Label>
-                  <Input 
-                    id="demo-input-2"
-                    placeholder="This field is optional..." 
-                  />
+                  <Select 
+                    placeholder="Choose your country..." 
+                    value={selectedCountry} 
+                    onChange={setSelectedCountry}
+                  >
+                    <Select.Item value="us">United States</Select.Item>
+                    <Select.Item value="uk">United Kingdom</Select.Item>
+                    <Select.Item value="ca">Canada</Select.Item>
+                    <Select.Item value="au">Australia</Select.Item>
+                    <Select.Item value="de">Germany</Select.Item>
+                    <Select.Item value="fr">France</Select.Item>
+                    <Select.Item value="jp">Japan</Select.Item>
+                    <Select.Item value="disabled" disabled>Disabled Option</Select.Item>
+                  </Select>
+                  {selectedCountry && (
+                    <p className="text-sm text-slate-600 mt-2">
+                      Selected: {selectedCountry}
+                    </p>
+                  )}
                 </div>
               </div>
               
-              <Divider variant="dotted" spacing="lg" />
+              <Divider variant="dotted" spacing="lg" className="py-4"/>
               
-              <div className="text-center text-slate-600 text-sm">
-                <p>More components coming soon...</p>
-              </div>
-            </div>
+          <div className="text-center text-slate-600 text-sm">
+            <p>More components coming soon...</p>
           </div>
+        </div>
+      </div>
+
+      {/* Debug section - remove this later */}
+      <DebugSelect />
 
       {/* Getting Started */}
       <div className="text-center">

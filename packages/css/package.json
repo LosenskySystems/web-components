@@ -1,6 +1,6 @@
 {
   "name": "@losensky-systems/web-components-css",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "CSS and design tokens for Losensky Systems web components",
   "type": "module",
   "main": "dist/index.css",
@@ -15,7 +15,9 @@
     "./components/button": "./dist/components/elements/button/index.css",
     "./components/divider": "./dist/components/elements/divider/index.css",
     "./components/label": "./dist/components/elements/label/index.css",
+    "./components/loader": "./dist/components/elements/loader/index.css",
     "./components/input": "./dist/components/forms/input/index.css",
+    "./components/select": "./dist/components/forms/select/index.css",
     
     "./components/*": "./dist/components/*/*.css",
     "./dist/*": "./dist/*"

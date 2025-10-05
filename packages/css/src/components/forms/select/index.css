@@ -1,0 +1,161 @@
+/* Select component styles */
+.web-select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 320px;
+}
+
+/* Select trigger button */
+.web-select-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--ls-space-2) var(--ls-space-4);
+  background: #ffffff;
+  border: 1px solid var(--ls-gray-300);
+  border-radius: var(--ls-border-radius-md);
+  font-size: var(--ls-font-size-sm);
+  color: var(--ls-gray-800);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.web-select-trigger:hover:not(:disabled) {
+  border-color: var(--ls-primary-500);
+  box-shadow: 0 0 0 1px var(--ls-primary-500);
+}
+
+.web-select-trigger:focus {
+  outline: none;
+  border-color: var(--ls-primary-500);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.web-select-trigger:disabled {
+  background: var(--ls-gray-100);
+  color: var(--ls-gray-400);
+  cursor: not-allowed;
+  border-color: var(--ls-gray-200);
+}
+
+/* Select value */
+.web-select-value {
+  flex: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Select icon */
+.web-select-icon {
+  margin-left: var(--ls-space-2);
+  font-size: 12px;
+  color: var(--ls-gray-400);
+  transition: transform 0.2s ease;
+}
+
+.web-select-open .web-select-icon {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.web-select-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  margin-top: var(--ls-space-1);
+  background: #ffffff;
+  border: 1px solid var(--ls-gray-200);
+  border-radius: var(--ls-border-radius-md);
+  box-shadow: var(--ls-shadow-md);
+  max-height: 200px;
+  overflow-y: auto;
+  animation: web-select-dropdown-appear 0.15s ease-out;
+}
+
+@keyframes web-select-dropdown-appear {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Select items */
+.web-select-item {
+  padding: var(--ls-space-2) var(--ls-space-4);
+  font-size: var(--ls-font-size-sm);
+  color: var(--ls-gray-800);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  border-bottom: 1px solid var(--ls-gray-100);
+}
+
+.web-select-item:last-child {
+  border-bottom: none;
+}
+
+.web-select-item:hover:not(.web-select-item-disabled) {
+  background-color: var(--ls-gray-100);
+}
+
+.web-select-item-selected {
+  background-color: var(--ls-primary-500);
+  color: #ffffff;
+}
+
+.web-select-item-selected:hover {
+  background-color: var(--ls-primary-600);
+}
+
+.web-select-item-disabled {
+  color: var(--ls-gray-400);
+  cursor: not-allowed;
+  background-color: transparent;
+}
+
+/* Disabled select */
+.web-select-disabled .web-select-trigger {
+  background: var(--ls-gray-100);
+  color: var(--ls-gray-400);
+  cursor: not-allowed;
+  border-color: var(--ls-gray-200);
+}
+
+.web-select-disabled .web-select-icon {
+  color: var(--ls-gray-300);
+}
+
+/* Focus styles */
+.web-select-item:focus {
+  outline: none;
+  background-color: var(--ls-primary-500);
+  color: #ffffff;
+}
+
+/* Scrollbar styling for dropdown */
+.web-select-dropdown::-webkit-scrollbar {
+  width: 6px;
+}
+
+.web-select-dropdown::-webkit-scrollbar-track {
+  background: var(--ls-gray-100);
+  border-radius: 3px;
+}
+
+.web-select-dropdown::-webkit-scrollbar-thumb {
+  background: var(--ls-gray-300);
+  border-radius: 3px;
+}
+
+.web-select-dropdown::-webkit-scrollbar-thumb:hover {
+  background: var(--ls-gray-400);
+}

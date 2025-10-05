@@ -24,8 +24,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/core
       '@losensky-systems/web-components-css':
-        specifier: ^0.0.2
-        version: 0.0.2
+        specifier: ^0.0.3
+        version: 0.0.3
       '@mdx-js/react':
         specifier: ^3.1.1
         version: 3.1.1(@types/react@19.2.0)(react@18.3.1)
@@ -446,8 +446,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@losensky-systems/web-components-css@0.0.2':
-    resolution: {integrity: sha512-/5gg9NiHJSO9hF3/t9/za/Wl7ORtlCLNAFaIHSl84hemUMK+DLVWEAC1KDvuqJ2awNalJvn/ERwkM/rE3vovFA==}
+  '@losensky-systems/web-components-css@0.0.3':
+    resolution: {integrity: sha512-nJWKfgWZrRmia7Gb2zqkh767NFPz8OwwG2m4HDMZTyRH9malREtBiWEjvolI07s3vCmi5kxR3Edeck/sFNF/OQ==}
 
   '@mdx-js/mdx@3.1.1':
     resolution: {integrity: sha512-f6ZO2ifpwAQIpzGWaBQT2TXxPv6z3RBzQKpVftEWN78Vl/YweF1uwussDx8ECAXVtr3Rs89fKyG9YlzUs9DyGQ==}
@@ -2302,7 +2302,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@losensky-systems/web-components-css@0.0.2': {}
+  '@losensky-systems/web-components-css@0.0.3': {}
 
   '@mdx-js/mdx@3.1.1':
     dependencies:
