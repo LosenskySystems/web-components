@@ -24,30 +24,23 @@
           "category": "elements",
           "subcategory": "interactive"
         },
-        "input": {
-          "name": "Input",
-          "path": "./components/elements/input",
+        "divider": {
+          "name": "Divider",
+          "path": "./components/elements/divider",
           "exports": [
-            "Input",
-            "InputProps"
+            "Divider",
+            "DividerProps"
           ],
           "props": {
-            "type": "'text' | 'email' | 'password' | 'number' | 'tel' | 'url' | 'search'",
-            "placeholder": "string",
-            "value": "string",
-            "defaultValue": "string",
-            "onChange": "(event: React.ChangeEvent<HTMLInputElement>) => void",
-            "onFocus": "(event: React.FocusEvent<HTMLInputElement>) => void",
-            "onBlur": "(event: React.FocusEvent<HTMLInputElement>) => void",
+            "orientation": "'horizontal' | 'vertical'",
+            "variant": "'solid' | 'dashed' | 'dotted'",
+            "spacing": "'sm' | 'md' | 'lg'",
             "className": "string",
-            "disabled": "boolean",
-            "required": "boolean",
-            "name": "string",
-            "id": "string"
+            "children": "React.ReactNode; // For labeled dividers"
           },
-          "css": "./components/elements/input/index.css",
+          "css": "./components/elements/divider/index.css",
           "category": "elements",
-          "subcategory": "form"
+          "subcategory": "general"
         },
         "label": {
           "name": "Label",
@@ -69,36 +62,7 @@
         }
       }
     },
-    "constants": {
-      "colors": {
-        "path": "./constants",
-        "exports": [
-          "colors"
-        ],
-        "description": "Design system colors tokens"
-      },
-      "spacing": {
-        "path": "./constants",
-        "exports": [
-          "spacing"
-        ],
-        "description": "Design system spacing tokens"
-      },
-      "typography": {
-        "path": "./constants",
-        "exports": [
-          "typography"
-        ],
-        "description": "Design system typography tokens"
-      },
-      "borderRadius": {
-        "path": "./constants",
-        "exports": [
-          "borderRadius"
-        ],
-        "description": "Design system borderRadius tokens"
-      }
-    },
+    "constants": {},
     "utils": {
       "debounce": {
         "path": "./utils/helpers",
@@ -131,10 +95,9 @@
     ],
     "subcategories": [
       "interactive",
-      "form",
       "general"
     ],
-    "generatedAt": "2025-10-05T17:19:13.075Z",
+    "generatedAt": "2025-10-05T17:41:14.742Z",
     "buildTool": "vite",
     "framework": "react"
   }

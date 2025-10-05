@@ -13,7 +13,9 @@
     "./tokens": "./dist/constants/tokens.css",
     
     "./components/button": "./dist/components/elements/button/index.css",
-    "./components/input": "./dist/components/elements/input/index.css",
+    "./components/divider": "./dist/components/elements/divider/index.css",
+    "./components/label": "./dist/components/elements/label/index.css",
+    "./components/input": "./dist/components/forms/input/index.css",
     
     "./components/*": "./dist/components/*/*.css",
     "./dist/*": "./dist/*"

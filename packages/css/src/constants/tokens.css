@@ -4,10 +4,14 @@
   --ls-primary-500: #2563eb;
   --ls-primary-600: #1d4ed8;
   --ls-gray-100: #e5e7eb;
+  --ls-gray-200: #e5e7eb;
+  --ls-gray-300: #d1d5db;
   --ls-gray-400: #9ca3af;
+  --ls-gray-600: #6b7280;
   --ls-gray-800: #111827;
   --ls-gray-900: #0f172a;
   --ls-red-500: #ef4444;
+  --ls-background: #ffffff;
   
   /* Spacing */
   --ls-space-1: 0.25rem;
@@ -17,6 +21,7 @@
   
   /* Typography */
   --ls-font-size-sm: 14px;
+  --ls-font-weight-medium: 500;
   --ls-font-weight-semibold: 600;
   --ls-font-weight-bold: 700;
   

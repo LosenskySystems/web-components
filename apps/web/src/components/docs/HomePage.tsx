@@ -1,4 +1,4 @@
-import { Button, Input, Label } from '@losensky-systems/web-components-core'
+import { Button, Input, Label, Divider } from '@losensky-systems/web-components-core'
 
 export function HomePage() {
   return (
@@ -13,43 +13,50 @@ export function HomePage() {
         </p>
       </div>
 
-      {/* Quick Demo */}
-      <div className="mb-16">
-        <h2 className="text-2xl font-semibold text-slate-800 mb-6 border-b border-slate-200 pb-2">
-          Demo
-        </h2>
-        <div className="bg-white border border-slate-200 rounded-xl p-8">
-          <div className="flex gap-4 items-center mb-6 flex-wrap">
-            <Button onClick={() => alert('Hello!')}>
-              Primary Button
-            </Button>
-            <Button variant="secondary">
-              Secondary Button
-            </Button>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <Label htmlFor="demo-input" required className="border-b border-slate-200 pb-2">
-                Email Address
-              </Label>
-              <Input 
-                id="demo-input"
-                type="email"
-                placeholder="Enter your email..." 
-              />
+          {/* Quick Demo */}
+          <div className="mb-16">
+            <h2 className="text-2xl font-semibold text-slate-800 mb-6 border-b border-slate-200 pb-2">
+              Demo
+            </h2>
+            <div className="bg-white border border-slate-200 rounded-xl p-8">
+              <div className="flex gap-4 items-center mb-6 flex-wrap">
+                <Button onClick={() => alert('Hello!')}>
+                  Primary Button
+                </Button>
+                <Button variant="secondary">
+                  Secondary Button
+                </Button>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <Label htmlFor="demo-input" required className="border-b border-slate-200 pb-2">
+                    Email Address
+                  </Label>
+                  <Input 
+                    id="demo-input"
+                    type="email"
+                    placeholder="Enter your email..." 
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="demo-input-2">
+                    Optional Field
+                  </Label>
+                  <Input 
+                    id="demo-input-2"
+                    placeholder="This field is optional..." 
+                  />
+                </div>
+              </div>
+              
+              <Divider variant="dotted" spacing="lg" />
+              
+              <div className="text-center text-slate-600 text-sm">
+                <p>More components coming soon...</p>
+              </div>
             </div>
-            <div>
-              <Label htmlFor="demo-input-2">
-                Optional Field
-              </Label>
-              <Input 
-                id="demo-input-2"
-                placeholder="This field is optional..." 
-              />
-            </div>
           </div>
-        </div>
-      </div>
 
       {/* Getting Started */}
       <div className="text-center">
