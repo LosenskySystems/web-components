@@ -1,0 +1,37 @@
+/* Label component styles */
+.web-label {
+  display: block;
+  font-size: var(--ls-font-size-sm);
+  font-weight: var(--ls-font-weight-semibold);
+  color: var(--ls-gray-800);
+  margin-bottom: var(--ls-space-2);
+  line-height: 1.4;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.web-label-required {
+  /* Additional styles for required labels can be added here */
+}
+
+.web-label-disabled {
+  color: var(--ls-gray-400);
+  cursor: not-allowed;
+}
+
+.web-label-asterisk {
+  color: var(--ls-red-500);
+  margin-left: var(--ls-space-1);
+  font-weight: var(--ls-font-weight-bold);
+  font-size: 1em;
+}
+
+/* Hover states */
+.web-label:not(.web-label-disabled):hover {
+  color: var(--ls-gray-900);
+}
+
+/* Focus-within for better UX when the associated input is focused */
+.web-label:focus-within {
+  color: var(--ls-primary-500);
+}

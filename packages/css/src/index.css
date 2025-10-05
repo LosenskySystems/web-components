@@ -6,3 +6,4 @@
 /* Import component styles */
 @import './components/elements/button/index.css';
 @import './components/elements/input/index.css';
+@import './components/elements/label/index.css';

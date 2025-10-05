@@ -1,4 +1,4 @@
-import { Button, Input } from '@losensky-systems/web-components-core'
+import { Button, Input, Label } from '@losensky-systems/web-components-core'
 
 export function HomePage() {
   return (
@@ -27,8 +27,26 @@ export function HomePage() {
               Secondary Button
             </Button>
           </div>
-          <div className="max-w-sm">
-            <Input placeholder="Try typing something..." />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <Label htmlFor="demo-input" required className="border-b border-slate-200 pb-2">
+                Email Address
+              </Label>
+              <Input 
+                id="demo-input"
+                type="email"
+                placeholder="Enter your email..." 
+              />
+            </div>
+            <div>
+              <Label htmlFor="demo-input-2">
+                Optional Field
+              </Label>
+              <Input 
+                id="demo-input-2"
+                placeholder="This field is optional..." 
+              />
+            </div>
           </div>
         </div>
       </div>

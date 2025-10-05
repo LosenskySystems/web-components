@@ -4,7 +4,10 @@
   --ls-primary-500: #2563eb;
   --ls-primary-600: #1d4ed8;
   --ls-gray-100: #e5e7eb;
+  --ls-gray-400: #9ca3af;
   --ls-gray-800: #111827;
+  --ls-gray-900: #0f172a;
+  --ls-red-500: #ef4444;
   
   /* Spacing */
   --ls-space-1: 0.25rem;

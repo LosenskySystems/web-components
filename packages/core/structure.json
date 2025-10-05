@@ -48,6 +48,24 @@
           "css": "./components/elements/input/index.css",
           "category": "elements",
           "subcategory": "form"
+        },
+        "label": {
+          "name": "Label",
+          "path": "./components/elements/label",
+          "exports": [
+            "Label",
+            "LabelProps"
+          ],
+          "props": {
+            "children": "React.ReactNode",
+            "htmlFor": "string",
+            "className": "string",
+            "required": "boolean",
+            "disabled": "boolean"
+          },
+          "css": "./components/elements/label/index.css",
+          "category": "elements",
+          "subcategory": "general"
         }
       }
     },
@@ -107,15 +125,16 @@
     }
   },
   "metadata": {
-    "totalComponents": 2,
+    "totalComponents": 3,
     "categories": [
       "elements"
     ],
     "subcategories": [
       "interactive",
-      "form"
+      "form",
+      "general"
     ],
-    "generatedAt": "2025-10-04T09:59:15.860Z",
+    "generatedAt": "2025-10-05T17:19:13.075Z",
     "buildTool": "vite",
     "framework": "react"
   }
