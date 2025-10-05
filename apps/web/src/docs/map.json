@@ -1,28 +1,58 @@
 {
-    "routes": [
-      {
-        "id": "button",
-        "title": "Button",
-        "path": "/docs/button",
-        "component": "Button",
-        "category": "Components",
-        "description": "A versatile button component with multiple variants and states"
-      },
-      {
-        "id": "input",
-        "title": "Input", 
-        "path": "/docs/input",
-        "component": "Input",
-        "category": "Components",
-        "description": "A flexible text input field with various states and styling options"
-      }
-    ],
-    "categories": [
-      {
-        "id": "components",
-        "title": "Components",
-        "description": "Core UI components for building interfaces"
-      }
-    ]
-  }
+  "routes": [
+    {
+      "id": "overview",
+      "title": "Overview",
+      "path": "/",
+      "category": "get-started",
+      "description": "Introduction to the component library"
+    },
+    {
+      "id": "installation",
+      "title": "Installation",
+      "path": "/docs/installation",
+      "category": "get-started", 
+      "description": "How to install and setup the library"
+    },
+    {
+      "id": "button",
+      "title": "Button",
+      "path": "/docs/button",
+      "component": "Button",
+      "category": "components",
+      "subcategory": "elements",
+      "description": "A versatile button component with multiple variants and states"
+    },
+    {
+      "id": "input",
+      "title": "Input", 
+      "path": "/docs/input",
+      "component": "Input",
+      "category": "components",
+      "subcategory": "elements",
+      "description": "A flexible text input field with various states and styling options"
+    }
+  ],
+  "categories": [
+    {
+      "id": "get-started",
+      "title": "Get Started",
+      "description": "Getting started with the component library",
+      "items": ["overview", "installation"]
+    },
+    {
+      "id": "components",
+      "title": "Components",
+      "description": "Core UI components for building interfaces",
+      "subcategories": [
+        {
+          "id": "elements",
+          "title": "Elements",
+          "description": "Basic UI elements",
+          "items": ["button", "input"]
+        }
+      ]
+    }
+  ]
+}
   
