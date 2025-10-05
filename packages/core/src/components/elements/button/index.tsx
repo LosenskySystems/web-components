@@ -12,10 +12,7 @@ export const Button: React.FC<ButtonProps> = ({
   disabled = false,
   type = 'button',
   loading = false,
-  color,
-  colorHover,
-  colorText,
-  colorBorder,
+  loadingText = 'Loading...',
   ...props
 }) => {
   // Component-first approach - complete styles in CSS, Tailwind for overrides
@@ -34,14 +31,6 @@ export const Button: React.FC<ButtonProps> = ({
     className
   ].filter(Boolean).join(' ');
 
-  // Custom styles for color overrides
-  const customStyles: React.CSSProperties = {};
-  
-  if (variant === 'custom' || color) {
-    if (color) customStyles.backgroundColor = color;
-    if (colorText) customStyles.color = colorText;
-    if (colorBorder) customStyles.borderColor = colorBorder;
-  }
 
   return (
     <button
@@ -49,12 +38,19 @@ export const Button: React.FC<ButtonProps> = ({
       className={classes}
       onClick={onClick}
       disabled={disabled || loading}
-      style={customStyles}
-      data-color-hover={colorHover}
+      aria-busy={loading}
+      aria-disabled={disabled || loading}
+      aria-label={loading ? loadingText : undefined}
       {...props}
     >
-      {loading && <span className="web-btn-spinner" aria-hidden="true" />}
-      <span className={loading ? 'web-btn-content-loading' : ''}>{children}</span>
+      {loading ? (
+        <>
+          <span className="web-btn-spinner" aria-hidden="true" />
+          <span className="web-btn-loading-text">{loadingText}</span>
+        </>
+      ) : (
+        children
+      )}
     </button>
   );
 };

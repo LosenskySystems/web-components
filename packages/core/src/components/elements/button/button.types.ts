@@ -9,9 +9,5 @@ export interface ButtonProps {
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset';
   loading?: boolean;
-  // Custom color props
-  color?: string;
-  colorHover?: string;
-  colorText?: string;
-  colorBorder?: string;
+  loadingText?: string;
 }
