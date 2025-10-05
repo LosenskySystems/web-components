@@ -14,11 +14,17 @@
           ],
           "props": {
             "children": "React.ReactNode",
-            "variant": "'primary' | 'secondary'",
+            "variant": "'primary' | 'secondary' | 'outline' | 'ghost' | 'destructive' | 'custom'",
+            "size": "'sm' | 'md' | 'lg'",
             "onClick": "(event: React.MouseEvent<HTMLButtonElement>) => void",
             "className": "string",
             "disabled": "boolean",
-            "type": "'button' | 'submit' | 'reset'"
+            "type": "'button' | 'submit' | 'reset'",
+            "loading": "boolean",
+            "color": "string",
+            "colorHover": "string",
+            "colorText": "string",
+            "colorBorder": "string"
           },
           "css": "./components/elements/button/index.css",
           "category": "elements",
@@ -115,7 +121,7 @@
       "interactive",
       "general"
     ],
-    "generatedAt": "2025-10-05T18:34:15.982Z",
+    "generatedAt": "2025-10-05T19:35:55.819Z",
     "buildTool": "vite",
     "framework": "react"
   }

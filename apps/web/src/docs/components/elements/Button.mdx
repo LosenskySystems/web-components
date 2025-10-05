@@ -10,94 +10,10 @@ import { Button } from '@losensky-systems/web-components-core'
 
 ## Basic Usage
 
-<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem' }}>
-  <Button>Default Button</Button>
-  <Button variant="secondary">Secondary Button</Button>
-</div>
-
-```tsx
-<Button>Default Button</Button>
-<Button variant="secondary">Secondary Button</Button>
-```
-
-## Variants
-
-The Button component supports two variants:
-
-### Primary (default)
-<div style={{ marginBottom: '1rem' }}>
+<div style={{ marginBottom: '2rem' }}>
   <Button>Primary Button</Button>
 </div>
 
 ```tsx
 <Button>Primary Button</Button>
-<Button variant="primary">Primary Button</Button>
 ```
-
-### Secondary
-<div style={{ marginBottom: '1rem' }}>
-  <Button className="bg-red-500 text-white" variant="secondary">Secondary Button</Button>
-</div>
-
-```tsx
-<Button variant="secondary">Secondary Button</Button>
-```
-
-## States
-
-### Disabled
-<div style={{ display: 'flex', gap: '1rem', marginBottom: '1rem' }}>
-  <Button disabled>Disabled Primary</Button>
-  <Button variant="secondary" disabled>Disabled Secondary</Button>
-</div>
-
-```tsx
-<Button disabled>Disabled Primary</Button>
-<Button variant="secondary" disabled>Disabled Secondary</Button>
-```
-
-## Props
-
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `children` | `React.ReactNode` | - | Button content |
-| `variant` | `'primary' \| 'secondary'` | `'primary'` | Button style variant |
-| `onClick` | `(event: React.MouseEvent<HTMLButtonElement>) => void` | - | Click handler |
-| `disabled` | `boolean` | `false` | Whether the button is disabled |
-| `type` | `'button' \| 'submit' \| 'reset'` | `'button'` | Button type |
-| `className` | `string` | - | Additional CSS classes |
-
-## Examples
-
-### With Click Handler
-<div style={{ marginBottom: '1rem' }}>
-  <Button onClick={() => alert('Button clicked!')}>
-    Click Me
-  </Button>
-</div>
-
-```tsx
-<Button onClick={() => alert('Button clicked!')}>
-  Click Me
-</Button>
-```
-
-### Custom Styling
-<div style={{ marginBottom: '1rem' }}>
-  <Button className="custom-button" style={{ minWidth: '200px' }}>
-    Custom Styled Button
-  </Button>
-</div>
-
-```tsx
-<Button className="custom-button" style={{ minWidth: '200px' }}>
-  Custom Styled Button
-</Button>
-```
-
-## Accessibility
-
-- The Button component is built with semantic HTML `<button>` elements
-- Supports keyboard navigation (Enter and Space keys)
-- Properly handles disabled state for screen readers
-- Includes proper ARIA attributes when needed

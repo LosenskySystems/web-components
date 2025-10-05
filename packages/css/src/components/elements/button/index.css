@@ -1,27 +1,283 @@
-/* Button component styles */
+/* Button component styles - Tailwind compatible */
 .web-btn {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  font-size: 14px;
-  font-weight: 600;
-  border-radius: 6px;
+  /* Reset and base styles */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ls-space-2);
+  font-family: inherit;
+  font-weight: var(--ls-font-weight-semibold);
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: var(--ls-border-radius-md);
   cursor: pointer;
-  border: none;
-  transition: background 0.2s;
+  transition: all 0.2s ease;
+  outline: none;
+  position: relative;
+  white-space: nowrap;
+  user-select: none;
 }
 
+/* Focus styles */
+.web-btn:focus-visible {
+  outline: 2px solid var(--ls-primary-500);
+  outline-offset: 2px;
+}
+
+/* Sizes */
+.web-btn-sm {
+  padding: var(--ls-space-1) var(--ls-space-3);
+  font-size: 12px;
+  line-height: 1.4;
+  min-height: 32px;
+}
+
+.web-btn-md {
+  padding: var(--ls-space-2) var(--ls-space-4);
+  font-size: var(--ls-font-size-sm);
+  line-height: 1.5;
+  min-height: 40px;
+}
+
+.web-btn-lg {
+  padding: var(--ls-space-3) var(--ls-space-6);
+  font-size: 16px;
+  line-height: 1.5;
+  min-height: 48px;
+}
+
+/* Primary variant */
 .web-btn-primary {
-  background: #2563eb;
-  color: white;
-}
-.web-btn-primary:hover {
-  background: #1d4ed8;
+  background-color: var(--ls-primary-500);
+  color: #ffffff;
+  border-color: var(--ls-primary-500);
 }
 
-.web-btn-secondary {
-  background: #e5e7eb;
-  color: #111827;
+.web-btn-primary:hover:not(:disabled) {
+  background-color: var(--ls-primary-600);
+  border-color: var(--ls-primary-600);
+  transform: translateY(-1px);
+  box-shadow: var(--ls-shadow-md);
 }
-.web-btn-secondary:hover {
-  background: #d1d5db;
+
+.web-btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: var(--ls-shadow-sm);
+}
+
+/* Secondary variant */
+.web-btn-secondary {
+  background-color: #ffffff;
+  color: var(--ls-gray-800);
+  border-color: var(--ls-gray-300);
+}
+
+.web-btn-secondary:hover:not(:disabled) {
+  background-color: var(--ls-gray-100);
+  border-color: var(--ls-gray-400);
+  transform: translateY(-1px);
+  box-shadow: var(--ls-shadow-md);
+}
+
+.web-btn-secondary:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: var(--ls-shadow-sm);
+}
+
+/* Outline variant */
+.web-btn-outline {
+  background-color: transparent;
+  color: var(--ls-primary-500);
+  border-color: var(--ls-primary-500);
+}
+
+.web-btn-outline:hover:not(:disabled) {
+  background-color: var(--ls-primary-500);
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: var(--ls-shadow-md);
+}
+
+.web-btn-outline:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: var(--ls-shadow-sm);
+}
+
+/* Ghost variant */
+.web-btn-ghost {
+  background-color: transparent;
+  color: var(--ls-gray-800);
+  border-color: transparent;
+}
+
+.web-btn-ghost:hover:not(:disabled) {
+  background-color: var(--ls-gray-100);
+  color: var(--ls-gray-900);
+}
+
+.web-btn-ghost:active:not(:disabled) {
+  background-color: var(--ls-gray-200);
+}
+
+/* Destructive variant */
+.web-btn-destructive {
+  background-color: var(--ls-red-500);
+  color: #ffffff;
+  border-color: var(--ls-red-500);
+}
+
+.web-btn-destructive:hover:not(:disabled) {
+  background-color: #dc2626;
+  border-color: #dc2626;
+  transform: translateY(-1px);
+  box-shadow: var(--ls-shadow-md);
+}
+
+.web-btn-destructive:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: var(--ls-shadow-sm);
+}
+
+/* Disabled state */
+.web-btn-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Loading state */
+.web-btn-loading {
+  cursor: wait;
+  pointer-events: none;
+}
+
+.web-btn-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: web-btn-spin 1s linear infinite;
+}
+
+.web-btn-content-loading {
+  opacity: 0.7;
+}
+
+@keyframes web-btn-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Tailwind compatibility - ensure our styles have higher specificity */
+.web-btn.web-btn {
+  /* Double class for higher specificity */
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+  .web-btn-lg {
+    padding: var(--ls-space-2) var(--ls-space-4);
+    font-size: var(--ls-font-size-sm);
+    min-height: 40px;
+  }
+}
+
+/* Custom variant for color overrides */
+.web-btn-custom {
+  /* Base styles will be overridden by inline styles */
+}
+
+/* Custom hover effects using data attributes */
+.web-btn[data-color-hover]:hover:not(:disabled) {
+  background-color: var(--hover-color) !important;
+  border-color: var(--hover-color) !important;
+  transform: translateY(-1px);
+  box-shadow: var(--ls-shadow-md);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .web-btn-primary {
+    background-color: var(--ls-primary-600);
+    border-color: var(--ls-primary-600);
+  }
+  
+  .web-btn-primary:hover:not(:disabled) {
+    background-color: var(--ls-primary-500);
+    border-color: var(--ls-primary-500);
+  }
+  
+  .web-btn-secondary {
+    background-color: var(--ls-gray-800);
+    color: var(--ls-gray-100);
+    border-color: var(--ls-gray-600);
+  }
+  
+  .web-btn-secondary:hover:not(:disabled) {
+    background-color: var(--ls-gray-700);
+    border-color: var(--ls-gray-500);
+  }
+  
+  .web-btn-outline {
+    background-color: transparent;
+    color: var(--ls-primary-400);
+    border-color: var(--ls-primary-400);
+  }
+  
+  .web-btn-outline:hover:not(:disabled) {
+    background-color: var(--ls-primary-400);
+    color: var(--ls-gray-900);
+  }
+  
+  .web-btn-ghost {
+    background-color: transparent;
+    color: var(--ls-gray-100);
+    border-color: transparent;
+  }
+  
+  .web-btn-ghost:hover:not(:disabled) {
+    background-color: var(--ls-gray-800);
+    color: #ffffff;
+  }
+  
+  .web-btn-destructive {
+    background-color: #dc2626;
+    border-color: #dc2626;
+  }
+  
+  .web-btn-destructive:hover:not(:disabled) {
+    background-color: #b91c1c;
+    border-color: #b91c1c;
+  }
+}
+
+/* Fallback for browsers that don't support attr() in custom properties */
+.web-btn[data-color-hover="#8b5cf6"]:hover:not(:disabled) {
+  background-color: #8b5cf6 !important;
+  border-color: #8b5cf6 !important;
+}
+
+.web-btn[data-color-hover="#7c3aed"]:hover:not(:disabled) {
+  background-color: #7c3aed !important;
+  border-color: #7c3aed !important;
+}
+
+.web-btn[data-color-hover="#10b981"]:hover:not(:disabled) {
+  background-color: #10b981 !important;
+  border-color: #10b981 !important;
+}
+
+.web-btn[data-color-hover="#f59e0b"]:hover:not(:disabled) {
+  background-color: #f59e0b !important;
+  border-color: #f59e0b !important;
+}
+
+.web-btn[data-color-hover="#ef4444"]:hover:not(:disabled) {
+  background-color: #ef4444 !important;
+  border-color: #ef4444 !important;
 }
