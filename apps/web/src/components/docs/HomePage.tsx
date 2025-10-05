@@ -1,4 +1,4 @@
-import { Button, Input, Label, Divider, Loader, Select } from '@losensky-systems/web-components-core'
+import { Button, Input, Label, Divider, Loader, Select, Textarea } from '@losensky-systems/web-components-core'
 import { useState } from 'react'
 import { DebugSelect } from '../DebugSelect'
 
@@ -74,6 +74,18 @@ export function HomePage() {
                     </p>
                   )}
                 </div>
+              </div>
+              
+              <div className="mt-6">
+                <Label htmlFor="demo-textarea">
+                  Message
+                </Label>
+                <Textarea 
+                  id="demo-textarea"
+                  placeholder="Tell us about yourself..." 
+                  rows={4}
+                  resize="vertical"
+                />
               </div>
               
               <Divider variant="dotted" spacing="lg" className="py-4"/>

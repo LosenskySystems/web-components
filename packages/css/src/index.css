@@ -12,3 +12,4 @@
 /* Import form styles */
 @import './components/forms/input/index.css';
 @import './components/forms/select/index.css';
+@import './components/forms/textarea/index.css';

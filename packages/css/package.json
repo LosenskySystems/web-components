@@ -18,6 +18,7 @@
     "./components/loader": "./dist/components/elements/loader/index.css",
     "./components/input": "./dist/components/forms/input/index.css",
     "./components/select": "./dist/components/forms/select/index.css",
+    "./components/textarea": "./dist/components/forms/textarea/index.css",
     
     "./components/*": "./dist/components/*/*.css",
     "./dist/*": "./dist/*"
