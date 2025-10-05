@@ -39,7 +39,7 @@
     "vite": "^7.1.7"
   },
   "dependencies": {
-    "@losensky-systems/web-components-css": "workspace:*"
+    "@losensky-systems/web-components-tailwindcss": "workspace:*"
   },
   "peerDependencies": {
     "react": ">=17.0.0",

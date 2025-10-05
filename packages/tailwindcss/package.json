@@ -1,0 +1,51 @@
+{
+  "name": "@losensky-systems/web-components-tailwindcss",
+  "version": "0.0.1",
+  "description": "Tailwind CSS components for Losensky Systems web components",
+  "type": "module",
+  "main": "dist/index.css",
+  "types": "index.d.ts",
+  "style": "dist/index.css",
+  "exports": {
+    ".": "./dist/index.css",
+    "./dist/index.css": "./dist/index.css",
+    
+    "./tokens": "./dist/constants/tokens.css",
+    
+    "./components/button": "./dist/components/elements/button/index.css",
+    "./components/divider": "./dist/components/elements/divider/index.css",
+    "./components/label": "./dist/components/elements/label/index.css",
+    "./components/loader": "./dist/components/elements/loader/index.css",
+    "./components/input": "./dist/components/forms/input/index.css",
+    "./components/select": "./dist/components/forms/select/index.css",
+    "./components/textarea": "./dist/components/forms/textarea/index.css",
+    
+    "./components/*": "./dist/components/*/*.css",
+    "./dist/*": "./dist/*"
+  },
+  "files": [
+    "dist",
+    "src",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "build": "npm run build:css",
+    "build:css": "node scripts/build-css.js",
+    "clean": "rm -rf dist",
+    "watch": "npm run build:css -- --watch"
+  },
+  "keywords": [
+    "tailwindcss",
+    "web-components",
+    "design-system",
+    "react"
+  ],
+  "author": "Ondřej Losenský",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^4.0.0",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.1.0"
+  }
+}

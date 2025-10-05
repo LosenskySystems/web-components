@@ -89,7 +89,7 @@ export const Select: React.FC<SelectProps> & {
           aria-expanded={isOpen}
         >
           <span className="web-select-value">{getSelectedLabel()}</span>
-          <span className="web-select-icon" aria-hidden="true">
+          <span className="web-select-arrow" aria-hidden="true">
             ▼
           </span>
         </button>

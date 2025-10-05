@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Import the component styles */
+@import "@losensky-systems/web-components-tailwindcss";
+
 /* Clean minimal styles */
 body {
   margin: 0;

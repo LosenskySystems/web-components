@@ -1,0 +1,54 @@
+/* Select component styles using Tailwind @apply */
+@layer components {
+  .web-select {
+    @apply relative inline-block w-full;
+  }
+
+  .web-select-trigger {
+    @apply flex items-center justify-between w-full px-3 py-2 text-sm text-gray-900 bg-white border border-gray-300 rounded-md shadow-sm cursor-pointer hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:bg-gray-50 disabled:text-gray-500 disabled:cursor-not-allowed;
+  }
+
+  .web-select-trigger-sm {
+    @apply h-8 px-2 text-xs;
+  }
+
+  .web-select-trigger-md {
+    @apply h-10 px-3 py-2 text-sm;
+  }
+
+  .web-select-trigger-lg {
+    @apply h-12 px-4 py-3 text-base;
+  }
+
+  .web-select-trigger-error {
+    @apply border-red-300 focus:ring-red-500 focus:border-red-500;
+  }
+
+  .web-select-trigger-open {
+    @apply ring-2 ring-blue-500 border-blue-500;
+  }
+
+  .web-select-arrow {
+    @apply w-4 h-4 text-gray-400 transition-transform duration-200;
+  }
+
+  .web-select-arrow-open {
+    @apply rotate-180;
+  }
+
+  .web-select-dropdown {
+    @apply absolute z-50 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg max-h-60 overflow-auto;
+  }
+
+  .web-select-item {
+    @apply flex items-center px-3 py-2 text-sm text-gray-900 cursor-pointer hover:bg-gray-100 focus:bg-gray-100 focus:outline-none;
+  }
+
+  .web-select-item-disabled {
+    @apply text-gray-400 cursor-not-allowed hover:bg-white focus:bg-white;
+  }
+
+  .web-select-item-selected {
+    @apply bg-blue-50 text-blue-600;
+  }
+}

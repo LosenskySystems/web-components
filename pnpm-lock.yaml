@@ -23,9 +23,9 @@ importers:
       '@losensky-systems/web-components-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@losensky-systems/web-components-css':
+      '@losensky-systems/web-components-tailwindcss':
         specifier: workspace:*
-        version: link:../../packages/css
+        version: link:../../packages/tailwindcss
       '@mdx-js/react':
         specifier: ^3.1.1
         version: 3.1.1(@types/react@19.2.0)(react@18.3.1)
@@ -93,9 +93,9 @@ importers:
 
   packages/core:
     dependencies:
-      '@losensky-systems/web-components-css':
+      '@losensky-systems/web-components-tailwindcss':
         specifier: workspace:*
-        version: link:../css
+        version: link:../tailwindcss
       react:
         specifier: '>=17.0.0'
         version: 18.3.1
@@ -130,6 +130,21 @@ importers:
       postcss-import:
         specifier: ^16.1.0
         version: 16.1.1(postcss@8.5.6)
+
+  packages/tailwindcss:
+    devDependencies:
+      postcss:
+        specifier: ^8.5.6
+        version: 8.5.6
+      postcss-cli:
+        specifier: ^11.0.0
+        version: 11.0.1(jiti@2.6.1)(postcss@8.5.6)
+      postcss-import:
+        specifier: ^16.1.0
+        version: 16.1.1(postcss@8.5.6)
+      tailwindcss:
+        specifier: ^4.0.0
+        version: 4.1.14
 
 packages:
 

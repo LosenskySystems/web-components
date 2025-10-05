@@ -1,6 +1,6 @@
 # Button Component
 
-The Button component is a versatile, accessible button that supports multiple variants and states.
+The Button component is a complete, accessible button with built-in styles. Use Tailwind classes for easy customization of colors, borders, and other details.
 
 ## Import
 
@@ -8,12 +8,33 @@ The Button component is a versatile, accessible button that supports multiple va
 import { Button } from '@losensky-systems/web-components-core'
 ```
 
-## Basic Usage
+## Variants
 
-<div style={{ marginBottom: '2rem' }}>
-  <Button>Primary Button</Button>
+The Button component supports multiple predefined variants:
+
+<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
+  <Button variant="primary">Primary</Button>
+  <Button variant="secondary">Secondary</Button>
+  <Button variant="outline">Outline</Button>
+  <Button variant="ghost">Ghost</Button>
+  <Button variant="destructive">Destructive</Button>
 </div>
 
-```tsx
-<Button>Primary Button</Button>
-```
+## Customization with Tailwind
+
+The Button component comes with complete styles, but you can easily customize colors, borders, and other details using Tailwind classes:
+
+<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
+  <Button className="bg-cyan-500 hover:bg-cyan-600 border-cyan-500">
+    Red Button
+  </Button>
+  <Button variant="outline" className="border-purple-500 text-purple-500">
+    Purple Outline
+  </Button>
+  <Button className="rounded-full bg-green-500 hover:bg-green-600">
+    Rounded Green
+  </Button>
+</div>
+
+
+**Note:** The component provides 90% of the styling. Use Tailwind classes to customize colors, borders, border-radius, and other details.

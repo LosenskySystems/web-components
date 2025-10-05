@@ -1,0 +1,39 @@
+/* Textarea component styles using Tailwind @apply */
+@layer components {
+  .web-textarea {
+    @apply block w-full px-3 py-2 text-sm text-gray-900 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:bg-gray-50 disabled:text-gray-500 disabled:cursor-not-allowed;
+  }
+
+  .web-textarea-error {
+    @apply border-red-300 focus:ring-red-500 focus:border-red-500;
+  }
+
+  .web-textarea-sm {
+    @apply h-20 px-2 py-1 text-xs;
+  }
+
+  .web-textarea-md {
+    @apply h-24 px-3 py-2 text-sm;
+  }
+
+  .web-textarea-lg {
+    @apply h-32 px-4 py-3 text-base;
+  }
+
+  /* Resize variants */
+  .web-textarea-resize-none {
+    @apply resize-none;
+  }
+
+  .web-textarea-resize-vertical {
+    @apply resize-y;
+  }
+
+  .web-textarea-resize-horizontal {
+    @apply resize-x;
+  }
+
+  .web-textarea-resize-both {
+    @apply resize;
+  }
+}

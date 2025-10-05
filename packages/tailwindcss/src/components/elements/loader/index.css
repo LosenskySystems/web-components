@@ -1,0 +1,81 @@
+/* Loader component styles using Tailwind @apply */
+@layer components {
+  .web-loader {
+    @apply inline-flex items-center justify-center;
+  }
+
+  .web-loader-spinner {
+    @apply w-4 h-4 border-2 border-transparent border-t-current rounded-full animate-spin;
+  }
+
+  .web-loader-text {
+    @apply text-sm font-medium;
+  }
+
+  .web-loader-sr-only {
+    @apply sr-only;
+  }
+
+  /* Size variants */
+  .web-loader-sm .web-loader-spinner {
+    @apply w-3 h-3 border;
+  }
+
+  .web-loader-sm .web-loader-text {
+    @apply text-xs;
+  }
+
+  .web-loader-md .web-loader-spinner {
+    @apply w-4 h-4 border-2;
+  }
+
+  .web-loader-md .web-loader-text {
+    @apply text-sm;
+  }
+
+  .web-loader-lg .web-loader-spinner {
+    @apply w-6 h-6 border-2;
+  }
+
+  .web-loader-lg .web-loader-text {
+    @apply text-base;
+  }
+
+  /* Variant styles */
+  .web-loader-primary .web-loader-spinner {
+    @apply border-t-blue-600;
+  }
+
+  .web-loader-primary .web-loader-text {
+    @apply text-blue-600;
+  }
+
+  .web-loader-secondary .web-loader-spinner {
+    @apply border-t-gray-600;
+  }
+
+  .web-loader-secondary .web-loader-text {
+    @apply text-gray-600;
+  }
+
+  .web-loader-white .web-loader-spinner {
+    @apply border-t-white;
+  }
+
+  .web-loader-white .web-loader-text {
+    @apply text-white;
+  }
+
+  /* Type variants */
+  .web-loader-spinner {
+    @apply gap-0;
+  }
+
+  .web-loader-text {
+    @apply gap-0;
+  }
+
+  .web-loader-both {
+    @apply gap-2;
+  }
+}

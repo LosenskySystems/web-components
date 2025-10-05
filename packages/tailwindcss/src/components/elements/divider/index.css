@@ -1,0 +1,47 @@
+/* Divider component styles using Tailwind @apply */
+@layer components {
+  .web-divider {
+    @apply border-0 border-t border-gray-200;
+  }
+
+  .web-divider-vertical {
+    @apply border-0 border-l border-gray-200 h-full w-0;
+  }
+
+  .web-divider-dashed {
+    @apply border-dashed;
+  }
+
+  .web-divider-dotted {
+    @apply border-dotted;
+  }
+
+  .web-divider-spacing-sm {
+    @apply my-1;
+  }
+
+  .web-divider-spacing-md {
+    @apply my-2;
+  }
+
+  .web-divider-spacing-lg {
+    @apply my-4;
+  }
+
+  .web-divider-with-children {
+    @apply flex items-center text-gray-500 text-sm;
+  }
+
+  .web-divider-with-children::before,
+  .web-divider-with-children::after {
+    @apply flex-1 border-t border-gray-200;
+  }
+
+  .web-divider-with-children::before {
+    @apply mr-4;
+  }
+
+  .web-divider-with-children::after {
+    @apply ml-4;
+  }
+}

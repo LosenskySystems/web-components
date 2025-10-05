@@ -9,23 +9,9 @@
           "name": "Button",
           "path": "./components/elements/button",
           "exports": [
-            "Button",
-            "ButtonProps"
+            "Button"
           ],
-          "props": {
-            "children": "React.ReactNode",
-            "variant": "'primary' | 'secondary' | 'outline' | 'ghost' | 'destructive' | 'custom'",
-            "size": "'sm' | 'md' | 'lg'",
-            "onClick": "(event: React.MouseEvent<HTMLButtonElement>) => void",
-            "className": "string",
-            "disabled": "boolean",
-            "type": "'button' | 'submit' | 'reset'",
-            "loading": "boolean",
-            "color": "string",
-            "colorHover": "string",
-            "colorText": "string",
-            "colorBorder": "string"
-          },
+          "props": {},
           "css": "./components/elements/button/index.css",
           "category": "elements",
           "subcategory": "interactive"
@@ -121,7 +107,7 @@
       "interactive",
       "general"
     ],
-    "generatedAt": "2025-10-05T19:35:55.819Z",
+    "generatedAt": "2025-10-05T20:08:27.210Z",
     "buildTool": "vite",
     "framework": "react"
   }

@@ -1,0 +1,73 @@
+/* Button component styles using Tailwind @apply */
+@layer components {
+  .web-btn {
+    @apply inline-flex items-center justify-center gap-2 font-medium text-sm border rounded-md cursor-pointer outline-none relative whitespace-nowrap select-none transition-all duration-200 ease-in-out;
+  }
+
+  /* Focus styles */
+  .web-btn:focus-visible {
+    @apply ring-2 ring-blue-500 ring-offset-2;
+  }
+
+  /* Size variants */
+  .web-btn-sm {
+    @apply h-8 px-3 text-xs leading-tight;
+  }
+
+  .web-btn-md {
+    @apply h-10 px-4 py-2 text-sm leading-normal;
+  }
+
+  .web-btn-lg {
+    @apply h-12 px-6 text-base leading-normal;
+  }
+
+  /* Variant styles */
+  .web-btn-primary {
+    @apply bg-blue-600 text-white border-blue-600 hover:bg-blue-700 hover:border-blue-700 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 active:shadow-sm;
+  }
+
+  .web-btn-secondary {
+    @apply bg-white text-gray-800 border-gray-300 hover:bg-gray-50 hover:border-gray-400 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 active:shadow-sm;
+  }
+
+  .web-btn-outline {
+    @apply bg-transparent text-blue-600 border-blue-600 hover:bg-blue-600 hover:text-white hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 active:shadow-sm;
+  }
+
+  .web-btn-ghost {
+    @apply bg-transparent text-gray-800 border-transparent hover:bg-gray-100 hover:text-gray-900 active:bg-gray-200;
+  }
+
+  .web-btn-destructive {
+    @apply bg-red-500 text-white border-red-500 hover:bg-red-600 hover:border-red-600 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 active:shadow-sm;
+  }
+
+  .web-btn-custom {
+    @apply border-transparent;
+  }
+
+  /* State styles */
+  .web-btn-disabled {
+    @apply opacity-50 cursor-not-allowed pointer-events-none;
+  }
+
+  .web-btn-loading {
+    @apply cursor-wait pointer-events-none;
+  }
+
+  .web-btn-spinner {
+    @apply w-4 h-4 border-2 border-transparent border-t-current rounded-full animate-spin;
+  }
+
+  .web-btn-content-loading {
+    @apply opacity-70;
+  }
+
+  /* Responsive design */
+  @media (max-width: 640px) {
+    .web-btn-lg {
+      @apply h-10 px-4 py-2 text-sm;
+    }
+  }
+}

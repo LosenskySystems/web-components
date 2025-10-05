@@ -1,20 +1,7 @@
 import React from 'react';
+import type { ButtonProps } from './button.types';
 
-export interface ButtonProps {
-  children: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'destructive' | 'custom';
-  size?: 'sm' | 'md' | 'lg';
-  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
-  className?: string;
-  disabled?: boolean;
-  type?: 'button' | 'submit' | 'reset';
-  loading?: boolean;
-  // Custom color props
-  color?: string;
-  colorHover?: string;
-  colorText?: string;
-  colorBorder?: string;
-}
+export { type ButtonProps } from './button.types';
 
 export const Button: React.FC<ButtonProps> = ({
   children,
@@ -31,6 +18,7 @@ export const Button: React.FC<ButtonProps> = ({
   colorBorder,
   ...props
 }) => {
+  // Component-first approach - complete styles in CSS, Tailwind for overrides
   const baseClasses = 'web-btn';
   const variantClass = `web-btn-${variant}`;
   const sizeClass = `web-btn-${size}`;

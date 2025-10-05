@@ -20,7 +20,7 @@ export const Divider: React.FC<DividerProps> = ({
   const orientationClasses = `web-divider-${orientation}`;
   const variantClasses = `web-divider-${variant}`;
   const spacingClasses = `web-divider-spacing-${spacing}`;
-  const labeledClasses = children ? 'web-divider-labeled' : '';
+  const labeledClasses = children ? 'web-divider-with-children' : '';
   
   const allClasses = `${baseClasses} ${orientationClasses} ${variantClasses} ${spacingClasses} ${labeledClasses} ${className || ''}`.trim();
 
@@ -28,7 +28,7 @@ export const Divider: React.FC<DividerProps> = ({
     // Labeled divider (only for horizontal)
     return (
       <div className={allClasses} role="separator" {...props}>
-        <span className="web-divider-label">{children}</span>
+        {children}
       </div>
     );
   }
