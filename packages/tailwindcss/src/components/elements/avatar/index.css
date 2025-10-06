@@ -1,0 +1,145 @@
+/* Avatar component styles */
+.web-avatar {
+  @apply inline-flex items-center justify-center font-medium text-white rounded-full overflow-hidden select-none;
+  background-color: #6b7280; /* Default gray background */
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 0.875rem;
+  line-height: 1;
+}
+
+/* Size variants */
+.web-avatar-sm {
+  width: 2rem;
+  height: 2rem;
+  font-size: 0.75rem;
+}
+
+.web-avatar-md {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 0.875rem;
+}
+
+.web-avatar-lg {
+  width: 3rem;
+  height: 3rem;
+  font-size: 1rem;
+}
+
+.web-avatar-xl {
+  width: 4rem;
+  height: 4rem;
+  font-size: 1.25rem;
+}
+
+/* Shape variants */
+.web-avatar-square {
+  @apply rounded-md;
+}
+
+.web-avatar-circle {
+  @apply rounded-full;
+}
+
+/* Image styles */
+.web-avatar img {
+  @apply w-full h-full object-cover;
+}
+
+/* Fallback text styles */
+.web-avatar-fallback {
+  @apply flex items-center justify-center w-full h-full;
+}
+
+/* Color variants */
+.web-avatar-default {
+  background-color: #6b7280;
+}
+
+.web-avatar-primary {
+  background-color: #3b82f6;
+}
+
+.web-avatar-success {
+  background-color: #10b981;
+}
+
+.web-avatar-warning {
+  background-color: #f59e0b;
+}
+
+.web-avatar-error {
+  background-color: #ef4444;
+}
+
+.web-avatar-info {
+  background-color: #06b6d4;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .web-avatar-default {
+    background-color: #9ca3af;
+  }
+  
+  .web-avatar-primary {
+    background-color: #60a5fa;
+  }
+  
+  .web-avatar-success {
+    background-color: #34d399;
+  }
+  
+  .web-avatar-warning {
+    background-color: #fbbf24;
+  }
+  
+  .web-avatar-error {
+    background-color: #f87171;
+  }
+  
+  .web-avatar-info {
+    background-color: #22d3ee;
+  }
+}
+
+/* Manual dark mode class */
+.dark .web-avatar-default {
+  background-color: #9ca3af;
+}
+
+.dark .web-avatar-primary {
+  background-color: #60a5fa;
+}
+
+.dark .web-avatar-success {
+  background-color: #34d399;
+}
+
+.dark .web-avatar-warning {
+  background-color: #fbbf24;
+}
+
+.dark .web-avatar-error {
+  background-color: #f87171;
+}
+
+.dark .web-avatar-info {
+  background-color: #22d3ee;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .web-avatar-lg {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .web-avatar-xl {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1rem;
+  }
+}

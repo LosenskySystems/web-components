@@ -10,6 +10,7 @@
 @import './components/elements/loader/index.css';
 @import './components/elements/tooltip/index.css';
 @import './components/elements/badge/index.css';
+@import './components/elements/avatar/index.css';
 
 /* Import form styles */
 @import './components/forms/input/index.css';

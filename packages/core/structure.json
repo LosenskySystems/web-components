@@ -5,6 +5,17 @@
   "structure": {
     "components": {
       "elements": {
+        "avatar": {
+          "name": "Avatar",
+          "path": "./components/elements/avatar",
+          "exports": [
+            "Avatar"
+          ],
+          "props": {},
+          "css": "./components/elements/avatar/index.css",
+          "category": "elements",
+          "subcategory": "general"
+        },
         "badge": {
           "name": "BadgeWrapper",
           "path": "./components/elements/badge",
@@ -115,7 +126,7 @@
     }
   },
   "metadata": {
-    "totalComponents": 6,
+    "totalComponents": 7,
     "categories": [
       "elements"
     ],
@@ -123,7 +134,7 @@
       "general",
       "interactive"
     ],
-    "generatedAt": "2025-10-06T14:59:19.694Z",
+    "generatedAt": "2025-10-06T15:05:04.928Z",
     "buildTool": "vite",
     "framework": "react"
   }

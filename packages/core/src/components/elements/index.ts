@@ -5,3 +5,4 @@ export { Label, LabelGroup, type LabelProps, type LabelGroupProps } from './labe
 export { Loader, type LoaderProps } from './loader';
 export { Tooltip, TooltipTrigger, type TooltipProps, type TooltipTriggerProps } from './tooltip';
 export { Badge, BadgeWrapper, type BadgeProps, type BadgeWrapperProps } from './badge';
+export { Avatar, type AvatarProps } from './avatar';

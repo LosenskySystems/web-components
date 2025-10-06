@@ -78,6 +78,15 @@
       "description": "A badge component for notification counts and indicators"
     },
     {
+      "id": "avatar",
+      "title": "Avatar",
+      "path": "/docs/components/elements/avatar",
+      "component": "Avatar",
+      "category": "components",
+      "subcategory": "elements",
+      "description": "A simple avatar component that displays user profile images with fallback support"
+    },
+    {
       "id": "input",
       "title": "Input", 
       "path": "/docs/components/forms/input",
@@ -121,7 +130,7 @@
           "id": "elements",
           "title": "Elements",
           "description": "Basic UI elements",
-          "items": ["button", "divider", "label", "loader", "tooltip", "badge"]
+          "items": ["button", "divider", "label", "loader", "tooltip", "badge", "avatar"]
         },
         {
           "id": "forms",

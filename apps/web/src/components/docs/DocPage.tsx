@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom'
 import { componentMap } from './docs-config'
 
 export function DocPage() {
-  const { component, category, page } = useParams<{ 
+  const { component, page } = useParams<{ 
     component?: string
     category?: string 
     page?: string 
