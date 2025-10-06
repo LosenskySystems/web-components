@@ -1,28 +1,257 @@
-/* Label component styles using Tailwind @apply */
-@layer components {
+/* Label component styles */
+.web-label-wrapper {
+  display: block;
+}
+
+.web-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-gray-900) !important;
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+/* Size variants */
+.web-label-sm {
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.web-label-md {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.web-label-lg {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Weight variants */
+.web-label-normal {
+  font-weight: 400;
+}
+
+.web-label-medium {
+  font-weight: 500;
+}
+
+.web-label-semibold {
+  font-weight: 600;
+}
+
+.web-label-bold {
+  font-weight: 700;
+}
+
+/* Color variants */
+.web-label-color-muted {
+  color: var(--color-gray-600) !important;
+}
+
+.web-label-color-primary {
+  color: var(--color-primary-600) !important;
+}
+
+.web-label-color-success {
+  color: var(--color-success) !important;
+}
+
+.web-label-color-warning {
+  color: var(--color-warning) !important;
+}
+
+.web-label-color-error {
+  color: var(--color-error) !important;
+}
+
+.web-label-color-info {
+  color: var(--color-info) !important;
+}
+
+/* Required state */
+.web-label-required {
+  /* Additional styles for required labels */
+}
+
+.web-label-asterisk {
+  color: var(--color-error);
+  margin-left: 0.25rem;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Disabled state */
+.web-label-disabled {
+  color: var(--color-gray-400);
+  cursor: not-allowed;
+}
+
+/* Tooltip */
+.web-label-tooltip {
+  margin-left: 0.5rem;
+  color: var(--color-gray-600);
+  font-size: 0.75rem;
+  cursor: help;
+  font-style: italic;
+}
+
+.web-label-tooltip:hover {
+  color: var(--color-gray-800);
+}
+
+/* Helper text */
+.web-label-with-helper {
+  margin-bottom: 0.25rem;
+}
+
+.web-label-helper {
+  display: block;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  line-height: 1.25;
+}
+
+.web-label-helper-default {
+  color: var(--color-gray-600);
+}
+
+.web-label-helper-error {
+  color: var(--color-error);
+}
+
+.web-label-helper-success {
+  color: var(--color-success);
+}
+
+/* Label Group */
+.web-label-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.web-label-group-horizontal {
+  flex-direction: row;
+  align-items: center;
+}
+
+.web-label-group-spacing-sm {
+  gap: 0.25rem;
+}
+
+.web-label-group-spacing-md {
+  gap: 0.5rem;
+}
+
+.web-label-group-spacing-lg {
+  gap: 0.75rem;
+}
+
+.web-label-group-horizontal.web-label-group-spacing-sm {
+  gap: 0.5rem;
+}
+
+.web-label-group-horizontal.web-label-group-spacing-md {
+  gap: 1rem;
+}
+
+.web-label-group-horizontal.web-label-group-spacing-lg {
+  gap: 1.5rem;
+}
+
+/* Hover states */
+.web-label:not(.web-label-disabled):hover {
+  color: var(--color-black) !important;
+}
+
+.web-label-color-primary:not(.web-label-disabled):hover {
+  color: var(--color-primary-700) !important;
+}
+
+.web-label-color-success:not(.web-label-disabled):hover {
+  color: var(--color-success) !important;
+}
+
+.web-label-color-warning:not(.web-label-disabled):hover {
+  color: var(--color-warning) !important;
+}
+
+.web-label-color-error:not(.web-label-disabled):hover {
+  color: var(--color-error) !important;
+}
+
+.web-label-color-info:not(.web-label-disabled):hover {
+  color: var(--color-info) !important;
+}
+
+/* Focus-within for better UX when the associated input is focused */
+.web-label:focus-within {
+  color: var(--color-primary-600);
+}
+
+.web-label-color-primary:focus-within {
+  color: var(--color-primary-700);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
   .web-label {
-    @apply block text-sm font-semibold text-gray-800 mb-2 leading-tight cursor-pointer transition-colors duration-200;
+    color: var(--color-gray-100);
   }
-
-  .web-label-required {
-    /* Additional styles for required labels can be added here */
+  
+  .web-label-color-muted {
+    color: var(--color-gray-300);
   }
-
+  
   .web-label-disabled {
-    @apply text-gray-400 cursor-not-allowed;
+    color: var(--color-gray-600);
   }
-
-  .web-label-asterisk {
-    @apply text-red-500 ml-1 font-bold text-base;
+  
+  .web-label-tooltip {
+    color: var(--color-gray-400);
   }
-
-  /* Hover states */
+  
+  .web-label-tooltip:hover {
+    color: var(--color-gray-200);
+  }
+  
+  .web-label-helper-default {
+    color: var(--color-gray-300);
+  }
+  
   .web-label:not(.web-label-disabled):hover {
-    @apply text-gray-900;
+    color: var(--color-white);
   }
+}
 
-  /* Focus-within for better UX when the associated input is focused */
-  .web-label:focus-within {
-    @apply text-blue-600;
-  }
+/* Manual dark mode class */
+.dark .web-label {
+  color: var(--color-gray-100);
+}
+
+.dark .web-label-color-muted {
+  color: var(--color-gray-300);
+}
+
+.dark .web-label-disabled {
+  color: var(--color-gray-600);
+}
+
+.dark .web-label-tooltip {
+  color: var(--color-gray-400);
+}
+
+.dark .web-label-tooltip:hover {
+  color: var(--color-gray-200);
+}
+
+.dark .web-label-helper-default {
+  color: var(--color-gray-300);
+}
+
+.dark .web-label:not(.web-label-disabled):hover {
+  color: var(--color-white);
 }

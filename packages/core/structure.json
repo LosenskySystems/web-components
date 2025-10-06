@@ -47,19 +47,12 @@
           "subcategory": "general"
         },
         "label": {
-          "name": "Label",
+          "name": "LabelGroup",
           "path": "./components/elements/label",
           "exports": [
-            "Label",
-            "LabelProps"
+            "LabelGroup"
           ],
-          "props": {
-            "children": "React.ReactNode",
-            "htmlFor": "string",
-            "className": "string",
-            "required": "boolean",
-            "disabled": "boolean"
-          },
+          "props": {},
           "css": "./components/elements/label/index.css",
           "category": "elements",
           "subcategory": "general"
@@ -130,7 +123,7 @@
       "general",
       "interactive"
     ],
-    "generatedAt": "2025-10-06T08:59:38.598Z",
+    "generatedAt": "2025-10-06T09:23:22.849Z",
     "buildTool": "vite",
     "framework": "react"
   }

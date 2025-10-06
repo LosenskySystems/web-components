@@ -1,6 +1,8 @@
+import { Label } from '@losensky-systems/web-components-core'
+
 # Label Component
 
-The Label component provides accessible labels for form elements and content sections.
+The Label component provides accessible labels for form elements with proper contrast and styling.
 
 ## Import
 
@@ -12,85 +14,87 @@ import { Label } from '@losensky-systems/web-components-core'
 
 <div style={{ marginBottom: '2rem' }}>
   <Label htmlFor="email">Email Address</Label>
-  <input id="email" type="email" placeholder="Enter your email" />
+  <Label htmlFor="password">Password</Label>
+  <Label htmlFor="name" required>Full Name</Label>
 </div>
 
 ```tsx
 <Label htmlFor="email">Email Address</Label>
-<input id="email" type="email" placeholder="Enter your email" />
-```
-
-## Required Fields
-
-Indicate required fields with an asterisk:
-
-<div style={{ marginBottom: '2rem' }}>
-  <Label htmlFor="name" required>Full Name</Label>
-  <input id="name" type="text" placeholder="Enter your full name" />
-</div>
-
-```tsx
+<Label htmlFor="password">Password</Label>
 <Label htmlFor="name" required>Full Name</Label>
-<input id="name" type="text" placeholder="Enter your full name" />
 ```
 
-## Disabled State
-
-Labels can be disabled to match disabled form elements:
+## Sizes
 
 <div style={{ marginBottom: '2rem' }}>
-  <Label htmlFor="disabled-field" disabled>Disabled Field</Label>
-  <input id="disabled-field" type="text" disabled placeholder="This field is disabled" />
+  <Label size="sm" htmlFor="small">Small Label</Label>
+  <Label size="md" htmlFor="medium">Medium Label (Default)</Label>
+  <Label size="lg" htmlFor="large">Large Label</Label>
 </div>
 
 ```tsx
-<Label htmlFor="disabled-field" disabled>Disabled Field</Label>
-<input id="disabled-field" type="text" disabled placeholder="This field is disabled" />
+<Label size="sm" htmlFor="small">Small Label</Label>
+<Label size="md" htmlFor="medium">Medium Label (Default)</Label>
+<Label size="lg" htmlFor="large">Large Label</Label>
 ```
 
-## Form Integration
-
-Labels work seamlessly with form components:
+## Colors
 
 <div style={{ marginBottom: '2rem' }}>
-  <div style={{ marginBottom: '1rem' }}>
-    <Label htmlFor="username" required>Username</Label>
-    <input id="username" type="text" placeholder="Choose a username" />
-  </div>
-  <div style={{ marginBottom: '1rem' }}>
-    <Label htmlFor="password" required>Password</Label>
-    <input id="password" type="password" placeholder="Enter your password" />
-  </div>
-  <div>
-    <Label htmlFor="bio">Bio (Optional)</Label>
-    <textarea id="bio" placeholder="Tell us about yourself"></textarea>
-  </div>
+  <Label color="default" htmlFor="default">Default Label</Label>
+  <Label color="primary" htmlFor="primary">Primary Label</Label>
+  <Label color="success" htmlFor="success">Success Label</Label>
+  <Label color="warning" htmlFor="warning">Warning Label</Label>
+  <Label color="error" htmlFor="error">Error Label</Label>
+  <Label color="muted" htmlFor="muted">Muted Label</Label>
 </div>
 
 ```tsx
-<Label htmlFor="username" required>Username</Label>
-<input id="username" type="text" placeholder="Choose a username" />
-
-<Label htmlFor="password" required>Password</Label>
-<input id="password" type="password" placeholder="Enter your password" />
-
-<Label htmlFor="bio">Bio (Optional)</Label>
-<textarea id="bio" placeholder="Tell us about yourself"></textarea>
+<Label color="default" htmlFor="default">Default Label</Label>
+<Label color="primary" htmlFor="primary">Primary Label</Label>
+<Label color="success" htmlFor="success">Success Label</Label>
+<Label color="warning" htmlFor="warning">Warning Label</Label>
+<Label color="error" htmlFor="error">Error Label</Label>
+<Label color="muted" htmlFor="muted">Muted Label</Label>
 ```
 
-## Customization
-
-You can customize labels using Tailwind classes:
+## Helper Text
 
 <div style={{ marginBottom: '2rem' }}>
-  <Label htmlFor="custom1" className="text-blue-600 font-bold">Blue Bold Label</Label>
-  <input id="custom1" type="text" />
-  
-  <Label htmlFor="custom2" className="text-green-600 text-lg">Large Green Label</Label>
-  <input id="custom2" type="text" />
+  <Label htmlFor="username" helperText="Choose a unique username">
+    Username
+  </Label>
+  <Label htmlFor="password" errorText="Password must be at least 8 characters">
+    Password
+  </Label>
+  <Label htmlFor="email" successText="Email address is valid">
+    Email Address
+  </Label>
 </div>
 
 ```tsx
-<Label htmlFor="custom1" className="text-blue-600 font-bold">Blue Bold Label</Label>
-<Label htmlFor="custom2" className="text-green-600 text-lg">Large Green Label</Label>
+<Label htmlFor="username" helperText="Choose a unique username">
+  Username
+</Label>
+<Label htmlFor="password" errorText="Password must be at least 8 characters">
+  Password
+</Label>
+<Label htmlFor="email" successText="Email address is valid">
+  Email Address
+</Label>
 ```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `children` | `React.ReactNode` | - | Label text content |
+| `htmlFor` | `string` | - | ID of associated form element |
+| `required` | `boolean` | `false` | Show required asterisk |
+| `disabled` | `boolean` | `false` | Disabled state |
+| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Label size |
+| `color` | `'default' \| 'muted' \| 'primary' \| 'success' \| 'warning' \| 'error' \| 'info'` | `'default'` | Label color |
+| `helperText` | `string` | - | Helper text below label |
+| `errorText` | `string` | - | Error text below label |
+| `successText` | `string` | - | Success text below label |
+| `className` | `string` | `''` | Additional CSS classes |
