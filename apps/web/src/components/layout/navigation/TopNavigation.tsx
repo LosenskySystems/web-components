@@ -22,19 +22,11 @@ export function TopNavigation({ routes, categories }: TopNavigationProps) {
       isLast: false
     })
 
-    // Skip "docs" segment for deeper paths - only include it for /docs or /docs/components
-    const shouldIncludeDocs = location.pathname === '/docs' || location.pathname === '/docs/components'
-    
     // Build breadcrumbs based on path segments
     let currentPath = ''
     pathSegments.forEach((segment, index) => {
       currentPath += `/${segment}`
       const isLast = index === pathSegments.length - 1
-      
-      // Skip "docs" segment for deeper paths
-      if (segment === 'docs' && !shouldIncludeDocs) {
-        return
-      }
       
       // Find the route to get the proper title
       const route = routes.find(r => r.path === currentPath)
