@@ -57,6 +57,17 @@
           "category": "elements",
           "subcategory": "general"
         },
+        "dropdown": {
+          "name": "DropdownItem",
+          "path": "./components/elements/dropdown",
+          "exports": [
+            "DropdownItem"
+          ],
+          "props": {},
+          "css": "./components/elements/dropdown/index.css",
+          "category": "elements",
+          "subcategory": "general"
+        },
         "icon": {
           "name": "Icon",
           "path": "./components/elements/icon",
@@ -137,7 +148,7 @@
     }
   },
   "metadata": {
-    "totalComponents": 8,
+    "totalComponents": 9,
     "categories": [
       "elements"
     ],
@@ -145,7 +156,7 @@
       "general",
       "interactive"
     ],
-    "generatedAt": "2025-10-06T15:08:05.961Z",
+    "generatedAt": "2025-10-06T15:26:21.221Z",
     "buildTool": "vite",
     "framework": "react"
   }

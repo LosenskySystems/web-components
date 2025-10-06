@@ -1,0 +1,143 @@
+# Dropdown
+
+A simple dropdown menu component for displaying a list of actions or options.
+
+## Basic Usage
+
+<Dropdown 
+  items={[
+    { children: 'Edit', onClick: () => console.log('Edit clicked') },
+    { children: 'Delete', onClick: () => console.log('Delete clicked') },
+    { children: 'Share', onClick: () => console.log('Share clicked') }
+  ]}
+>
+  <Button>Actions</Button>
+</Dropdown>
+
+## With Icons
+
+<Dropdown 
+  items={[
+    { children: 'Edit', icon: <Icon name="settings" size="sm" />, onClick: () => console.log('Edit') },
+    { children: 'Delete', icon: <Icon name="close" size="sm" />, onClick: () => console.log('Delete') },
+    { children: 'Share', icon: <Icon name="heart" size="sm" />, onClick: () => console.log('Share') }
+  ]}
+>
+  <Button variant="outline">Menu</Button>
+</Dropdown>
+
+## Different Placements
+
+<div className="flex gap-4">
+  <Dropdown 
+    placement="top"
+    items={[
+      { children: 'Top', onClick: () => console.log('Top') }
+    ]}
+  >
+    <Button size="sm">Top</Button>
+  </Dropdown>
+  
+  <Dropdown 
+    placement="bottom"
+    items={[
+      { children: 'Bottom', onClick: () => console.log('Bottom') }
+    ]}
+  >
+    <Button size="sm">Bottom</Button>
+  </Dropdown>
+  
+  <Dropdown 
+    placement="left"
+    items={[
+      { children: 'Left', onClick: () => console.log('Left') }
+    ]}
+  >
+    <Button size="sm">Left</Button>
+  </Dropdown>
+  
+  <Dropdown 
+    placement="right"
+    items={[
+      { children: 'Right', onClick: () => console.log('Right') }
+    ]}
+  >
+    <Button size="sm">Right</Button>
+  </Dropdown>
+</div>
+
+## Sizes
+
+<div className="flex gap-4">
+  <Dropdown 
+    size="sm"
+    items={[
+      { children: 'Small', onClick: () => console.log('Small') }
+    ]}
+  >
+    <Button size="sm">Small</Button>
+  </Dropdown>
+  
+  <Dropdown 
+    size="md"
+    items={[
+      { children: 'Medium', onClick: () => console.log('Medium') }
+    ]}
+  >
+    <Button size="sm">Medium</Button>
+  </Dropdown>
+  
+  <Dropdown 
+    size="lg"
+    items={[
+      { children: 'Large', onClick: () => console.log('Large') }
+    ]}
+  >
+    <Button size="sm">Large</Button>
+  </Dropdown>
+</div>
+
+## With Disabled Items
+
+<Dropdown 
+  items={[
+    { children: 'Enabled', onClick: () => console.log('Enabled') },
+    { children: 'Disabled', disabled: true, onClick: () => console.log('Disabled') },
+    { children: 'Another Enabled', onClick: () => console.log('Another') }
+  ]}
+>
+  <Button variant="secondary">With Disabled</Button>
+</Dropdown>
+
+## Manual Components
+
+<DropdownMenu placement="bottom" size="md">
+  <DropdownItem icon={<Icon name="user" size="sm" />}>Profile</DropdownItem>
+  <DropdownItem icon={<Icon name="settings" size="sm" />}>Settings</DropdownItem>
+  <DropdownDivider />
+  <DropdownItem icon={<Icon name="close" size="sm" />}>Logout</DropdownItem>
+</DropdownMenu>
+
+## Props
+
+### Dropdown Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `children` | `React.ReactNode` | - | The trigger element |
+| `items` | `DropdownItemProps[]` | - | Array of dropdown items |
+| `placement` | `'top' \| 'bottom' \| 'left' \| 'right'` | `'bottom'` | Placement of the dropdown |
+| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Size variant |
+| `isOpen` | `boolean` | - | Whether the dropdown is open (controlled) |
+| `onOpenChange` | `(isOpen: boolean) => void` | - | Callback when dropdown open state changes |
+| `className` | `string` | - | Additional CSS classes |
+
+### DropdownItem Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `children` | `React.ReactNode` | - | Item content |
+| `icon` | `React.ReactNode` | - | Icon to display before the text |
+| `disabled` | `boolean` | `false` | Whether the item is disabled |
+| `onClick` | `() => void` | - | Click handler |
+| `className` | `string` | - | Additional CSS classes |

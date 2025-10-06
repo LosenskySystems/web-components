@@ -96,6 +96,15 @@
       "description": "A flexible icon component that supports custom SVG content and built-in icon names"
     },
     {
+      "id": "dropdown",
+      "title": "Dropdown",
+      "path": "/docs/components/elements/dropdown",
+      "component": "Dropdown",
+      "category": "components",
+      "subcategory": "elements",
+      "description": "A simple dropdown menu component for displaying a list of actions or options"
+    },
+    {
       "id": "input",
       "title": "Input", 
       "path": "/docs/components/forms/input",
@@ -139,7 +148,7 @@
           "id": "elements",
           "title": "Elements",
           "description": "Basic UI elements",
-          "items": ["button", "divider", "label", "loader", "tooltip", "badge", "avatar", "icon"]
+          "items": ["button", "divider", "label", "loader", "tooltip", "badge", "avatar", "icon", "dropdown"]
         },
         {
           "id": "forms",

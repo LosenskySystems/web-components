@@ -12,6 +12,7 @@
 @import './components/elements/badge/index.css';
 @import './components/elements/avatar/index.css';
 @import './components/elements/icon/index.css';
+@import './components/elements/dropdown/index.css';
 
 /* Import form styles */
 @import './components/forms/input/index.css';

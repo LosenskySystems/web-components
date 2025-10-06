@@ -8,6 +8,7 @@ import TooltipDocs from '../../docs/components/elements/Tooltip.mdx'
 import BadgeDocs from '../../docs/components/elements/Badge.mdx'
 import AvatarDocs from '../../docs/components/elements/Avatar.mdx'
 import IconDocs from '../../docs/components/elements/Icon.mdx'
+import DropdownDocs from '../../docs/components/elements/Dropdown.mdx'
 import InputDocs from '../../docs/components/forms/Input.mdx'
 import SelectDocs from '../../docs/components/forms/Select.mdx'
 import TextareaDocs from '../../docs/components/forms/Textarea.mdx'
@@ -25,6 +26,7 @@ export const componentMap: Record<string, React.ComponentType> = {
   Badge: BadgeDocs,
   Avatar: AvatarDocs,
   Icon: IconDocs,
+  Dropdown: DropdownDocs,
   Input: InputDocs,
   Select: SelectDocs,
   Textarea: TextareaDocs,
