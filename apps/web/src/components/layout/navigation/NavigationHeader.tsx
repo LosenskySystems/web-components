@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 export function NavigationHeader() {
   return (
-    <div className="p-4 border-b border-gray-200">
+    <div className="p-4 h-full flex items-center">
       <Link 
         to="/" 
         className="flex items-center gap-3 text-gray-900 no-underline hover:text-gray-700 transition-colors"
