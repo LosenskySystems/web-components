@@ -1,4 +1,4 @@
-import { Button, Input, Divider, Label, Loader, Select, Textarea } from '@losensky-systems/web-components-core'
+import { Button, Input, Divider, Label, Loader, Select, Textarea, Tooltip } from '@losensky-systems/web-components-core'
 
 // MDX components mapping with Tailwind classes
 export const mdxComponents = {
@@ -9,6 +9,7 @@ export const mdxComponents = {
   Loader,
   Select,
   Textarea,
+  Tooltip,
   // Typography
   h1: (props: any) => (
     <h1 

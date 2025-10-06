@@ -1,0 +1,178 @@
+/* Tooltip component styles */
+.web-tooltip {
+  @apply pointer-events-none;
+}
+
+.web-tooltip-content {
+  @apply bg-gray-900 text-white text-sm px-3 py-2 rounded-md shadow-lg;
+  max-width: 200px;
+  word-wrap: break-word;
+}
+
+/* Tooltip arrows */
+.web-tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.web-tooltip-arrow-top {
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid rgb(17 24 39); /* gray-900 */
+}
+
+.web-tooltip-arrow-bottom {
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid rgb(17 24 39); /* gray-900 */
+}
+
+.web-tooltip-arrow-left {
+  right: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid rgb(17 24 39); /* gray-900 */
+}
+
+.web-tooltip-arrow-right {
+  left: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-right: 4px solid rgb(17 24 39); /* gray-900 */
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .web-tooltip-content {
+    @apply bg-gray-100 text-gray-900;
+  }
+  
+  .web-tooltip-arrow-top {
+    border-top-color: rgb(243 244 246); /* gray-100 */
+  }
+  
+  .web-tooltip-arrow-bottom {
+    border-bottom-color: rgb(243 244 246); /* gray-100 */
+  }
+  
+  .web-tooltip-arrow-left {
+    border-left-color: rgb(243 244 246); /* gray-100 */
+  }
+  
+  .web-tooltip-arrow-right {
+    border-right-color: rgb(243 244 246); /* gray-100 */
+  }
+}
+
+/* Manual dark mode class */
+.dark .web-tooltip-content {
+  @apply bg-gray-100 text-gray-900;
+}
+
+.dark .web-tooltip-arrow-top {
+  border-top-color: rgb(243 244 246); /* gray-100 */
+}
+
+.dark .web-tooltip-arrow-bottom {
+  border-bottom-color: rgb(243 244 246); /* gray-100 */
+}
+
+.dark .web-tooltip-arrow-left {
+  border-left-color: rgb(243 244 246); /* gray-100 */
+}
+
+.dark .web-tooltip-arrow-right {
+  border-right-color: rgb(243 244 246); /* gray-100 */
+}
+
+/* Customizable tooltip content */
+.web-tooltip-content.web-tooltip-light {
+  @apply bg-white text-gray-900 border border-gray-200;
+}
+
+.web-tooltip-content.web-tooltip-light .web-tooltip-arrow-top {
+  border-top-color: rgb(255 255 255); /* white */
+}
+
+.web-tooltip-content.web-tooltip-light .web-tooltip-arrow-bottom {
+  border-bottom-color: rgb(255 255 255); /* white */
+}
+
+.web-tooltip-content.web-tooltip-light .web-tooltip-arrow-left {
+  border-left-color: rgb(255 255 255); /* white */
+}
+
+.web-tooltip-content.web-tooltip-light .web-tooltip-arrow-right {
+  border-right-color: rgb(255 255 255); /* white */
+}
+
+.web-tooltip-content.web-tooltip-success {
+  @apply bg-green-600 text-white;
+}
+
+.web-tooltip-content.web-tooltip-success .web-tooltip-arrow-top {
+  border-top-color: rgb(22 163 74); /* green-600 */
+}
+
+.web-tooltip-content.web-tooltip-success .web-tooltip-arrow-bottom {
+  border-bottom-color: rgb(22 163 74); /* green-600 */
+}
+
+.web-tooltip-content.web-tooltip-success .web-tooltip-arrow-left {
+  border-left-color: rgb(22 163 74); /* green-600 */
+}
+
+.web-tooltip-content.web-tooltip-success .web-tooltip-arrow-right {
+  border-right-color: rgb(22 163 74); /* green-600 */
+}
+
+.web-tooltip-content.web-tooltip-warning {
+  @apply bg-amber-500 text-white;
+}
+
+.web-tooltip-content.web-tooltip-warning .web-tooltip-arrow-top {
+  border-top-color: rgb(245 158 11); /* amber-500 */
+}
+
+.web-tooltip-content.web-tooltip-warning .web-tooltip-arrow-bottom {
+  border-bottom-color: rgb(245 158 11); /* amber-500 */
+}
+
+.web-tooltip-content.web-tooltip-warning .web-tooltip-arrow-left {
+  border-left-color: rgb(245 158 11); /* amber-500 */
+}
+
+.web-tooltip-content.web-tooltip-warning .web-tooltip-arrow-right {
+  border-right-color: rgb(245 158 11); /* amber-500 */
+}
+
+.web-tooltip-content.web-tooltip-error {
+  @apply bg-red-600 text-white;
+}
+
+.web-tooltip-content.web-tooltip-error .web-tooltip-arrow-top {
+  border-top-color: rgb(220 38 38); /* red-600 */
+}
+
+.web-tooltip-content.web-tooltip-error .web-tooltip-arrow-bottom {
+  border-bottom-color: rgb(220 38 38); /* red-600 */
+}
+
+.web-tooltip-content.web-tooltip-error .web-tooltip-arrow-left {
+  border-left-color: rgb(220 38 38); /* red-600 */
+}
+
+.web-tooltip-content.web-tooltip-error .web-tooltip-arrow-right {
+  border-right-color: rgb(220 38 38); /* red-600 */
+}

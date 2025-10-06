@@ -1,4 +1,4 @@
-import { Button } from '@losensky-systems/web-components-core'
+import { Button, Tooltip } from '@losensky-systems/web-components-core'
 import { FolderOpen, Save, Plus, Settings, Heart, FileText, Search, Download } from 'lucide-react'
 
 # Button Component
@@ -8,7 +8,7 @@ The Button component is a complete, accessible button with built-in styles. Use 
 ## Import
 
 ```tsx
-import { Button } from '@losensky-systems/web-components-core'
+import { Button, Tooltip } from '@losensky-systems/web-components-core'
 import { FolderOpen, Save, Plus, Settings, Heart } from 'lucide-react'
 ```
 
@@ -416,6 +416,54 @@ You can easily add Tailwind classes to any button variant to customize colors, b
 ```
 
 **Note:** Simply add Tailwind classes to override specific properties. The button keeps all its base styling (shadows, hover effects, etc.) and only the specified properties are changed.
+
+## With Tooltips
+
+Buttons work perfectly with the Tooltip component for additional context:
+
+<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
+  <Tooltip content="Save your changes">
+    <Button icon={<Save size={16} />} iconPosition="left">
+      Save
+    </Button>
+  </Tooltip>
+  
+  <Tooltip content="Delete this item" placement="top">
+    <Button variant="destructive" icon="🗑">
+      Delete
+    </Button>
+  </Tooltip>
+  
+  <Tooltip content="Settings" trigger="click">
+    <Button icon={<Settings size={16} />} iconOnly variant="ghost" />
+  </Tooltip>
+  
+  <Tooltip content="Like this post" delay={100}>
+    <Button icon={<Heart size={16} />} iconOnly variant="ghost" color="error" />
+  </Tooltip>
+</div>
+
+```tsx
+<Tooltip content="Save your changes">
+  <Button icon={<Save size={16} />} iconPosition="left">
+    Save
+  </Button>
+</Tooltip>
+
+<Tooltip content="Delete this item" placement="top">
+  <Button variant="destructive" icon="🗑">
+    Delete
+  </Button>
+</Tooltip>
+
+<Tooltip content="Settings" trigger="click">
+  <Button icon={<Settings size={16} />} iconOnly variant="ghost" />
+</Tooltip>
+
+<Tooltip content="Like this post" delay={100}>
+  <Button icon={<Heart size={16} />} iconOnly variant="ghost" color="error" />
+</Tooltip>
+```
 
 ## Props
 

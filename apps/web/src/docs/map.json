@@ -51,6 +51,15 @@
       "description": "A loading spinner component with multiple variants"
     },
     {
+      "id": "tooltip",
+      "title": "Tooltip",
+      "path": "/docs/components/elements/tooltip",
+      "component": "Tooltip",
+      "category": "components",
+      "subcategory": "elements",
+      "description": "A tooltip component for contextual information"
+    },
+    {
       "id": "input",
       "title": "Input", 
       "path": "/docs/components/forms/input",
@@ -94,7 +103,7 @@
           "id": "elements",
           "title": "Elements",
           "description": "Basic UI elements",
-          "items": ["button", "divider", "label", "loader"]
+          "items": ["button", "divider", "label", "loader", "tooltip"]
         },
         {
           "id": "forms",

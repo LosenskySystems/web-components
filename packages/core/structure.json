@@ -69,6 +69,17 @@
           "css": "./components/elements/loader/index.css",
           "category": "elements",
           "subcategory": "general"
+        },
+        "tooltip": {
+          "name": "TooltipTrigger",
+          "path": "./components/elements/tooltip",
+          "exports": [
+            "TooltipTrigger"
+          ],
+          "props": {},
+          "css": "./components/elements/tooltip/index.css",
+          "category": "elements",
+          "subcategory": "general"
         }
       }
     },
@@ -99,7 +110,7 @@
     }
   },
   "metadata": {
-    "totalComponents": 4,
+    "totalComponents": 5,
     "categories": [
       "elements"
     ],
@@ -107,7 +118,7 @@
       "interactive",
       "general"
     ],
-    "generatedAt": "2025-10-06T08:26:52.291Z",
+    "generatedAt": "2025-10-06T08:33:40.016Z",
     "buildTool": "vite",
     "framework": "react"
   }
