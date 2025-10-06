@@ -1,11 +1,13 @@
+import { Textarea, Label } from '@losensky-systems/web-components-core'
+
 # Textarea Component
 
-The Textarea component provides a multi-line text input with customizable resize behavior and styling.
+The Textarea component is a flexible, accessible multi-line text input with various states, sizes, styling options, and helper text support.
 
 ## Import
 
 ```tsx
-import { Textarea } from '@losensky-systems/web-components-core'
+import { Textarea, Label } from '@losensky-systems/web-components-core'
 ```
 
 ## Basic Usage
@@ -18,18 +20,119 @@ import { Textarea } from '@losensky-systems/web-components-core'
 <Textarea placeholder="Enter your message..." />
 ```
 
-## With Rows
-
-Control the initial height with rows:
+## Sizes
 
 <div style={{ marginBottom: '2rem' }}>
-  <Textarea rows={3} placeholder="3 rows textarea" />
-  <Textarea rows={5} placeholder="5 rows textarea" />
+  <div style={{ marginBottom: '1rem' }}>
+    <Label>Small Textarea</Label>
+    <Textarea size="sm" placeholder="Small textarea" rows={3} />
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Label>Medium Textarea (default)</Label>
+    <Textarea size="md" placeholder="Medium textarea" rows={4} />
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Label>Large Textarea</Label>
+    <Textarea size="lg" placeholder="Large textarea" rows={5} />
+  </div>
 </div>
 
 ```tsx
-<Textarea rows={3} placeholder="3 rows textarea" />
-<Textarea rows={5} placeholder="5 rows textarea" />
+<Textarea size="sm" placeholder="Small textarea" rows={3} />
+<Textarea size="md" placeholder="Medium textarea" rows={4} />
+<Textarea size="lg" placeholder="Large textarea" rows={5} />
+```
+
+## Variants
+
+<div style={{ marginBottom: '2rem' }}>
+  <div style={{ marginBottom: '1rem' }}>
+    <Label>Default Textarea</Label>
+    <Textarea variant="default" placeholder="Default textarea" rows={3} />
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Label>Error Textarea</Label>
+    <Textarea variant="error" placeholder="Error textarea" rows={3} />
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Label>Success Textarea</Label>
+    <Textarea variant="success" placeholder="Success textarea" rows={3} />
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Label>Warning Textarea</Label>
+    <Textarea variant="warning" placeholder="Warning textarea" rows={3} />
+  </div>
+</div>
+
+```tsx
+<Textarea variant="default" placeholder="Default textarea" rows={3} />
+<Textarea variant="error" placeholder="Error textarea" rows={3} />
+<Textarea variant="success" placeholder="Success textarea" rows={3} />
+<Textarea variant="warning" placeholder="Warning textarea" rows={3} />
+```
+
+## With Labels and Helper Text
+
+<div style={{ marginBottom: '2rem' }}>
+  <div style={{ marginBottom: '1rem' }}>
+    <Label htmlFor="feedback-textarea">Feedback</Label>
+    <Textarea 
+      id="feedback-textarea"
+      placeholder="Please share your feedback..." 
+      helperText="Your feedback helps us improve"
+      rows={4}
+    />
+  </div>
+  
+  <div style={{ marginBottom: '1rem' }}>
+    <Label htmlFor="error-textarea">Description</Label>
+    <Textarea 
+      id="error-textarea"
+      placeholder="Enter description"
+      errorText="Description is required"
+      error
+      rows={3}
+    />
+  </div>
+  
+  <div style={{ marginBottom: '1rem' }}>
+    <Label htmlFor="success-textarea">Bio</Label>
+    <Textarea 
+      id="success-textarea"
+      placeholder="Tell us about yourself"
+      successText="Bio updated successfully!"
+      variant="success"
+      rows={3}
+    />
+  </div>
+</div>
+
+```tsx
+<Label htmlFor="feedback-textarea">Feedback</Label>
+<Textarea 
+  id="feedback-textarea"
+  placeholder="Please share your feedback..." 
+  helperText="Your feedback helps us improve"
+  rows={4}
+/>
+
+<Label htmlFor="error-textarea">Description</Label>
+<Textarea 
+  id="error-textarea"
+  placeholder="Enter description"
+  errorText="Description is required"
+  error
+  rows={3}
+/>
+
+<Label htmlFor="success-textarea">Bio</Label>
+<Textarea 
+  id="success-textarea"
+  placeholder="Tell us about yourself"
+  successText="Bio updated successfully!"
+  variant="success"
+  rows={3}
+/>
 ```
 
 ## Resize Options
@@ -39,95 +142,109 @@ Control how users can resize the textarea:
 <div style={{ marginBottom: '2rem' }}>
   <div style={{ marginBottom: '1rem' }}>
     <Label>No Resize</Label>
-    <Textarea resize="none" placeholder="Cannot be resized" />
+    <Textarea resize="none" placeholder="Cannot be resized" rows={3} />
   </div>
   <div style={{ marginBottom: '1rem' }}>
-    <Label>Vertical Only</Label>
-    <Textarea resize="vertical" placeholder="Can resize vertically" />
+    <Label>Vertical Only (default)</Label>
+    <Textarea resize="vertical" placeholder="Can resize vertically" rows={3} />
   </div>
   <div style={{ marginBottom: '1rem' }}>
     <Label>Horizontal Only</Label>
-    <Textarea resize="horizontal" placeholder="Can resize horizontally" />
+    <Textarea resize="horizontal" placeholder="Can resize horizontally" rows={3} />
   </div>
-  <div>
+  <div style={{ marginBottom: '1rem' }}>
     <Label>Both Directions</Label>
-    <Textarea resize="both" placeholder="Can resize both ways" />
+    <Textarea resize="both" placeholder="Can resize both ways" rows={3} />
   </div>
 </div>
 
 ```tsx
-<Textarea resize="none" placeholder="Cannot be resized" />
-<Textarea resize="vertical" placeholder="Can resize vertically" />
-<Textarea resize="horizontal" placeholder="Can resize horizontally" />
-<Textarea resize="both" placeholder="Can resize both ways" />
+<Textarea resize="none" placeholder="Cannot be resized" rows={3} />
+<Textarea resize="vertical" placeholder="Can resize vertically" rows={3} />
+<Textarea resize="horizontal" placeholder="Can resize horizontally" rows={3} />
+<Textarea resize="both" placeholder="Can resize both ways" rows={3} />
 ```
 
-## Disabled State
-
-Textareas can be disabled:
+## Loading State
 
 <div style={{ marginBottom: '2rem' }}>
-  <Textarea disabled placeholder="This textarea is disabled" />
-</div>
-
-```tsx
-<Textarea disabled placeholder="This textarea is disabled" />
-```
-
-## With Label
-
-Combine with Label component for better UX:
-
-<div style={{ marginBottom: '2rem' }}>
-  <Label htmlFor="feedback" required>Feedback</Label>
   <Textarea 
-    id="feedback" 
-    rows={4} 
-    placeholder="Please share your feedback..."
-    resize="vertical"
+    loading 
+    placeholder="Loading textarea..." 
+    rows={3}
   />
 </div>
 
 ```tsx
-<Label htmlFor="feedback" required>Feedback</Label>
 <Textarea 
-  id="feedback" 
-  rows={4} 
-  placeholder="Please share your feedback..."
-  resize="vertical"
+  loading 
+  placeholder="Loading textarea..." 
+  rows={3}
 />
+```
+
+## States
+
+<div style={{ marginBottom: '2rem' }}>
+  <div style={{ marginBottom: '1rem' }}>
+    <Label>Default Textarea</Label>
+    <Textarea placeholder="Default textarea" rows={3} />
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Label>Disabled Textarea</Label>
+    <Textarea placeholder="This textarea is disabled" disabled rows={3} />
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Label>Read-only Textarea</Label>
+    <Textarea placeholder="Read-only textarea" readOnly defaultValue="This is read-only content" rows={3} />
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Label>Required Textarea</Label>
+    <Textarea placeholder="Required textarea" required rows={3} />
+  </div>
+</div>
+
+```tsx
+<Textarea placeholder="Default textarea" rows={3} />
+<Textarea placeholder="This textarea is disabled" disabled rows={3} />
+<Textarea placeholder="Read-only textarea" readOnly defaultValue="This is read-only content" rows={3} />
+<Textarea placeholder="Required textarea" required rows={3} />
 ```
 
 ## Form Integration
 
-Textareas work well in forms:
+Textareas work well in forms with proper labels and validation:
 
 <div style={{ marginBottom: '2rem' }}>
   <div style={{ marginBottom: '1rem' }}>
-    <Label htmlFor="subject" required>Subject</Label>
-    <input id="subject" type="text" placeholder="Email subject" />
+    <Label htmlFor="subject-input" required>Subject</Label>
+    <input id="subject-input" type="text" placeholder="Email subject" />
   </div>
   <div>
-    <Label htmlFor="message" required>Message</Label>
+    <Label htmlFor="message-textarea" required>Message</Label>
     <Textarea 
-      id="message" 
+      id="message-textarea" 
       rows={6} 
       placeholder="Write your message here..."
       resize="vertical"
+      helperText="Minimum 10 characters required"
+      minLength={10}
     />
   </div>
 </div>
 
 ```tsx
-<Label htmlFor="subject" required>Subject</Label>
-<input id="subject" type="text" placeholder="Email subject" />
+<Label htmlFor="subject-input" required>Subject</Label>
+<input id="subject-input" type="text" placeholder="Email subject" />
 
-<Label htmlFor="message" required>Message</Label>
+<Label htmlFor="message-textarea" required>Message</Label>
 <Textarea 
-  id="message" 
+  id="message-textarea" 
   rows={6} 
   placeholder="Write your message here..."
   resize="vertical"
+  helperText="Minimum 10 characters required"
+  minLength={10}
 />
 ```
 
@@ -150,3 +267,31 @@ You can customize textareas using Tailwind classes:
   rows={3}
 />
 ```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Textarea size |
+| `variant` | `'default' \| 'error' \| 'success' \| 'warning'` | `'default'` | Textarea variant |
+| `error` | `boolean` | `false` | Error state |
+| `errorText` | `string` | - | Error message |
+| `successText` | `string` | - | Success message |
+| `helperText` | `string` | - | Helper text |
+| `resize` | `'none' \| 'vertical' \| 'horizontal' \| 'both'` | `'vertical'` | Resize behavior |
+| `loading` | `boolean` | `false` | Loading state |
+| `disabled` | `boolean` | `false` | Disabled state |
+| `readOnly` | `boolean` | `false` | Read-only state |
+| `required` | `boolean` | `false` | Required field |
+| `autoFocus` | `boolean` | `false` | Auto-focus on mount |
+| `maxLength` | `number` | - | Maximum length |
+| `minLength` | `number` | - | Minimum length |
+| `rows` | `number` | - | Number of visible text lines |
+| `cols` | `number` | - | Number of visible character widths |
+| `placeholder` | `string` | - | Placeholder text |
+| `value` | `string` | - | Textarea value (controlled) |
+| `defaultValue` | `string` | - | Default value (uncontrolled) |
+| `onChange` | `(event: React.ChangeEvent<HTMLTextAreaElement>) => void` | - | Change handler |
+| `onFocus` | `(event: React.FocusEvent<HTMLTextAreaElement>) => void` | - | Focus handler |
+| `onBlur` | `(event: React.FocusEvent<HTMLTextAreaElement>) => void` | - | Blur handler |
+| `className` | `string` | `''` | Additional CSS classes |
