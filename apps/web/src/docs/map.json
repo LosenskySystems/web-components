@@ -114,6 +114,15 @@
       "description": "A simple alert component for displaying important messages and notifications"
     },
     {
+      "id": "toast",
+      "title": "Toast",
+      "path": "/docs/components/data/toast",
+      "component": "Toast",
+      "category": "components",
+      "subcategory": "data",
+      "description": "A floating notification component for displaying temporary messages and feedback"
+    },
+    {
       "id": "input",
       "title": "Input", 
       "path": "/docs/components/forms/input",
@@ -169,7 +178,7 @@
           "id": "data",
           "title": "Data Display",
           "description": "Components for displaying data and content",
-          "items": ["card"]
+          "items": ["card", "toast"]
         }
       ]
     }

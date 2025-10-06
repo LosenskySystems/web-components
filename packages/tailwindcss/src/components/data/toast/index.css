@@ -1,0 +1,211 @@
+/* Toast component styles */
+.web-toast {
+  @apply fixed z-50 flex items-start p-4 rounded-md border shadow-lg max-w-sm;
+  background-color: #ffffff !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Toast content */
+.web-toast-content {
+  @apply flex-1;
+}
+
+.web-toast-title {
+  @apply text-sm font-semibold mb-1;
+  color: #111827 !important;
+}
+
+.web-toast-description {
+  @apply text-sm;
+  color: #6b7280 !important;
+}
+
+/* Toast icon */
+.web-toast-icon {
+  @apply w-5 h-5 mr-3 flex-shrink-0 mt-0.5;
+}
+
+/* Toast close button */
+.web-toast-close {
+  @apply ml-3 flex-shrink-0;
+}
+
+.web-toast-close-button {
+  @apply inline-flex items-center justify-center w-6 h-6 rounded-md;
+  color: #6b7280 !important;
+  background-color: transparent !important;
+}
+
+.web-toast-close-button:hover {
+  color: #374151 !important;
+  background-color: #f3f4f6 !important;
+}
+
+/* Variant styles */
+.web-toast-default {
+  @apply border-gray-200;
+  border-color: #e5e7eb !important;
+}
+
+.web-toast-success {
+  @apply border-green-200;
+  border-color: #bbf7d0 !important;
+  background-color: #f0fdf4 !important;
+}
+
+.web-toast-success .web-toast-icon {
+  color: #16a34a !important;
+}
+
+.web-toast-success .web-toast-title {
+  color: #14532d !important;
+}
+
+.web-toast-success .web-toast-description {
+  color: #166534 !important;
+}
+
+.web-toast-warning {
+  @apply border-amber-200;
+  border-color: #fed7aa !important;
+  background-color: #fffbeb !important;
+}
+
+.web-toast-warning .web-toast-icon {
+  color: #d97706 !important;
+}
+
+.web-toast-warning .web-toast-title {
+  color: #92400e !important;
+}
+
+.web-toast-warning .web-toast-description {
+  color: #b45309 !important;
+}
+
+.web-toast-error {
+  @apply border-red-200;
+  border-color: #fecaca !important;
+  background-color: #fef2f2 !important;
+}
+
+.web-toast-error .web-toast-icon {
+  color: #dc2626 !important;
+}
+
+.web-toast-error .web-toast-title {
+  color: #991b1b !important;
+}
+
+.web-toast-error .web-toast-description {
+  color: #b91c1c !important;
+}
+
+.web-toast-info {
+  @apply border-blue-200;
+  border-color: #bfdbfe !important;
+  background-color: #eff6ff !important;
+}
+
+.web-toast-info .web-toast-icon {
+  color: #2563eb !important;
+}
+
+.web-toast-info .web-toast-title {
+  color: #1e40af !important;
+}
+
+.web-toast-info .web-toast-description {
+  color: #1d4ed8 !important;
+}
+
+/* Position variants */
+.web-toast-top-left {
+  @apply top-4 left-4;
+}
+
+.web-toast-top-right {
+  @apply top-4 right-4;
+}
+
+.web-toast-top-center {
+  @apply top-4 left-1/2 transform -translate-x-1/2;
+}
+
+.web-toast-bottom-left {
+  @apply bottom-4 left-4;
+}
+
+.web-toast-bottom-right {
+  @apply bottom-4 right-4;
+}
+
+.web-toast-bottom-center {
+  @apply bottom-4 left-1/2 transform -translate-x-1/2;
+}
+
+/* Size variants */
+.web-toast-sm {
+  @apply p-3 max-w-xs;
+}
+
+.web-toast-sm .web-toast-icon {
+  @apply w-4 h-4 mr-2;
+}
+
+.web-toast-sm .web-toast-title {
+  @apply text-xs;
+}
+
+.web-toast-sm .web-toast-description {
+  @apply text-xs;
+}
+
+.web-toast-lg {
+  @apply p-6 max-w-md;
+}
+
+.web-toast-lg .web-toast-icon {
+  @apply w-6 h-6 mr-4;
+}
+
+.web-toast-lg .web-toast-title {
+  @apply text-base;
+}
+
+.web-toast-lg .web-toast-description {
+  @apply text-base;
+}
+
+/* Animation classes */
+.web-toast-enter {
+  @apply opacity-0 transform scale-95;
+}
+
+.web-toast-enter-active {
+  @apply opacity-100 transform scale-100 transition-all duration-300 ease-out;
+}
+
+.web-toast-exit {
+  @apply opacity-100 transform scale-100;
+}
+
+.web-toast-exit-active {
+  @apply opacity-0 transform scale-95 transition-all duration-200 ease-in;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .web-toast {
+    @apply p-3 max-w-xs;
+  }
+  
+  .web-toast-lg {
+    @apply p-4 max-w-sm;
+  }
+  
+  .web-toast-top-center,
+  .web-toast-bottom-center {
+    @apply left-4 right-4 transform-none;
+  }
+}

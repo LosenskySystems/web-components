@@ -119,6 +119,17 @@
           "category": "elements",
           "subcategory": "general"
         },
+        "toast": {
+          "name": "Toast",
+          "path": "./components/elements/toast",
+          "exports": [
+            "Toast"
+          ],
+          "props": {},
+          "css": "./components/elements/toast/index.css",
+          "category": "elements",
+          "subcategory": "general"
+        },
         "tooltip": {
           "name": "TooltipTrigger",
           "path": "./components/elements/tooltip",
@@ -159,7 +170,7 @@
     }
   },
   "metadata": {
-    "totalComponents": 10,
+    "totalComponents": 11,
     "categories": [
       "elements"
     ],
@@ -167,7 +178,7 @@
       "general",
       "interactive"
     ],
-    "generatedAt": "2025-10-06T15:31:34.995Z",
+    "generatedAt": "2025-10-06T15:41:22.393Z",
     "buildTool": "vite",
     "framework": "react"
   }

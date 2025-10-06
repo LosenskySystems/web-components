@@ -1,6 +1,7 @@
 // Import MDX files
 import ButtonDocs from '../../docs/components/elements/Button.mdx'
 import CardDocs from '../../docs/components/data/Card.mdx'
+import ToastDocs from '../../docs/components/data/Toast.mdx'
 import DividerDocs from '../../docs/components/elements/Divider.mdx'
 import LabelDocs from '../../docs/components/elements/Label.mdx'
 import LoaderDocs from '../../docs/components/elements/Loader.mdx'
@@ -20,6 +21,7 @@ import InstallationDocs from '../../docs/get-started/Installation.mdx'
 export const componentMap: Record<string, React.ComponentType> = {
   Button: ButtonDocs,
   Card: CardDocs,
+  Toast: ToastDocs,
   Divider: DividerDocs,
   Label: LabelDocs,
   Loader: LoaderDocs,

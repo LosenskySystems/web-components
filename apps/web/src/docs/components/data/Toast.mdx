@@ -1,0 +1,236 @@
+# Toast
+
+A floating notification component for displaying temporary messages and feedback.
+
+## Basic Usage
+
+<Toast title="Success!" description="Your action was completed successfully." />
+
+<Button onClick={() => {
+  const toast = document.createElement('div');
+  toast.innerHTML = '<div class="web-toast web-toast-success web-toast-top-right"><div class="web-toast-icon">✓</div><div class="web-toast-content"><div class="web-toast-title">Success!</div><div class="web-toast-description">Your action was completed successfully.</div></div></div>';
+  toast.style.position = 'fixed';
+  toast.style.top = '20px';
+  toast.style.right = '20px';
+  toast.style.zIndex = '9999';
+  document.body.appendChild(toast);
+  setTimeout(() => document.body.removeChild(toast), 5000);
+}}>Show Basic Toast</Button>
+
+## Variants
+
+<div className="space-y-4">
+  <div className="flex gap-2">
+    <Button variant="success" onClick={() => {
+      const toast = document.createElement('div');
+      toast.innerHTML = '<div class="web-toast web-toast-success web-toast-top-right"><div class="web-toast-icon">✓</div><div class="web-toast-content"><div class="web-toast-title">Success!</div><div class="web-toast-description">Your action was completed successfully.</div></div></div>';
+      toast.style.position = 'fixed';
+      toast.style.top = '20px';
+      toast.style.right = '20px';
+      toast.style.zIndex = '9999';
+      document.body.appendChild(toast);
+      setTimeout(() => document.body.removeChild(toast), 5000);
+    }}>Success Toast</Button>
+    
+    <Button variant="warning" onClick={() => {
+      const toast = document.createElement('div');
+      toast.innerHTML = '<div class="web-toast web-toast-warning web-toast-top-right"><div class="web-toast-icon">⚠</div><div class="web-toast-content"><div class="web-toast-title">Warning</div><div class="web-toast-description">Please check your input before proceeding.</div></div></div>';
+      toast.style.position = 'fixed';
+      toast.style.top = '20px';
+      toast.style.right = '20px';
+      toast.style.zIndex = '9999';
+      document.body.appendChild(toast);
+      setTimeout(() => document.body.removeChild(toast), 5000);
+    }}>Warning Toast</Button>
+    
+    <Button variant="error" onClick={() => {
+      const toast = document.createElement('div');
+      toast.innerHTML = '<div class="web-toast web-toast-error web-toast-top-right"><div class="web-toast-icon">✕</div><div class="web-toast-content"><div class="web-toast-title">Error</div><div class="web-toast-description">Something went wrong. Please try again.</div></div></div>';
+      toast.style.position = 'fixed';
+      toast.style.top = '20px';
+      toast.style.right = '20px';
+      toast.style.zIndex = '9999';
+      document.body.appendChild(toast);
+      setTimeout(() => document.body.removeChild(toast), 5000);
+    }}>Error Toast</Button>
+    
+    <Button variant="secondary" onClick={() => {
+      const toast = document.createElement('div');
+      toast.innerHTML = '<div class="web-toast web-toast-info web-toast-top-right"><div class="web-toast-icon">ℹ</div><div class="web-toast-content"><div class="web-toast-title">Info</div><div class="web-toast-description">Here\'s some useful information for you.</div></div></div>';
+      toast.style.position = 'fixed';
+      toast.style.top = '20px';
+      toast.style.right = '20px';
+      toast.style.zIndex = '9999';
+      document.body.appendChild(toast);
+      setTimeout(() => document.body.removeChild(toast), 5000);
+    }}>Info Toast</Button>
+  </div>
+</div>
+
+## Positions
+
+<div className="space-y-4">
+  <div className="grid grid-cols-2 gap-2">
+    <Button size="sm" onClick={() => {
+      const toast = document.createElement('div');
+      toast.innerHTML = '<div class="web-toast web-toast-success web-toast-top-left"><div class="web-toast-icon">✓</div><div class="web-toast-content"><div class="web-toast-title">Top Left</div><div class="web-toast-description">Positioned at top left</div></div></div>';
+      toast.style.position = 'fixed';
+      toast.style.top = '20px';
+      toast.style.left = '20px';
+      toast.style.zIndex = '9999';
+      document.body.appendChild(toast);
+      setTimeout(() => document.body.removeChild(toast), 3000);
+    }}>Top Left</Button>
+    
+    <Button size="sm" onClick={() => {
+      const toast = document.createElement('div');
+      toast.innerHTML = '<div class="web-toast web-toast-success web-toast-top-right"><div class="web-toast-icon">✓</div><div class="web-toast-content"><div class="web-toast-title">Top Right</div><div class="web-toast-description">Positioned at top right</div></div></div>';
+      toast.style.position = 'fixed';
+      toast.style.top = '20px';
+      toast.style.right = '20px';
+      toast.style.zIndex = '9999';
+      document.body.appendChild(toast);
+      setTimeout(() => document.body.removeChild(toast), 3000);
+    }}>Top Right</Button>
+    
+    <Button size="sm" onClick={() => {
+      const toast = document.createElement('div');
+      toast.innerHTML = '<div class="web-toast web-toast-success web-toast-bottom-left"><div class="web-toast-icon">✓</div><div class="web-toast-content"><div class="web-toast-title">Bottom Left</div><div class="web-toast-description">Positioned at bottom left</div></div></div>';
+      toast.style.position = 'fixed';
+      toast.style.bottom = '20px';
+      toast.style.left = '20px';
+      toast.style.zIndex = '9999';
+      document.body.appendChild(toast);
+      setTimeout(() => document.body.removeChild(toast), 3000);
+    }}>Bottom Left</Button>
+    
+    <Button size="sm" onClick={() => {
+      const toast = document.createElement('div');
+      toast.innerHTML = '<div class="web-toast web-toast-success web-toast-bottom-right"><div class="web-toast-icon">✓</div><div class="web-toast-content"><div class="web-toast-title">Bottom Right</div><div class="web-toast-description">Positioned at bottom right</div></div></div>';
+      toast.style.position = 'fixed';
+      toast.style.bottom = '20px';
+      toast.style.right = '20px';
+      toast.style.zIndex = '9999';
+      document.body.appendChild(toast);
+      setTimeout(() => document.body.removeChild(toast), 3000);
+    }}>Bottom Right</Button>
+  </div>
+</div>
+
+## Sizes
+
+<div className="space-y-4">
+  <div className="flex gap-2">
+    <Button size="sm" onClick={() => {
+      const toast = document.createElement('div');
+      toast.innerHTML = '<div class="web-toast web-toast-success web-toast-sm web-toast-top-right"><div class="web-toast-icon">✓</div><div class="web-toast-content"><div class="web-toast-title">Small</div><div class="web-toast-description">This is a small toast.</div></div></div>';
+      toast.style.position = 'fixed';
+      toast.style.top = '20px';
+      toast.style.right = '20px';
+      toast.style.zIndex = '9999';
+      document.body.appendChild(toast);
+      setTimeout(() => document.body.removeChild(toast), 3000);
+    }}>Small Toast</Button>
+    
+    <Button onClick={() => {
+      const toast = document.createElement('div');
+      toast.innerHTML = '<div class="web-toast web-toast-success web-toast-md web-toast-top-right"><div class="web-toast-icon">✓</div><div class="web-toast-content"><div class="web-toast-title">Medium</div><div class="web-toast-description">This is a medium toast (default).</div></div></div>';
+      toast.style.position = 'fixed';
+      toast.style.top = '20px';
+      toast.style.right = '20px';
+      toast.style.zIndex = '9999';
+      document.body.appendChild(toast);
+      setTimeout(() => document.body.removeChild(toast), 3000);
+    }}>Medium Toast</Button>
+    
+    <Button size="lg" onClick={() => {
+      const toast = document.createElement('div');
+      toast.innerHTML = '<div class="web-toast web-toast-success web-toast-lg web-toast-top-right"><div class="web-toast-icon">✓</div><div class="web-toast-content"><div class="web-toast-title">Large</div><div class="web-toast-description">This is a large toast with more padding.</div></div></div>';
+      toast.style.position = 'fixed';
+      toast.style.top = '20px';
+      toast.style.right = '20px';
+      toast.style.zIndex = '9999';
+      document.body.appendChild(toast);
+      setTimeout(() => document.body.removeChild(toast), 3000);
+    }}>Large Toast</Button>
+  </div>
+</div>
+
+## Auto Dismiss
+
+<Button onClick={() => {
+  const toast = document.createElement('div');
+  toast.innerHTML = '<div class="web-toast web-toast-success web-toast-top-right"><div class="web-toast-icon">✓</div><div class="web-toast-content"><div class="web-toast-title">Auto Dismiss</div><div class="web-toast-description">This toast will automatically disappear after 3 seconds.</div></div></div>';
+  toast.style.position = 'fixed';
+  toast.style.top = '20px';
+  toast.style.right = '20px';
+  toast.style.zIndex = '9999';
+  document.body.appendChild(toast);
+  setTimeout(() => document.body.removeChild(toast), 3000);
+}}>Show Auto Dismiss Toast (3s)</Button>
+
+## Manual Close
+
+<Button onClick={() => {
+  const toast = document.createElement('div');
+  toast.innerHTML = '<div class="web-toast web-toast-info web-toast-top-right"><div class="web-toast-icon">ℹ</div><div class="web-toast-content"><div class="web-toast-title">Manual Close</div><div class="web-toast-description">This toast can be dismissed by clicking the close button.</div></div><div class="web-toast-close"><button class="web-toast-close-button" onclick="this.parentElement.parentElement.parentElement.remove()">✕</button></div></div>';
+  toast.style.position = 'fixed';
+  toast.style.top = '20px';
+  toast.style.right = '20px';
+  toast.style.zIndex = '9999';
+  document.body.appendChild(toast);
+}}>Show Manual Close Toast</Button>
+
+## No Auto Dismiss
+
+<Button onClick={() => {
+  const toast = document.createElement('div');
+  toast.innerHTML = '<div class="web-toast web-toast-warning web-toast-top-right"><div class="web-toast-icon">⚠</div><div class="web-toast-content"><div class="web-toast-title">Persistent</div><div class="web-toast-description">This toast will stay until manually closed.</div></div><div class="web-toast-close"><button class="web-toast-close-button" onclick="this.parentElement.parentElement.parentElement.remove()">✕</button></div></div>';
+  toast.style.position = 'fixed';
+  toast.style.top = '20px';
+  toast.style.right = '20px';
+  toast.style.zIndex = '9999';
+  document.body.appendChild(toast);
+}}>Show Persistent Toast</Button>
+
+## Custom Icons
+
+<Button onClick={() => {
+  const toast = document.createElement('div');
+  toast.innerHTML = '<div class="web-toast web-toast-success web-toast-top-right"><div class="web-toast-icon">❤</div><div class="web-toast-content"><div class="web-toast-title">Custom Icon</div><div class="web-toast-description">This toast uses a custom heart icon.</div></div></div>';
+  toast.style.position = 'fixed';
+  toast.style.top = '20px';
+  toast.style.right = '20px';
+  toast.style.zIndex = '9999';
+  document.body.appendChild(toast);
+  setTimeout(() => document.body.removeChild(toast), 4000);
+}}>Show Custom Icon Toast</Button>
+
+## Custom Content
+
+<Button onClick={() => {
+  const toast = document.createElement('div');
+  toast.innerHTML = '<div class="web-toast web-toast-info web-toast-top-right"><div class="web-toast-icon">👤</div><div class="web-toast-content"><div style="display: flex; align-items: center;"><span style="margin-left: 8px;">Custom content with icon and text</span></div></div></div>';
+  toast.style.position = 'fixed';
+  toast.style.top = '20px';
+  toast.style.right = '20px';
+  toast.style.zIndex = '9999';
+  document.body.appendChild(toast);
+  setTimeout(() => document.body.removeChild(toast), 4000);
+}}>Show Custom Content Toast</Button>
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `children` | `React.ReactNode` | - | Custom content |
+| `title` | `string` | - | Toast title |
+| `description` | `string` | - | Toast description |
+| `variant` | `'default' \| 'success' \| 'warning' \| 'error' \| 'info'` | `'default'` | Toast variant |
+| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Toast size |
+| `position` | `'top-left' \| 'top-right' \| 'top-center' \| 'bottom-left' \| 'bottom-right' \| 'bottom-center'` | `'top-right'` | Toast position |
+| `closable` | `boolean` | `true` | Whether to show close button |
+| `duration` | `number` | `5000` | Auto dismiss duration in milliseconds (0 = no auto dismiss) |
+| `onClose` | `() => void` | - | Callback when toast is closed |
+| `icon` | `React.ReactNode` | - | Custom icon |
+| `className` | `string` | - | Additional CSS classes |
