@@ -27,6 +27,17 @@
           "category": "elements",
           "subcategory": "interactive"
         },
+        "card": {
+          "name": "Card",
+          "path": "./components/elements/card",
+          "exports": [
+            "Card"
+          ],
+          "props": {},
+          "css": "./components/elements/card/index.css",
+          "category": "elements",
+          "subcategory": "general"
+        },
         "divider": {
           "name": "Divider",
           "path": "./components/elements/divider",
@@ -115,7 +126,7 @@
     }
   },
   "metadata": {
-    "totalComponents": 6,
+    "totalComponents": 7,
     "categories": [
       "elements"
     ],
@@ -123,7 +134,7 @@
       "general",
       "interactive"
     ],
-    "generatedAt": "2025-10-06T10:29:56.530Z",
+    "generatedAt": "2025-10-06T14:44:12.930Z",
     "buildTool": "vite",
     "framework": "react"
   }

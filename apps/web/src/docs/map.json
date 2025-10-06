@@ -24,6 +24,15 @@
       "description": "A versatile button component with multiple variants and states"
     },
     {
+      "id": "card",
+      "title": "Card",
+      "path": "/docs/components/elements/card",
+      "component": "Card",
+      "category": "components",
+      "subcategory": "elements",
+      "description": "A flexible card component with compound architecture for content layouts"
+    },
+    {
       "id": "divider",
       "title": "Divider",
       "path": "/docs/components/elements/divider",
@@ -112,7 +121,7 @@
           "id": "elements",
           "title": "Elements",
           "description": "Basic UI elements",
-          "items": ["button", "divider", "label", "loader", "tooltip", "badge"]
+          "items": ["button", "card", "divider", "label", "loader", "tooltip", "badge"]
         },
         {
           "id": "forms",
