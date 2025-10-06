@@ -37,7 +37,7 @@ export function DocPage() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto font-sans">
+    <div className="font-sans">
       <ComponentDoc />
     </div>
   )

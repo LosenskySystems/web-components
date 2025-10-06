@@ -1,0 +1,116 @@
+# Loader Component
+
+The Loader component displays loading states with customizable spinners, text, or both.
+
+## Import
+
+```tsx
+import { Loader } from '@losensky-systems/web-components-core'
+```
+
+## Basic Usage
+
+<div style={{ display: 'flex', gap: '2rem', marginBottom: '2rem', alignItems: 'center' }}>
+  <Loader />
+  <Loader type="text" />
+  <Loader type="both" />
+</div>
+
+```tsx
+<Loader />
+<Loader type="text" />
+<Loader type="both" />
+```
+
+## Sizes
+
+Loaders come in three sizes:
+
+<div style={{ display: 'flex', gap: '2rem', marginBottom: '2rem', alignItems: 'center' }}>
+  <Loader size="sm" />
+  <Loader size="md" />
+  <Loader size="lg" />
+</div>
+
+```tsx
+<Loader size="sm" />
+<Loader size="md" />
+<Loader size="lg" />
+```
+
+## Variants
+
+Different color variants for different contexts:
+
+<div style={{ display: 'flex', gap: '2rem', marginBottom: '2rem', alignItems: 'center' }}>
+  <Loader variant="primary" />
+  <Loader variant="secondary" />
+  <div style={{ background: '#1f2937', padding: '1rem', borderRadius: '0.5rem' }}>
+    <Loader variant="white" />
+  </div>
+</div>
+
+```tsx
+<Loader variant="primary" />
+<Loader variant="secondary" />
+<Loader variant="white" />
+```
+
+## Custom Loading Text
+
+Customize the loading message:
+
+<div style={{ display: 'flex', gap: '2rem', marginBottom: '2rem', alignItems: 'center' }}>
+  <Loader type="text" text="Processing..." />
+  <Loader type="both" text="Saving data..." />
+  <Loader type="text" text="Please wait..." />
+</div>
+
+```tsx
+<Loader type="text" text="Processing..." />
+<Loader type="both" text="Saving data..." />
+<Loader type="text" text="Please wait..." />
+```
+
+## In Context
+
+Loaders work great within buttons and other components:
+
+<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
+  <button style={{ padding: '0.5rem 1rem', background: '#3b82f6', color: 'white', border: 'none', borderRadius: '0.375rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+    <Loader size="sm" variant="white" type="spinner" />
+    Loading...
+  </button>
+  <div style={{ padding: '1rem', border: '1px solid #e5e7eb', borderRadius: '0.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+    <Loader size="md" />
+    <span>Processing your request</span>
+  </div>
+</div>
+
+```tsx
+// In a button
+<button>
+  <Loader size="sm" variant="white" type="spinner" />
+  Loading...
+</button>
+
+// In a card
+<div>
+  <Loader size="md" />
+  <span>Processing your request</span>
+</div>
+```
+
+## Customization
+
+You can customize loaders using Tailwind classes:
+
+<div style={{ display: 'flex', gap: '2rem', marginBottom: '2rem', alignItems: 'center' }}>
+  <Loader className="text-red-500" />
+  <Loader className="text-green-500" type="text" text="Custom Color" />
+</div>
+
+```tsx
+<Loader className="text-red-500" />
+<Loader className="text-green-500" type="text" text="Custom Color" />
+```

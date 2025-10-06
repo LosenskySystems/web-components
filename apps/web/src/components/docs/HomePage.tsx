@@ -23,7 +23,7 @@ export function HomePage() {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto font-sans">
+    <div className="font-sans">
       {/* Hero Section */}
       <div className="mb-16 text-center">
         <h1 className="text-5xl font-extrabold text-slate-900 mb-4 leading-tight tracking-tight">

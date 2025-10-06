@@ -1,0 +1,131 @@
+# Select Component
+
+The Select component provides a dropdown selection interface with custom options and compound component architecture.
+
+## Import
+
+```tsx
+import { Select } from '@losensky-systems/web-components-core'
+```
+
+## Basic Usage
+
+<div style={{ marginBottom: '2rem' }}>
+  <Select placeholder="Choose an option...">
+    <Select.Item value="option1">Option 1</Select.Item>
+    <Select.Item value="option2">Option 2</Select.Item>
+    <Select.Item value="option3">Option 3</Select.Item>
+  </Select>
+</div>
+
+```tsx
+<Select placeholder="Choose an option...">
+  <Select.Item value="option1">Option 1</Select.Item>
+  <Select.Item value="option2">Option 2</Select.Item>
+  <Select.Item value="option3">Option 3</Select.Item>
+</Select>
+```
+
+## Controlled Select
+
+Use with state for controlled behavior:
+
+<div style={{ marginBottom: '2rem' }}>
+  <Select value="option2" placeholder="Choose an option...">
+    <Select.Item value="option1">Option 1</Select.Item>
+    <Select.Item value="option2">Option 2</Select.Item>
+    <Select.Item value="option3">Option 3</Select.Item>
+  </Select>
+</div>
+
+```tsx
+const [value, setValue] = useState('option2')
+
+<Select value={value} onChange={setValue} placeholder="Choose an option...">
+  <Select.Item value="option1">Option 1</Select.Item>
+  <Select.Item value="option2">Option 2</Select.Item>
+  <Select.Item value="option3">Option 3</Select.Item>
+</Select>
+```
+
+## Disabled Options
+
+Some options can be disabled:
+
+<div style={{ marginBottom: '2rem' }}>
+  <Select placeholder="Choose an option...">
+    <Select.Item value="available">Available Option</Select.Item>
+    <Select.Item value="disabled" disabled>Disabled Option</Select.Item>
+    <Select.Item value="another">Another Option</Select.Item>
+  </Select>
+</div>
+
+```tsx
+<Select placeholder="Choose an option...">
+  <Select.Item value="available">Available Option</Select.Item>
+  <Select.Item value="disabled" disabled>Disabled Option</Select.Item>
+  <Select.Item value="another">Another Option</Select.Item>
+</Select>
+```
+
+## Disabled Select
+
+The entire select can be disabled:
+
+<div style={{ marginBottom: '2rem' }}>
+  <Select disabled placeholder="This select is disabled">
+    <Select.Item value="option1">Option 1</Select.Item>
+    <Select.Item value="option2">Option 2</Select.Item>
+  </Select>
+</div>
+
+```tsx
+<Select disabled placeholder="This select is disabled">
+  <Select.Item value="option1">Option 1</Select.Item>
+  <Select.Item value="option2">Option 2</Select.Item>
+</Select>
+```
+
+## With Label
+
+Combine with Label component for better UX:
+
+<div style={{ marginBottom: '2rem' }}>
+  <Label htmlFor="country-select" required>Country</Label>
+  <Select id="country-select" placeholder="Select your country">
+    <Select.Item value="us">United States</Select.Item>
+    <Select.Item value="ca">Canada</Select.Item>
+    <Select.Item value="uk">United Kingdom</Select.Item>
+    <Select.Item value="de">Germany</Select.Item>
+    <Select.Item value="fr">France</Select.Item>
+  </Select>
+</div>
+
+```tsx
+<Label htmlFor="country-select" required>Country</Label>
+<Select id="country-select" placeholder="Select your country">
+  <Select.Item value="us">United States</Select.Item>
+  <Select.Item value="ca">Canada</Select.Item>
+  <Select.Item value="uk">United Kingdom</Select.Item>
+  <Select.Item value="de">Germany</Select.Item>
+  <Select.Item value="fr">France</Select.Item>
+</Select>
+```
+
+## Customization
+
+You can customize the select using Tailwind classes:
+
+<div style={{ marginBottom: '2rem' }}>
+  <Select className="border-purple-500 focus:border-purple-600" placeholder="Custom styled select">
+    <Select.Item value="option1">Option 1</Select.Item>
+    <Select.Item value="option2">Option 2</Select.Item>
+  </Select>
+</div>
+
+```tsx
+<Select className="border-purple-500 focus:border-purple-600" placeholder="Custom styled select">
+  <Select.Item value="option1">Option 1</Select.Item>
+  <Select.Item value="option2">Option 2</Select.Item>
+</Select>
+```

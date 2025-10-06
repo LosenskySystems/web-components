@@ -1,0 +1,96 @@
+# Label Component
+
+The Label component provides accessible labels for form elements and content sections.
+
+## Import
+
+```tsx
+import { Label } from '@losensky-systems/web-components-core'
+```
+
+## Basic Usage
+
+<div style={{ marginBottom: '2rem' }}>
+  <Label htmlFor="email">Email Address</Label>
+  <input id="email" type="email" placeholder="Enter your email" />
+</div>
+
+```tsx
+<Label htmlFor="email">Email Address</Label>
+<input id="email" type="email" placeholder="Enter your email" />
+```
+
+## Required Fields
+
+Indicate required fields with an asterisk:
+
+<div style={{ marginBottom: '2rem' }}>
+  <Label htmlFor="name" required>Full Name</Label>
+  <input id="name" type="text" placeholder="Enter your full name" />
+</div>
+
+```tsx
+<Label htmlFor="name" required>Full Name</Label>
+<input id="name" type="text" placeholder="Enter your full name" />
+```
+
+## Disabled State
+
+Labels can be disabled to match disabled form elements:
+
+<div style={{ marginBottom: '2rem' }}>
+  <Label htmlFor="disabled-field" disabled>Disabled Field</Label>
+  <input id="disabled-field" type="text" disabled placeholder="This field is disabled" />
+</div>
+
+```tsx
+<Label htmlFor="disabled-field" disabled>Disabled Field</Label>
+<input id="disabled-field" type="text" disabled placeholder="This field is disabled" />
+```
+
+## Form Integration
+
+Labels work seamlessly with form components:
+
+<div style={{ marginBottom: '2rem' }}>
+  <div style={{ marginBottom: '1rem' }}>
+    <Label htmlFor="username" required>Username</Label>
+    <input id="username" type="text" placeholder="Choose a username" />
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Label htmlFor="password" required>Password</Label>
+    <input id="password" type="password" placeholder="Enter your password" />
+  </div>
+  <div>
+    <Label htmlFor="bio">Bio (Optional)</Label>
+    <textarea id="bio" placeholder="Tell us about yourself"></textarea>
+  </div>
+</div>
+
+```tsx
+<Label htmlFor="username" required>Username</Label>
+<input id="username" type="text" placeholder="Choose a username" />
+
+<Label htmlFor="password" required>Password</Label>
+<input id="password" type="password" placeholder="Enter your password" />
+
+<Label htmlFor="bio">Bio (Optional)</Label>
+<textarea id="bio" placeholder="Tell us about yourself"></textarea>
+```
+
+## Customization
+
+You can customize labels using Tailwind classes:
+
+<div style={{ marginBottom: '2rem' }}>
+  <Label htmlFor="custom1" className="text-blue-600 font-bold">Blue Bold Label</Label>
+  <input id="custom1" type="text" />
+  
+  <Label htmlFor="custom2" className="text-green-600 text-lg">Large Green Label</Label>
+  <input id="custom2" type="text" />
+</div>
+
+```tsx
+<Label htmlFor="custom1" className="text-blue-600 font-bold">Blue Bold Label</Label>
+<Label htmlFor="custom2" className="text-green-600 text-lg">Large Green Label</Label>
+```

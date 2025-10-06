@@ -1,0 +1,109 @@
+# Divider Component
+
+The Divider component creates visual separation between content sections with various styles and orientations.
+
+## Import
+
+```tsx
+import { Divider } from '@losensky-systems/web-components-core'
+```
+
+## Basic Usage
+
+<div style={{ marginBottom: '2rem' }}>
+  <Divider />
+</div>
+
+```tsx
+<Divider />
+```
+
+## Variants
+
+The Divider component supports different visual styles:
+
+<div style={{ marginBottom: '2rem' }}>
+  <Divider variant="solid" />
+  <Divider variant="dashed" />
+  <Divider variant="dotted" />
+</div>
+
+```tsx
+<Divider variant="solid" />
+<Divider variant="dashed" />
+<Divider variant="dotted" />
+```
+
+## Orientation
+
+Dividers can be horizontal (default) or vertical:
+
+<div style={{ display: 'flex', gap: '2rem', marginBottom: '2rem', alignItems: 'center' }}>
+  <div style={{ flex: 1 }}>
+    <p>Content before horizontal divider</p>
+    <Divider orientation="horizontal" />
+    <p>Content after horizontal divider</p>
+  </div>
+  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+    <span>Left</span>
+    <Divider orientation="vertical" />
+    <span>Right</span>
+  </div>
+</div>
+
+```tsx
+<Divider orientation="horizontal" />
+<Divider orientation="vertical" />
+```
+
+## Spacing
+
+Control the vertical spacing around dividers:
+
+<div style={{ marginBottom: '2rem' }}>
+  <p>Content before</p>
+  <Divider spacing="sm" />
+  <p>Small spacing</p>
+  <Divider spacing="md" />
+  <p>Medium spacing (default)</p>
+  <Divider spacing="lg" />
+  <p>Large spacing</p>
+</div>
+
+```tsx
+<Divider spacing="sm" />
+<Divider spacing="md" />
+<Divider spacing="lg" />
+```
+
+## Labeled Dividers
+
+Add text content to create labeled dividers:
+
+<div style={{ marginBottom: '2rem' }}>
+  <Divider>OR</Divider>
+  <Divider>Continue with</Divider>
+  <Divider variant="dashed">Section Break</Divider>
+</div>
+
+```tsx
+<Divider>OR</Divider>
+<Divider>Continue with</Divider>
+<Divider variant="dashed">Section Break</Divider>
+```
+
+## Customization
+
+You can customize dividers using Tailwind classes:
+
+<div style={{ marginBottom: '2rem' }}>
+  <Divider className="border-red-500" />
+  <Divider className="border-2 border-blue-500" />
+  <Divider className="border-dashed border-green-500">Custom Styled</Divider>
+</div>
+
+```tsx
+<Divider className="border-red-500" />
+<Divider className="border-2 border-blue-500" />
+<Divider className="border-dashed border-green-500">Custom Styled</Divider>
+```

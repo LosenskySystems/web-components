@@ -1,0 +1,152 @@
+# Textarea Component
+
+The Textarea component provides a multi-line text input with customizable resize behavior and styling.
+
+## Import
+
+```tsx
+import { Textarea } from '@losensky-systems/web-components-core'
+```
+
+## Basic Usage
+
+<div style={{ marginBottom: '2rem' }}>
+  <Textarea placeholder="Enter your message..." />
+</div>
+
+```tsx
+<Textarea placeholder="Enter your message..." />
+```
+
+## With Rows
+
+Control the initial height with rows:
+
+<div style={{ marginBottom: '2rem' }}>
+  <Textarea rows={3} placeholder="3 rows textarea" />
+  <Textarea rows={5} placeholder="5 rows textarea" />
+</div>
+
+```tsx
+<Textarea rows={3} placeholder="3 rows textarea" />
+<Textarea rows={5} placeholder="5 rows textarea" />
+```
+
+## Resize Options
+
+Control how users can resize the textarea:
+
+<div style={{ marginBottom: '2rem' }}>
+  <div style={{ marginBottom: '1rem' }}>
+    <Label>No Resize</Label>
+    <Textarea resize="none" placeholder="Cannot be resized" />
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Label>Vertical Only</Label>
+    <Textarea resize="vertical" placeholder="Can resize vertically" />
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Label>Horizontal Only</Label>
+    <Textarea resize="horizontal" placeholder="Can resize horizontally" />
+  </div>
+  <div>
+    <Label>Both Directions</Label>
+    <Textarea resize="both" placeholder="Can resize both ways" />
+  </div>
+</div>
+
+```tsx
+<Textarea resize="none" placeholder="Cannot be resized" />
+<Textarea resize="vertical" placeholder="Can resize vertically" />
+<Textarea resize="horizontal" placeholder="Can resize horizontally" />
+<Textarea resize="both" placeholder="Can resize both ways" />
+```
+
+## Disabled State
+
+Textareas can be disabled:
+
+<div style={{ marginBottom: '2rem' }}>
+  <Textarea disabled placeholder="This textarea is disabled" />
+</div>
+
+```tsx
+<Textarea disabled placeholder="This textarea is disabled" />
+```
+
+## With Label
+
+Combine with Label component for better UX:
+
+<div style={{ marginBottom: '2rem' }}>
+  <Label htmlFor="feedback" required>Feedback</Label>
+  <Textarea 
+    id="feedback" 
+    rows={4} 
+    placeholder="Please share your feedback..."
+    resize="vertical"
+  />
+</div>
+
+```tsx
+<Label htmlFor="feedback" required>Feedback</Label>
+<Textarea 
+  id="feedback" 
+  rows={4} 
+  placeholder="Please share your feedback..."
+  resize="vertical"
+/>
+```
+
+## Form Integration
+
+Textareas work well in forms:
+
+<div style={{ marginBottom: '2rem' }}>
+  <div style={{ marginBottom: '1rem' }}>
+    <Label htmlFor="subject" required>Subject</Label>
+    <input id="subject" type="text" placeholder="Email subject" />
+  </div>
+  <div>
+    <Label htmlFor="message" required>Message</Label>
+    <Textarea 
+      id="message" 
+      rows={6} 
+      placeholder="Write your message here..."
+      resize="vertical"
+    />
+  </div>
+</div>
+
+```tsx
+<Label htmlFor="subject" required>Subject</Label>
+<input id="subject" type="text" placeholder="Email subject" />
+
+<Label htmlFor="message" required>Message</Label>
+<Textarea 
+  id="message" 
+  rows={6} 
+  placeholder="Write your message here..."
+  resize="vertical"
+/>
+```
+
+## Customization
+
+You can customize textareas using Tailwind classes:
+
+<div style={{ marginBottom: '2rem' }}>
+  <Textarea 
+    className="border-green-500 focus:border-green-600 focus:ring-green-500" 
+    placeholder="Green themed textarea"
+    rows={3}
+  />
+</div>
+
+```tsx
+<Textarea 
+  className="border-green-500 focus:border-green-600 focus:ring-green-500" 
+  placeholder="Green themed textarea"
+  rows={3}
+/>
+```
