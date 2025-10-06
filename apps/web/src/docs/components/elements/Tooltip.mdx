@@ -1,9 +1,9 @@
 import { Tooltip, Button } from '@losensky-systems/web-components-core'
-import { Settings, Heart, Info, AlertTriangle, X } from 'lucide-react'
+import { Settings, Save, Heart, Info } from 'lucide-react'
 
 # Tooltip Component
 
-The Tooltip component provides contextual information on hover, click, or focus. It wraps any element and shows helpful text or content.
+The Tooltip component provides contextual information when users interact with elements.
 
 ## Import
 
@@ -13,47 +13,35 @@ import { Tooltip } from '@losensky-systems/web-components-core'
 
 ## Basic Usage
 
-Wrap any element with the Tooltip component:
-
 <div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
-  <Tooltip content="This is a helpful tooltip">
+  <Tooltip content="This is a tooltip">
     <Button>Hover me</Button>
   </Tooltip>
   
-  <Tooltip content="Click to see tooltip" trigger="click">
-    <Button variant="outline">Click me</Button>
-  </Tooltip>
-  
-  <Tooltip content="Focus to see tooltip" trigger="focus">
-    <Button variant="ghost">Focus me</Button>
+  <Tooltip content="Another tooltip example">
+    <span style={{ padding: '0.5rem', background: '#f3f4f6', borderRadius: '0.375rem', cursor: 'pointer' }}>
+      Hover over this text
+    </span>
   </Tooltip>
 </div>
 
 ```tsx
-<Tooltip content="This is a helpful tooltip">
+<Tooltip content="This is a tooltip">
   <Button>Hover me</Button>
 </Tooltip>
 
-<Tooltip content="Click to see tooltip" trigger="click">
-  <Button variant="outline">Click me</Button>
-</Tooltip>
-
-<Tooltip content="Focus to see tooltip" trigger="focus">
-  <Button variant="ghost">Focus me</Button>
+<Tooltip content="Another tooltip example">
+  <span>Hover over this text</span>
 </Tooltip>
 ```
 
-## Placement
+## Placements
 
-Control where the tooltip appears relative to the trigger element:
+Control where the tooltip appears:
 
 <div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
   <Tooltip content="Top tooltip" placement="top">
     <Button size="sm">Top</Button>
-  </Tooltip>
-  
-  <Tooltip content="Right tooltip" placement="right">
-    <Button size="sm">Right</Button>
   </Tooltip>
   
   <Tooltip content="Bottom tooltip" placement="bottom">
@@ -63,15 +51,15 @@ Control where the tooltip appears relative to the trigger element:
   <Tooltip content="Left tooltip" placement="left">
     <Button size="sm">Left</Button>
   </Tooltip>
+  
+  <Tooltip content="Right tooltip" placement="right">
+    <Button size="sm">Right</Button>
+  </Tooltip>
 </div>
 
 ```tsx
 <Tooltip content="Top tooltip" placement="top">
   <Button size="sm">Top</Button>
-</Tooltip>
-
-<Tooltip content="Right tooltip" placement="right">
-  <Button size="sm">Right</Button>
 </Tooltip>
 
 <Tooltip content="Bottom tooltip" placement="bottom">
@@ -81,208 +69,124 @@ Control where the tooltip appears relative to the trigger element:
 <Tooltip content="Left tooltip" placement="left">
   <Button size="sm">Left</Button>
 </Tooltip>
+
+<Tooltip content="Right tooltip" placement="right">
+  <Button size="sm">Right</Button>
+</Tooltip>
 ```
 
 ## Triggers
 
-Choose how the tooltip is activated:
+Different ways to trigger tooltips:
 
-### Hover (Default)
-Shows on mouse enter, hides on mouse leave:
+<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
+  <Tooltip content="Hover to see" trigger="hover">
+    <Button>Hover</Button>
+  </Tooltip>
+  
+  <Tooltip content="Click to toggle" trigger="click">
+    <Button variant="outline">Click</Button>
+  </Tooltip>
+  
+  <Tooltip content="Focus to see" trigger="focus">
+    <Button variant="ghost">Focus</Button>
+  </Tooltip>
+</div>
 
 ```tsx
-<Tooltip content="Hover tooltip">
-  <Button>Hover me</Button>
+<Tooltip content="Hover to see" trigger="hover">
+  <Button>Hover</Button>
+</Tooltip>
+
+<Tooltip content="Click to toggle" trigger="click">
+  <Button variant="outline">Click</Button>
+</Tooltip>
+
+<Tooltip content="Focus to see" trigger="focus">
+  <Button variant="ghost">Focus</Button>
 </Tooltip>
 ```
 
-### Click
-Shows/hides on click, closes when clicking outside:
+## With Icons
+
+Tooltips work great with icon buttons:
+
+<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
+  <Tooltip content="Save changes">
+    <Button icon={<Save size={16} />} iconOnly variant="ghost" />
+  </Tooltip>
+  
+  <Tooltip content="Settings" placement="top">
+    <Button icon={<Settings size={16} />} iconOnly variant="ghost" />
+  </Tooltip>
+  
+  <Tooltip content="Like this post">
+    <Button icon={<Heart size={16} />} iconOnly variant="ghost" color="error" />
+  </Tooltip>
+  
+  <Tooltip content="More information">
+    <Button icon={<Info size={16} />} iconOnly variant="ghost" color="info" />
+  </Tooltip>
+</div>
 
 ```tsx
-<Tooltip content="Click tooltip" trigger="click">
-  <Button>Click me</Button>
+<Tooltip content="Save changes">
+  <Button icon={<Save size={16} />} iconOnly variant="ghost" />
 </Tooltip>
-```
 
-### Focus
-Shows on focus, hides on blur (useful for keyboard navigation):
+<Tooltip content="Settings" placement="top">
+  <Button icon={<Settings size={16} />} iconOnly variant="ghost" />
+</Tooltip>
 
-```tsx
-<Tooltip content="Focus tooltip" trigger="focus">
-  <Button>Focus me</Button>
+<Tooltip content="Like this post">
+  <Button icon={<Heart size={16} />} iconOnly variant="ghost" color="error" />
+</Tooltip>
+
+<Tooltip content="More information">
+  <Button icon={<Info size={16} />} iconOnly variant="ghost" color="info" />
 </Tooltip>
 ```
 
 ## Delay
 
-Control the delay before showing the tooltip:
+Control how quickly tooltips appear:
 
 <div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
-  <Tooltip content="No delay" delay={0}>
-    <Button size="sm">No Delay</Button>
+  <Tooltip content="Appears immediately" delay={0}>
+    <Button>No Delay</Button>
   </Tooltip>
   
-  <Tooltip content="Fast delay" delay={100}>
-    <Button size="sm">Fast</Button>
+  <Tooltip content="Appears after 500ms" delay={500}>
+    <Button>Slow Hover</Button>
   </Tooltip>
   
-  <Tooltip content="Default delay" delay={200}>
-    <Button size="sm">Default</Button>
-  </Tooltip>
-  
-  <Tooltip content="Slow delay" delay={500}>
-    <Button size="sm">Slow</Button>
+  <Tooltip content="Appears after 1 second" delay={1000}>
+    <Button>Very Slow</Button>
   </Tooltip>
 </div>
 
 ```tsx
-<Tooltip content="No delay" delay={0}>
-  <Button size="sm">No Delay</Button>
+<Tooltip content="Appears immediately" delay={0}>
+  <Button>No Delay</Button>
 </Tooltip>
 
-<Tooltip content="Fast delay" delay={100}>
-  <Button size="sm">Fast</Button>
+<Tooltip content="Appears after 500ms" delay={500}>
+  <Button>Slow Hover</Button>
 </Tooltip>
 
-<Tooltip content="Default delay" delay={200}>
-  <Button size="sm">Default</Button>
-</Tooltip>
-
-<Tooltip content="Slow delay" delay={500}>
-  <Button size="sm">Slow</Button>
+<Tooltip content="Appears after 1 second" delay={1000}>
+  <Button>Very Slow</Button>
 </Tooltip>
 ```
-
-## Rich Content
-
-Tooltips can contain more than just text:
-
-<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
-  <Tooltip content={
-    <div>
-      <div style={{ fontWeight: 'bold', marginBottom: '0.25rem' }}>Settings</div>
-      <div style={{ fontSize: '0.75rem', opacity: 0.8 }}>Configure your preferences</div>
-    </div>
-  }>
-    <Button icon={<Settings size={16} />} iconOnly variant="ghost" />
-  </Tooltip>
-  
-  <Tooltip content={
-    <div>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-        <Heart size={14} />
-        <span>Like this post</span>
-      </div>
-    </div>
-  }>
-    <Button icon={<Heart size={16} />} iconOnly variant="ghost" />
-  </Tooltip>
-</div>
-
-```tsx
-<Tooltip content={
-  <div>
-    <div style={{ fontWeight: 'bold', marginBottom: '0.25rem' }}>Settings</div>
-    <div style={{ fontSize: '0.75rem', opacity: 0.8 }}>Configure your preferences</div>
-  </div>
-}>
-  <Button icon={<Settings size={16} />} iconOnly variant="ghost" />
-</Tooltip>
-
-<Tooltip content={
-  <div>
-    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-      <Heart size={14} />
-      <span>Like this post</span>
-    </div>
-  </div>
-}>
-  <Button icon={<Heart size={16} />} iconOnly variant="ghost" />
-</Tooltip>
-```
-
-## Custom Styling
-
-You can customize tooltip appearance with CSS classes:
-
-<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
-  <Tooltip content="Light tooltip">
-    <Button size="sm">Light</Button>
-  </Tooltip>
-  
-  <Tooltip content="Success tooltip">
-    <Button size="sm" color="success">Success</Button>
-  </Tooltip>
-  
-  <Tooltip content="Warning tooltip">
-    <Button size="sm" color="warning">Warning</Button>
-  </Tooltip>
-  
-  <Tooltip content="Error tooltip">
-    <Button size="sm" color="error">Error</Button>
-  </Tooltip>
-</div>
-
-```tsx
-<Tooltip content="Light tooltip">
-  <Button size="sm">Light</Button>
-</Tooltip>
-
-<Tooltip content="Success tooltip">
-  <Button size="sm" color="success">Success</Button>
-</Tooltip>
-
-<Tooltip content="Warning tooltip">
-  <Button size="sm" color="warning">Warning</Button>
-</Tooltip>
-
-<Tooltip content="Error tooltip">
-  <Button size="sm" color="error">Error</Button>
-</Tooltip>
-```
-
-## Disabled State
-
-Disable tooltips when needed:
-
-<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
-  <Tooltip content="This tooltip is disabled" disabled>
-    <Button>Disabled Tooltip</Button>
-  </Tooltip>
-  
-  <Tooltip content="This tooltip works">
-    <Button>Enabled Tooltip</Button>
-  </Tooltip>
-</div>
-
-```tsx
-<Tooltip content="This tooltip is disabled" disabled>
-  <Button>Disabled Tooltip</Button>
-</Tooltip>
-
-<Tooltip content="This tooltip works">
-  <Button>Enabled Tooltip</Button>
-</Tooltip>
-```
-
-## Accessibility
-
-The Tooltip component includes proper accessibility features:
-
-- **ARIA attributes**: `role="tooltip"` and `aria-hidden`
-- **Keyboard support**: Works with focus triggers
-- **Screen reader friendly**: Content is properly announced
-- **Focus management**: Handles focus/blur events correctly
 
 ## Props
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
-| `children` | `React.ReactNode` | - | Element to wrap with tooltip |
-| `content` | `React.ReactNode` | - | Tooltip content |
-| `placement` | `'top' \| 'bottom' \| 'left' \| 'right'` | `'top'` | Tooltip position |
-| `trigger` | `'hover' \| 'click' \| 'focus'` | `'hover'` | Activation method |
-| `delay` | `number` | `200` | Delay before showing (ms) |
+| `children` | `React.ReactNode` | - | The element that triggers the tooltip |
+| `content` | `React.ReactNode` | - | The content to display inside the tooltip |
+| `placement` | `'top' \| 'bottom' \| 'left' \| 'right'` | `'top'` | Position of the tooltip relative to the trigger |
+| `trigger` | `'hover' \| 'click' \| 'focus'` | `'hover'` | Event that triggers the tooltip |
+| `delay` | `number` | `200` | Delay in milliseconds before tooltip appears |
+| `disabled` | `boolean` | `false` | Disable the tooltip |
 | `className` | `string` | `''` | Additional CSS classes |
-| `disabled` | `boolean` | `false` | Disable tooltip |

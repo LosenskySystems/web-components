@@ -1,6 +1,9 @@
+import { Input, Label } from '@losensky-systems/web-components-core'
+import { Search, Mail, Lock, User } from 'lucide-react'
+
 # Input Component
 
-The Input component is a flexible, accessible text input field with various states and styling options.
+The Input component is a flexible, accessible text input field with various states, sizes, and styling options.
 
 ## Import
 
@@ -18,114 +21,279 @@ import { Input } from '@losensky-systems/web-components-core'
 <Input placeholder="Enter your text..." />
 ```
 
-## States
+## Sizes
 
-### Default
-<div style={{ marginBottom: '1rem' }}>
-  <Input placeholder="Default input" />
+<div style={{ marginBottom: '2rem' }}>
+  <div style={{ marginBottom: '1rem' }}>
+    <Input size="sm" placeholder="Small input" />
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Input size="md" placeholder="Medium input (default)" />
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Input size="lg" placeholder="Large input" />
+  </div>
 </div>
 
 ```tsx
-<Input placeholder="Default input" />
+<Input size="sm" placeholder="Small input" />
+<Input size="md" placeholder="Medium input (default)" />
+<Input size="lg" placeholder="Large input" />
 ```
 
-### With Value
-<div style={{ marginBottom: '1rem' }}>
-  <Input value="Pre-filled value" onChange={() => {}} />
+## Variants
+
+<div style={{ marginBottom: '2rem' }}>
+  <div style={{ marginBottom: '1rem' }}>
+    <Input variant="default" placeholder="Default input" />
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Input variant="error" placeholder="Error input" />
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Input variant="success" placeholder="Success input" />
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Input variant="warning" placeholder="Warning input" />
+  </div>
 </div>
 
 ```tsx
-<Input value="Pre-filled value" onChange={handleChange} />
+<Input variant="default" placeholder="Default input" />
+<Input variant="error" placeholder="Error input" />
+<Input variant="success" placeholder="Success input" />
+<Input variant="warning" placeholder="Warning input" />
 ```
 
-### Disabled
-<div style={{ marginBottom: '1rem' }}>
-  <Input placeholder="Disabled input" disabled />
+## With Labels and Helper Text
+
+<div style={{ marginBottom: '2rem' }}>
+  <div style={{ marginBottom: '1rem' }}>
+    <Label htmlFor="email-input">Email Address</Label>
+    <Input 
+      id="email-input"
+      placeholder="Enter your email" 
+      helperText="We'll never share your email"
+    />
+  </div>
+  
+  <div style={{ marginBottom: '1rem' }}>
+    <Label htmlFor="password-input">Password</Label>
+    <Input 
+      id="password-input"
+      type="password" 
+      placeholder="Enter your password"
+      errorText="Password must be at least 8 characters"
+      error
+    />
+  </div>
+  
+  <div style={{ marginBottom: '1rem' }}>
+    <Label htmlFor="username-input">Username</Label>
+    <Input 
+      id="username-input"
+      placeholder="Choose a username"
+      successText="Username is available!"
+      variant="success"
+    />
+  </div>
 </div>
 
 ```tsx
-<Input placeholder="Disabled input" disabled />
+<Label htmlFor="email-input">Email Address</Label>
+<Input 
+  id="email-input"
+  placeholder="Enter your email" 
+  helperText="We'll never share your email"
+/>
+
+<Label htmlFor="password-input">Password</Label>
+<Input 
+  id="password-input"
+  type="password" 
+  placeholder="Enter your password"
+  errorText="Password must be at least 8 characters"
+  error
+/>
+
+<Label htmlFor="username-input">Username</Label>
+<Input 
+  id="username-input"
+  placeholder="Choose a username"
+  successText="Username is available!"
+  variant="success"
+/>
+```
+
+## With Icons
+
+<div style={{ marginBottom: '2rem' }}>
+  <div style={{ marginBottom: '1rem' }}>
+    <Input 
+      icon={<Search size={16} />} 
+      placeholder="Search..." 
+    />
+  </div>
+  
+  <div style={{ marginBottom: '1rem' }}>
+    <Input 
+      icon={<Mail size={16} />} 
+      iconPosition="left"
+      placeholder="Email address" 
+    />
+  </div>
+  
+  <div style={{ marginBottom: '1rem' }}>
+    <Input 
+      icon={<Lock size={16} />} 
+      iconPosition="right"
+      type="password"
+      placeholder="Password" 
+    />
+  </div>
+</div>
+
+```tsx
+<Input 
+  icon={<Search size={16} />} 
+  placeholder="Search..." 
+/>
+
+<Input 
+  icon={<Mail size={16} />} 
+  iconPosition="left"
+  placeholder="Email address" 
+/>
+
+<Input 
+  icon={<Lock size={16} />} 
+  iconPosition="right"
+  type="password"
+  placeholder="Password" 
+/>
+```
+
+## Clearable Input
+
+<div style={{ marginBottom: '2rem' }}>
+  <Input 
+    clearable 
+    placeholder="Type something to see clear button" 
+    defaultValue="Clearable text"
+  />
+</div>
+
+```tsx
+<Input 
+  clearable 
+  placeholder="Type something to see clear button" 
+  defaultValue="Clearable text"
+/>
+```
+
+## Loading State
+
+<div style={{ marginBottom: '2rem' }}>
+  <Input 
+    loading 
+    placeholder="Loading input..." 
+  />
+</div>
+
+```tsx
+<Input 
+  loading 
+  placeholder="Loading input..." 
+/>
 ```
 
 ## Input Types
 
-### Text (default)
-<div style={{ marginBottom: '1rem' }}>
-  <Input type="text" placeholder="Text input" />
-</div>
-
-### Email
-<div style={{ marginBottom: '1rem' }}>
-  <Input type="email" placeholder="Email input" />
-</div>
-
-### Password
-<div style={{ marginBottom: '1rem' }}>
-  <Input type="password" placeholder="Password input" />
+<div style={{ marginBottom: '2rem' }}>
+  <div style={{ marginBottom: '1rem' }}>
+    <Input type="text" placeholder="Text input" />
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Input type="email" placeholder="Email input" />
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Input type="password" placeholder="Password input" />
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Input type="number" placeholder="Number input" />
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Input type="tel" placeholder="Phone input" />
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Input type="url" placeholder="URL input" />
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Input type="search" placeholder="Search input" />
+  </div>
 </div>
 
 ```tsx
 <Input type="text" placeholder="Text input" />
 <Input type="email" placeholder="Email input" />
 <Input type="password" placeholder="Password input" />
+<Input type="number" placeholder="Number input" />
+<Input type="tel" placeholder="Phone input" />
+<Input type="url" placeholder="URL input" />
+<Input type="search" placeholder="Search input" />
+```
+
+## States
+
+<div style={{ marginBottom: '2rem' }}>
+  <div style={{ marginBottom: '1rem' }}>
+    <Input placeholder="Default input" />
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Input placeholder="Disabled input" disabled />
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Input placeholder="Read-only input" readOnly defaultValue="Read-only value" />
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Input placeholder="Required input" required />
+  </div>
+</div>
+
+```tsx
+<Input placeholder="Default input" />
+<Input placeholder="Disabled input" disabled />
+<Input placeholder="Read-only input" readOnly defaultValue="Read-only value" />
+<Input placeholder="Required input" required />
 ```
 
 ## Props
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
-| `type` | `string` | `'text'` | Input type (text, email, password, etc.) |
+| `type` | `'text' \| 'email' \| 'password' \| 'number' \| 'tel' \| 'url' \| 'search'` | `'text'` | Input type |
 | `placeholder` | `string` | - | Placeholder text |
 | `value` | `string` | - | Input value (controlled) |
 | `defaultValue` | `string` | - | Default value (uncontrolled) |
+| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Input size |
+| `variant` | `'default' \| 'error' \| 'success' \| 'warning'` | `'default'` | Input variant |
+| `error` | `boolean` | `false` | Error state |
+| `errorText` | `string` | - | Error message |
+| `successText` | `string` | - | Success message |
+| `helperText` | `string` | - | Helper text |
+| `icon` | `React.ReactNode` | - | Icon element |
+| `iconPosition` | `'left' \| 'right'` | `'left'` | Icon position |
+| `clearable` | `boolean` | `false` | Show clear button |
+| `loading` | `boolean` | `false` | Loading state |
+| `disabled` | `boolean` | `false` | Disabled state |
+| `required` | `boolean` | `false` | Required field |
+| `readOnly` | `boolean` | `false` | Read-only state |
+| `autoComplete` | `string` | - | Autocomplete attribute |
+| `autoFocus` | `boolean` | `false` | Auto-focus on mount |
+| `maxLength` | `number` | - | Maximum length |
+| `minLength` | `number` | - | Minimum length |
+| `pattern` | `string` | - | Input pattern |
 | `onChange` | `(event: React.ChangeEvent<HTMLInputElement>) => void` | - | Change handler |
 | `onFocus` | `(event: React.FocusEvent<HTMLInputElement>) => void` | - | Focus handler |
 | `onBlur` | `(event: React.FocusEvent<HTMLInputElement>) => void` | - | Blur handler |
-| `disabled` | `boolean` | `false` | Whether the input is disabled |
-| `className` | `string` | - | Additional CSS classes |
-
-## Examples
-
-### Controlled Input
-<div style={{ marginBottom: '1rem' }}>
-  <Input 
-    value="Controlled value" 
-    onChange={(e) => console.log(e.target.value)}
-    placeholder="Type to see console output"
-  />
-</div>
-
-```tsx
-const [value, setValue] = useState('')
-
-<Input 
-  value={value}
-  onChange={(e) => setValue(e.target.value)}
-  placeholder="Controlled input"
-/>
-```
-
-### With Event Handlers
-<div style={{ marginBottom: '1rem' }}>
-  <Input 
-    placeholder="Focus/blur events"
-    onFocus={() => console.log('Input focused')}
-    onBlur={() => console.log('Input blurred')}
-  />
-</div>
-
-```tsx
-<Input 
-  placeholder="Focus/blur events"
-  onFocus={() => console.log('Input focused')}
-  onBlur={() => console.log('Input blurred')}
-/>
-```
-
-## Accessibility
-
-- Built with semantic HTML `<input>` elements
-- Supports all standard input attributes
-- Proper focus management and keyboard navigation
-- Screen reader compatible with proper labeling when used with labels
-- Disabled state is properly communicated to assistive technologies
+| `className` | `string` | `''` | Additional CSS classes |
