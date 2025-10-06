@@ -105,6 +105,15 @@
       "description": "A simple dropdown menu component for displaying a list of actions or options"
     },
     {
+      "id": "alert",
+      "title": "Alert",
+      "path": "/docs/components/elements/alert",
+      "component": "Alert",
+      "category": "components",
+      "subcategory": "elements",
+      "description": "A simple alert component for displaying important messages and notifications"
+    },
+    {
       "id": "input",
       "title": "Input", 
       "path": "/docs/components/forms/input",
@@ -148,7 +157,7 @@
           "id": "elements",
           "title": "Elements",
           "description": "Basic UI elements",
-          "items": ["button", "divider", "label", "loader", "tooltip", "badge", "avatar", "icon", "dropdown"]
+          "items": ["button", "divider", "label", "loader", "tooltip", "badge", "avatar", "icon", "dropdown", "alert"]
         },
         {
           "id": "forms",

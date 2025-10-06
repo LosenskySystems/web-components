@@ -8,3 +8,4 @@ export { Badge, BadgeWrapper, type BadgeProps, type BadgeWrapperProps } from './
 export { Avatar, type AvatarProps } from './avatar';
 export { Icon, type IconProps } from './icon';
 export { Dropdown, DropdownItem, DropdownDivider, DropdownMenu, type DropdownProps, type DropdownItemProps, type DropdownDividerProps, type DropdownMenuProps } from './dropdown';
+export { Alert, type AlertProps } from './alert';

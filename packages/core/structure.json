@@ -5,6 +5,17 @@
   "structure": {
     "components": {
       "elements": {
+        "alert": {
+          "name": "Alert",
+          "path": "./components/elements/alert",
+          "exports": [
+            "Alert"
+          ],
+          "props": {},
+          "css": "./components/elements/alert/index.css",
+          "category": "elements",
+          "subcategory": "general"
+        },
         "avatar": {
           "name": "Avatar",
           "path": "./components/elements/avatar",
@@ -148,7 +159,7 @@
     }
   },
   "metadata": {
-    "totalComponents": 9,
+    "totalComponents": 10,
     "categories": [
       "elements"
     ],
@@ -156,7 +167,7 @@
       "general",
       "interactive"
     ],
-    "generatedAt": "2025-10-06T15:26:21.221Z",
+    "generatedAt": "2025-10-06T15:31:34.995Z",
     "buildTool": "vite",
     "framework": "react"
   }

@@ -1,0 +1,67 @@
+# Alert
+
+A simple alert component for displaying important messages and notifications.
+
+## Basic Usage
+
+<Alert title="Information" description="This is a simple alert message." />
+
+## Variants
+
+<Alert variant="success" title="Success!" description="Your action was completed successfully." />
+
+<Alert variant="warning" title="Warning" description="Please check your input before proceeding." />
+
+<Alert variant="error" title="Error" description="Something went wrong. Please try again." />
+
+<Alert variant="info" title="Info" description="Here's some useful information for you." />
+
+## With Custom Content
+
+<Alert variant="success">
+  <div className="flex items-center">
+    <Icon name="check" size="sm" className="mr-2" />
+    <span>Custom content with icon and text</span>
+  </div>
+</Alert>
+
+## Sizes
+
+<div className="space-y-4">
+  <Alert size="sm" title="Small" description="This is a small alert." />
+  <Alert size="md" title="Medium" description="This is a medium alert (default)." />
+  <Alert size="lg" title="Large" description="This is a large alert with more padding." />
+</div>
+
+## Closable Alerts
+
+<Alert 
+  variant="info" 
+  title="Closable Alert" 
+  description="This alert can be dismissed by clicking the close button."
+  closable 
+  onClose={() => console.log('Alert closed')}
+/>
+
+## Custom Icons
+
+<Alert 
+  variant="success" 
+  title="Custom Icon" 
+  description="This alert uses a custom icon."
+  icon={<Icon name="heart" size="sm" />}
+/>
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `children` | `React.ReactNode` | - | Custom content |
+| `title` | `string` | - | Alert title |
+| `description` | `string` | - | Alert description |
+| `variant` | `'default' \| 'success' \| 'warning' \| 'error' \| 'info'` | `'default'` | Alert variant |
+| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Alert size |
+| `closable` | `boolean` | `false` | Whether to show close button |
+| `onClose` | `() => void` | - | Callback when alert is closed |
+| `icon` | `React.ReactNode` | - | Custom icon |
+| `className` | `string` | - | Additional CSS classes |
