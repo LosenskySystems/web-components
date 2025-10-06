@@ -10,27 +10,72 @@
     {
       "id": "installation",
       "title": "Installation",
-      "path": "/docs/installation",
+      "path": "/docs/get-started/installation",
       "category": "get-started", 
       "description": "How to install and setup the library"
     },
     {
       "id": "button",
       "title": "Button",
-      "path": "/docs/button",
+      "path": "/docs/components/elements/button",
       "component": "Button",
       "category": "components",
       "subcategory": "elements",
       "description": "A versatile button component with multiple variants and states"
     },
     {
-      "id": "input",
-      "title": "Input", 
-      "path": "/docs/input",
-      "component": "Input",
+      "id": "divider",
+      "title": "Divider",
+      "path": "/docs/components/elements/divider",
+      "component": "Divider",
       "category": "components",
       "subcategory": "elements",
+      "description": "A divider component for separating content sections"
+    },
+    {
+      "id": "label",
+      "title": "Label",
+      "path": "/docs/components/elements/label",
+      "component": "Label",
+      "category": "components",
+      "subcategory": "elements",
+      "description": "A label component for form fields and content"
+    },
+    {
+      "id": "loader",
+      "title": "Loader",
+      "path": "/docs/components/elements/loader",
+      "component": "Loader",
+      "category": "components",
+      "subcategory": "elements",
+      "description": "A loading spinner component with multiple variants"
+    },
+    {
+      "id": "input",
+      "title": "Input", 
+      "path": "/docs/components/forms/input",
+      "component": "Input",
+      "category": "components",
+      "subcategory": "forms",
       "description": "A flexible text input field with various states and styling options"
+    },
+    {
+      "id": "select",
+      "title": "Select",
+      "path": "/docs/components/forms/select",
+      "component": "Select",
+      "category": "components",
+      "subcategory": "forms",
+      "description": "A dropdown selection component with custom options"
+    },
+    {
+      "id": "textarea",
+      "title": "Textarea",
+      "path": "/docs/components/forms/textarea",
+      "component": "Textarea",
+      "category": "components",
+      "subcategory": "forms",
+      "description": "A multi-line text input component"
     }
   ],
   "categories": [
@@ -49,7 +94,13 @@
           "id": "elements",
           "title": "Elements",
           "description": "Basic UI elements",
-          "items": ["button", "input"]
+          "items": ["button", "divider", "label", "loader"]
+        },
+        {
+          "id": "forms",
+          "title": "Forms",
+          "description": "Form input components",
+          "items": ["input", "select", "textarea"]
         }
       ]
     }

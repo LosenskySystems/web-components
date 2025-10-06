@@ -23,7 +23,7 @@ export function HomePage() {
   ];
 
   return (
-    <div className="py-12 px-8 max-w-4xl mx-auto font-sans">
+    <div className="max-w-4xl mx-auto font-sans">
       {/* Hero Section */}
       <div className="mb-16 text-center">
         <h1 className="text-5xl font-extrabold text-slate-900 mb-4 leading-tight tracking-tight">
@@ -39,7 +39,7 @@ export function HomePage() {
         {components.map((component) => (
           <div
             key={component.name}
-            className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md transition-shadow cursor-pointer"
+            className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-sleek transition-all duration-200 cursor-pointer transform hover:-translate-y-1"
             onClick={() => window.location.href = component.href}
           >
             <div className="flex items-center justify-between mb-3">

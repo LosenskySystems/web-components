@@ -10,13 +10,16 @@ interface AppLayoutProps {
 
 export function AppLayout({ docsMap }: AppLayoutProps) {
   return (
-    <div className="flex min-h-screen bg-slate-50">
+    <div className="flex min-h-screen">
       <Navigation routes={docsMap.routes} categories={docsMap.categories} />
-      <main className="flex-1 overflow-auto bg-slate-50">
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/docs/:component" element={<DocPage />} />
-        </Routes>
+      <main className="flex-1 overflow-auto">
+        <div className="main-content">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/docs/get-started/:page" element={<DocPage />} />
+            <Route path="/docs/components/:category/:component" element={<DocPage />} />
+          </Routes>
+        </div>
       </main>
     </div>
   )

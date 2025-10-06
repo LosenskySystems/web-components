@@ -29,14 +29,7 @@ export function Category({
       {/* Category Header */}
       <div
         onClick={() => onToggleCategory(category.id)}
-        className={`
-          px-4 py-3 cursor-pointer flex items-center justify-between text-white text-sm font-semibold
-          transition-all duration-200 border-l-2
-          ${isExpanded 
-            ? 'bg-gray-700 border-blue-500' 
-            : 'border-transparent hover:bg-gray-800'
-          }
-        `}
+        className="px-4 py-3 cursor-pointer flex items-center justify-between text-gray-900 text-sm font-medium hover:text-gray-700 transition-colors"
       >
         <span>{category.title}</span>
         <span className={`
@@ -60,10 +53,10 @@ export function Category({
                 key={route.id}
                 to={route.path}
                 className={`
-                  block py-2 px-4 pl-8 text-sm no-underline transition-all duration-200 border-l-2
+                  block py-2 px-4 pl-8 text-sm no-underline transition-colors
                   ${isActive(route.path)
-                    ? 'bg-gray-600 text-white border-blue-500'
-                    : 'text-gray-300 border-transparent hover:bg-gray-800 hover:text-white'
+                    ? 'text-gray-900 font-semibold'
+                    : 'text-gray-600 hover:text-gray-900'
                   }
                 `}
               >
@@ -78,11 +71,11 @@ export function Category({
               {/* Subcategory Header */}
               <div
                 onClick={() => onToggleSubcategory(subcategory.id)}
-                className="py-2 px-4 pl-8 cursor-pointer flex items-center justify-between text-gray-300 text-sm font-medium transition-all duration-200 hover:text-white hover:bg-gray-800"
+                className="py-2 px-4 pl-8 cursor-pointer flex items-center justify-between text-gray-900 text-sm font-medium hover:text-gray-700 transition-colors"
               >
                 <span>{subcategory.title}</span>
                 <span className={`
-                  text-xs text-gray-500 transition-transform duration-200
+                  text-xs text-gray-400 transition-transform duration-200
                   ${expandedSubcategories.includes(subcategory.id) ? 'rotate-90' : 'rotate-0'}
                 `}>
                   ▶
@@ -101,10 +94,10 @@ export function Category({
                         key={route.id}
                         to={route.path}
                         className={`
-                          block py-2 px-4 pl-12 text-sm no-underline transition-all duration-200 border-l-2
+                          block py-2 px-4 pl-12 text-sm no-underline transition-colors
                           ${isActive(route.path)
-                            ? 'bg-gray-600 text-white border-blue-500'
-                            : 'text-gray-400 border-transparent hover:bg-gray-800 hover:text-white'
+                            ? 'text-gray-900 font-semibold'
+                            : 'text-gray-600 hover:text-gray-900'
                           }
                         `}
                       >

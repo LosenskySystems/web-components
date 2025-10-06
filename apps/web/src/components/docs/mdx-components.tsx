@@ -7,44 +7,44 @@ export const mdxComponents = {
   // Typography
   h1: (props: any) => (
     <h1 
-      className="text-4xl font-bold text-slate-900 mb-4 mt-0 leading-tight tracking-tight"
+      className="text-4xl font-bold text-slate-900 mb-6 mt-0 leading-tight tracking-tight"
       {...props} 
     />
   ),
   h2: (props: any) => (
     <h2 
-      className="text-2xl font-semibold text-slate-800 mb-4 mt-12 leading-snug border-b border-slate-200 pb-2"
+      className="text-2xl font-semibold text-slate-800 mb-6 mt-12 leading-snug border-b border-slate-200 pb-3"
       {...props} 
     />
   ),
   h3: (props: any) => (
     <h3 
-      className="text-xl font-semibold text-slate-700 mb-3 mt-8 leading-normal"
+      className="text-xl font-semibold text-slate-700 mb-4 mt-8 leading-normal"
       {...props} 
     />
   ),
   h4: (props: any) => (
     <h4 
-      className="text-lg font-semibold text-slate-700 mb-2 mt-6"
+      className="text-lg font-semibold text-slate-700 mb-3 mt-6"
       {...props} 
     />
   ),
   p: (props: any) => (
     <p 
-      className="text-slate-600 leading-relaxed mb-5 text-base"
+      className="text-slate-600 leading-relaxed mb-6 text-base"
       {...props} 
     />
   ),
-  // Code styling
+  // Code styling - Light theme sleek
   code: (props: any) => (
     <code 
-      className="bg-slate-100 text-slate-900 px-1.5 py-0.5 rounded-md text-sm font-mono border border-slate-200"
+      className="bg-slate-100 text-red-600 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-200"
       {...props} 
     />
   ),
   pre: (props: any) => (
     <pre 
-      className="bg-slate-900 text-slate-50 p-6 rounded-xl overflow-auto mb-6 text-sm leading-relaxed font-mono border border-slate-800"
+      className="bg-slate-50 text-slate-900 p-6 rounded-xl overflow-auto mb-8 text-sm leading-relaxed font-mono border border-slate-200 shadow-sleek"
       {...props} 
     />
   ),
