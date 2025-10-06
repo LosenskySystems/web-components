@@ -1,5 +1,3 @@
-import React from 'react'
-
 interface Prop {
   name: string
   type: string

@@ -19,6 +19,7 @@ import RadioDocs from '../../docs/components/forms/Radio.mdx'
 import TabsDocs from '../../docs/components/navigation/Tabs.mdx'
 import OverviewDocs from '../../docs/get-started/Overview.mdx'
 import InstallationDocs from '../../docs/get-started/Installation.mdx'
+import AccordionDocs from '../../docs/components/data/Accordion.mdx'
 
 // Component mapping for dynamic imports
 export const componentMap: Record<string, React.ComponentType> = {
@@ -40,6 +41,7 @@ export const componentMap: Record<string, React.ComponentType> = {
   Checkbox: CheckboxDocs,
   Radio: RadioDocs,
   Tabs: TabsDocs,
+  Accordion: AccordionDocs,
   Overview: OverviewDocs,
   Installation: InstallationDocs,
 }

@@ -1,4 +1,4 @@
-import { Button, Input, Divider, Label, LabelGroup, Loader, Select, Textarea, Tooltip, Badge, Card, Avatar, Icon, Dropdown, DropdownItem, DropdownDivider, DropdownMenu, Alert, Toast, Checkbox, Radio, Tabs, TabsList, TabsTrigger, TabsContent, TabsPanel } from '@losensky-systems/web-components-core'
+import { Button, Input, Divider, Label, LabelGroup, Loader, Select, Textarea, Tooltip, Badge, Card, Avatar, Icon, Dropdown, DropdownItem, DropdownDivider, DropdownMenu, Alert, Toast, Checkbox, Radio, Tabs, TabsList, TabsTrigger, TabsContent, TabsPanel, Accordion, AccordionItem } from '@losensky-systems/web-components-core'
 import { CodeBlock } from './CodeBlock'
 import { PropsTable } from './PropsTable'
 
@@ -30,6 +30,8 @@ export const mdxComponents = {
   TabsTrigger,
   TabsContent,
   TabsPanel,
+  Accordion,
+  AccordionItem,
   CodeBlock,
   PropsTable,
   // Typography

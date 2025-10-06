@@ -114,6 +114,15 @@
       "description": "A simple alert component for displaying important messages and notifications"
     },
     {
+      "id": "accordion",
+      "title": "Accordion",
+      "path": "/docs/components/data/accordion",
+      "component": "Accordion",
+      "category": "components",
+      "subcategory": "data",
+      "description": "A collapsible content area that allows users to expand and collapse sections of information"
+    },
+    {
       "id": "toast",
       "title": "Toast",
       "path": "/docs/components/data/toast",
@@ -209,9 +218,9 @@
         },
         {
           "id": "data",
-          "title": "Data Display",
+          "title": "Data",
           "description": "Components for displaying data and content",
-          "items": ["card", "toast"]
+          "items": ["card", "toast", "accordion"]
         }
       ]
     }
