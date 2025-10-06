@@ -26,10 +26,10 @@
     {
       "id": "card",
       "title": "Card",
-      "path": "/docs/components/elements/card",
+      "path": "/docs/components/data/card",
       "component": "Card",
       "category": "components",
-      "subcategory": "elements",
+      "subcategory": "data",
       "description": "A flexible card component with compound architecture for content layouts"
     },
     {
@@ -121,13 +121,19 @@
           "id": "elements",
           "title": "Elements",
           "description": "Basic UI elements",
-          "items": ["button", "card", "divider", "label", "loader", "tooltip", "badge"]
+          "items": ["button", "divider", "label", "loader", "tooltip", "badge"]
         },
         {
           "id": "forms",
           "title": "Forms",
           "description": "Form input components",
           "items": ["input", "select", "textarea"]
+        },
+        {
+          "id": "data",
+          "title": "Data Display",
+          "description": "Components for displaying data and content",
+          "items": ["card"]
         }
       ]
     }

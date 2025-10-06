@@ -5,7 +5,6 @@
 
 /* Import element styles */
 @import './components/elements/button/index.css';
-@import './components/elements/card/index.css';
 @import './components/elements/divider/index.css';
 @import './components/elements/label/index.css';
 @import './components/elements/loader/index.css';
@@ -16,3 +15,6 @@
 @import './components/forms/input/index.css';
 @import './components/forms/select/index.css';
 @import './components/forms/textarea/index.css';
+
+/* Import data display styles */
+@import './components/data/card/index.css';

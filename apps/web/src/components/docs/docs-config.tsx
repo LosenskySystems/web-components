@@ -1,6 +1,6 @@
 // Import MDX files
 import ButtonDocs from '../../docs/components/elements/Button.mdx'
-import CardDocs from '../../docs/components/elements/Card.mdx'
+import CardDocs from '../../docs/components/data/Card.mdx'
 import DividerDocs from '../../docs/components/elements/Divider.mdx'
 import LabelDocs from '../../docs/components/elements/Label.mdx'
 import LoaderDocs from '../../docs/components/elements/Loader.mdx'

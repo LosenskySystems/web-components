@@ -1,6 +1,5 @@
 // Export all element components
 export { Button, type ButtonProps, type ButtonGroupProps } from './button';
-export { Card, type CardProps, type CardHeaderProps, type CardBodyProps, type CardFooterProps, type CardActionsProps } from './card';
 export { Divider, type DividerProps } from './divider';
 export { Label, LabelGroup, type LabelProps, type LabelGroupProps } from './label';
 export { Loader, type LoaderProps } from './loader';
