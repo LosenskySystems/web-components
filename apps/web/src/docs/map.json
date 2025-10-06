@@ -148,6 +148,15 @@
       "category": "components",
       "subcategory": "forms",
       "description": "A multi-line text input component"
+    },
+    {
+      "id": "checkbox",
+      "title": "Checkbox",
+      "path": "/docs/components/forms/checkbox",
+      "component": "Checkbox",
+      "category": "components",
+      "subcategory": "forms",
+      "description": "A checkbox component for form inputs and selections"
     }
   ],
   "categories": [
@@ -172,7 +181,7 @@
           "id": "forms",
           "title": "Forms",
           "description": "Form input components",
-          "items": ["input", "select", "textarea"]
+          "items": ["input", "select", "textarea", "checkbox"]
         },
         {
           "id": "data",

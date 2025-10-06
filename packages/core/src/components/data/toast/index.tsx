@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Icon } from '../icon';
+import { Icon } from '../../elements/icon';
 import type { ToastProps } from './toast.types';
 
 export { type ToastProps } from './toast.types';

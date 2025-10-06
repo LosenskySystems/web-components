@@ -2,3 +2,4 @@
 export { Input, type InputProps } from './input';
 export { Select, type SelectProps, type SelectItemProps } from './select';
 export { Textarea, type TextareaProps } from './textarea';
+export { Checkbox, type CheckboxProps } from './checkbox';

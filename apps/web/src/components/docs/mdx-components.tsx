@@ -1,4 +1,4 @@
-import { Button, Input, Divider, Label, LabelGroup, Loader, Select, Textarea, Tooltip, Badge, Card, Avatar, Icon, Dropdown, DropdownItem, DropdownDivider, DropdownMenu, Alert, Toast } from '@losensky-systems/web-components-core'
+import { Button, Input, Divider, Label, LabelGroup, Loader, Select, Textarea, Tooltip, Badge, Card, Avatar, Icon, Dropdown, DropdownItem, DropdownDivider, DropdownMenu, Alert, Toast, Checkbox } from '@losensky-systems/web-components-core'
 
 // MDX components mapping with Tailwind classes
 export const mdxComponents = {
@@ -21,6 +21,7 @@ export const mdxComponents = {
   DropdownMenu,
   Alert,
   Toast,
+  Checkbox,
   // Typography
   h1: (props: any) => (
     <h1 

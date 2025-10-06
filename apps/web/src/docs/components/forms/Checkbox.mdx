@@ -1,0 +1,119 @@
+# Checkbox
+
+A checkbox component for form inputs and selections.
+
+## Basic Usage
+
+<Checkbox>Accept terms and conditions</Checkbox>
+
+## States
+
+<div className="space-y-4">
+  <Checkbox>Unchecked</Checkbox>
+  <Checkbox checked>Checked</Checkbox>
+  <Checkbox indeterminate>Indeterminate</Checkbox>
+  <Checkbox disabled>Disabled</Checkbox>
+  <Checkbox checked disabled>Checked & Disabled</Checkbox>
+</div>
+
+## Sizes
+
+<div className="space-y-4">
+  <Checkbox size="sm">Small checkbox</Checkbox>
+  <Checkbox size="md">Medium checkbox (default)</Checkbox>
+  <Checkbox size="lg">Large checkbox</Checkbox>
+</div>
+
+## Variants
+
+<div className="space-y-4">
+  <Checkbox variant="default">Default variant</Checkbox>
+  <Checkbox variant="error">Error variant</Checkbox>
+  <Checkbox variant="success">Success variant</Checkbox>
+</div>
+
+## Interactive Examples
+
+<div className="space-y-4">
+  <div>
+    <h4 className="text-sm font-medium mb-2">Basic Checkbox</h4>
+    <Checkbox onChange={(checked) => console.log('Checked:', checked)}>
+      I agree to the terms
+    </Checkbox>
+  </div>
+  
+  <div>
+    <h4 className="text-sm font-medium mb-2">Checkbox Group</h4>
+    <div className="space-y-2">
+      <Checkbox onChange={(checked) => console.log('Option 1:', checked)}>
+        Option 1
+      </Checkbox>
+      <Checkbox onChange={(checked) => console.log('Option 2:', checked)}>
+        Option 2
+      </Checkbox>
+      <Checkbox onChange={(checked) => console.log('Option 3:', checked)}>
+        Option 3
+      </Checkbox>
+    </div>
+  </div>
+  
+  <div>
+    <h4 className="text-sm font-medium mb-2">Parent-Child Checkboxes</h4>
+    <div className="space-y-2">
+      <Checkbox indeterminate onChange={(checked) => console.log('Select All:', checked)}>
+        Select All
+      </Checkbox>
+      <div className="ml-6 space-y-1">
+        <Checkbox onChange={(checked) => console.log('Item 1:', checked)}>
+          Item 1
+        </Checkbox>
+        <Checkbox onChange={(checked) => console.log('Item 2:', checked)}>
+          Item 2
+        </Checkbox>
+        <Checkbox onChange={(checked) => console.log('Item 3:', checked)}>
+          Item 3
+        </Checkbox>
+      </div>
+    </div>
+  </div>
+</div>
+
+## Form Integration
+
+<div className="space-y-4">
+  <div>
+    <Label>Preferences</Label>
+    <div className="mt-2 space-y-2">
+      <Checkbox>Email notifications</Checkbox>
+      <Checkbox>SMS notifications</Checkbox>
+      <Checkbox>Push notifications</Checkbox>
+    </div>
+  </div>
+  
+  <div>
+    <Label>Required Field</Label>
+    <div className="mt-2">
+      <Checkbox variant="error" onChange={(checked) => {
+        if (!checked) {
+          console.log('This field is required!');
+        }
+      }}>
+        I acknowledge the privacy policy
+      </Checkbox>
+    </div>
+  </div>
+</div>
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `checked` | `boolean` | `false` | Whether the checkbox is checked |
+| `indeterminate` | `boolean` | `false` | Whether the checkbox is in indeterminate state |
+| `disabled` | `boolean` | `false` | Whether the checkbox is disabled |
+| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Checkbox size |
+| `variant` | `'default' \| 'error' \| 'success'` | `'default'` | Checkbox variant |
+| `children` | `React.ReactNode` | - | Checkbox label |
+| `onChange` | `(checked: boolean) => void` | - | Callback when checkbox state changes |
+| `className` | `string` | - | Additional CSS classes |
+| `inputProps` | `React.InputHTMLAttributes<HTMLInputElement>` | - | Additional input props |
