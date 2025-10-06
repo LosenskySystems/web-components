@@ -29,7 +29,7 @@ export function Category({
       {/* Category Header */}
       <div
         onClick={() => onToggleCategory(category.id)}
-        className="px-4 py-3 cursor-pointer flex items-center justify-between text-gray-900 text-sm font-medium hover:text-gray-700 transition-colors"
+        className="px-3 py-1.5 cursor-pointer flex items-center justify-between text-gray-900 text-sm font-medium hover:text-gray-700 transition-colors"
       >
         <span>{category.title}</span>
         <span className={`
@@ -53,7 +53,7 @@ export function Category({
                 key={route.id}
                 to={route.path}
                 className={`
-                  block py-2 px-4 pl-8 text-sm no-underline transition-colors
+                  block py-1 px-3 pl-5 text-sm no-underline transition-colors
                   ${isActive(route.path)
                     ? 'text-gray-900 font-semibold'
                     : 'text-gray-600 hover:text-gray-900'
@@ -71,7 +71,7 @@ export function Category({
               {/* Subcategory Header */}
               <div
                 onClick={() => onToggleSubcategory(subcategory.id)}
-                className="py-2 px-4 pl-8 cursor-pointer flex items-center justify-between text-gray-900 text-sm font-medium hover:text-gray-700 transition-colors"
+                className="py-1 px-3 pl-5 cursor-pointer flex items-center justify-between text-gray-900 text-sm font-medium hover:text-gray-700 transition-colors"
               >
                 <span>{subcategory.title}</span>
                 <span className={`
@@ -94,7 +94,7 @@ export function Category({
                         key={route.id}
                         to={route.path}
                         className={`
-                          block py-2 px-4 pl-12 text-sm no-underline transition-colors
+                          block py-1 px-3 pl-8 text-sm no-underline transition-colors
                           ${isActive(route.path)
                             ? 'text-gray-900 font-semibold'
                             : 'text-gray-600 hover:text-gray-900'
