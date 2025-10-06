@@ -18,8 +18,8 @@
 - ✅ Text Input 
 - ✅ Textarea
 - ✅ Select 
-- ❌ Checkbox
-- ❌ Radio Button
+- ✅ Checkbox
+- ✅ Radio Button
 - ❌ Toggle / Switch
 - ❌ Range Slider
 - ❌ File Upload (drag & drop + input)
@@ -105,7 +105,7 @@ The **Advanced** set is optional but useful for full-featured apps.
 
 ## 📊 Progress Summary
 
-**✅ COMPLETED (14 components):**
+**✅ COMPLETED (16 components):**
 
 **Elements (9):**
 - Button (with variants, sizes, colors, loading, icons, links)
@@ -119,28 +119,30 @@ The **Advanced** set is optional but useful for full-featured apps.
 - Dropdown (with items, icons, placements, sizes)
 - Alert (with variants, sizes, closable, custom icons)
 
-**Forms (3):**
+**Forms (5):**
 - Input (with sizes, variants, states, helper text)
 - Select (with compound components: Item)
 - Textarea (with sizes, variants, states, helper text)
+- Checkbox (with sizes, variants, states, controlled/uncontrolled)
+- Radio Button (with sizes, variants, states, grouping, uncheckable)
 
 **Data Display (2):**
 - Card (with compound components: Header, Body, Footer, Actions)
 - Toast (with variants, sizes, positions, auto-dismiss, custom icons)
 
-**❌ NOT DONE (92 components):**
+**❌ NOT DONE (90 components):**
 - All Navigation components
 - All Layout components  
 - All Utilities/Overlays
 - All Advanced components
 - Remaining Elements (Popover)
-- Most remaining Forms (Checkbox, Radio, Toggle, etc.)
+- Most remaining Forms (Toggle, Range Slider, etc.)
 
 **🎯 Next Priority Recommendations:**
-1. **Checkbox** & **Radio Button** - Core form elements
+1. **Toggle/Switch** - Common form element
 2. **Modal/Dialog** - Essential for interactions
 3. **Tabs** - Common navigation pattern
 4. **Table** - Essential for data display
 5. **Progress Bar** - Important for user feedback
 
-**Progress: 14/106 components completed (13.2%)**
+**Progress: 16/106 components completed (15.1%)**

@@ -15,6 +15,7 @@ import InputDocs from '../../docs/components/forms/Input.mdx'
 import SelectDocs from '../../docs/components/forms/Select.mdx'
 import TextareaDocs from '../../docs/components/forms/Textarea.mdx'
 import CheckboxDocs from '../../docs/components/forms/Checkbox.mdx'
+import RadioDocs from '../../docs/components/forms/Radio.mdx'
 import OverviewDocs from '../../docs/get-started/Overview.mdx'
 import InstallationDocs from '../../docs/get-started/Installation.mdx'
 
@@ -36,6 +37,7 @@ export const componentMap: Record<string, React.ComponentType> = {
   Select: SelectDocs,
   Textarea: TextareaDocs,
   Checkbox: CheckboxDocs,
+  Radio: RadioDocs,
   Overview: OverviewDocs,
   Installation: InstallationDocs,
 }

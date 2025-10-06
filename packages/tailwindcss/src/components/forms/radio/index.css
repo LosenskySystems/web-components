@@ -1,0 +1,163 @@
+/* Radio component styles */
+.web-radio {
+  @apply relative inline-flex items-center cursor-pointer;
+  min-height: 20px;
+}
+
+.web-radio-input {
+  @apply absolute opacity-0 cursor-pointer;
+  margin: 0;
+  z-index: 10;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 0;
+}
+
+.web-radio-control {
+  @apply relative inline-flex items-center justify-center rounded-full border-2 transition-all duration-200;
+  background-color: #ffffff !important;
+  border-color: #d1d5db !important;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+.web-radio:hover .web-radio-control {
+  border-color: #9ca3af !important;
+  background-color: #f9fafb !important;
+  transform: scale(1.05);
+}
+
+.web-radio-control:hover {
+  border-color: #9ca3af !important;
+}
+
+.web-radio-control:focus-within {
+  @apply ring-2 ring-blue-500;
+  border-color: #3b82f6 !important;
+}
+
+/* Checked state */
+.web-radio-checked .web-radio-control {
+  border-color: #3b82f6 !important;
+}
+
+.web-radio-checked .web-radio-dot {
+  @apply opacity-100;
+  background-color: #3b82f6 !important;
+}
+
+/* Disabled state */
+.web-radio-disabled {
+  @apply cursor-not-allowed opacity-50;
+}
+
+.web-radio-disabled .web-radio-control {
+  background-color: #f3f4f6 !important;
+  border-color: #e5e7eb !important;
+}
+
+.web-radio-disabled .web-radio-control:hover {
+  border-color: #e5e7eb !important;
+}
+
+.web-radio-disabled .web-radio-label {
+  color: #9ca3af !important;
+}
+
+/* Radio dot */
+.web-radio-dot {
+  @apply absolute rounded-full opacity-0 transition-opacity duration-200;
+  width: 8px;
+  height: 8px;
+}
+
+/* Label */
+.web-radio-label {
+  @apply ml-3 text-sm font-medium;
+  color: #374151 !important;
+}
+
+/* Size variants */
+.web-radio-sm .web-radio-control {
+  width: 16px;
+  height: 16px;
+}
+
+.web-radio-sm .web-radio-input {
+  width: 16px;
+  height: 16px;
+}
+
+.web-radio-sm .web-radio-dot {
+  width: 6px;
+  height: 6px;
+}
+
+.web-radio-sm .web-radio-label {
+  @apply ml-2 text-xs;
+}
+
+.web-radio-lg .web-radio-control {
+  width: 24px;
+  height: 24px;
+}
+
+.web-radio-lg .web-radio-input {
+  width: 24px;
+  height: 24px;
+}
+
+.web-radio-lg .web-radio-dot {
+  width: 10px;
+  height: 10px;
+}
+
+.web-radio-lg .web-radio-label {
+  @apply ml-4 text-base;
+}
+
+/* Error state */
+.web-radio-error .web-radio-control {
+  border-color: #dc2626 !important;
+}
+
+.web-radio-error .web-radio-control:focus-within {
+  @apply ring-red-500;
+  border-color: #dc2626 !important;
+}
+
+.web-radio-error .web-radio-label {
+  color: #dc2626 !important;
+}
+
+/* Success state */
+.web-radio-success .web-radio-control {
+  border-color: #16a34a !important;
+}
+
+.web-radio-success .web-radio-control:focus-within {
+  @apply ring-green-500;
+  border-color: #16a34a !important;
+}
+
+.web-radio-success .web-radio-label {
+  color: #16a34a !important;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .web-radio-label {
+    @apply text-sm;
+  }
+  
+  .web-radio-sm .web-radio-label {
+    @apply text-xs;
+  }
+  
+  .web-radio-lg .web-radio-label {
+    @apply text-sm;
+  }
+}

@@ -157,6 +157,15 @@
       "category": "components",
       "subcategory": "forms",
       "description": "A checkbox component for form inputs and selections"
+    },
+    {
+      "id": "radio",
+      "title": "Radio",
+      "path": "/docs/components/forms/radio",
+      "component": "Radio",
+      "category": "components",
+      "subcategory": "forms",
+      "description": "A radio button component for single selection in forms"
     }
   ],
   "categories": [
@@ -181,7 +190,7 @@
           "id": "forms",
           "title": "Forms",
           "description": "Form input components",
-          "items": ["input", "select", "textarea", "checkbox"]
+          "items": ["input", "select", "textarea", "checkbox", "radio"]
         },
         {
           "id": "data",
