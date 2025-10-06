@@ -13,94 +13,55 @@ import { Input } from '@losensky-systems/web-components-core'
 
 ## Basic Usage
 
-<div style={{ marginBottom: '2rem' }}>
-  <Input placeholder="Enter your text..." />
-</div>
-
-```tsx
-<Input placeholder="Enter your text..." />
-```
+<CodeBlock code={`<Input placeholder="Enter your text..." />`}>
+  <div className="mb-8">
+    <Input placeholder="Enter your text..." />
+  </div>
+</CodeBlock>
 
 ## Sizes
 
-<div style={{ marginBottom: '2rem' }}>
-  <div style={{ marginBottom: '1rem' }}>
-    <Input size="sm" placeholder="Small input" />
-  </div>
-  <div style={{ marginBottom: '1rem' }}>
-    <Input size="md" placeholder="Medium input (default)" />
-  </div>
-  <div style={{ marginBottom: '1rem' }}>
-    <Input size="lg" placeholder="Large input" />
-  </div>
-</div>
-
-```tsx
-<Input size="sm" placeholder="Small input" />
+<CodeBlock code={`<Input size="sm" placeholder="Small input" />
 <Input size="md" placeholder="Medium input (default)" />
-<Input size="lg" placeholder="Large input" />
-```
+<Input size="lg" placeholder="Large input" />`}>
+  <div className="mb-8">
+    <div className="mb-4">
+      <Input size="sm" placeholder="Small input" />
+    </div>
+    <div className="mb-4">
+      <Input size="md" placeholder="Medium input (default)" />
+    </div>
+    <div className="mb-4">
+      <Input size="lg" placeholder="Large input" />
+    </div>
+  </div>
+</CodeBlock>
 
 ## Variants
 
-<div style={{ marginBottom: '2rem' }}>
-  <div style={{ marginBottom: '1rem' }}>
-    <Input variant="default" placeholder="Default input" />
-  </div>
-  <div style={{ marginBottom: '1rem' }}>
-    <Input variant="error" placeholder="Error input" />
-  </div>
-  <div style={{ marginBottom: '1rem' }}>
-    <Input variant="success" placeholder="Success input" />
-  </div>
-  <div style={{ marginBottom: '1rem' }}>
-    <Input variant="warning" placeholder="Warning input" />
-  </div>
-</div>
-
-```tsx
-<Input variant="default" placeholder="Default input" />
+<CodeBlock code={`<Input variant="default" placeholder="Default input" />
 <Input variant="error" placeholder="Error input" />
 <Input variant="success" placeholder="Success input" />
-<Input variant="warning" placeholder="Warning input" />
-```
+<Input variant="warning" placeholder="Warning input" />`}>
+  <div className="mb-8">
+    <div className="mb-4">
+      <Input variant="default" placeholder="Default input" />
+    </div>
+    <div className="mb-4">
+      <Input variant="error" placeholder="Error input" />
+    </div>
+    <div className="mb-4">
+      <Input variant="success" placeholder="Success input" />
+    </div>
+    <div className="mb-4">
+      <Input variant="warning" placeholder="Warning input" />
+    </div>
+  </div>
+</CodeBlock>
 
 ## With Labels and Helper Text
 
-<div style={{ marginBottom: '2rem' }}>
-  <div style={{ marginBottom: '1rem' }}>
-    <Label htmlFor="email-input">Email Address</Label>
-    <Input 
-      id="email-input"
-      placeholder="Enter your email" 
-      helperText="We'll never share your email"
-    />
-  </div>
-  
-  <div style={{ marginBottom: '1rem' }}>
-    <Label htmlFor="password-input">Password</Label>
-    <Input 
-      id="password-input"
-      type="password" 
-      placeholder="Enter your password"
-      errorText="Password must be at least 8 characters"
-      error
-    />
-  </div>
-  
-  <div style={{ marginBottom: '1rem' }}>
-    <Label htmlFor="username-input">Username</Label>
-    <Input 
-      id="username-input"
-      placeholder="Choose a username"
-      successText="Username is available!"
-      variant="success"
-    />
-  </div>
-</div>
-
-```tsx
-<Label htmlFor="email-input">Email Address</Label>
+<CodeBlock code={`<Label htmlFor="email-input">Email Address</Label>
 <Input 
   id="email-input"
   placeholder="Enter your email" 
@@ -122,39 +83,43 @@ import { Input } from '@losensky-systems/web-components-core'
   placeholder="Choose a username"
   successText="Username is available!"
   variant="success"
-/>
-```
+/>`}>
+  <div className="mb-8">
+    <div className="mb-4">
+      <Label htmlFor="email-input">Email Address</Label>
+      <Input 
+        id="email-input"
+        placeholder="Enter your email" 
+        helperText="We'll never share your email"
+      />
+    </div>
+    
+    <div className="mb-4">
+      <Label htmlFor="password-input">Password</Label>
+      <Input 
+        id="password-input"
+        type="password" 
+        placeholder="Enter your password"
+        errorText="Password must be at least 8 characters"
+        error
+      />
+    </div>
+    
+    <div className="mb-4">
+      <Label htmlFor="username-input">Username</Label>
+      <Input 
+        id="username-input"
+        placeholder="Choose a username"
+        successText="Username is available!"
+        variant="success"
+      />
+    </div>
+  </div>
+</CodeBlock>
 
 ## With Icons
 
-<div style={{ marginBottom: '2rem' }}>
-  <div style={{ marginBottom: '1rem' }}>
-    <Input 
-      icon={<Search size={16} />} 
-      placeholder="Search..." 
-    />
-  </div>
-  
-  <div style={{ marginBottom: '1rem' }}>
-    <Input 
-      icon={<Mail size={16} />} 
-      iconPosition="left"
-      placeholder="Email address" 
-    />
-  </div>
-  
-  <div style={{ marginBottom: '1rem' }}>
-    <Input 
-      icon={<Lock size={16} />} 
-      iconPosition="right"
-      type="password"
-      placeholder="Password" 
-    />
-  </div>
-</div>
-
-```tsx
-<Input 
+<CodeBlock code={`<Input 
   icon={<Search size={16} />} 
   placeholder="Search..." 
 />
@@ -170,102 +135,119 @@ import { Input } from '@losensky-systems/web-components-core'
   iconPosition="right"
   type="password"
   placeholder="Password" 
-/>
-```
+/>`}>
+  <div className="mb-8">
+    <div className="mb-4">
+      <Input 
+        icon={<Search size={16} />} 
+        placeholder="Search..." 
+      />
+    </div>
+    
+    <div className="mb-4">
+      <Input 
+        icon={<Mail size={16} />} 
+        iconPosition="left"
+        placeholder="Email address" 
+      />
+    </div>
+    
+    <div className="mb-4">
+      <Input 
+        icon={<Lock size={16} />} 
+        iconPosition="right"
+        type="password"
+        placeholder="Password" 
+      />
+    </div>
+  </div>
+</CodeBlock>
 
 ## Clearable Input
 
-<div style={{ marginBottom: '2rem' }}>
-  <Input 
-    clearable 
-    placeholder="Type something to see clear button" 
-    defaultValue="Clearable text"
-  />
-</div>
-
-```tsx
-<Input 
+<CodeBlock code={`<Input 
   clearable 
   placeholder="Type something to see clear button" 
   defaultValue="Clearable text"
-/>
-```
+/>`}>
+  <div className="mb-8">
+    <Input 
+      clearable 
+      placeholder="Type something to see clear button" 
+      defaultValue="Clearable text"
+    />
+  </div>
+</CodeBlock>
 
 ## Loading State
 
-<div style={{ marginBottom: '2rem' }}>
-  <Input 
-    loading 
-    placeholder="Loading input..." 
-  />
-</div>
-
-```tsx
-<Input 
+<CodeBlock code={`<Input 
   loading 
   placeholder="Loading input..." 
-/>
-```
+/>`}>
+  <div className="mb-8">
+    <Input 
+      loading 
+      placeholder="Loading input..." 
+    />
+  </div>
+</CodeBlock>
 
 ## Input Types
 
-<div style={{ marginBottom: '2rem' }}>
-  <div style={{ marginBottom: '1rem' }}>
-    <Input type="text" placeholder="Text input" />
-  </div>
-  <div style={{ marginBottom: '1rem' }}>
-    <Input type="email" placeholder="Email input" />
-  </div>
-  <div style={{ marginBottom: '1rem' }}>
-    <Input type="password" placeholder="Password input" />
-  </div>
-  <div style={{ marginBottom: '1rem' }}>
-    <Input type="number" placeholder="Number input" />
-  </div>
-  <div style={{ marginBottom: '1rem' }}>
-    <Input type="tel" placeholder="Phone input" />
-  </div>
-  <div style={{ marginBottom: '1rem' }}>
-    <Input type="url" placeholder="URL input" />
-  </div>
-  <div style={{ marginBottom: '1rem' }}>
-    <Input type="search" placeholder="Search input" />
-  </div>
-</div>
-
-```tsx
-<Input type="text" placeholder="Text input" />
+<CodeBlock code={`<Input type="text" placeholder="Text input" />
 <Input type="email" placeholder="Email input" />
 <Input type="password" placeholder="Password input" />
 <Input type="number" placeholder="Number input" />
 <Input type="tel" placeholder="Phone input" />
 <Input type="url" placeholder="URL input" />
-<Input type="search" placeholder="Search input" />
-```
+<Input type="search" placeholder="Search input" />`}>
+  <div className="mb-8">
+    <div className="mb-4">
+      <Input type="text" placeholder="Text input" />
+    </div>
+    <div className="mb-4">
+      <Input type="email" placeholder="Email input" />
+    </div>
+    <div className="mb-4">
+      <Input type="password" placeholder="Password input" />
+    </div>
+    <div className="mb-4">
+      <Input type="number" placeholder="Number input" />
+    </div>
+    <div className="mb-4">
+      <Input type="tel" placeholder="Phone input" />
+    </div>
+    <div className="mb-4">
+      <Input type="url" placeholder="URL input" />
+    </div>
+    <div className="mb-4">
+      <Input type="search" placeholder="Search input" />
+    </div>
+  </div>
+</CodeBlock>
 
 ## States
 
-<div style={{ marginBottom: '2rem' }}>
-  <div style={{ marginBottom: '1rem' }}>
-    <Input placeholder="Default input" />
-  </div>
-  <div style={{ marginBottom: '1rem' }}>
-    <Input placeholder="Disabled input" disabled />
-  </div>
-  <div style={{ marginBottom: '1rem' }}>
-    <Input placeholder="Read-only input" readOnly defaultValue="Read-only value" />
-  </div>
-  <div style={{ marginBottom: '1rem' }}>
-    <Input placeholder="Required input" required />
-  </div>
-</div>
-
-```tsx
-<Input placeholder="Default input" />
+<CodeBlock code={`<Input placeholder="Default input" />
 <Input placeholder="Disabled input" disabled />
 <Input placeholder="Read-only input" readOnly defaultValue="Read-only value" />
-<Input placeholder="Required input" required />
-```
+<Input placeholder="Required input" required />`}>
+  <div className="mb-8">
+    <div className="mb-4">
+      <Input placeholder="Default input" />
+    </div>
+    <div className="mb-4">
+      <Input placeholder="Disabled input" disabled />
+    </div>
+    <div className="mb-4">
+      <Input placeholder="Read-only input" readOnly defaultValue="Read-only value" />
+    </div>
+    <div className="mb-4">
+      <Input placeholder="Required input" required />
+    </div>
+  </div>
+</CodeBlock>
 
 ## Props
 

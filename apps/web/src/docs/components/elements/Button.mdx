@@ -16,74 +16,83 @@ import { FolderOpen, Save, Plus, Settings, Heart, ShoppingCart, Bell, MessageCir
 
 The Button component supports multiple predefined variants:
 
-<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
+<CodeBlock code={`<div className="flex gap-4 flex-wrap">
   <Button variant="primary">Primary</Button>
   <Button variant="secondary">Secondary</Button>
   <Button variant="outline">Outline</Button>
   <Button variant="ghost">Ghost</Button>
   <Button variant="text">Text</Button>
   <Button variant="destructive">Destructive</Button>
-</div>
+</div>`}>
+  <div className="flex gap-4 flex-wrap">
+    <Button variant="primary">Primary</Button>
+    <Button variant="secondary">Secondary</Button>
+    <Button variant="outline">Outline</Button>
+    <Button variant="ghost">Ghost</Button>
+    <Button variant="text">Text</Button>
+    <Button variant="destructive">Destructive</Button>
+  </div>
+</CodeBlock>
 
 ## Sizes
 
 The Button component supports multiple sizes:
 
-<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
+<CodeBlock code={`<div className="flex gap-4 flex-wrap items-center">
   <Button size="sm">Small</Button>
   <Button size="md">Medium</Button>
   <Button size="lg">Large</Button>
   <Button size="xl">Extra Large</Button>
-</div>
-
-```tsx
-<Button size="sm">Small</Button>
-<Button size="md">Medium</Button>
-<Button size="lg">Large</Button>
-<Button size="xl">Extra Large</Button>
-```
+</div>`}>
+  <div className="flex gap-4 flex-wrap items-center">
+    <Button size="sm">Small</Button>
+    <Button size="md">Medium</Button>
+    <Button size="lg">Large</Button>
+    <Button size="xl">Extra Large</Button>
+  </div>
+</CodeBlock>
 
 ### Size with Icons
 
 Sizes work perfectly with icons:
 
-<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
+<CodeBlock code={`<div className="flex gap-4 flex-wrap items-center">
   <Button size="sm" icon={<Plus size={14} />} iconPosition="left">Small</Button>
   <Button size="md" icon={<Plus size={16} />} iconPosition="left">Medium</Button>
   <Button size="lg" icon={<Plus size={18} />} iconPosition="left">Large</Button>
   <Button size="xl" icon={<Plus size={20} />} iconPosition="left">Extra Large</Button>
-</div>
-
-```tsx
-<Button size="sm" icon={<Plus size={14} />} iconPosition="left">Small</Button>
-<Button size="md" icon={<Plus size={16} />} iconPosition="left">Medium</Button>
-<Button size="lg" icon={<Plus size={18} />} iconPosition="left">Large</Button>
-<Button size="xl" icon={<Plus size={20} />} iconPosition="left">Extra Large</Button>
-```
+</div>`}>
+  <div className="flex gap-4 flex-wrap items-center">
+    <Button size="sm" icon={<Plus size={14} />} iconPosition="left">Small</Button>
+    <Button size="md" icon={<Plus size={16} />} iconPosition="left">Medium</Button>
+    <Button size="lg" icon={<Plus size={18} />} iconPosition="left">Large</Button>
+    <Button size="xl" icon={<Plus size={20} />} iconPosition="left">Extra Large</Button>
+  </div>
+</CodeBlock>
 
 ### Icon-Only Sizes
 
 Icon-only buttons scale appropriately:
 
-<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
+<CodeBlock code={`<div className="flex gap-4 flex-wrap items-center">
   <Button size="sm" icon={<Settings size={14} />} iconOnly variant="ghost" />
   <Button size="md" icon={<Settings size={16} />} iconOnly variant="ghost" />
   <Button size="lg" icon={<Settings size={18} />} iconOnly variant="ghost" />
   <Button size="xl" icon={<Settings size={20} />} iconOnly variant="ghost" />
-</div>
-
-```tsx
-<Button size="sm" icon={<Settings size={14} />} iconOnly variant="ghost" />
-<Button size="md" icon={<Settings size={16} />} iconOnly variant="ghost" />
-<Button size="lg" icon={<Settings size={18} />} iconOnly variant="ghost" />
-<Button size="xl" icon={<Settings size={20} />} iconOnly variant="ghost" />
-```
+</div>`}>
+  <div className="flex gap-4 flex-wrap items-center">
+    <Button size="sm" icon={<Settings size={14} />} iconOnly variant="ghost" />
+    <Button size="md" icon={<Settings size={16} />} iconOnly variant="ghost" />
+    <Button size="lg" icon={<Settings size={18} />} iconOnly variant="ghost" />
+    <Button size="xl" icon={<Settings size={20} />} iconOnly variant="ghost" />
+  </div>
+</CodeBlock>
 
 ## Link Buttons
 
 The Button component can render as a link when `href` is provided, maintaining all button styling and functionality:
 
-<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
+<CodeBlock code={`<div className="flex gap-4 flex-wrap">
   <Button href="https://example.com" variant="primary">
     External Link
   </Button>
@@ -93,27 +102,25 @@ The Button component can render as a link when `href` is provided, maintaining a
   <Button href="https://github.com" target="_blank" rel="noopener noreferrer" variant="secondary">
     GitHub
   </Button>
-</div>
-
-```tsx
-<Button href="https://example.com" variant="primary">
-  External Link
-</Button>
-
-<Button href="/docs" variant="outline">
-  Internal Link
-</Button>
-
-<Button href="https://github.com" target="_blank" rel="noopener noreferrer" variant="secondary">
-  GitHub
-</Button>
-```
+</div>`}>
+  <div className="flex gap-4 flex-wrap">
+    <Button href="https://example.com" variant="primary">
+      External Link
+    </Button>
+    <Button href="/docs" variant="outline">
+      Internal Link
+    </Button>
+    <Button href="https://github.com" target="_blank" rel="noopener noreferrer" variant="secondary">
+      GitHub
+    </Button>
+  </div>
+</CodeBlock>
 
 ### Link Buttons with Icons
 
 Link buttons work perfectly with icons:
 
-<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
+<CodeBlock code={`<div className="flex gap-4 flex-wrap">
   <Button href="/download" icon={<Download size={16} />} iconPosition="left" variant="primary">
     Download
   </Button>
@@ -121,48 +128,45 @@ Link buttons work perfectly with icons:
     Search
   </Button>
   <Button href="/docs" icon={<FileText size={16} />} iconOnly variant="ghost" />
-</div>
-
-```tsx
-<Button href="/download" icon={<Download size={16} />} iconPosition="left" variant="primary">
-  Download
-</Button>
-
-<Button href="/search" icon={<Search size={16} />} iconPosition="right" variant="outline">
-  Search
-</Button>
-
-<Button href="/docs" icon={<FileText size={16} />} iconOnly variant="ghost" />
-```
+</div>`}>
+  <div className="flex gap-4 flex-wrap">
+    <Button href="/download" icon={<Download size={16} />} iconPosition="left" variant="primary">
+      Download
+    </Button>
+    <Button href="/search" icon={<Search size={16} />} iconPosition="right" variant="outline">
+      Search
+    </Button>
+    <Button href="/docs" icon={<FileText size={16} />} iconOnly variant="ghost" />
+  </div>
+</CodeBlock>
 
 ### Disabled Link Buttons
 
 Disabled link buttons won't navigate and maintain disabled styling:
 
-<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
+<CodeBlock code={`<div className="flex gap-4 flex-wrap">
   <Button href="/disabled" disabled variant="primary">
     Disabled Link
   </Button>
   <Button href="/loading" loading variant="outline">
     Loading Link
   </Button>
-</div>
-
-```tsx
-<Button href="/disabled" disabled variant="primary">
-  Disabled Link
-</Button>
-
-<Button href="/loading" loading variant="outline">
-  Loading Link
-</Button>
-```
+</div>`}>
+  <div className="flex gap-4 flex-wrap">
+    <Button href="/disabled" disabled variant="primary">
+      Disabled Link
+    </Button>
+    <Button href="/loading" loading variant="outline">
+      Loading Link
+    </Button>
+  </div>
+</CodeBlock>
 
 ## Icon Support
 
 The Button component supports icons with flexible positioning:
 
-<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
+<CodeBlock code={`<div className="flex gap-4 flex-wrap items-center">
   <Button icon={<FolderOpen size={16} />} iconPosition="left">
     Open File
   </Button>
@@ -178,29 +182,25 @@ The Button component supports icons with flexible positioning:
   <Button icon={<Heart size={16} />} iconOnly variant="ghost">
     Like
   </Button>
-</div>
-
-```tsx
-<Button icon={<FolderOpen size={16} />} iconPosition="left">
-  Open File
-</Button>
-
-<Button icon={<Save size={16} />} iconPosition="right">
-  Save
-</Button>
-
-<Button icon={<Plus size={16} />} iconOnly>
-  Add
-</Button>
-
-<Button icon={<Settings size={16} />} iconOnly variant="outline">
-  Settings
-</Button>
-
-<Button icon={<Heart size={16} />} iconOnly variant="ghost">
-  Like
-</Button>
-```
+</div>`}>
+  <div className="flex gap-4 flex-wrap items-center">
+    <Button icon={<FolderOpen size={16} />} iconPosition="left">
+      Open File
+    </Button>
+    <Button icon={<Save size={16} />} iconPosition="right">
+      Save
+    </Button>
+    <Button icon={<Plus size={16} />} iconOnly>
+      Add
+    </Button>
+    <Button icon={<Settings size={16} />} iconOnly variant="outline">
+      Settings
+    </Button>
+    <Button icon={<Heart size={16} />} iconOnly variant="ghost">
+      Like
+    </Button>
+  </div>
+</CodeBlock>
 
 ### Icon Props
 
@@ -236,37 +236,51 @@ import { Download, Search, Heart } from 'lucide-react'
 
 Different variants create different visual styles for icon-only buttons:
 
-<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
-  <div style={{ textAlign: 'center' }}>
+<CodeBlock code={`<div className="flex gap-4 flex-wrap items-center">
+  <div className="text-center">
     <Button icon={<Plus size={16} />} iconOnly variant="primary" />
-    <div style={{ fontSize: '0.75rem', color: '#6b7280', marginTop: '0.5rem' }}>Primary</div>
+    <div className="text-xs text-gray-500 mt-2">Primary</div>
   </div>
-  <div style={{ textAlign: 'center' }}>
+  <div className="text-center">
     <Button icon={<Settings size={16} />} iconOnly variant="secondary" />
-    <div style={{ fontSize: '0.75rem', color: '#6b7280', marginTop: '0.5rem' }}>Secondary</div>
+    <div className="text-xs text-gray-500 mt-2">Secondary</div>
   </div>
-  <div style={{ textAlign: 'center' }}>
+  <div className="text-center">
     <Button icon={<FileText size={16} />} iconOnly variant="outline" />
-    <div style={{ fontSize: '0.75rem', color: '#6b7280', marginTop: '0.5rem' }}>Outline</div>
+    <div className="text-xs text-gray-500 mt-2">Outline</div>
   </div>
-  <div style={{ textAlign: 'center' }}>
+  <div className="text-center">
     <Button icon={<Heart size={16} />} iconOnly variant="ghost" />
-    <div style={{ fontSize: '0.75rem', color: '#6b7280', marginTop: '0.5rem' }}>Ghost</div>
+    <div className="text-xs text-gray-500 mt-2">Ghost</div>
   </div>
-  <div style={{ textAlign: 'center' }}>
+  <div className="text-center">
     <Button icon={<Search size={16} />} iconOnly variant="text" />
-    <div style={{ fontSize: '0.75rem', color: '#6b7280', marginTop: '0.5rem' }}>Text</div>
+    <div className="text-xs text-gray-500 mt-2">Text</div>
   </div>
-</div>
-
-```tsx
-// Different icon-only button styles
-<Button icon={<Plus size={16} />} iconOnly variant="primary" />     // Solid background
-<Button icon={<Settings size={16} />} iconOnly variant="secondary" />  // Light background  
-<Button icon={<FileText size={16} />} iconOnly variant="outline" />   // Border only
-<Button icon={<Heart size={16} />} iconOnly variant="ghost" />      // Light gray hover
-<Button icon={<Search size={16} />} iconOnly variant="text" />      // Minimal hover
-```
+</div>`}>
+  <div className="flex gap-4 flex-wrap items-center">
+    <div className="text-center">
+      <Button icon={<Plus size={16} />} iconOnly variant="primary" />
+      <div className="text-xs text-gray-500 mt-2">Primary</div>
+    </div>
+    <div className="text-center">
+      <Button icon={<Settings size={16} />} iconOnly variant="secondary" />
+      <div className="text-xs text-gray-500 mt-2">Secondary</div>
+    </div>
+    <div className="text-center">
+      <Button icon={<FileText size={16} />} iconOnly variant="outline" />
+      <div className="text-xs text-gray-500 mt-2">Outline</div>
+    </div>
+    <div className="text-center">
+      <Button icon={<Heart size={16} />} iconOnly variant="ghost" />
+      <div className="text-xs text-gray-500 mt-2">Ghost</div>
+    </div>
+    <div className="text-center">
+      <Button icon={<Search size={16} />} iconOnly variant="text" />
+      <div className="text-xs text-gray-500 mt-2">Text</div>
+    </div>
+  </div>
+</CodeBlock>
 
 **Perfect for your use case**: `<Button icon={<Heart size={16} />} iconOnly variant="ghost" />` gives you exactly what you want - no background, no color, just a light gray rounded background on hover!
 
@@ -274,9 +288,9 @@ Different variants create different visual styles for icon-only buttons:
 
 Use `Button.Group` to group related buttons together:
 
-<div style={{ display: 'flex', gap: '2rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'flex-start' }}>
+<CodeBlock code={`<div className="flex gap-8 flex-wrap items-start">
   <div>
-    <h4 style={{ margin: '0 0 0.5rem 0', fontSize: '0.875rem', fontWeight: '600' }}>Basic Group</h4>
+    <h4 className="text-sm font-semibold mb-2">Basic Group</h4>
     <Button.Group>
       <Button variant="primary">Save</Button>
       <Button variant="secondary">Cancel</Button>
@@ -284,7 +298,7 @@ Use `Button.Group` to group related buttons together:
   </div>
   
   <div>
-    <h4 style={{ margin: '0 0 0.5rem 0', fontSize: '0.875rem', fontWeight: '600' }}>Attached</h4>
+    <h4 className="text-sm font-semibold mb-2">Attached</h4>
     <Button.Group attached>
       <Button variant="primary">Save</Button>
       <Button variant="secondary">Cancel</Button>
@@ -292,35 +306,41 @@ Use `Button.Group` to group related buttons together:
   </div>
   
   <div>
-    <h4 style={{ margin: '0 0 0.5rem 0', fontSize: '0.875rem', fontWeight: '600' }}>With Icons</h4>
+    <h4 className="text-sm font-semibold mb-2">With Icons</h4>
     <Button.Group>
       <Button icon="📁" iconPosition="left">Open</Button>
       <Button icon="💾" iconPosition="left">Save</Button>
       <Button icon="🗑" iconPosition="left" variant="destructive">Delete</Button>
     </Button.Group>
   </div>
-</div>
-
-```tsx
-// Basic button group
-<Button.Group>
-  <Button variant="primary">Save</Button>
-  <Button variant="secondary">Cancel</Button>
-</Button.Group>
-
-// Attached buttons (connected borders)
-<Button.Group attached>
-  <Button variant="primary">Save</Button>
-  <Button variant="secondary">Cancel</Button>
-</Button.Group>
-
-// With icons
-<Button.Group>
-  <Button icon="📁" iconPosition="left">Open</Button>
-  <Button icon="💾" iconPosition="left">Save</Button>
-  <Button icon="🗑" iconPosition="left" variant="destructive">Delete</Button>
-</Button.Group>
-```
+</div>`}>
+  <div className="flex gap-8 flex-wrap items-start">
+    <div>
+      <h4 className="text-sm font-semibold mb-2">Basic Group</h4>
+      <Button.Group>
+        <Button variant="primary">Save</Button>
+        <Button variant="secondary">Cancel</Button>
+      </Button.Group>
+    </div>
+    
+    <div>
+      <h4 className="text-sm font-semibold mb-2">Attached</h4>
+      <Button.Group attached>
+        <Button variant="primary">Save</Button>
+        <Button variant="secondary">Cancel</Button>
+      </Button.Group>
+    </div>
+    
+    <div>
+      <h4 className="text-sm font-semibold mb-2">With Icons</h4>
+      <Button.Group>
+        <Button icon="📁" iconPosition="left">Open</Button>
+        <Button icon="💾" iconPosition="left">Save</Button>
+        <Button icon="🗑" iconPosition="left" variant="destructive">Delete</Button>
+      </Button.Group>
+    </div>
+  </div>
+</CodeBlock>
 
 ### Group Props
 
@@ -330,9 +350,9 @@ Use `Button.Group` to group related buttons together:
 
 ### Vertical Groups
 
-<div style={{ display: 'flex', gap: '2rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
+<CodeBlock code={`<div className="flex gap-8 flex-wrap">
   <div>
-    <h4 style={{ margin: '0 0 0.5rem 0', fontSize: '0.875rem', fontWeight: '600' }}>Vertical</h4>
+    <h4 className="text-sm font-semibold mb-2">Vertical</h4>
     <Button.Group orientation="vertical">
       <Button variant="primary">Save</Button>
       <Button variant="secondary">Cancel</Button>
@@ -340,33 +360,37 @@ Use `Button.Group` to group related buttons together:
   </div>
   
   <div>
-    <h4 style={{ margin: '0 0 0.5rem 0', fontSize: '0.875rem', fontWeight: '600' }}>Vertical Attached</h4>
+    <h4 className="text-sm font-semibold mb-2">Vertical Attached</h4>
     <Button.Group orientation="vertical" attached>
       <Button variant="primary">Save</Button>
       <Button variant="secondary">Cancel</Button>
     </Button.Group>
   </div>
-</div>
-
-```tsx
-// Vertical button group
-<Button.Group orientation="vertical">
-  <Button variant="primary">Save</Button>
-  <Button variant="secondary">Cancel</Button>
-</Button.Group>
-
-// Vertical attached buttons
-<Button.Group orientation="vertical" attached>
-  <Button variant="primary">Save</Button>
-  <Button variant="secondary">Cancel</Button>
-</Button.Group>
-```
+</div>`}>
+  <div className="flex gap-8 flex-wrap">
+    <div>
+      <h4 className="text-sm font-semibold mb-2">Vertical</h4>
+      <Button.Group orientation="vertical">
+        <Button variant="primary">Save</Button>
+        <Button variant="secondary">Cancel</Button>
+      </Button.Group>
+    </div>
+    
+    <div>
+      <h4 className="text-sm font-semibold mb-2">Vertical Attached</h4>
+      <Button.Group orientation="vertical" attached>
+        <Button variant="primary">Save</Button>
+        <Button variant="secondary">Cancel</Button>
+      </Button.Group>
+    </div>
+  </div>
+</CodeBlock>
 
 ## Color System
 
 Combine any variant with semantic colors for flexible styling:
 
-<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
+<CodeBlock code={`<div className="flex gap-4 flex-wrap">
   <Button variant="primary" color="success" icon={<Heart size={16} />} iconPosition="left">
     Success Primary
   </Button>
@@ -382,29 +406,25 @@ Combine any variant with semantic colors for flexible styling:
   <Button variant="ghost" color="success" icon={<Heart size={16} />} iconPosition="left">
     Success Ghost
   </Button>
-</div>
-
-```tsx
-<Button variant="primary" color="success" icon={<Heart size={16} />} iconPosition="left">
-  Success Primary
-</Button>
-
-<Button variant="outline" color="info" icon={<Search size={16} />} iconPosition="left">
-  Info Outline
-</Button>
-
-<Button variant="secondary" color="warning" icon={<Settings size={16} />} iconPosition="left">
-  Warning Secondary
-</Button>
-
-<Button variant="text" color="error" icon={<Heart size={16} />} iconPosition="left">
-  Error Text
-</Button>
-
-<Button variant="ghost" color="success" icon={<Heart size={16} />} iconPosition="left">
-  Success Ghost
-</Button>
-```
+</div>`}>
+  <div className="flex gap-4 flex-wrap">
+    <Button variant="primary" color="success" icon={<Heart size={16} />} iconPosition="left">
+      Success Primary
+    </Button>
+    <Button variant="outline" color="info" icon={<Search size={16} />} iconPosition="left">
+      Info Outline
+    </Button>
+    <Button variant="secondary" color="warning" icon={<Settings size={16} />} iconPosition="left">
+      Warning Secondary
+    </Button>
+    <Button variant="text" color="error" icon={<Heart size={16} />} iconPosition="left">
+      Error Text
+    </Button>
+    <Button variant="ghost" color="success" icon={<Heart size={16} />} iconPosition="left">
+      Success Ghost
+    </Button>
+  </div>
+</CodeBlock>
 
 ### Available Colors
 
@@ -418,27 +438,27 @@ Combine any variant with semantic colors for flexible styling:
 
 The `text` variant creates minimal buttons with no background or border - perfect for subtle actions:
 
-<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
+<CodeBlock code={`<div className="flex gap-4 flex-wrap">
   <Button variant="text">Default Text</Button>
   <Button variant="text" color="success" icon={<Heart size={16} />}>Success Text</Button>
   <Button variant="text" color="info" icon={<Search size={16} />}>Info Text</Button>
   <Button variant="text" color="warning" icon={<Settings size={16} />}>Warning Text</Button>
   <Button variant="text" color="error" icon={<Heart size={16} />}>Error Text</Button>
-</div>
-
-```tsx
-<Button variant="text">Default Text</Button>
-<Button variant="text" color="success" icon={<Heart size={16} />}>Success Text</Button>
-<Button variant="text" color="info" icon={<Search size={16} />}>Info Text</Button>
-<Button variant="text" color="warning" icon={<Settings size={16} />}>Warning Text</Button>
-<Button variant="text" color="error" icon={<Heart size={16} />}>Error Text</Button>
-```
+</div>`}>
+  <div className="flex gap-4 flex-wrap">
+    <Button variant="text">Default Text</Button>
+    <Button variant="text" color="success" icon={<Heart size={16} />}>Success Text</Button>
+    <Button variant="text" color="info" icon={<Search size={16} />}>Info Text</Button>
+    <Button variant="text" color="warning" icon={<Settings size={16} />}>Warning Text</Button>
+    <Button variant="text" color="error" icon={<Heart size={16} />}>Error Text</Button>
+  </div>
+</CodeBlock>
 
 ## Customization with Tailwind
 
 You can easily add Tailwind classes to any button variant to customize colors, borders, and other details:
 
-<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
+<CodeBlock code={`<div className="flex gap-4 flex-wrap">
   <Button variant="primary" className="bg-violet-800 text-white">
     Violet Primary
   </Button>
@@ -448,21 +468,19 @@ You can easily add Tailwind classes to any button variant to customize colors, b
   <Button variant="outline" className="border-purple-500 text-purple-500">
     Purple Outline
   </Button>
-</div>
-
-```tsx
-<Button variant="primary" className="bg-violet-800 text-white">
-  Violet Primary
-</Button>
-
-<Button variant="secondary" className="bg-green-100 text-green-800 border-green-300">
-  Green Secondary
-</Button>
-
-<Button variant="outline" className="border-purple-500 text-purple-500">
-  Purple Outline
-</Button>
-```
+</div>`}>
+  <div className="flex gap-4 flex-wrap">
+    <Button variant="primary" className="bg-violet-800 text-white">
+      Violet Primary
+    </Button>
+    <Button variant="secondary" className="bg-green-100 text-green-800 border-green-300">
+      Green Secondary
+    </Button>
+    <Button variant="outline" className="border-purple-500 text-purple-500">
+      Purple Outline
+    </Button>
+  </div>
+</CodeBlock>
 
 **Note:** Simply add Tailwind classes to override specific properties. The button keeps all its base styling (shadows, hover effects, etc.) and only the specified properties are changed.
 
@@ -470,7 +488,7 @@ You can easily add Tailwind classes to any button variant to customize colors, b
 
 Buttons work perfectly with the Tooltip component for additional context:
 
-<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
+<CodeBlock code={`<div className="flex gap-4 flex-wrap items-center">
   <Tooltip content="Save your changes">
     <Button icon={<Save size={16} />} iconPosition="left">
       Save
@@ -490,35 +508,35 @@ Buttons work perfectly with the Tooltip component for additional context:
   <Tooltip content="Like this post" delay={100}>
     <Button icon={<Heart size={16} />} iconOnly variant="ghost" color="error" />
   </Tooltip>
-</div>
-
-```tsx
-<Tooltip content="Save your changes">
-  <Button icon={<Save size={16} />} iconPosition="left">
-    Save
-  </Button>
-</Tooltip>
-
-<Tooltip content="Delete this item" placement="top">
-  <Button variant="destructive" icon="🗑">
-    Delete
-  </Button>
-</Tooltip>
-
-<Tooltip content="Settings" trigger="click">
-  <Button icon={<Settings size={16} />} iconOnly variant="ghost" />
-</Tooltip>
-
-<Tooltip content="Like this post" delay={100}>
-  <Button icon={<Heart size={16} />} iconOnly variant="ghost" color="error" />
-</Tooltip>
-```
+</div>`}>
+  <div className="flex gap-4 flex-wrap items-center">
+    <Tooltip content="Save your changes">
+      <Button icon={<Save size={16} />} iconPosition="left">
+        Save
+      </Button>
+    </Tooltip>
+    
+    <Tooltip content="Delete this item" placement="top">
+      <Button variant="destructive" icon="🗑">
+        Delete
+      </Button>
+    </Tooltip>
+    
+    <Tooltip content="Settings" trigger="click">
+      <Button icon={<Settings size={16} />} iconOnly variant="ghost" />
+    </Tooltip>
+    
+    <Tooltip content="Like this post" delay={100}>
+      <Button icon={<Heart size={16} />} iconOnly variant="ghost" color="error" />
+    </Tooltip>
+  </div>
+</CodeBlock>
 
 ## With Badges
 
 Buttons work great with Badge components for notification counts:
 
-<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
+<CodeBlock code={`<div className="flex gap-4 flex-wrap items-center">
   <Badge count={3} variant="error">
     <Button icon={<ShoppingCart size={16} />} iconOnly variant="ghost" />
   </Badge>
@@ -542,33 +560,33 @@ Buttons work great with Badge components for notification counts:
   <Badge text="Sale" variant="error">
     <Button size="sm" variant="outline">Item</Button>
   </Badge>
-</div>
-
-```tsx
-<Badge count={3} variant="error">
-  <Button icon={<ShoppingCart size={16} />} iconOnly variant="ghost" />
-</Badge>
-
-<Badge count={12} variant="info">
-  <Button icon={<MessageCircle size={16} />} iconOnly variant="ghost" />
-</Badge>
-
-<Badge dot variant="success">
-  <Button icon={<Settings size={16} />} iconOnly variant="ghost" />
-</Badge>
-
-<Badge count={99} max={99} variant="warning">
-  <Button icon={<Bell size={16} />} iconOnly variant="ghost" />
-</Badge>
-
-<Badge text="New" variant="success">
-  <Button size="sm">Product</Button>
-</Badge>
-
-<Badge text="Sale" variant="error">
-  <Button size="sm" variant="outline">Item</Button>
-</Badge>
-```
+</div>`}>
+  <div className="flex gap-4 flex-wrap items-center">
+    <Badge count={3} variant="error">
+      <Button icon={<ShoppingCart size={16} />} iconOnly variant="ghost" />
+    </Badge>
+    
+    <Badge count={12} variant="info">
+      <Button icon={<MessageCircle size={16} />} iconOnly variant="ghost" />
+    </Badge>
+    
+    <Badge dot variant="success">
+      <Button icon={<Settings size={16} />} iconOnly variant="ghost" />
+    </Badge>
+    
+    <Badge count={99} max={99} variant="warning">
+      <Button icon={<Bell size={16} />} iconOnly variant="ghost" />
+    </Badge>
+    
+    <Badge text="New" variant="success">
+      <Button size="sm">Product</Button>
+    </Badge>
+    
+    <Badge text="Sale" variant="error">
+      <Button size="sm" variant="outline">Item</Button>
+    </Badge>
+  </div>
+</CodeBlock>
 
 ## Props
 

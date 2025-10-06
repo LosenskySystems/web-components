@@ -12,68 +12,49 @@ import { Label } from '@losensky-systems/web-components-core'
 
 ## Basic Usage
 
-<div style={{ marginBottom: '2rem' }}>
-  <Label htmlFor="email">Email Address</Label>
-  <Label htmlFor="password">Password</Label>
-  <Label htmlFor="name" required>Full Name</Label>
-</div>
-
-```tsx
-<Label htmlFor="email">Email Address</Label>
+<CodeBlock code={`<Label htmlFor="email">Email Address</Label>
 <Label htmlFor="password">Password</Label>
-<Label htmlFor="name" required>Full Name</Label>
-```
+<Label htmlFor="name" required>Full Name</Label>`}>
+  <div className="mb-8">
+    <Label htmlFor="email">Email Address</Label>
+    <Label htmlFor="password">Password</Label>
+    <Label htmlFor="name" required>Full Name</Label>
+  </div>
+</CodeBlock>
 
 ## Sizes
 
-<div style={{ marginBottom: '2rem' }}>
-  <Label size="sm" htmlFor="small">Small Label</Label>
-  <Label size="md" htmlFor="medium">Medium Label (Default)</Label>
-  <Label size="lg" htmlFor="large">Large Label</Label>
-</div>
-
-```tsx
-<Label size="sm" htmlFor="small">Small Label</Label>
+<CodeBlock code={`<Label size="sm" htmlFor="small">Small Label</Label>
 <Label size="md" htmlFor="medium">Medium Label (Default)</Label>
-<Label size="lg" htmlFor="large">Large Label</Label>
-```
+<Label size="lg" htmlFor="large">Large Label</Label>`}>
+  <div className="mb-8">
+    <Label size="sm" htmlFor="small">Small Label</Label>
+    <Label size="md" htmlFor="medium">Medium Label (Default)</Label>
+    <Label size="lg" htmlFor="large">Large Label</Label>
+  </div>
+</CodeBlock>
 
 ## Colors
 
-<div style={{ marginBottom: '2rem' }}>
-  <Label color="default" htmlFor="default">Default Label</Label>
-  <Label color="primary" htmlFor="primary">Primary Label</Label>
-  <Label color="success" htmlFor="success">Success Label</Label>
-  <Label color="warning" htmlFor="warning">Warning Label</Label>
-  <Label color="error" htmlFor="error">Error Label</Label>
-  <Label color="muted" htmlFor="muted">Muted Label</Label>
-</div>
-
-```tsx
-<Label color="default" htmlFor="default">Default Label</Label>
+<CodeBlock code={`<Label color="default" htmlFor="default">Default Label</Label>
 <Label color="primary" htmlFor="primary">Primary Label</Label>
 <Label color="success" htmlFor="success">Success Label</Label>
 <Label color="warning" htmlFor="warning">Warning Label</Label>
 <Label color="error" htmlFor="error">Error Label</Label>
-<Label color="muted" htmlFor="muted">Muted Label</Label>
-```
+<Label color="muted" htmlFor="muted">Muted Label</Label>`}>
+  <div className="mb-8">
+    <Label color="default" htmlFor="default">Default Label</Label>
+    <Label color="primary" htmlFor="primary">Primary Label</Label>
+    <Label color="success" htmlFor="success">Success Label</Label>
+    <Label color="warning" htmlFor="warning">Warning Label</Label>
+    <Label color="error" htmlFor="error">Error Label</Label>
+    <Label color="muted" htmlFor="muted">Muted Label</Label>
+  </div>
+</CodeBlock>
 
 ## Helper Text
 
-<div style={{ marginBottom: '2rem' }}>
-  <Label htmlFor="username" helperText="Choose a unique username">
-    Username
-  </Label>
-  <Label htmlFor="password" errorText="Password must be at least 8 characters">
-    Password
-  </Label>
-  <Label htmlFor="email" successText="Email address is valid">
-    Email Address
-  </Label>
-</div>
-
-```tsx
-<Label htmlFor="username" helperText="Choose a unique username">
+<CodeBlock code={`<Label htmlFor="username" helperText="Choose a unique username">
   Username
 </Label>
 <Label htmlFor="password" errorText="Password must be at least 8 characters">
@@ -81,8 +62,19 @@ import { Label } from '@losensky-systems/web-components-core'
 </Label>
 <Label htmlFor="email" successText="Email address is valid">
   Email Address
-</Label>
-```
+</Label>`}>
+  <div className="mb-8">
+    <Label htmlFor="username" helperText="Choose a unique username">
+      Username
+    </Label>
+    <Label htmlFor="password" errorText="Password must be at least 8 characters">
+      Password
+    </Label>
+    <Label htmlFor="email" successText="Email address is valid">
+      Email Address
+    </Label>
+  </div>
+</CodeBlock>
 
 ## Props
 

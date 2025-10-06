@@ -12,50 +12,23 @@ import { Select, Label } from '@losensky-systems/web-components-core'
 
 ## Basic Usage
 
-<div style={{ marginBottom: '2rem' }}>
-  <Select placeholder="Choose an option...">
-    <Select.Item value="option1">Option 1</Select.Item>
-    <Select.Item value="option2">Option 2</Select.Item>
-    <Select.Item value="option3">Option 3</Select.Item>
-  </Select>
-</div>
-
-```tsx
-<Select placeholder="Choose an option...">
+<CodeBlock code={`<Select placeholder="Choose an option...">
   <Select.Item value="option1">Option 1</Select.Item>
   <Select.Item value="option2">Option 2</Select.Item>
   <Select.Item value="option3">Option 3</Select.Item>
-</Select>
-```
+</Select>`}>
+  <div className="mb-8">
+    <Select placeholder="Choose an option...">
+      <Select.Item value="option1">Option 1</Select.Item>
+      <Select.Item value="option2">Option 2</Select.Item>
+      <Select.Item value="option3">Option 3</Select.Item>
+    </Select>
+  </div>
+</CodeBlock>
 
 ## Sizes
 
-<div style={{ marginBottom: '2rem' }}>
-  <div style={{ marginBottom: '1rem' }}>
-    <Label>Small Select</Label>
-    <Select size="sm" placeholder="Small select">
-      <Select.Item value="option1">Option 1</Select.Item>
-      <Select.Item value="option2">Option 2</Select.Item>
-    </Select>
-  </div>
-  <div style={{ marginBottom: '1rem' }}>
-    <Label>Medium Select (default)</Label>
-    <Select size="md" placeholder="Medium select">
-      <Select.Item value="option1">Option 1</Select.Item>
-      <Select.Item value="option2">Option 2</Select.Item>
-    </Select>
-  </div>
-  <div style={{ marginBottom: '1rem' }}>
-    <Label>Large Select</Label>
-    <Select size="lg" placeholder="Large select">
-      <Select.Item value="option1">Option 1</Select.Item>
-      <Select.Item value="option2">Option 2</Select.Item>
-    </Select>
-  </div>
-</div>
-
-```tsx
-<Select size="sm" placeholder="Small select">
+<CodeBlock code={`<Select size="sm" placeholder="Small select">
   <Select.Item value="option1">Option 1</Select.Item>
   <Select.Item value="option2">Option 2</Select.Item>
 </Select>
@@ -68,44 +41,35 @@ import { Select, Label } from '@losensky-systems/web-components-core'
 <Select size="lg" placeholder="Large select">
   <Select.Item value="option1">Option 1</Select.Item>
   <Select.Item value="option2">Option 2</Select.Item>
-</Select>
-```
+</Select>`}>
+  <div className="mb-8">
+    <div className="mb-4">
+      <Label>Small Select</Label>
+      <Select size="sm" placeholder="Small select">
+        <Select.Item value="option1">Option 1</Select.Item>
+        <Select.Item value="option2">Option 2</Select.Item>
+      </Select>
+    </div>
+    <div className="mb-4">
+      <Label>Medium Select (default)</Label>
+      <Select size="md" placeholder="Medium select">
+        <Select.Item value="option1">Option 1</Select.Item>
+        <Select.Item value="option2">Option 2</Select.Item>
+      </Select>
+    </div>
+    <div className="mb-4">
+      <Label>Large Select</Label>
+      <Select size="lg" placeholder="Large select">
+        <Select.Item value="option1">Option 1</Select.Item>
+        <Select.Item value="option2">Option 2</Select.Item>
+      </Select>
+    </div>
+  </div>
+</CodeBlock>
 
 ## Variants
 
-<div style={{ marginBottom: '2rem' }}>
-  <div style={{ marginBottom: '1rem' }}>
-    <Label>Default Select</Label>
-    <Select variant="default" placeholder="Default select">
-      <Select.Item value="option1">Option 1</Select.Item>
-      <Select.Item value="option2">Option 2</Select.Item>
-    </Select>
-  </div>
-  <div style={{ marginBottom: '1rem' }}>
-    <Label>Error Select</Label>
-    <Select variant="error" placeholder="Error select">
-      <Select.Item value="option1">Option 1</Select.Item>
-      <Select.Item value="option2">Option 2</Select.Item>
-    </Select>
-  </div>
-  <div style={{ marginBottom: '1rem' }}>
-    <Label>Success Select</Label>
-    <Select variant="success" placeholder="Success select">
-      <Select.Item value="option1">Option 1</Select.Item>
-      <Select.Item value="option2">Option 2</Select.Item>
-    </Select>
-  </div>
-  <div style={{ marginBottom: '1rem' }}>
-    <Label>Warning Select</Label>
-    <Select variant="warning" placeholder="Warning select">
-      <Select.Item value="option1">Option 1</Select.Item>
-      <Select.Item value="option2">Option 2</Select.Item>
-    </Select>
-  </div>
-</div>
-
-```tsx
-<Select variant="default" placeholder="Default select">
+<CodeBlock code={`<Select variant="default" placeholder="Default select">
   <Select.Item value="option1">Option 1</Select.Item>
   <Select.Item value="option2">Option 2</Select.Item>
 </Select>
@@ -123,55 +87,42 @@ import { Select, Label } from '@losensky-systems/web-components-core'
 <Select variant="warning" placeholder="Warning select">
   <Select.Item value="option1">Option 1</Select.Item>
   <Select.Item value="option2">Option 2</Select.Item>
-</Select>
-```
+</Select>`}>
+  <div className="mb-8">
+    <div className="mb-4">
+      <Label>Default Select</Label>
+      <Select variant="default" placeholder="Default select">
+        <Select.Item value="option1">Option 1</Select.Item>
+        <Select.Item value="option2">Option 2</Select.Item>
+      </Select>
+    </div>
+    <div className="mb-4">
+      <Label>Error Select</Label>
+      <Select variant="error" placeholder="Error select">
+        <Select.Item value="option1">Option 1</Select.Item>
+        <Select.Item value="option2">Option 2</Select.Item>
+      </Select>
+    </div>
+    <div className="mb-4">
+      <Label>Success Select</Label>
+      <Select variant="success" placeholder="Success select">
+        <Select.Item value="option1">Option 1</Select.Item>
+        <Select.Item value="option2">Option 2</Select.Item>
+      </Select>
+    </div>
+    <div className="mb-4">
+      <Label>Warning Select</Label>
+      <Select variant="warning" placeholder="Warning select">
+        <Select.Item value="option1">Option 1</Select.Item>
+        <Select.Item value="option2">Option 2</Select.Item>
+      </Select>
+    </div>
+  </div>
+</CodeBlock>
 
 ## With Labels and Helper Text
 
-<div style={{ marginBottom: '2rem' }}>
-  <div style={{ marginBottom: '1rem' }}>
-    <Label htmlFor="country-select">Country</Label>
-    <Select 
-      id="country-select"
-      placeholder="Select your country"
-      helperText="Choose your country of residence"
-    >
-      <Select.Item value="us">United States</Select.Item>
-      <Select.Item value="ca">Canada</Select.Item>
-      <Select.Item value="uk">United Kingdom</Select.Item>
-    </Select>
-  </div>
-  
-  <div style={{ marginBottom: '1rem' }}>
-    <Label htmlFor="error-select">Priority</Label>
-    <Select 
-      id="error-select"
-      placeholder="Select priority"
-      errorText="Priority is required"
-      error
-    >
-      <Select.Item value="low">Low</Select.Item>
-      <Select.Item value="medium">Medium</Select.Item>
-      <Select.Item value="high">High</Select.Item>
-    </Select>
-  </div>
-  
-  <div style={{ marginBottom: '1rem' }}>
-    <Label htmlFor="success-select">Status</Label>
-    <Select 
-      id="success-select"
-      placeholder="Select status"
-      successText="Status updated successfully!"
-      variant="success"
-    >
-      <Select.Item value="active">Active</Select.Item>
-      <Select.Item value="inactive">Inactive</Select.Item>
-    </Select>
-  </div>
-</div>
-
-```tsx
-<Label htmlFor="country-select">Country</Label>
+<CodeBlock code={`<Label htmlFor="country-select">Country</Label>
 <Select 
   id="country-select"
   placeholder="Select your country"
@@ -203,113 +154,121 @@ import { Select, Label } from '@losensky-systems/web-components-core'
 >
   <Select.Item value="active">Active</Select.Item>
   <Select.Item value="inactive">Inactive</Select.Item>
-</Select>
-```
+</Select>`}>
+  <div className="mb-8">
+    <div className="mb-4">
+      <Label htmlFor="country-select">Country</Label>
+      <Select 
+        id="country-select"
+        placeholder="Select your country"
+        helperText="Choose your country of residence"
+      >
+        <Select.Item value="us">United States</Select.Item>
+        <Select.Item value="ca">Canada</Select.Item>
+        <Select.Item value="uk">United Kingdom</Select.Item>
+      </Select>
+    </div>
+    
+    <div className="mb-4">
+      <Label htmlFor="error-select">Priority</Label>
+      <Select 
+        id="error-select"
+        placeholder="Select priority"
+        errorText="Priority is required"
+        error
+      >
+        <Select.Item value="low">Low</Select.Item>
+        <Select.Item value="medium">Medium</Select.Item>
+        <Select.Item value="high">High</Select.Item>
+      </Select>
+    </div>
+    
+    <div className="mb-4">
+      <Label htmlFor="success-select">Status</Label>
+      <Select 
+        id="success-select"
+        placeholder="Select status"
+        successText="Status updated successfully!"
+        variant="success"
+      >
+        <Select.Item value="active">Active</Select.Item>
+        <Select.Item value="inactive">Inactive</Select.Item>
+      </Select>
+    </div>
+  </div>
+</CodeBlock>
 
 ## Controlled Select
 
 Use with state for controlled behavior:
 
-<div style={{ marginBottom: '2rem' }}>
-  <Select value="option2" placeholder="Choose an option...">
-    <Select.Item value="option1">Option 1</Select.Item>
-    <Select.Item value="option2">Option 2</Select.Item>
-    <Select.Item value="option3">Option 3</Select.Item>
-  </Select>
-</div>
-
-```tsx
-const [value, setValue] = useState('option2')
+<CodeBlock code={`const [value, setValue] = useState('option2')
 
 <Select value={value} onChange={setValue} placeholder="Choose an option...">
   <Select.Item value="option1">Option 1</Select.Item>
   <Select.Item value="option2">Option 2</Select.Item>
   <Select.Item value="option3">Option 3</Select.Item>
-</Select>
-```
+</Select>`}>
+  <div className="mb-8">
+    <Select value="option2" placeholder="Choose an option...">
+      <Select.Item value="option1">Option 1</Select.Item>
+      <Select.Item value="option2">Option 2</Select.Item>
+      <Select.Item value="option3">Option 3</Select.Item>
+    </Select>
+  </div>
+</CodeBlock>
 
 ## Disabled Options
 
 Some options can be disabled:
 
-<div style={{ marginBottom: '2rem' }}>
-  <Select placeholder="Choose an option...">
-    <Select.Item value="available">Available Option</Select.Item>
-    <Select.Item value="disabled" disabled>Disabled Option</Select.Item>
-    <Select.Item value="another">Another Option</Select.Item>
-  </Select>
-</div>
-
-```tsx
-<Select placeholder="Choose an option...">
+<CodeBlock code={`<Select placeholder="Choose an option...">
   <Select.Item value="available">Available Option</Select.Item>
   <Select.Item value="disabled" disabled>Disabled Option</Select.Item>
   <Select.Item value="another">Another Option</Select.Item>
-</Select>
-```
+</Select>`}>
+  <div className="mb-8">
+    <Select placeholder="Choose an option...">
+      <Select.Item value="available">Available Option</Select.Item>
+      <Select.Item value="disabled" disabled>Disabled Option</Select.Item>
+      <Select.Item value="another">Another Option</Select.Item>
+    </Select>
+  </div>
+</CodeBlock>
 
 ## Disabled Select
 
 The entire select can be disabled:
 
-<div style={{ marginBottom: '2rem' }}>
-  <Select disabled placeholder="This select is disabled">
-    <Select.Item value="option1">Option 1</Select.Item>
-    <Select.Item value="option2">Option 2</Select.Item>
-  </Select>
-</div>
-
-```tsx
-<Select disabled placeholder="This select is disabled">
+<CodeBlock code={`<Select disabled placeholder="This select is disabled">
   <Select.Item value="option1">Option 1</Select.Item>
   <Select.Item value="option2">Option 2</Select.Item>
-</Select>
-```
+</Select>`}>
+  <div className="mb-8">
+    <Select disabled placeholder="This select is disabled">
+      <Select.Item value="option1">Option 1</Select.Item>
+      <Select.Item value="option2">Option 2</Select.Item>
+    </Select>
+  </div>
+</CodeBlock>
 
 ## Loading State
 
-<div style={{ marginBottom: '2rem' }}>
-  <Select loading placeholder="Loading options...">
-    <Select.Item value="option1">Option 1</Select.Item>
-    <Select.Item value="option2">Option 2</Select.Item>
-  </Select>
-</div>
-
-```tsx
-<Select loading placeholder="Loading options...">
+<CodeBlock code={`<Select loading placeholder="Loading options...">
   <Select.Item value="option1">Option 1</Select.Item>
   <Select.Item value="option2">Option 2</Select.Item>
-</Select>
-```
+</Select>`}>
+  <div className="mb-8">
+    <Select loading placeholder="Loading options...">
+      <Select.Item value="option1">Option 1</Select.Item>
+      <Select.Item value="option2">Option 2</Select.Item>
+    </Select>
+  </div>
+</CodeBlock>
 
 ## States
 
-<div style={{ marginBottom: '2rem' }}>
-  <div style={{ marginBottom: '1rem' }}>
-    <Label>Default Select</Label>
-    <Select placeholder="Default select">
-      <Select.Item value="option1">Option 1</Select.Item>
-      <Select.Item value="option2">Option 2</Select.Item>
-    </Select>
-  </div>
-  <div style={{ marginBottom: '1rem' }}>
-    <Label>Disabled Select</Label>
-    <Select placeholder="This select is disabled" disabled>
-      <Select.Item value="option1">Option 1</Select.Item>
-      <Select.Item value="option2">Option 2</Select.Item>
-    </Select>
-  </div>
-  <div style={{ marginBottom: '1rem' }}>
-    <Label>Required Select</Label>
-    <Select placeholder="Required select" required>
-      <Select.Item value="option1">Option 1</Select.Item>
-      <Select.Item value="option2">Option 2</Select.Item>
-    </Select>
-  </div>
-</div>
-
-```tsx
-<Select placeholder="Default select">
+<CodeBlock code={`<Select placeholder="Default select">
   <Select.Item value="option1">Option 1</Select.Item>
   <Select.Item value="option2">Option 2</Select.Item>
 </Select>
@@ -322,44 +281,37 @@ The entire select can be disabled:
 <Select placeholder="Required select" required>
   <Select.Item value="option1">Option 1</Select.Item>
   <Select.Item value="option2">Option 2</Select.Item>
-</Select>
-```
+</Select>`}>
+  <div className="mb-8">
+    <div className="mb-4">
+      <Label>Default Select</Label>
+      <Select placeholder="Default select">
+        <Select.Item value="option1">Option 1</Select.Item>
+        <Select.Item value="option2">Option 2</Select.Item>
+      </Select>
+    </div>
+    <div className="mb-4">
+      <Label>Disabled Select</Label>
+      <Select placeholder="This select is disabled" disabled>
+        <Select.Item value="option1">Option 1</Select.Item>
+        <Select.Item value="option2">Option 2</Select.Item>
+      </Select>
+    </div>
+    <div className="mb-4">
+      <Label>Required Select</Label>
+      <Select placeholder="Required select" required>
+        <Select.Item value="option1">Option 1</Select.Item>
+        <Select.Item value="option2">Option 2</Select.Item>
+      </Select>
+    </div>
+  </div>
+</CodeBlock>
 
 ## Form Integration
 
 Selects work well in forms with proper labels and validation:
 
-<div style={{ marginBottom: '2rem' }}>
-  <div style={{ marginBottom: '1rem' }}>
-    <Label htmlFor="category-select" required>Category</Label>
-    <Select 
-      id="category-select"
-      placeholder="Select a category"
-      helperText="Choose the most appropriate category"
-    >
-      <Select.Item value="tech">Technology</Select.Item>
-      <Select.Item value="design">Design</Select.Item>
-      <Select.Item value="business">Business</Select.Item>
-    </Select>
-  </div>
-  <div>
-    <Label htmlFor="priority-select" required>Priority Level</Label>
-    <Select 
-      id="priority-select"
-      placeholder="Select priority"
-      errorText="Please select a priority level"
-      error
-    >
-      <Select.Item value="low">Low Priority</Select.Item>
-      <Select.Item value="medium">Medium Priority</Select.Item>
-      <Select.Item value="high">High Priority</Select.Item>
-      <Select.Item value="urgent">Urgent</Select.Item>
-    </Select>
-  </div>
-</div>
-
-```tsx
-<Label htmlFor="category-select" required>Category</Label>
+<CodeBlock code={`<Label htmlFor="category-select" required>Category</Label>
 <Select 
   id="category-select"
   placeholder="Select a category"
@@ -381,26 +333,52 @@ Selects work well in forms with proper labels and validation:
   <Select.Item value="medium">Medium Priority</Select.Item>
   <Select.Item value="high">High Priority</Select.Item>
   <Select.Item value="urgent">Urgent</Select.Item>
-</Select>
-```
+</Select>`}>
+  <div className="mb-8">
+    <div className="mb-4">
+      <Label htmlFor="category-select" required>Category</Label>
+      <Select 
+        id="category-select"
+        placeholder="Select a category"
+        helperText="Choose the most appropriate category"
+      >
+        <Select.Item value="tech">Technology</Select.Item>
+        <Select.Item value="design">Design</Select.Item>
+        <Select.Item value="business">Business</Select.Item>
+      </Select>
+    </div>
+    <div>
+      <Label htmlFor="priority-select" required>Priority Level</Label>
+      <Select 
+        id="priority-select"
+        placeholder="Select priority"
+        errorText="Please select a priority level"
+        error
+      >
+        <Select.Item value="low">Low Priority</Select.Item>
+        <Select.Item value="medium">Medium Priority</Select.Item>
+        <Select.Item value="high">High Priority</Select.Item>
+        <Select.Item value="urgent">Urgent</Select.Item>
+      </Select>
+    </div>
+  </div>
+</CodeBlock>
 
 ## Customization
 
 You can customize the select using Tailwind classes:
 
-<div style={{ marginBottom: '2rem' }}>
-  <Select className="border-purple-500 focus:border-purple-600" placeholder="Custom styled select">
-    <Select.Item value="option1">Option 1</Select.Item>
-    <Select.Item value="option2">Option 2</Select.Item>
-  </Select>
-</div>
-
-```tsx
-<Select className="border-purple-500 focus:border-purple-600" placeholder="Custom styled select">
+<CodeBlock code={`<Select className="border-purple-500 focus:border-purple-600" placeholder="Custom styled select">
   <Select.Item value="option1">Option 1</Select.Item>
   <Select.Item value="option2">Option 2</Select.Item>
-</Select>
-```
+</Select>`}>
+  <div className="mb-8">
+    <Select className="border-purple-500 focus:border-purple-600" placeholder="Custom styled select">
+      <Select.Item value="option1">Option 1</Select.Item>
+      <Select.Item value="option2">Option 2</Select.Item>
+    </Select>
+  </div>
+</CodeBlock>
 
 ## Props
 

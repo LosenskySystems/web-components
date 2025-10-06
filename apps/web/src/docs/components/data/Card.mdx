@@ -12,64 +12,23 @@ import { Card } from '@losensky-systems/web-components-core'
 
 ## Basic Usage
 
-<div style={{ marginBottom: '2rem' }}>
-  <Card>
-    <Card.Body>
-      <p>This is a basic card with some content.</p>
-    </Card.Body>
-  </Card>
-</div>
-
-```tsx
-<Card>
+<CodeBlock code={`<Card>
   <Card.Body>
     <p>This is a basic card with some content.</p>
   </Card.Body>
-</Card>
-```
+</Card>`}>
+  <div style={{ marginBottom: '2rem' }}>
+    <Card>
+      <Card.Body>
+        <p>This is a basic card with some content.</p>
+      </Card.Body>
+    </Card>
+  </div>
+</CodeBlock>
 
 ## Variants
 
-<div style={{ marginBottom: '2rem' }}>
-  <div style={{ marginBottom: '1rem' }}>
-    <h4>Default Card</h4>
-    <Card variant="default">
-      <Card.Body>
-        <p>Default card with subtle border and shadow.</p>
-      </Card.Body>
-    </Card>
-  </div>
-  
-  <div style={{ marginBottom: '1rem' }}>
-    <h4>Outlined Card</h4>
-    <Card variant="outlined">
-      <Card.Body>
-        <p>Outlined card with prominent border.</p>
-      </Card.Body>
-    </Card>
-  </div>
-  
-  <div style={{ marginBottom: '1rem' }}>
-    <h4>Elevated Card</h4>
-    <Card variant="elevated">
-      <Card.Body>
-        <p>Elevated card with stronger shadow.</p>
-      </Card.Body>
-    </Card>
-  </div>
-  
-  <div style={{ marginBottom: '1rem' }}>
-    <h4>Filled Card</h4>
-    <Card variant="filled">
-      <Card.Body>
-        <p>Filled card with background color.</p>
-      </Card.Body>
-    </Card>
-  </div>
-</div>
-
-```tsx
-<Card variant="default">
+<CodeBlock code={`<Card variant="default">
   <Card.Body>
     <p>Default card with subtle border and shadow.</p>
   </Card.Body>
@@ -91,42 +50,49 @@ import { Card } from '@losensky-systems/web-components-core'
   <Card.Body>
     <p>Filled card with background color.</p>
   </Card.Body>
-</Card>
-```
+</Card>`}>
+  <div style={{ marginBottom: '2rem' }}>
+    <div style={{ marginBottom: '1rem' }}>
+      <h4>Default Card</h4>
+      <Card variant="default">
+        <Card.Body>
+          <p>Default card with subtle border and shadow.</p>
+        </Card.Body>
+      </Card>
+    </div>
+    
+    <div style={{ marginBottom: '1rem' }}>
+      <h4>Outlined Card</h4>
+      <Card variant="outlined">
+        <Card.Body>
+          <p>Outlined card with prominent border.</p>
+        </Card.Body>
+      </Card>
+    </div>
+    
+    <div style={{ marginBottom: '1rem' }}>
+      <h4>Elevated Card</h4>
+      <Card variant="elevated">
+        <Card.Body>
+          <p>Elevated card with stronger shadow.</p>
+        </Card.Body>
+      </Card>
+    </div>
+    
+    <div style={{ marginBottom: '1rem' }}>
+      <h4>Filled Card</h4>
+      <Card variant="filled">
+        <Card.Body>
+          <p>Filled card with background color.</p>
+        </Card.Body>
+      </Card>
+    </div>
+  </div>
+</CodeBlock>
 
 ## Sizes
 
-<div style={{ marginBottom: '2rem' }}>
-  <div style={{ marginBottom: '1rem' }}>
-    <h4>Small Card</h4>
-    <Card size="sm">
-      <Card.Body>
-        <p>Small card (max-width: 20rem)</p>
-      </Card.Body>
-    </Card>
-  </div>
-  
-  <div style={{ marginBottom: '1rem' }}>
-    <h4>Medium Card (default)</h4>
-    <Card size="md">
-      <Card.Body>
-        <p>Medium card (max-width: 28rem)</p>
-      </Card.Body>
-    </Card>
-  </div>
-  
-  <div style={{ marginBottom: '1rem' }}>
-    <h4>Large Card</h4>
-    <Card size="lg">
-      <Card.Body>
-        <p>Large card (max-width: 36rem)</p>
-      </Card.Body>
-    </Card>
-  </div>
-</div>
-
-```tsx
-<Card size="sm">
+<CodeBlock code={`<Card size="sm">
   <Card.Body>
     <p>Small card (max-width: 20rem)</p>
   </Card.Body>
@@ -142,29 +108,42 @@ import { Card } from '@losensky-systems/web-components-core'
   <Card.Body>
     <p>Large card (max-width: 36rem)</p>
   </Card.Body>
-</Card>
-```
+</Card>`}>
+  <div style={{ marginBottom: '2rem' }}>
+    <div style={{ marginBottom: '1rem' }}>
+      <h4>Small Card</h4>
+      <Card size="sm">
+        <Card.Body>
+          <p>Small card (max-width: 20rem)</p>
+        </Card.Body>
+      </Card>
+    </div>
+    
+    <div style={{ marginBottom: '1rem' }}>
+      <h4>Medium Card (default)</h4>
+      <Card size="md">
+        <Card.Body>
+          <p>Medium card (max-width: 28rem)</p>
+        </Card.Body>
+      </Card>
+    </div>
+    
+    <div style={{ marginBottom: '1rem' }}>
+      <h4>Large Card</h4>
+      <Card size="lg">
+        <Card.Body>
+          <p>Large card (max-width: 36rem)</p>
+        </Card.Body>
+      </Card>
+    </div>
+  </div>
+</CodeBlock>
 
 ## Compound Components
 
 ### Card with Header, Body, and Footer
 
-<div style={{ marginBottom: '2rem' }}>
-  <Card>
-    <Card.Header title="Card Title" subtitle="Card subtitle">
-      <p>Additional header content</p>
-    </Card.Header>
-    <Card.Body>
-      <p>This is the main content of the card. It can contain any React elements.</p>
-    </Card.Body>
-    <Card.Footer>
-      <p>Footer content goes here</p>
-    </Card.Footer>
-  </Card>
-</div>
-
-```tsx
-<Card>
+<CodeBlock code={`<Card>
   <Card.Header title="Card Title" subtitle="Card subtitle">
     <p>Additional header content</p>
   </Card.Header>
@@ -174,31 +153,25 @@ import { Card } from '@losensky-systems/web-components-core'
   <Card.Footer>
     <p>Footer content goes here</p>
   </Card.Footer>
-</Card>
-```
+</Card>`}>
+  <div style={{ marginBottom: '2rem' }}>
+    <Card>
+      <Card.Header title="Card Title" subtitle="Card subtitle">
+        <p>Additional header content</p>
+      </Card.Header>
+      <Card.Body>
+        <p>This is the main content of the card. It can contain any React elements.</p>
+      </Card.Body>
+      <Card.Footer>
+        <p>Footer content goes here</p>
+      </Card.Footer>
+    </Card>
+  </div>
+</CodeBlock>
 
 ### Card with Avatar and Actions
 
-<div style={{ marginBottom: '2rem' }}>
-  <Card>
-    <Card.Header 
-      title="John Doe" 
-      subtitle="Software Engineer"
-      avatar={<div style={{ width: '40px', height: '40px', backgroundColor: '#6366f1', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '16px' }}>JD</div>}
-      action={<Button size="sm" variant="ghost">Follow</Button>}
-    />
-    <Card.Body>
-      <p>Building amazing user experiences with React and modern web technologies.</p>
-    </Card.Body>
-    <Card.Actions>
-      <Button size="sm" variant="outline">Message</Button>
-      <Button size="sm">Connect</Button>
-    </Card.Actions>
-  </Card>
-</div>
-
-```tsx
-<Card>
+<CodeBlock code={`<Card>
   <Card.Header 
     title="John Doe" 
     subtitle="Software Engineer"
@@ -212,89 +185,63 @@ import { Card } from '@losensky-systems/web-components-core'
     <Button size="sm" variant="outline">Message</Button>
     <Button size="sm">Connect</Button>
   </Card.Actions>
-</Card>
-```
+</Card>`}>
+  <div style={{ marginBottom: '2rem' }}>
+    <Card>
+      <Card.Header 
+        title="John Doe" 
+        subtitle="Software Engineer"
+        avatar={<div style={{ width: '40px', height: '40px', backgroundColor: '#6366f1', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '16px' }}>JD</div>}
+        action={<Button size="sm" variant="ghost">Follow</Button>}
+      />
+      <Card.Body>
+        <p>Building amazing user experiences with React and modern web technologies.</p>
+      </Card.Body>
+      <Card.Actions>
+        <Button size="sm" variant="outline">Message</Button>
+        <Button size="sm">Connect</Button>
+      </Card.Actions>
+    </Card>
+  </div>
+</CodeBlock>
 
 ## Interactive Cards
 
 ### Hover Effect
 
-<div style={{ marginBottom: '2rem' }}>
-  <Card hover>
-    <Card.Body>
-      <p>This card has a hover effect - try hovering over it!</p>
-    </Card.Body>
-  </Card>
-</div>
-
-```tsx
-<Card hover>
+<CodeBlock code={`<Card hover>
   <Card.Body>
     <p>This card has a hover effect - try hovering over it!</p>
   </Card.Body>
-</Card>
-```
+</Card>`}>
+  <div style={{ marginBottom: '2rem' }}>
+    <Card hover>
+      <Card.Body>
+        <p>This card has a hover effect - try hovering over it!</p>
+      </Card.Body>
+    </Card>
+  </div>
+</CodeBlock>
 
 ### Clickable Card
 
-<div style={{ marginBottom: '2rem' }}>
-  <Card clickable onClick={() => alert('Card clicked!')}>
-    <Card.Body>
-      <p>This card is clickable - try clicking it!</p>
-    </Card.Body>
-  </Card>
-</div>
-
-```tsx
-<Card clickable onClick={() => alert('Card clicked!')}>
+<CodeBlock code={`<Card clickable onClick={() => alert('Card clicked!')}>
   <Card.Body>
     <p>This card is clickable - try clicking it!</p>
   </Card.Body>
-</Card>
-```
+</Card>`}>
+  <div style={{ marginBottom: '2rem' }}>
+    <Card clickable onClick={() => alert('Card clicked!')}>
+      <Card.Body>
+        <p>This card is clickable - try clicking it!</p>
+      </Card.Body>
+    </Card>
+  </div>
+</CodeBlock>
 
 ## Padding Options
 
-<div style={{ marginBottom: '2rem' }}>
-  <div style={{ marginBottom: '1rem' }}>
-    <h4>No Padding</h4>
-    <Card padding="none">
-      <Card.Body>
-        <p>Card with no padding</p>
-      </Card.Body>
-    </Card>
-  </div>
-  
-  <div style={{ marginBottom: '1rem' }}>
-    <h4>Small Padding</h4>
-    <Card padding="sm">
-      <Card.Body>
-        <p>Card with small padding</p>
-      </Card.Body>
-    </Card>
-  </div>
-  
-  <div style={{ marginBottom: '1rem' }}>
-    <h4>Medium Padding (default)</h4>
-    <Card padding="md">
-      <Card.Body>
-        <p>Card with medium padding</p>
-      </Card.Body>
-    </Card>
-  </div>
-  
-  <div style={{ marginBottom: '1rem' }}>
-    <h4>Large Padding</h4>
-    <Card padding="lg">
-      <Card.Body>
-        <p>Card with large padding</p>
-      </Card.Body>
-    </Card>
-  </div>
-</div>
-
-```tsx
-<Card padding="none">
+<CodeBlock code={`<Card padding="none">
   <Card.Body>
     <p>Card with no padding</p>
   </Card.Body>
@@ -316,60 +263,49 @@ import { Card } from '@losensky-systems/web-components-core'
   <Card.Body>
     <p>Card with large padding</p>
   </Card.Body>
-</Card>
-```
+</Card>`}>
+  <div style={{ marginBottom: '2rem' }}>
+    <div style={{ marginBottom: '1rem' }}>
+      <h4>No Padding</h4>
+      <Card padding="none">
+        <Card.Body>
+          <p>Card with no padding</p>
+        </Card.Body>
+      </Card>
+    </div>
+    
+    <div style={{ marginBottom: '1rem' }}>
+      <h4>Small Padding</h4>
+      <Card padding="sm">
+        <Card.Body>
+          <p>Card with small padding</p>
+        </Card.Body>
+      </Card>
+    </div>
+    
+    <div style={{ marginBottom: '1rem' }}>
+      <h4>Medium Padding (default)</h4>
+      <Card padding="md">
+        <Card.Body>
+          <p>Card with medium padding</p>
+        </Card.Body>
+      </Card>
+    </div>
+    
+    <div style={{ marginBottom: '1rem' }}>
+      <h4>Large Padding</h4>
+      <Card padding="lg">
+        <Card.Body>
+          <p>Card with large padding</p>
+        </Card.Body>
+      </Card>
+    </div>
+  </div>
+</CodeBlock>
 
 ## Rounded Corners
 
-<div style={{ marginBottom: '2rem' }}>
-  <div style={{ marginBottom: '1rem' }}>
-    <h4>No Rounded Corners</h4>
-    <Card rounded="none">
-      <Card.Body>
-        <p>Card with no rounded corners</p>
-      </Card.Body>
-    </Card>
-  </div>
-  
-  <div style={{ marginBottom: '1rem' }}>
-    <h4>Small Rounded Corners</h4>
-    <Card rounded="sm">
-      <Card.Body>
-        <p>Card with small rounded corners</p>
-      </Card.Body>
-    </Card>
-  </div>
-  
-  <div style={{ marginBottom: '1rem' }}>
-    <h4>Medium Rounded Corners (default)</h4>
-    <Card rounded="md">
-      <Card.Body>
-        <p>Card with medium rounded corners</p>
-      </Card.Body>
-    </Card>
-  </div>
-  
-  <div style={{ marginBottom: '1rem' }}>
-    <h4>Large Rounded Corners</h4>
-    <Card rounded="lg">
-      <Card.Body>
-        <p>Card with large rounded corners</p>
-      </Card.Body>
-    </Card>
-  </div>
-  
-  <div style={{ marginBottom: '1rem' }}>
-    <h4>Extra Large Rounded Corners</h4>
-    <Card rounded="xl">
-      <Card.Body>
-        <p>Card with extra large rounded corners</p>
-      </Card.Body>
-    </Card>
-  </div>
-</div>
-
-```tsx
-<Card rounded="none">
+<CodeBlock code={`<Card rounded="none">
   <Card.Body>
     <p>Card with no rounded corners</p>
   </Card.Body>
@@ -397,68 +333,58 @@ import { Card } from '@losensky-systems/web-components-core'
   <Card.Body>
     <p>Card with extra large rounded corners</p>
   </Card.Body>
-</Card>
-```
+</Card>`}>
+  <div style={{ marginBottom: '2rem' }}>
+    <div style={{ marginBottom: '1rem' }}>
+      <h4>No Rounded Corners</h4>
+      <Card rounded="none">
+        <Card.Body>
+          <p>Card with no rounded corners</p>
+        </Card.Body>
+      </Card>
+    </div>
+    
+    <div style={{ marginBottom: '1rem' }}>
+      <h4>Small Rounded Corners</h4>
+      <Card rounded="sm">
+        <Card.Body>
+          <p>Card with small rounded corners</p>
+        </Card.Body>
+      </Card>
+    </div>
+    
+    <div style={{ marginBottom: '1rem' }}>
+      <h4>Medium Rounded Corners (default)</h4>
+      <Card rounded="md">
+        <Card.Body>
+          <p>Card with medium rounded corners</p>
+        </Card.Body>
+      </Card>
+    </div>
+    
+    <div style={{ marginBottom: '1rem' }}>
+      <h4>Large Rounded Corners</h4>
+      <Card rounded="lg">
+        <Card.Body>
+          <p>Card with large rounded corners</p>
+        </Card.Body>
+      </Card>
+    </div>
+    
+    <div style={{ marginBottom: '1rem' }}>
+      <h4>Extra Large Rounded Corners</h4>
+      <Card rounded="xl">
+        <Card.Body>
+          <p>Card with extra large rounded corners</p>
+        </Card.Body>
+      </Card>
+    </div>
+  </div>
+</CodeBlock>
 
 ## Action Alignment
 
-<div style={{ marginBottom: '2rem' }}>
-  <div style={{ marginBottom: '1rem' }}>
-    <h4>Left Aligned Actions</h4>
-    <Card>
-      <Card.Body>
-        <p>Card with left-aligned actions</p>
-      </Card.Body>
-      <Card.Actions align="left">
-        <Button size="sm" variant="outline">Cancel</Button>
-        <Button size="sm">Save</Button>
-      </Card.Actions>
-    </Card>
-  </div>
-  
-  <div style={{ marginBottom: '1rem' }}>
-    <h4>Center Aligned Actions</h4>
-    <Card>
-      <Card.Body>
-        <p>Card with center-aligned actions</p>
-      </Card.Body>
-      <Card.Actions align="center">
-        <Button size="sm" variant="outline">Cancel</Button>
-        <Button size="sm">Save</Button>
-      </Card.Actions>
-    </Card>
-  </div>
-  
-  <div style={{ marginBottom: '1rem' }}>
-    <h4>Right Aligned Actions (default)</h4>
-    <Card>
-      <Card.Body>
-        <p>Card with right-aligned actions</p>
-      </Card.Body>
-      <Card.Actions align="right">
-        <Button size="sm" variant="outline">Cancel</Button>
-        <Button size="sm">Save</Button>
-      </Card.Actions>
-    </Card>
-  </div>
-  
-  <div style={{ marginBottom: '1rem' }}>
-    <h4>Space Between Actions</h4>
-    <Card>
-      <Card.Body>
-        <p>Card with space-between actions</p>
-      </Card.Body>
-      <Card.Actions align="between">
-        <Button size="sm" variant="ghost">Delete</Button>
-        <Button size="sm" variant="outline">Cancel</Button>
-        <Button size="sm">Save</Button>
-      </Card.Actions>
-    </Card>
-  </div>
-</div>
-
-```tsx
-<Card>
+<CodeBlock code={`<Card>
   <Card.Body>
     <p>Card with left-aligned actions</p>
   </Card.Body>
@@ -497,28 +423,80 @@ import { Card } from '@losensky-systems/web-components-core'
     <Button size="sm" variant="outline">Cancel</Button>
     <Button size="sm">Save</Button>
   </Card.Actions>
-</Card>
-```
+</Card>`}>
+  <div style={{ marginBottom: '2rem' }}>
+    <div style={{ marginBottom: '1rem' }}>
+      <h4>Left Aligned Actions</h4>
+      <Card>
+        <Card.Body>
+          <p>Card with left-aligned actions</p>
+        </Card.Body>
+        <Card.Actions align="left">
+          <Button size="sm" variant="outline">Cancel</Button>
+          <Button size="sm">Save</Button>
+        </Card.Actions>
+      </Card>
+    </div>
+    
+    <div style={{ marginBottom: '1rem' }}>
+      <h4>Center Aligned Actions</h4>
+      <Card>
+        <Card.Body>
+          <p>Card with center-aligned actions</p>
+        </Card.Body>
+        <Card.Actions align="center">
+          <Button size="sm" variant="outline">Cancel</Button>
+          <Button size="sm">Save</Button>
+        </Card.Actions>
+      </Card>
+    </div>
+    
+    <div style={{ marginBottom: '1rem' }}>
+      <h4>Right Aligned Actions (default)</h4>
+      <Card>
+        <Card.Body>
+          <p>Card with right-aligned actions</p>
+        </Card.Body>
+        <Card.Actions align="right">
+          <Button size="sm" variant="outline">Cancel</Button>
+          <Button size="sm">Save</Button>
+        </Card.Actions>
+      </Card>
+    </div>
+    
+    <div style={{ marginBottom: '1rem' }}>
+      <h4>Space Between Actions</h4>
+      <Card>
+        <Card.Body>
+          <p>Card with space-between actions</p>
+        </Card.Body>
+        <Card.Actions align="between">
+          <Button size="sm" variant="ghost">Delete</Button>
+          <Button size="sm" variant="outline">Cancel</Button>
+          <Button size="sm">Save</Button>
+        </Card.Actions>
+      </Card>
+    </div>
+  </div>
+</CodeBlock>
 
 ## Customization
 
 You can customize cards using Tailwind classes:
 
-<div style={{ marginBottom: '2rem' }}>
-  <Card className="border-blue-500 bg-blue-50">
-    <Card.Body>
-      <p>Custom styled card with blue theme</p>
-    </Card.Body>
-  </Card>
-</div>
-
-```tsx
-<Card className="border-blue-500 bg-blue-50">
+<CodeBlock code={`<Card className="border-blue-500 bg-blue-50">
   <Card.Body>
     <p>Custom styled card with blue theme</p>
   </Card.Body>
-</Card>
-```
+</Card>`}>
+  <div style={{ marginBottom: '2rem' }}>
+    <Card className="border-blue-500 bg-blue-50">
+      <Card.Body>
+        <p>Custom styled card with blue theme</p>
+      </Card.Body>
+    </Card>
+  </div>
+</CodeBlock>
 
 ## Props
 

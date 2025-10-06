@@ -4,24 +4,39 @@ A radio button component for single selection in forms.
 
 ## Basic Usage
 
-<Radio name="option" value="option1">Option 1</Radio>
+<CodeBlock code={`<Radio name="option" value="option1">Option 1</Radio>`}>
+  <Radio name="option" value="option1">Option 1</Radio>
+</CodeBlock>
 
 ## States
 
-<div className="space-y-4">
+<CodeBlock code={`<div className="space-y-4">
   <Radio name="states" value="unchecked">Unchecked</Radio>
   <Radio name="states" value="checked" checked>Checked</Radio>
   <Radio name="states" value="disabled" disabled>Disabled</Radio>
   <Radio name="states" value="checked-disabled" checked disabled>Checked & Disabled</Radio>
-</div>
+</div>`}>
+  <div className="space-y-4">
+    <Radio name="states" value="unchecked">Unchecked</Radio>
+    <Radio name="states" value="checked" checked>Checked</Radio>
+    <Radio name="states" value="disabled" disabled>Disabled</Radio>
+    <Radio name="states" value="checked-disabled" checked disabled>Checked & Disabled</Radio>
+  </div>
+</CodeBlock>
 
 ## Sizes
 
-<div className="space-y-4">
+<CodeBlock code={`<div className="space-y-4">
   <Radio name="sizes" value="small" size="sm">Small radio</Radio>
   <Radio name="sizes" value="medium" size="md">Medium radio (default)</Radio>
   <Radio name="sizes" value="large" size="lg">Large radio</Radio>
-</div>
+</div>`}>
+  <div className="space-y-4">
+    <Radio name="sizes" value="small" size="sm">Small radio</Radio>
+    <Radio name="sizes" value="medium" size="md">Medium radio (default)</Radio>
+    <Radio name="sizes" value="large" size="lg">Large radio</Radio>
+  </div>
+</CodeBlock>
 
 ## Variants
 

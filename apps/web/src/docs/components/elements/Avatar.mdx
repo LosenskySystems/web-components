@@ -4,38 +4,63 @@ A simple avatar component that displays user profile images with fallback suppor
 
 ## Basic Usage
 
-<Avatar src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="John Doe" />
+<CodeBlock code={`<Avatar src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="John Doe" />`}>
+  <Avatar src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="John Doe" />
+</CodeBlock>
 
 ## With Fallback Text
 
-<Avatar fallback="JD" alt="John Doe" />
+<CodeBlock code={`<Avatar fallback="JD" alt="John Doe" />`}>
+  <Avatar fallback="JD" alt="John Doe" />
+</CodeBlock>
 
 ## Sizes
 
-<div className="flex items-center gap-4">
+<CodeBlock code={`<div className="flex items-center gap-4">
   <Avatar src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" size="sm" alt="Small" />
   <Avatar src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" size="md" alt="Medium" />
   <Avatar src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" size="lg" alt="Large" />
   <Avatar src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" size="xl" alt="Extra Large" />
-</div>
+</div>`}>
+  <div className="flex items-center gap-4">
+    <Avatar src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" size="sm" alt="Small" />
+    <Avatar src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" size="md" alt="Medium" />
+    <Avatar src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" size="lg" alt="Large" />
+    <Avatar src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" size="xl" alt="Extra Large" />
+  </div>
+</CodeBlock>
 
 ## Shapes
 
-<div className="flex items-center gap-4">
+<CodeBlock code={`<div className="flex items-center gap-4">
   <Avatar src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" shape="circle" alt="Circle" />
   <Avatar src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" shape="square" alt="Square" />
-</div>
+</div>`}>
+  <div className="flex items-center gap-4">
+    <Avatar src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" shape="circle" alt="Circle" />
+    <Avatar src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" shape="square" alt="Square" />
+  </div>
+</CodeBlock>
 
 ## Color Variants
 
-<div className="flex items-center gap-4">
+<CodeBlock code={`<div className="flex items-center gap-4">
   <Avatar fallback="JD" color="default" alt="Default" />
   <Avatar fallback="JD" color="primary" alt="Primary" />
   <Avatar fallback="JD" color="success" alt="Success" />
   <Avatar fallback="JD" color="warning" alt="Warning" />
   <Avatar fallback="JD" color="error" alt="Error" />
   <Avatar fallback="JD" color="info" alt="Info" />
-</div>
+</div>`}>
+  <div className="flex items-center gap-4">
+    <Avatar fallback="JD" color="default" alt="Default" />
+    <Avatar fallback="JD" color="primary" alt="Primary" />
+    <Avatar fallback="JD" color="success" alt="Success" />
+    <Avatar fallback="JD" color="warning" alt="Warning" />
+    <Avatar fallback="JD" color="error" alt="Error" />
+    <Avatar fallback="JD" color="info" alt="Info" />
+  </div>
+</CodeBlock>
 
 ## Props
 

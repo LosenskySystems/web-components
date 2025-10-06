@@ -4,53 +4,88 @@ A simple alert component for displaying important messages and notifications.
 
 ## Basic Usage
 
-<Alert title="Information" description="This is a simple alert message." />
+<CodeBlock code={`<Alert title="Information" description="This is a simple alert message." />`}>
+  <Alert title="Information" description="This is a simple alert message." />
+</CodeBlock>
 
 ## Variants
 
-<Alert variant="success" title="Success!" description="Your action was completed successfully." />
+<CodeBlock code={`<Alert variant="success" title="Success!" description="Your action was completed successfully." />
 
 <Alert variant="warning" title="Warning" description="Please check your input before proceeding." />
 
 <Alert variant="error" title="Error" description="Something went wrong. Please try again." />
 
-<Alert variant="info" title="Info" description="Here's some useful information for you." />
+<Alert variant="info" title="Info" description="Here's some useful information for you." />`}>
+  <div className="space-y-4">
+    <Alert variant="success" title="Success!" description="Your action was completed successfully." />
+    <Alert variant="warning" title="Warning" description="Please check your input before proceeding." />
+    <Alert variant="error" title="Error" description="Something went wrong. Please try again." />
+    <Alert variant="info" title="Info" description="Here's some useful information for you." />
+  </div>
+</CodeBlock>
 
 ## With Custom Content
 
-<Alert variant="success">
+<CodeBlock code={`<Alert variant="success">
   <div className="flex items-center">
     <Icon name="check" size="sm" className="mr-2" />
     <span>Custom content with icon and text</span>
   </div>
-</Alert>
+</Alert>`}>
+  <Alert variant="success">
+    <div className="flex items-center">
+      <Icon name="check" size="sm" className="mr-2" />
+      <span>Custom content with icon and text</span>
+    </div>
+  </Alert>
+</CodeBlock>
 
 ## Sizes
 
-<div className="space-y-4">
-  <Alert size="sm" title="Small" description="This is a small alert." />
-  <Alert size="md" title="Medium" description="This is a medium alert (default)." />
-  <Alert size="lg" title="Large" description="This is a large alert with more padding." />
-</div>
+<CodeBlock code={`<Alert size="sm" title="Small" description="This is a small alert." />
+<Alert size="md" title="Medium" description="This is a medium alert (default)." />
+<Alert size="lg" title="Large" description="This is a large alert with more padding." />`}>
+  <div className="space-y-4">
+    <Alert size="sm" title="Small" description="This is a small alert." />
+    <Alert size="md" title="Medium" description="This is a medium alert (default)." />
+    <Alert size="lg" title="Large" description="This is a large alert with more padding." />
+  </div>
+</CodeBlock>
 
 ## Closable Alerts
 
-<Alert 
+<CodeBlock code={`<Alert 
   variant="info" 
   title="Closable Alert" 
   description="This alert can be dismissed by clicking the close button."
   closable 
   onClose={() => console.log('Alert closed')}
-/>
+/>`}>
+  <Alert 
+    variant="info" 
+    title="Closable Alert" 
+    description="This alert can be dismissed by clicking the close button."
+    closable 
+    onClose={() => console.log('Alert closed')}
+  />
+</CodeBlock>
 
 ## Custom Icons
 
-<Alert 
+<CodeBlock code={`<Alert 
   variant="success" 
   title="Custom Icon" 
   description="This alert uses a custom icon."
   icon={<Icon name="heart" size="sm" />}
-/>
+/>`}>
+  <Alert 
+    variant="success" 
+    title="Custom Icon" 
+    description="This alert uses a custom icon."
+    icon={<Icon name="heart" size="sm" />}
+  />
+</CodeBlock>
 
 ## Props
 

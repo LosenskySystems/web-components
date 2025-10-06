@@ -15,34 +15,7 @@ import { Badge } from '@losensky-systems/web-components-core'
 
 Wrap any element with a Badge to show a count or text:
 
-<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
-  <Badge count={2}>
-    <Button icon={<ShoppingCart size={16} />} iconOnly variant="ghost" />
-  </Badge>
-  
-  <Badge count={5}>
-    <Button icon={<Bell size={16} />} iconOnly variant="ghost" />
-  </Badge>
-  
-  <Badge count={12}>
-    <Button icon={<MessageCircle size={16} />} iconOnly variant="ghost" />
-  </Badge>
-  
-  <Badge count={0} showZero>
-    <Button icon={<Heart size={16} />} iconOnly variant="ghost" />
-  </Badge>
-  
-  <Badge text="New">
-    <Button size="sm">Product</Button>
-  </Badge>
-  
-  <Badge text="Sale" variant="error">
-    <Button size="sm" variant="outline">Item</Button>
-  </Badge>
-</div>
-
-```tsx
-<Badge count={2}>
+<CodeBlock code={`<Badge count={2}>
   <Button icon={<ShoppingCart size={16} />} iconOnly variant="ghost" />
 </Badge>
 
@@ -64,37 +37,39 @@ Wrap any element with a Badge to show a count or text:
 
 <Badge text="Sale" variant="error">
   <Button size="sm" variant="outline">Item</Button>
-</Badge>
-```
+</Badge>`}>
+  <div className="flex gap-4 mb-8 flex-wrap items-center">
+    <Badge count={2}>
+      <Button icon={<ShoppingCart size={16} />} iconOnly variant="ghost" />
+    </Badge>
+    
+    <Badge count={5}>
+      <Button icon={<Bell size={16} />} iconOnly variant="ghost" />
+    </Badge>
+    
+    <Badge count={12}>
+      <Button icon={<MessageCircle size={16} />} iconOnly variant="ghost" />
+    </Badge>
+    
+    <Badge count={0} showZero>
+      <Button icon={<Heart size={16} />} iconOnly variant="ghost" />
+    </Badge>
+    
+    <Badge text="New">
+      <Button size="sm">Product</Button>
+    </Badge>
+    
+    <Badge text="Sale" variant="error">
+      <Button size="sm" variant="outline">Item</Button>
+    </Badge>
+  </div>
+</CodeBlock>
 
 ## Text Badges
 
 Display text content instead of numbers:
 
-<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
-  <Badge text="New">
-    <Button size="sm">Product</Button>
-  </Badge>
-  
-  <Badge text="Sale" variant="error">
-    <Button size="sm" variant="outline">Item</Button>
-  </Badge>
-  
-  <Badge text="Featured" variant="success">
-    <Button size="sm" variant="outline">Article</Button>
-  </Badge>
-  
-  <Badge text="Hot" variant="warning">
-    <Button size="sm" variant="outline">Trending</Button>
-  </Badge>
-  
-  <Badge text="Beta" variant="info">
-    <Button size="sm" variant="outline">Feature</Button>
-  </Badge>
-</div>
-
-```tsx
-<Badge text="New">
+<CodeBlock code={`<Badge text="New">
   <Button size="sm">Product</Button>
 </Badge>
 
@@ -112,29 +87,35 @@ Display text content instead of numbers:
 
 <Badge text="Beta" variant="info">
   <Button size="sm" variant="outline">Feature</Button>
-</Badge>
-```
+</Badge>`}>
+  <div className="flex gap-4 mb-8 flex-wrap items-center">
+    <Badge text="New">
+      <Button size="sm">Product</Button>
+    </Badge>
+    
+    <Badge text="Sale" variant="error">
+      <Button size="sm" variant="outline">Item</Button>
+    </Badge>
+    
+    <Badge text="Featured" variant="success">
+      <Button size="sm" variant="outline">Article</Button>
+    </Badge>
+    
+    <Badge text="Hot" variant="warning">
+      <Button size="sm" variant="outline">Trending</Button>
+    </Badge>
+    
+    <Badge text="Beta" variant="info">
+      <Button size="sm" variant="outline">Feature</Button>
+    </Badge>
+  </div>
+</CodeBlock>
 
 ### Text Badge Sizes
 
 Text badges scale with different sizes:
 
-<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
-  <Badge text="New" size="sm">
-    <Button size="sm">Small</Button>
-  </Badge>
-  
-  <Badge text="Sale" size="md">
-    <Button size="md">Medium</Button>
-  </Badge>
-  
-  <Badge text="Featured" size="lg">
-    <Button size="lg">Large</Button>
-  </Badge>
-</div>
-
-```tsx
-<Badge text="New" size="sm">
+<CodeBlock code={`<Badge text="New" size="sm">
   <Button size="sm">Small</Button>
 </Badge>
 
@@ -144,33 +125,27 @@ Text badges scale with different sizes:
 
 <Badge text="Featured" size="lg">
   <Button size="lg">Large</Button>
-</Badge>
-```
+</Badge>`}>
+  <div className="flex gap-4 mb-8 flex-wrap items-center">
+    <Badge text="New" size="sm">
+      <Button size="sm">Small</Button>
+    </Badge>
+    
+    <Badge text="Sale" size="md">
+      <Button size="md">Medium</Button>
+    </Badge>
+    
+    <Badge text="Featured" size="lg">
+      <Button size="lg">Large</Button>
+    </Badge>
+  </div>
+</CodeBlock>
 
 ## Dot Indicator
 
 Use a simple dot instead of a number:
 
-<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
-  <Badge dot>
-    <Button icon={<Bell size={16} />} iconOnly variant="ghost" />
-  </Badge>
-  
-  <Badge dot variant="success">
-    <Button icon={<Settings size={16} />} iconOnly variant="ghost" />
-  </Badge>
-  
-  <Badge dot variant="warning">
-    <Button icon={<User size={16} />} iconOnly variant="ghost" />
-  </Badge>
-  
-  <Badge dot variant="error">
-    <Button icon={<Heart size={16} />} iconOnly variant="ghost" />
-  </Badge>
-</div>
-
-```tsx
-<Badge dot>
+<CodeBlock code={`<Badge dot>
   <Button icon={<Bell size={16} />} iconOnly variant="ghost" />
 </Badge>
 
@@ -184,37 +159,31 @@ Use a simple dot instead of a number:
 
 <Badge dot variant="error">
   <Button icon={<Heart size={16} />} iconOnly variant="ghost" />
-</Badge>
-```
+</Badge>`}>
+  <div className="flex gap-4 mb-8 flex-wrap items-center">
+    <Badge dot>
+      <Button icon={<Bell size={16} />} iconOnly variant="ghost" />
+    </Badge>
+    
+    <Badge dot variant="success">
+      <Button icon={<Settings size={16} />} iconOnly variant="ghost" />
+    </Badge>
+    
+    <Badge dot variant="warning">
+      <Button icon={<User size={16} />} iconOnly variant="ghost" />
+    </Badge>
+    
+    <Badge dot variant="error">
+      <Button icon={<Heart size={16} />} iconOnly variant="ghost" />
+    </Badge>
+  </div>
+</CodeBlock>
 
 ## Variants
 
 Different color variants for different contexts:
 
-<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
-  <Badge count={3} variant="default">
-    <Button size="sm">Default</Button>
-  </Badge>
-  
-  <Badge count={5} variant="success">
-    <Button size="sm" variant="outline">Success</Button>
-  </Badge>
-  
-  <Badge count={2} variant="warning">
-    <Button size="sm" variant="outline">Warning</Button>
-  </Badge>
-  
-  <Badge count={7} variant="error">
-    <Button size="sm" variant="outline">Error</Button>
-  </Badge>
-  
-  <Badge count={1} variant="info">
-    <Button size="sm" variant="outline">Info</Button>
-  </Badge>
-</div>
-
-```tsx
-<Badge count={3} variant="default">
+<CodeBlock code={`<Badge count={3} variant="default">
   <Button size="sm">Default</Button>
 </Badge>
 
@@ -232,29 +201,35 @@ Different color variants for different contexts:
 
 <Badge count={1} variant="info">
   <Button size="sm" variant="outline">Info</Button>
-</Badge>
-```
+</Badge>`}>
+  <div className="flex gap-4 mb-8 flex-wrap items-center">
+    <Badge count={3} variant="default">
+      <Button size="sm">Default</Button>
+    </Badge>
+    
+    <Badge count={5} variant="success">
+      <Button size="sm" variant="outline">Success</Button>
+    </Badge>
+    
+    <Badge count={2} variant="warning">
+      <Button size="sm" variant="outline">Warning</Button>
+    </Badge>
+    
+    <Badge count={7} variant="error">
+      <Button size="sm" variant="outline">Error</Button>
+    </Badge>
+    
+    <Badge count={1} variant="info">
+      <Button size="sm" variant="outline">Info</Button>
+    </Badge>
+  </div>
+</CodeBlock>
 
 ## Sizes
 
 Control the badge size:
 
-<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
-  <Badge count={3} size="sm">
-    <Button size="sm" icon={<Bell size={14} />} iconOnly variant="ghost" />
-  </Badge>
-  
-  <Badge count={5} size="md">
-    <Button size="md" icon={<Bell size={16} />} iconOnly variant="ghost" />
-  </Badge>
-  
-  <Badge count={2} size="lg">
-    <Button size="lg" icon={<Bell size={18} />} iconOnly variant="ghost" />
-  </Badge>
-</div>
-
-```tsx
-<Badge count={3} size="sm">
+<CodeBlock code={`<Badge count={3} size="sm">
   <Button size="sm" icon={<Bell size={14} />} iconOnly variant="ghost" />
 </Badge>
 
@@ -264,33 +239,27 @@ Control the badge size:
 
 <Badge count={2} size="lg">
   <Button size="lg" icon={<Bell size={18} />} iconOnly variant="ghost" />
-</Badge>
-```
+</Badge>`}>
+  <div className="flex gap-4 mb-8 flex-wrap items-center">
+    <Badge count={3} size="sm">
+      <Button size="sm" icon={<Bell size={14} />} iconOnly variant="ghost" />
+    </Badge>
+    
+    <Badge count={5} size="md">
+      <Button size="md" icon={<Bell size={16} />} iconOnly variant="ghost" />
+    </Badge>
+    
+    <Badge count={2} size="lg">
+      <Button size="lg" icon={<Bell size={18} />} iconOnly variant="ghost" />
+    </Badge>
+  </div>
+</CodeBlock>
 
 ## Position
 
 Control where the badge appears:
 
-<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
-  <Badge count={3} position="top-left">
-    <Button size="sm" icon={<Bell size={16} />} iconOnly variant="ghost" />
-  </Badge>
-  
-  <Badge count={5} position="top-right">
-    <Button size="sm" icon={<Bell size={16} />} iconOnly variant="ghost" />
-  </Badge>
-  
-  <Badge count={2} position="bottom-left">
-    <Button size="sm" icon={<Bell size={16} />} iconOnly variant="ghost" />
-  </Badge>
-  
-  <Badge count={7} position="bottom-right">
-    <Button size="sm" icon={<Bell size={16} />} iconOnly variant="ghost" />
-  </Badge>
-</div>
-
-```tsx
-<Badge count={3} position="top-left">
+<CodeBlock code={`<Badge count={3} position="top-left">
   <Button size="sm" icon={<Bell size={16} />} iconOnly variant="ghost" />
 </Badge>
 
@@ -304,29 +273,31 @@ Control where the badge appears:
 
 <Badge count={7} position="bottom-right">
   <Button size="sm" icon={<Bell size={16} />} iconOnly variant="ghost" />
-</Badge>
-```
+</Badge>`}>
+  <div className="flex gap-4 mb-8 flex-wrap items-center">
+    <Badge count={3} position="top-left">
+      <Button size="sm" icon={<Bell size={16} />} iconOnly variant="ghost" />
+    </Badge>
+    
+    <Badge count={5} position="top-right">
+      <Button size="sm" icon={<Bell size={16} />} iconOnly variant="ghost" />
+    </Badge>
+    
+    <Badge count={2} position="bottom-left">
+      <Button size="sm" icon={<Bell size={16} />} iconOnly variant="ghost" />
+    </Badge>
+    
+    <Badge count={7} position="bottom-right">
+      <Button size="sm" icon={<Bell size={16} />} iconOnly variant="ghost" />
+    </Badge>
+  </div>
+</CodeBlock>
 
 ## Max Count
 
 Limit the maximum number displayed:
 
-<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
-  <Badge count={5} max={5}>
-    <Button size="sm" icon={<Bell size={16} />} iconOnly variant="ghost" />
-  </Badge>
-  
-  <Badge count={150} max={99}>
-    <Button size="sm" icon={<Bell size={16} />} iconOnly variant="ghost" />
-  </Badge>
-  
-  <Badge count={1000} max={9}>
-    <Button size="sm" icon={<Bell size={16} />} iconOnly variant="ghost" />
-  </Badge>
-</div>
-
-```tsx
-<Badge count={5} max={5}>
+<CodeBlock code={`<Badge count={5} max={5}>
   <Button size="sm" icon={<Bell size={16} />} iconOnly variant="ghost" />
 </Badge>
 
@@ -336,29 +307,27 @@ Limit the maximum number displayed:
 
 <Badge count={1000} max={9}>
   <Button size="sm" icon={<Bell size={16} />} iconOnly variant="ghost" />
-</Badge>
-```
+</Badge>`}>
+  <div className="flex gap-4 mb-8 flex-wrap items-center">
+    <Badge count={5} max={5}>
+      <Button size="sm" icon={<Bell size={16} />} iconOnly variant="ghost" />
+    </Badge>
+    
+    <Badge count={150} max={99}>
+      <Button size="sm" icon={<Bell size={16} />} iconOnly variant="ghost" />
+    </Badge>
+    
+    <Badge count={1000} max={9}>
+      <Button size="sm" icon={<Bell size={16} />} iconOnly variant="ghost" />
+    </Badge>
+  </div>
+</CodeBlock>
 
 ## Custom Offset
 
 Fine-tune badge positioning:
 
-<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
-  <Badge count={3} offset={{ x: 5, y: -5 }}>
-    <Button size="sm" icon={<Bell size={16} />} iconOnly variant="ghost" />
-  </Badge>
-  
-  <Badge count={5} offset={{ x: -5, y: 5 }}>
-    <Button size="sm" icon={<Bell size={16} />} iconOnly variant="ghost" />
-  </Badge>
-  
-  <Badge count={2} offset={{ x: 0, y: -10 }}>
-    <Button size="sm" icon={<Bell size={16} />} iconOnly variant="ghost" />
-  </Badge>
-</div>
-
-```tsx
-<Badge count={3} offset={{ x: 5, y: -5 }}>
+<CodeBlock code={`<Badge count={3} offset={{ x: 5, y: -5 }}>
   <Button size="sm" icon={<Bell size={16} />} iconOnly variant="ghost" />
 </Badge>
 
@@ -368,45 +337,27 @@ Fine-tune badge positioning:
 
 <Badge count={2} offset={{ x: 0, y: -10 }}>
   <Button size="sm" icon={<Bell size={16} />} iconOnly variant="ghost" />
-</Badge>
-```
+</Badge>`}>
+  <div className="flex gap-4 mb-8 flex-wrap items-center">
+    <Badge count={3} offset={{ x: 5, y: -5 }}>
+      <Button size="sm" icon={<Bell size={16} />} iconOnly variant="ghost" />
+    </Badge>
+    
+    <Badge count={5} offset={{ x: -5, y: 5 }}>
+      <Button size="sm" icon={<Bell size={16} />} iconOnly variant="ghost" />
+    </Badge>
+    
+    <Badge count={2} offset={{ x: 0, y: -10 }}>
+      <Button size="sm" icon={<Bell size={16} />} iconOnly variant="ghost" />
+    </Badge>
+  </div>
+</CodeBlock>
 
 ## Real-World Examples
 
 Common use cases for badges:
 
-<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
-  <Badge count={3} variant="error">
-    <Button icon={<ShoppingCart size={16} />} iconOnly variant="ghost" />
-  </Badge>
-  
-  <Badge count={12} variant="info">
-    <Button icon={<MessageCircle size={16} />} iconOnly variant="ghost" />
-  </Badge>
-  
-  <Badge dot variant="success">
-    <Button icon={<Settings size={16} />} iconOnly variant="ghost" />
-  </Badge>
-  
-  <Badge count={99} max={99} variant="warning">
-    <Button icon={<Bell size={16} />} iconOnly variant="ghost" />
-  </Badge>
-  
-  <Badge text="New" variant="success">
-    <Button size="sm">Product</Button>
-  </Badge>
-  
-  <Badge text="Sale" variant="error">
-    <Button size="sm" variant="outline">Item</Button>
-  </Badge>
-  
-  <Badge text="Beta" variant="info">
-    <Button size="sm" variant="ghost">Feature</Button>
-  </Badge>
-</div>
-
-```tsx
-// Shopping cart with items
+<CodeBlock code={`// Shopping cart with items
 <Badge count={3} variant="error">
   <Button icon={<ShoppingCart size={16} />} iconOnly variant="ghost" />
 </Badge>
@@ -439,8 +390,37 @@ Common use cases for badges:
 // Feature with "Beta" badge
 <Badge text="Beta" variant="info">
   <Button size="sm" variant="ghost">Feature</Button>
-</Badge>
-```
+</Badge>`}>
+  <div className="flex gap-4 mb-8 flex-wrap items-center">
+    <Badge count={3} variant="error">
+      <Button icon={<ShoppingCart size={16} />} iconOnly variant="ghost" />
+    </Badge>
+    
+    <Badge count={12} variant="info">
+      <Button icon={<MessageCircle size={16} />} iconOnly variant="ghost" />
+    </Badge>
+    
+    <Badge dot variant="success">
+      <Button icon={<Settings size={16} />} iconOnly variant="ghost" />
+    </Badge>
+    
+    <Badge count={99} max={99} variant="warning">
+      <Button icon={<Bell size={16} />} iconOnly variant="ghost" />
+    </Badge>
+    
+    <Badge text="New" variant="success">
+      <Button size="sm">Product</Button>
+    </Badge>
+    
+    <Badge text="Sale" variant="error">
+      <Button size="sm" variant="outline">Item</Button>
+    </Badge>
+    
+    <Badge text="Beta" variant="info">
+      <Button size="sm" variant="ghost">Feature</Button>
+    </Badge>
+  </div>
+</CodeBlock>
 
 ## Accessibility
 

@@ -4,7 +4,7 @@ A simple dropdown menu component for displaying a list of actions or options.
 
 ## Basic Usage
 
-<Dropdown 
+<CodeBlock code={`<Dropdown 
   items={[
     { children: 'Edit', onClick: () => console.log('Edit clicked') },
     { children: 'Delete', onClick: () => console.log('Delete clicked') },
@@ -12,11 +12,21 @@ A simple dropdown menu component for displaying a list of actions or options.
   ]}
 >
   <Button>Actions</Button>
-</Dropdown>
+</Dropdown>`}>
+  <Dropdown 
+    items={[
+      { children: 'Edit', onClick: () => console.log('Edit clicked') },
+      { children: 'Delete', onClick: () => console.log('Delete clicked') },
+      { children: 'Share', onClick: () => console.log('Share clicked') }
+    ]}
+  >
+    <Button>Actions</Button>
+  </Dropdown>
+</CodeBlock>
 
 ## With Icons
 
-<Dropdown 
+<CodeBlock code={`<Dropdown 
   items={[
     { children: 'Edit', icon: <Icon name="settings" size="sm" />, onClick: () => console.log('Edit') },
     { children: 'Delete', icon: <Icon name="close" size="sm" />, onClick: () => console.log('Delete') },
@@ -24,11 +34,21 @@ A simple dropdown menu component for displaying a list of actions or options.
   ]}
 >
   <Button variant="outline">Menu</Button>
-</Dropdown>
+</Dropdown>`}>
+  <Dropdown 
+    items={[
+      { children: 'Edit', icon: <Icon name="settings" size="sm" />, onClick: () => console.log('Edit') },
+      { children: 'Delete', icon: <Icon name="close" size="sm" />, onClick: () => console.log('Delete') },
+      { children: 'Share', icon: <Icon name="heart" size="sm" />, onClick: () => console.log('Share') }
+    ]}
+  >
+    <Button variant="outline">Menu</Button>
+  </Dropdown>
+</CodeBlock>
 
 ## Different Placements
 
-<div className="flex gap-4">
+<CodeBlock code={`<div className="flex gap-4">
   <Dropdown 
     placement="top"
     items={[
@@ -64,7 +84,45 @@ A simple dropdown menu component for displaying a list of actions or options.
   >
     <Button size="sm">Right</Button>
   </Dropdown>
-</div>
+</div>`}>
+  <div className="flex gap-4">
+    <Dropdown 
+      placement="top"
+      items={[
+        { children: 'Top', onClick: () => console.log('Top') }
+      ]}
+    >
+      <Button size="sm">Top</Button>
+    </Dropdown>
+    
+    <Dropdown 
+      placement="bottom"
+      items={[
+        { children: 'Bottom', onClick: () => console.log('Bottom') }
+      ]}
+    >
+      <Button size="sm">Bottom</Button>
+    </Dropdown>
+    
+    <Dropdown 
+      placement="left"
+      items={[
+        { children: 'Left', onClick: () => console.log('Left') }
+      ]}
+    >
+      <Button size="sm">Left</Button>
+    </Dropdown>
+    
+    <Dropdown 
+      placement="right"
+      items={[
+        { children: 'Right', onClick: () => console.log('Right') }
+      ]}
+    >
+      <Button size="sm">Right</Button>
+    </Dropdown>
+  </div>
+</CodeBlock>
 
 ## Sizes
 

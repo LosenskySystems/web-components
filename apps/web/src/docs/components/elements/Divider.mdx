@@ -14,256 +14,267 @@ import { Divider } from '@losensky-systems/web-components-core'
 
 Simple dividers for content separation:
 
-<div style={{ marginBottom: '2rem' }}>
-  <p>Content above the divider</p>
-  <Divider />
-  <p>Content below the divider</p>
-</div>
-
-```tsx
-<p>Content above the divider</p>
+<CodeBlock code={`<p>Content above the divider</p>
 <Divider />
-<p>Content below the divider</p>
-```
+<p>Content below the divider</p>`}>
+  <div className="mb-8">
+    <p>Content above the divider</p>
+    <Divider />
+    <p>Content below the divider</p>
+  </div>
+</CodeBlock>
 
 ## Orientations
 
 ### Horizontal (Default)
 Horizontal dividers separate content vertically:
 
-<div style={{ marginBottom: '2rem' }}>
-  <div style={{ padding: '1rem', background: '#f8fafc', borderRadius: '0.5rem', marginBottom: '1rem' }}>
-    Section 1
-  </div>
-  <Divider />
-  <div style={{ padding: '1rem', background: '#f8fafc', borderRadius: '0.5rem', marginTop: '1rem' }}>
-    Section 2
-  </div>
+<CodeBlock code={`<div className="p-4 bg-gray-50 rounded-lg mb-4">
+  Section 1
 </div>
-
-```tsx
-<div>Section 1</div>
 <Divider />
-<div>Section 2</div>
-```
+<div className="p-4 bg-gray-50 rounded-lg mt-4">
+  Section 2
+</div>`}>
+  <div className="mb-8">
+    <div className="p-4 bg-gray-50 rounded-lg mb-4">
+      Section 1
+    </div>
+    <Divider />
+    <div className="p-4 bg-gray-50 rounded-lg mt-4">
+      Section 2
+    </div>
+  </div>
+</CodeBlock>
 
 ### Vertical
 Vertical dividers separate content horizontally:
 
-<div style={{ display: 'flex', alignItems: 'center', marginBottom: '2rem', height: '4rem' }}>
-  <div style={{ padding: '0.5rem 1rem', background: '#f8fafc', borderRadius: '0.5rem' }}>
+<CodeBlock code={`<div className="flex items-center h-16">
+  <div className="px-4 py-2 bg-gray-50 rounded-lg">
     Left Content
   </div>
   <Divider orientation="vertical" />
-  <div style={{ padding: '0.5rem 1rem', background: '#f8fafc', borderRadius: '0.5rem' }}>
+  <div className="px-4 py-2 bg-gray-50 rounded-lg">
     Right Content
   </div>
-</div>
-
-```tsx
-<div style={{ display: 'flex', alignItems: 'center' }}>
-  <div>Left Content</div>
-  <Divider orientation="vertical" />
-  <div>Right Content</div>
-</div>
-```
+</div>`}>
+  <div className="flex items-center h-16 mb-8">
+    <div className="px-4 py-2 bg-gray-50 rounded-lg">
+      Left Content
+    </div>
+    <Divider orientation="vertical" />
+    <div className="px-4 py-2 bg-gray-50 rounded-lg">
+      Right Content
+    </div>
+  </div>
+</CodeBlock>
 
 ## Variants
 
 Different border styles for visual variety:
 
-<div style={{ marginBottom: '2rem' }}>
-  <p>Solid divider (default):</p>
-  <Divider variant="solid" />
-  
-  <p style={{ marginTop: '1rem' }}>Dashed divider:</p>
-  <Divider variant="dashed" />
-  
-  <p style={{ marginTop: '1rem' }}>Dotted divider:</p>
-  <Divider variant="dotted" />
-</div>
+<CodeBlock code={`<p>Solid divider (default):</p>
+<Divider variant="solid" />
 
-```tsx
-<Divider variant="solid" />   {/* Default */}
+<p className="mt-4">Dashed divider:</p>
 <Divider variant="dashed" />
-<Divider variant="dotted" />
-```
+
+<p className="mt-4">Dotted divider:</p>
+<Divider variant="dotted" />`}>
+  <div className="mb-8">
+    <p>Solid divider (default):</p>
+    <Divider variant="solid" />
+    
+    <p className="mt-4">Dashed divider:</p>
+    <Divider variant="dashed" />
+    
+    <p className="mt-4">Dotted divider:</p>
+    <Divider variant="dotted" />
+  </div>
+</CodeBlock>
 
 ## Spacing
 
 Control the margin around dividers:
 
-<div style={{ marginBottom: '2rem' }}>
-  <p>Small spacing:</p>
-  <Divider spacing="sm" />
-  <p>Medium spacing (default):</p>
-  <Divider spacing="md" />
-  <p>Large spacing:</p>
-  <Divider spacing="lg" />
-  <p>Extra large spacing:</p>
-  <Divider spacing="xl" />
-</div>
-
-```tsx
-<Divider spacing="sm" />   {/* 0.25rem margin */}
-<Divider spacing="md" />    {/* 0.5rem margin - default */}
-<Divider spacing="lg" />   {/* 1rem margin */}
-<Divider spacing="xl" />   {/* 1.5rem margin */}
-```
+<CodeBlock code={`<p>Small spacing:</p>
+<Divider spacing="sm" />
+<p>Medium spacing (default):</p>
+<Divider spacing="md" />
+<p>Large spacing:</p>
+<Divider spacing="lg" />
+<p>Extra large spacing:</p>
+<Divider spacing="xl" />`}>
+  <div className="mb-8">
+    <p>Small spacing:</p>
+    <Divider spacing="sm" />
+    <p>Medium spacing (default):</p>
+    <Divider spacing="md" />
+    <p>Large spacing:</p>
+    <Divider spacing="lg" />
+    <p>Extra large spacing:</p>
+    <Divider spacing="xl" />
+  </div>
+</CodeBlock>
 
 ## Colors
 
 Use semantic colors for different contexts:
 
-<div style={{ marginBottom: '2rem' }}>
-  <p>Default divider:</p>
-  <Divider color="default" />
-  
-  <p style={{ marginTop: '1rem' }}>Primary divider:</p>
-  <Divider color="primary" />
-  
-  <p style={{ marginTop: '1rem' }}>Success divider:</p>
-  <Divider color="success" />
-  
-  <p style={{ marginTop: '1rem' }}>Warning divider:</p>
-  <Divider color="warning" />
-  
-  <p style={{ marginTop: '1rem' }}>Error divider:</p>
-  <Divider color="error" />
-  
-  <p style={{ marginTop: '1rem' }}>Info divider:</p>
-  <Divider color="info" />
-</div>
-
-```tsx
+<CodeBlock code={`<p>Default divider:</p>
 <Divider color="default" />
+
+<p className="mt-4">Primary divider:</p>
 <Divider color="primary" />
+
+<p className="mt-4">Success divider:</p>
 <Divider color="success" />
+
+<p className="mt-4">Warning divider:</p>
 <Divider color="warning" />
+
+<p className="mt-4">Error divider:</p>
 <Divider color="error" />
-<Divider color="info" />
-```
+
+<p className="mt-4">Info divider:</p>
+<Divider color="info" />`}>
+  <div className="mb-8">
+    <p>Default divider:</p>
+    <Divider color="default" />
+    
+    <p className="mt-4">Primary divider:</p>
+    <Divider color="primary" />
+    
+    <p className="mt-4">Success divider:</p>
+    <Divider color="success" />
+    
+    <p className="mt-4">Warning divider:</p>
+    <Divider color="warning" />
+    
+    <p className="mt-4">Error divider:</p>
+    <Divider color="error" />
+    
+    <p className="mt-4">Info divider:</p>
+    <Divider color="info" />
+  </div>
+</CodeBlock>
 
 ## Labeled Dividers
 
 Add text labels to dividers for better context:
 
-<div style={{ marginBottom: '2rem' }}>
-  <Divider>OR</Divider>
-  
-  <Divider color="primary">Section Break</Divider>
-  
-  <Divider color="success">Success Message</Divider>
-  
-  <Divider color="warning">Important Notice</Divider>
-</div>
+<CodeBlock code={`<Divider>OR</Divider>
 
-```tsx
-<Divider>OR</Divider>
 <Divider color="primary">Section Break</Divider>
+
 <Divider color="success">Success Message</Divider>
-<Divider color="warning">Important Notice</Divider>
-```
+
+<Divider color="warning">Important Notice</Divider>`}>
+  <div className="mb-8">
+    <Divider>OR</Divider>
+    
+    <Divider color="primary">Section Break</Divider>
+    
+    <Divider color="success">Success Message</Divider>
+    
+    <Divider color="warning">Important Notice</Divider>
+  </div>
+</CodeBlock>
 
 ## Real-World Examples
 
 Common use cases for dividers:
 
-<div style={{ marginBottom: '2rem' }}>
-  <div style={{ padding: '1rem', background: '#f8fafc', borderRadius: '0.5rem' }}>
-    <h3 style={{ margin: '0 0 0.5rem 0' }}>User Profile</h3>
-    <p style={{ margin: 0 }}>Personal information and settings</p>
-  </div>
-  
-  <Divider spacing="lg" />
-  
-  <div style={{ padding: '1rem', background: '#f8fafc', borderRadius: '0.5rem' }}>
-    <h3 style={{ margin: '0 0 0.5rem 0' }}>Account Settings</h3>
-    <p style={{ margin: 0 }}>Security and privacy options</p>
-  </div>
-  
-  <Divider spacing="lg" />
-  
-  <div style={{ padding: '1rem', background: '#f8fafc', borderRadius: '0.5rem' }}>
-    <h3 style={{ margin: '0 0 0.5rem 0' }}>Billing</h3>
-    <p style={{ margin: 0 }}>Payment methods and subscription</p>
-  </div>
-</div>
-
-```tsx
-<div>
-  <h3>User Profile</h3>
-  <p>Personal information and settings</p>
+<CodeBlock code={`<div className="p-4 bg-gray-50 rounded-lg">
+  <h3 className="text-lg font-semibold mb-2">User Profile</h3>
+  <p className="m-0">Personal information and settings</p>
 </div>
 
 <Divider spacing="lg" />
 
-<div>
-  <h3>Account Settings</h3>
-  <p>Security and privacy options</p>
+<div className="p-4 bg-gray-50 rounded-lg">
+  <h3 className="text-lg font-semibold mb-2">Account Settings</h3>
+  <p className="m-0">Security and privacy options</p>
 </div>
 
 <Divider spacing="lg" />
 
-<div>
-  <h3>Billing</h3>
-  <p>Payment methods and subscription</p>
-</div>
-```
+<div className="p-4 bg-gray-50 rounded-lg">
+  <h3 className="text-lg font-semibold mb-2">Billing</h3>
+  <p className="m-0">Payment methods and subscription</p>
+</div>`}>
+  <div className="mb-8">
+    <div className="p-4 bg-gray-50 rounded-lg">
+      <h3 className="text-lg font-semibold mb-2">User Profile</h3>
+      <p className="m-0">Personal information and settings</p>
+    </div>
+    
+    <Divider spacing="lg" />
+    
+    <div className="p-4 bg-gray-50 rounded-lg">
+      <h3 className="text-lg font-semibold mb-2">Account Settings</h3>
+      <p className="m-0">Security and privacy options</p>
+    </div>
+    
+    <Divider spacing="lg" />
+    
+    <div className="p-4 bg-gray-50 rounded-lg">
+      <h3 className="text-lg font-semibold mb-2">Billing</h3>
+      <p className="m-0">Payment methods and subscription</p>
+    </div>
+  </div>
+</CodeBlock>
 
 ### Navigation Menu Example
 
-<div style={{ display: 'flex', alignItems: 'center', marginBottom: '2rem', padding: '0.5rem', background: '#f8fafc', borderRadius: '0.5rem' }}>
-  <span style={{ padding: '0.5rem 1rem' }}>Home</span>
+<CodeBlock code={`<div className="flex items-center p-2 bg-gray-50 rounded-lg">
+  <span className="px-4 py-2">Home</span>
   <Divider orientation="vertical" spacing="sm" />
-  <span style={{ padding: '0.5rem 1rem' }}>Products</span>
+  <span className="px-4 py-2">Products</span>
   <Divider orientation="vertical" spacing="sm" />
-  <span style={{ padding: '0.5rem 1rem' }}>About</span>
+  <span className="px-4 py-2">About</span>
   <Divider orientation="vertical" spacing="sm" />
-  <span style={{ padding: '0.5rem 1rem' }}>Contact</span>
-</div>
-
-```tsx
-<div style={{ display: 'flex', alignItems: 'center' }}>
-  <span>Home</span>
-  <Divider orientation="vertical" spacing="sm" />
-  <span>Products</span>
-  <Divider orientation="vertical" spacing="sm" />
-  <span>About</span>
-  <Divider orientation="vertical" spacing="sm" />
-  <span>Contact</span>
-</div>
-```
+  <span className="px-4 py-2">Contact</span>
+</div>`}>
+  <div className="flex items-center p-2 bg-gray-50 rounded-lg mb-8">
+    <span className="px-4 py-2">Home</span>
+    <Divider orientation="vertical" spacing="sm" />
+    <span className="px-4 py-2">Products</span>
+    <Divider orientation="vertical" spacing="sm" />
+    <span className="px-4 py-2">About</span>
+    <Divider orientation="vertical" spacing="sm" />
+    <span className="px-4 py-2">Contact</span>
+  </div>
+</CodeBlock>
 
 ### Form Section Example
 
-<div style={{ marginBottom: '2rem' }}>
-  <div style={{ padding: '1rem', background: '#f8fafc', borderRadius: '0.5rem' }}>
-    <h4 style={{ margin: '0 0 0.5rem 0' }}>Personal Information</h4>
-    <p style={{ margin: 0, fontSize: '0.875rem', color: '#6b7280' }}>Enter your basic details</p>
-  </div>
-  
-  <Divider color="primary" spacing="md" />
-  
-  <div style={{ padding: '1rem', background: '#f8fafc', borderRadius: '0.5rem' }}>
-    <h4 style={{ margin: '0 0 0.5rem 0' }}>Contact Details</h4>
-    <p style={{ margin: 0, fontSize: '0.875rem', color: '#6b7280' }}>Phone and email information</p>
-  </div>
-</div>
-
-```tsx
-<div>
-  <h4>Personal Information</h4>
-  <p>Enter your basic details</p>
+<CodeBlock code={`<div className="p-4 bg-gray-50 rounded-lg">
+  <h4 className="text-lg font-semibold mb-2">Personal Information</h4>
+  <p className="m-0 text-sm text-gray-600">Enter your basic details</p>
 </div>
 
 <Divider color="primary" spacing="md" />
 
-<div>
-  <h4>Contact Details</h4>
-  <p>Phone and email information</p>
-</div>
-```
+<div className="p-4 bg-gray-50 rounded-lg">
+  <h4 className="text-lg font-semibold mb-2">Contact Details</h4>
+  <p className="m-0 text-sm text-gray-600">Phone and email information</p>
+</div>`}>
+  <div className="mb-8">
+    <div className="p-4 bg-gray-50 rounded-lg">
+      <h4 className="text-lg font-semibold mb-2">Personal Information</h4>
+      <p className="m-0 text-sm text-gray-600">Enter your basic details</p>
+    </div>
+    
+    <Divider color="primary" spacing="md" />
+    
+    <div className="p-4 bg-gray-50 rounded-lg">
+      <h4 className="text-lg font-semibold mb-2">Contact Details</h4>
+      <p className="m-0 text-sm text-gray-600">Phone and email information</p>
+    </div>
+  </div>
+</CodeBlock>
 
 ## Accessibility
 
