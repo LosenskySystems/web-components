@@ -11,7 +11,16 @@ export default defineConfig([
     files: ['**/*.{ts,tsx}'],
     extends: [
       js.configs.recommended,
-      tseslint.configs.recommended,
+      ...tseslint.configs.recommended.map(config => ({
+        ...config,
+        languageOptions: {
+          ...config.languageOptions,
+          parserOptions: {
+            ...config.languageOptions?.parserOptions,
+            tsconfigRootDir: import.meta.dirname,
+          },
+        },
+      })),
       reactHooks.configs['recommended-latest'],
       reactRefresh.configs.vite,
     ],
