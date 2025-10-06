@@ -1,5 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Button } from '@losensky-systems/web-components-core'
+import Prism from 'prismjs'
+import 'prismjs/themes/prism.css'
+import 'prismjs/components/prism-jsx'
+import 'prismjs/components/prism-tsx'
+import 'prismjs/components/prism-typescript'
+import 'prismjs/components/prism-javascript'
 
 interface CodeBlockProps {
   children: React.ReactNode
@@ -9,6 +15,26 @@ interface CodeBlockProps {
 
 export function CodeBlock({ children, code, language = 'tsx' }: CodeBlockProps) {
   const [showCode, setShowCode] = useState(false)
+  const [highlightedCode, setHighlightedCode] = useState('')
+
+  useEffect(() => {
+    if (showCode && code) {
+      // Map language names to Prism language identifiers
+      const prismLanguage = language === 'tsx' ? 'tsx' : 
+                           language === 'jsx' ? 'jsx' : 
+                           language === 'typescript' ? 'typescript' : 
+                           language === 'javascript' ? 'javascript' : 
+                           language
+      
+      try {
+        const highlighted = Prism.highlight(code, Prism.languages[prismLanguage] || Prism.languages.text, prismLanguage)
+        setHighlightedCode(highlighted)
+      } catch {
+        // Fallback to plain text if highlighting fails
+        setHighlightedCode(code)
+      }
+    }
+  }, [showCode, code, language])
 
   return (
     <div className="border border-gray-200 overflow-hidden">
@@ -45,11 +71,14 @@ export function CodeBlock({ children, code, language = 'tsx' }: CodeBlockProps) 
       {/* Code Block */}
       {showCode && (
         <div className="border border-gray-200">
-          <div className="px-4 py-2 text-xs text-gray-600 rounded-none font-mono border-b border-gray-200">
+          <div className="px-4 py-2 text-xs text-gray-600 rounded-none font-mono border-b border-gray-200 bg-gray-50">
             {language}
           </div>
-          <pre className="p-4 overflow-x-auto">
-            <code className="text-sm font-mono text-gray-800">{code}</code>
+          <pre className="p-4 overflow-x-auto bg-gray-900 text-sm font-mono">
+            <code 
+              className="language-tsx"
+              dangerouslySetInnerHTML={{ __html: highlightedCode }}
+            />
           </pre>
         </div>
       )}
