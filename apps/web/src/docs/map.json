@@ -184,6 +184,20 @@
       "category": "components",
       "subcategory": "navigation",
       "description": "A tabs component for organizing content into separate views that can be switched between"
+    },
+    {
+      "id": "get-started-category",
+      "title": "Get Started",
+      "path": "/docs/get-started",
+      "category": "get-started",
+      "description": "Getting started with the component library"
+    },
+    {
+      "id": "components-category",
+      "title": "Components",
+      "path": "/docs/components",
+      "category": "components",
+      "description": "Browse all component categories and their contents"
     }
   ],
   "categories": [

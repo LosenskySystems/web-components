@@ -9,7 +9,7 @@ interface NavigationProps {
 
 export function Navigation({ routes, categories }: NavigationProps) {
   return (
-    <nav className="w-56 bg-white border-r border-gray-200 text-gray-900 h-screen overflow-y-auto sticky top-0 font-sans">
+    <nav className="w-64 bg-white border-r border-gray-200 text-gray-900 h-screen overflow-y-auto sticky top-0 font-sans shadow-sm">
       <NavigationHeader />
       <NavigationItems routes={routes} categories={categories} />
     </nav>

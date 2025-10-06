@@ -25,15 +25,17 @@ export function Category({
   }
 
   return (
-    <div>
+    <div className="border-b border-gray-100 last:border-b-0">
       {/* Category Header */}
       <div
         onClick={() => onToggleCategory(category.id)}
-        className="px-3 py-1.5 cursor-pointer flex items-center justify-between text-gray-900 text-sm font-medium hover:text-gray-700 transition-colors"
+        className="px-4 py-3 cursor-pointer flex items-center justify-between text-gray-900 hover:bg-gray-50 transition-colors group"
       >
-        <span>{category.title}</span>
+        <span className="text-sm font-semibold tracking-wide uppercase text-gray-700 group-hover:text-gray-900">
+          {category.title}
+        </span>
         <span className={`
-          text-xs text-gray-400 transition-transform duration-200
+          text-xs text-gray-400 transition-transform duration-200 group-hover:text-gray-600
           ${isExpanded ? 'rotate-90' : 'rotate-0'}
         `}>
           ▶
@@ -42,7 +44,7 @@ export function Category({
 
       {/* Category Content */}
       {isExpanded && (
-        <div>
+        <div className="bg-gray-50/50">
           {/* Direct category items (like Get Started items) */}
           {category.items && category.items.map((itemId) => {
             const route = routes.find(r => r.id === itemId)
@@ -53,10 +55,10 @@ export function Category({
                 key={route.id}
                 to={route.path}
                 className={`
-                  block py-1 px-3 pl-5 text-sm no-underline transition-colors
+                  block py-2.5 px-4 pl-6 text-sm no-underline transition-all duration-150 border-l-2
                   ${isActive(route.path)
-                    ? 'text-gray-900 font-semibold'
-                    : 'text-gray-600 hover:text-gray-900'
+                    ? 'text-blue-600 font-medium bg-blue-50 border-blue-200'
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100 border-transparent hover:border-gray-200'
                   }
                 `}
               >
@@ -71,11 +73,13 @@ export function Category({
               {/* Subcategory Header */}
               <div
                 onClick={() => onToggleSubcategory(subcategory.id)}
-                className="py-1 px-3 pl-5 cursor-pointer flex items-center justify-between text-gray-900 text-sm font-medium hover:text-gray-700 transition-colors"
+                className="py-2.5 px-4 pl-6 cursor-pointer flex items-center justify-between text-gray-800 hover:bg-gray-100 transition-colors group"
               >
-                <span>{subcategory.title}</span>
+                <span className="text-sm font-medium text-gray-700 group-hover:text-gray-900">
+                  {subcategory.title}
+                </span>
                 <span className={`
-                  text-xs text-gray-400 transition-transform duration-200
+                  text-xs text-gray-400 transition-transform duration-200 group-hover:text-gray-600
                   ${expandedSubcategories.includes(subcategory.id) ? 'rotate-90' : 'rotate-0'}
                 `}>
                   ▶
@@ -84,7 +88,7 @@ export function Category({
 
               {/* Subcategory Items */}
               {expandedSubcategories.includes(subcategory.id) && (
-                <div>
+                <div className="bg-white/80">
                   {subcategory.items.map((itemId) => {
                     const route = routes.find(r => r.id === itemId)
                     if (!route) return null
@@ -94,10 +98,10 @@ export function Category({
                         key={route.id}
                         to={route.path}
                         className={`
-                          block py-1 px-3 pl-8 text-sm no-underline transition-colors
+                          block py-2 px-4 pl-8 text-sm no-underline transition-all duration-150 border-l-2
                           ${isActive(route.path)
-                            ? 'text-gray-900 font-semibold'
-                            : 'text-gray-600 hover:text-gray-900'
+                            ? 'text-blue-600 font-medium bg-blue-50 border-blue-200'
+                            : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50 border-transparent hover:border-gray-200'
                           }
                         `}
                       >
