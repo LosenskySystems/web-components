@@ -1,3 +1,6 @@
+import { Button } from '@losensky-systems/web-components-core'
+import { FolderOpen, Save, Plus, Settings, Heart, FileText, Search, Download } from 'lucide-react'
+
 # Button Component
 
 The Button component is a complete, accessible button with built-in styles. Use Tailwind classes for easy customization of colors, borders, and other details.
@@ -6,6 +9,7 @@ The Button component is a complete, accessible button with built-in styles. Use 
 
 ```tsx
 import { Button } from '@losensky-systems/web-components-core'
+import { FolderOpen, Save, Plus, Settings, Heart } from 'lucide-react'
 ```
 
 ## Variants
@@ -17,8 +21,63 @@ The Button component supports multiple predefined variants:
   <Button variant="secondary">Secondary</Button>
   <Button variant="outline">Outline</Button>
   <Button variant="ghost">Ghost</Button>
+  <Button variant="text">Text</Button>
   <Button variant="destructive">Destructive</Button>
 </div>
+
+## Sizes
+
+The Button component supports multiple sizes:
+
+<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
+  <Button size="sm">Small</Button>
+  <Button size="md">Medium</Button>
+  <Button size="lg">Large</Button>
+  <Button size="xl">Extra Large</Button>
+</div>
+
+```tsx
+<Button size="sm">Small</Button>
+<Button size="md">Medium</Button>
+<Button size="lg">Large</Button>
+<Button size="xl">Extra Large</Button>
+```
+
+### Size with Icons
+
+Sizes work perfectly with icons:
+
+<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
+  <Button size="sm" icon={<Plus size={14} />} iconPosition="left">Small</Button>
+  <Button size="md" icon={<Plus size={16} />} iconPosition="left">Medium</Button>
+  <Button size="lg" icon={<Plus size={18} />} iconPosition="left">Large</Button>
+  <Button size="xl" icon={<Plus size={20} />} iconPosition="left">Extra Large</Button>
+</div>
+
+```tsx
+<Button size="sm" icon={<Plus size={14} />} iconPosition="left">Small</Button>
+<Button size="md" icon={<Plus size={16} />} iconPosition="left">Medium</Button>
+<Button size="lg" icon={<Plus size={18} />} iconPosition="left">Large</Button>
+<Button size="xl" icon={<Plus size={20} />} iconPosition="left">Extra Large</Button>
+```
+
+### Icon-Only Sizes
+
+Icon-only buttons scale appropriately:
+
+<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
+  <Button size="sm" icon={<Settings size={14} />} iconOnly variant="ghost" />
+  <Button size="md" icon={<Settings size={16} />} iconOnly variant="ghost" />
+  <Button size="lg" icon={<Settings size={18} />} iconOnly variant="ghost" />
+  <Button size="xl" icon={<Settings size={20} />} iconOnly variant="ghost" />
+</div>
+
+```tsx
+<Button size="sm" icon={<Settings size={14} />} iconOnly variant="ghost" />
+<Button size="md" icon={<Settings size={16} />} iconOnly variant="ghost" />
+<Button size="lg" icon={<Settings size={18} />} iconOnly variant="ghost" />
+<Button size="xl" icon={<Settings size={20} />} iconOnly variant="ghost" />
+```
 
 ## Loading State
 
@@ -48,6 +107,282 @@ The Button component supports a loading state with proper accessibility:
 <Button variant="outline" loading>
   Outline Loading
 </Button>
+```
+
+## Icon Support
+
+The Button component supports icons with flexible positioning:
+
+<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
+  <Button icon={<FolderOpen size={16} />} iconPosition="left">
+    Open File
+  </Button>
+  <Button icon={<Save size={16} />} iconPosition="right">
+    Save
+  </Button>
+  <Button icon={<Plus size={16} />} iconOnly>
+    Add
+  </Button>
+  <Button icon={<Settings size={16} />} iconOnly variant="outline">
+    Settings
+  </Button>
+  <Button icon={<Heart size={16} />} iconOnly variant="ghost">
+    Like
+  </Button>
+</div>
+
+```tsx
+<Button icon={<FolderOpen size={16} />} iconPosition="left">
+  Open File
+</Button>
+
+<Button icon={<Save size={16} />} iconPosition="right">
+  Save
+</Button>
+
+<Button icon={<Plus size={16} />} iconOnly>
+  Add
+</Button>
+
+<Button icon={<Settings size={16} />} iconOnly variant="outline">
+  Settings
+</Button>
+
+<Button icon={<Heart size={16} />} iconOnly variant="ghost">
+  Like
+</Button>
+```
+
+### Icon Props
+
+- **`icon`**: React node (SVG, icon component, emoji)
+- **`iconPosition`**: `'left'` | `'right'` (default: `'left'`)
+- **`iconOnly`**: `boolean` - Shows only the icon with screen reader text
+
+### Using Lucide React Icons
+
+```tsx
+import { Download, Search, Heart } from 'lucide-react'
+
+<Button icon={<Download size={16} />} iconPosition="right">
+  Download
+</Button>
+
+<Button icon={<Search size={16} />} iconOnly variant="ghost">
+  Search
+</Button>
+
+<Button icon={<Heart size={16} />} iconOnly color="error">
+  Like
+</Button>
+```
+
+### Icon Accessibility
+
+- Icons are marked with `aria-hidden="true"` to prevent screen reader confusion
+- Icon-only buttons use `aria-label` for accessibility
+- Text content is preserved in `sr-only` span for icon-only buttons
+
+### Icon-Only Button Styles
+
+Different variants create different visual styles for icon-only buttons:
+
+<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
+  <div style={{ textAlign: 'center' }}>
+    <Button icon={<Plus size={16} />} iconOnly variant="primary" />
+    <div style={{ fontSize: '0.75rem', color: '#6b7280', marginTop: '0.5rem' }}>Primary</div>
+  </div>
+  <div style={{ textAlign: 'center' }}>
+    <Button icon={<Settings size={16} />} iconOnly variant="secondary" />
+    <div style={{ fontSize: '0.75rem', color: '#6b7280', marginTop: '0.5rem' }}>Secondary</div>
+  </div>
+  <div style={{ textAlign: 'center' }}>
+    <Button icon={<FileText size={16} />} iconOnly variant="outline" />
+    <div style={{ fontSize: '0.75rem', color: '#6b7280', marginTop: '0.5rem' }}>Outline</div>
+  </div>
+  <div style={{ textAlign: 'center' }}>
+    <Button icon={<Heart size={16} />} iconOnly variant="ghost" />
+    <div style={{ fontSize: '0.75rem', color: '#6b7280', marginTop: '0.5rem' }}>Ghost</div>
+  </div>
+  <div style={{ textAlign: 'center' }}>
+    <Button icon={<Search size={16} />} iconOnly variant="text" />
+    <div style={{ fontSize: '0.75rem', color: '#6b7280', marginTop: '0.5rem' }}>Text</div>
+  </div>
+</div>
+
+```tsx
+// Different icon-only button styles
+<Button icon={<Plus size={16} />} iconOnly variant="primary" />     // Solid background
+<Button icon={<Settings size={16} />} iconOnly variant="secondary" />  // Light background  
+<Button icon={<FileText size={16} />} iconOnly variant="outline" />   // Border only
+<Button icon={<Heart size={16} />} iconOnly variant="ghost" />      // Light gray hover
+<Button icon={<Search size={16} />} iconOnly variant="text" />      // Minimal hover
+```
+
+**Perfect for your use case**: `<Button icon={<Heart size={16} />} iconOnly variant="ghost" />` gives you exactly what you want - no background, no color, just a light gray rounded background on hover!
+
+## Button Groups
+
+Use `Button.Group` to group related buttons together:
+
+<div style={{ display: 'flex', gap: '2rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'flex-start' }}>
+  <div>
+    <h4 style={{ margin: '0 0 0.5rem 0', fontSize: '0.875rem', fontWeight: '600' }}>Basic Group</h4>
+    <Button.Group>
+      <Button variant="primary">Save</Button>
+      <Button variant="secondary">Cancel</Button>
+    </Button.Group>
+  </div>
+  
+  <div>
+    <h4 style={{ margin: '0 0 0.5rem 0', fontSize: '0.875rem', fontWeight: '600' }}>Attached</h4>
+    <Button.Group attached>
+      <Button variant="primary">Save</Button>
+      <Button variant="secondary">Cancel</Button>
+    </Button.Group>
+  </div>
+  
+  <div>
+    <h4 style={{ margin: '0 0 0.5rem 0', fontSize: '0.875rem', fontWeight: '600' }}>With Icons</h4>
+    <Button.Group>
+      <Button icon="📁" iconPosition="left">Open</Button>
+      <Button icon="💾" iconPosition="left">Save</Button>
+      <Button icon="🗑" iconPosition="left" variant="destructive">Delete</Button>
+    </Button.Group>
+  </div>
+</div>
+
+```tsx
+// Basic button group
+<Button.Group>
+  <Button variant="primary">Save</Button>
+  <Button variant="secondary">Cancel</Button>
+</Button.Group>
+
+// Attached buttons (connected borders)
+<Button.Group attached>
+  <Button variant="primary">Save</Button>
+  <Button variant="secondary">Cancel</Button>
+</Button.Group>
+
+// With icons
+<Button.Group>
+  <Button icon="📁" iconPosition="left">Open</Button>
+  <Button icon="💾" iconPosition="left">Save</Button>
+  <Button icon="🗑" iconPosition="left" variant="destructive">Delete</Button>
+</Button.Group>
+```
+
+### Group Props
+
+- **`orientation`**: `'horizontal'` | `'vertical'` (default: `'horizontal'`)
+- **`spacing`**: `'none'` | `'sm'` | `'md'` | `'lg'` (default: `'sm'`)
+- **`attached`**: `boolean` - Connects buttons with shared borders
+
+### Vertical Groups
+
+<div style={{ display: 'flex', gap: '2rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
+  <div>
+    <h4 style={{ margin: '0 0 0.5rem 0', fontSize: '0.875rem', fontWeight: '600' }}>Vertical</h4>
+    <Button.Group orientation="vertical">
+      <Button variant="primary">Save</Button>
+      <Button variant="secondary">Cancel</Button>
+    </Button.Group>
+  </div>
+  
+  <div>
+    <h4 style={{ margin: '0 0 0.5rem 0', fontSize: '0.875rem', fontWeight: '600' }}>Vertical Attached</h4>
+    <Button.Group orientation="vertical" attached>
+      <Button variant="primary">Save</Button>
+      <Button variant="secondary">Cancel</Button>
+    </Button.Group>
+  </div>
+</div>
+
+```tsx
+// Vertical button group
+<Button.Group orientation="vertical">
+  <Button variant="primary">Save</Button>
+  <Button variant="secondary">Cancel</Button>
+</Button.Group>
+
+// Vertical attached buttons
+<Button.Group orientation="vertical" attached>
+  <Button variant="primary">Save</Button>
+  <Button variant="secondary">Cancel</Button>
+</Button.Group>
+```
+
+## Color System
+
+Combine any variant with semantic colors for flexible styling:
+
+<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
+  <Button variant="primary" color="success" icon={<Heart size={16} />} iconPosition="left">
+    Success Primary
+  </Button>
+  <Button variant="outline" color="info" icon={<Search size={16} />} iconPosition="left">
+    Info Outline
+  </Button>
+  <Button variant="secondary" color="warning" icon={<Settings size={16} />} iconPosition="left">
+    Warning Secondary
+  </Button>
+  <Button variant="text" color="error" icon={<Heart size={16} />} iconPosition="left">
+    Error Text
+  </Button>
+  <Button variant="ghost" color="success" icon={<Heart size={16} />} iconPosition="left">
+    Success Ghost
+  </Button>
+</div>
+
+```tsx
+<Button variant="primary" color="success" icon={<Heart size={16} />} iconPosition="left">
+  Success Primary
+</Button>
+
+<Button variant="outline" color="info" icon={<Search size={16} />} iconPosition="left">
+  Info Outline
+</Button>
+
+<Button variant="secondary" color="warning" icon={<Settings size={16} />} iconPosition="left">
+  Warning Secondary
+</Button>
+
+<Button variant="text" color="error" icon={<Heart size={16} />} iconPosition="left">
+  Error Text
+</Button>
+
+<Button variant="ghost" color="success" icon={<Heart size={16} />} iconPosition="left">
+  Success Ghost
+</Button>
+```
+
+### Available Colors
+
+- **`default`** - Uses variant's default colors
+- **`success`** - Green theme for positive actions
+- **`info`** - Cyan theme for informational actions  
+- **`warning`** - Amber theme for caution actions
+- **`error`** - Red theme for error/danger actions
+
+### Text Variant
+
+The `text` variant creates minimal buttons with no background or border - perfect for subtle actions:
+
+<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
+  <Button variant="text">Default Text</Button>
+  <Button variant="text" color="success" icon={<Heart size={16} />}>Success Text</Button>
+  <Button variant="text" color="info" icon={<Search size={16} />}>Info Text</Button>
+  <Button variant="text" color="warning" icon={<Settings size={16} />}>Warning Text</Button>
+  <Button variant="text" color="error" icon={<Heart size={16} />}>Error Text</Button>
+</div>
+
+```tsx
+<Button variant="text">Default Text</Button>
+<Button variant="text" color="success" icon={<Heart size={16} />}>Success Text</Button>
+<Button variant="text" color="info" icon={<Search size={16} />}>Info Text</Button>
+<Button variant="text" color="warning" icon={<Settings size={16} />}>Warning Text</Button>
+<Button variant="text" color="error" icon={<Heart size={16} />}>Error Text</Button>
 ```
 
 ## Customization with Tailwind
@@ -81,3 +416,21 @@ You can easily add Tailwind classes to any button variant to customize colors, b
 ```
 
 **Note:** Simply add Tailwind classes to override specific properties. The button keeps all its base styling (shadows, hover effects, etc.) and only the specified properties are changed.
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `children` | `React.ReactNode` | - | Button content |
+| `variant` | `'primary' \| 'secondary' \| 'outline' \| 'ghost' \| 'text' \| 'destructive' \| 'custom'` | `'primary'` | Button style variant |
+| `color` | `'default' \| 'success' \| 'info' \| 'warning' \| 'error'` | `'default'` | Semantic color theme |
+| `size` | `'sm' \| 'md' \| 'lg' \| 'xl'` | `'md'` | Button size |
+| `onClick` | `(event: React.MouseEvent<HTMLButtonElement>) => void` | - | Click handler |
+| `className` | `string` | `''` | Additional CSS classes |
+| `disabled` | `boolean` | `false` | Disabled state |
+| `type` | `'button' \| 'submit' \| 'reset'` | `'button'` | Button type |
+| `loading` | `boolean` | `false` | Loading state |
+| `loadingText` | `string` | `'Loading...'` | Loading text |
+| `icon` | `React.ReactNode` | - | Icon element |
+| `iconPosition` | `'left' \| 'right'` | `'left'` | Icon position |
+| `iconOnly` | `boolean` | `false` | Show only icon |

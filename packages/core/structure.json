@@ -6,10 +6,10 @@
     "components": {
       "elements": {
         "button": {
-          "name": "Button",
+          "name": "ButtonGroup",
           "path": "./components/elements/button",
           "exports": [
-            "Button"
+            "ButtonGroup"
           ],
           "props": {},
           "css": "./components/elements/button/index.css",
@@ -107,7 +107,7 @@
       "interactive",
       "general"
     ],
-    "generatedAt": "2025-10-05T20:47:50.418Z",
+    "generatedAt": "2025-10-06T08:26:52.291Z",
     "buildTool": "vite",
     "framework": "react"
   }
