@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 import { Card } from '@losensky-systems/web-components-core'
+import { ComponentPreview } from './ComponentPreview'
 import type { DocRoute, Category } from '../docs/types'
 
 interface CategoryPageProps {
@@ -82,17 +83,37 @@ export function CategoryPage({ routes, categories, categoryId }: CategoryPagePro
           <p className="text-lg text-gray-600">{subcategoryData.description}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {subcategoryRoutes.map(route => (
             <Link key={route.id} to={route.path} className="block">
-              <Card className="h-full hover:shadow-md transition-shadow">
+              <Card className="h-full hover:shadow-md transition-all duration-200 hover:scale-[1.02] group">
+                <Card.Header>
+                  <div className="flex items-start justify-between">
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                        {route.title}
+                      </h3>
+                    </div>
+                    <div className="ml-3 flex-shrink-0">
+                      <span className="text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded-full">
+                        {route.component || 'Component'}
+                      </span>
+                    </div>
+                  </div>
+                </Card.Header>
                 <Card.Body>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    {route.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm">
-                    {route.description}
-                  </p>
+                  <p className="text-gray-600 text-sm mb-4">{route.description}</p>
+                  
+                  {/* Component Preview */}
+                  <ComponentPreview 
+                    componentName={route.component || route.id} 
+                    className="mb-3"
+                  />
+                  
+                  {/* View Details Link */}
+                  <div className="text-xs text-blue-600 group-hover:text-blue-700 font-medium">
+                    View details →
+                  </div>
                 </Card.Body>
               </Card>
             </Link>
