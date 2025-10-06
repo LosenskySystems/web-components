@@ -1,5 +1,5 @@
-import { Button, Tooltip } from '@losensky-systems/web-components-core'
-import { FolderOpen, Save, Plus, Settings, Heart, FileText, Search, Download } from 'lucide-react'
+import { Button, Tooltip, Badge } from '@losensky-systems/web-components-core'
+import { FolderOpen, Save, Plus, Settings, Heart, FileText, Search, Download, ShoppingCart, Bell, MessageCircle } from 'lucide-react'
 
 # Button Component
 
@@ -8,8 +8,8 @@ The Button component is a complete, accessible button with built-in styles. Use 
 ## Import
 
 ```tsx
-import { Button, Tooltip } from '@losensky-systems/web-components-core'
-import { FolderOpen, Save, Plus, Settings, Heart } from 'lucide-react'
+import { Button, Tooltip, Badge } from '@losensky-systems/web-components-core'
+import { FolderOpen, Save, Plus, Settings, Heart, ShoppingCart, Bell, MessageCircle } from 'lucide-react'
 ```
 
 ## Variants
@@ -463,6 +463,62 @@ Buttons work perfectly with the Tooltip component for additional context:
 <Tooltip content="Like this post" delay={100}>
   <Button icon={<Heart size={16} />} iconOnly variant="ghost" color="error" />
 </Tooltip>
+```
+
+## With Badges
+
+Buttons work great with Badge components for notification counts:
+
+<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap', alignItems: 'center' }}>
+  <Badge count={3} variant="error">
+    <Button icon={<ShoppingCart size={16} />} iconOnly variant="ghost" />
+  </Badge>
+  
+  <Badge count={12} variant="info">
+    <Button icon={<MessageCircle size={16} />} iconOnly variant="ghost" />
+  </Badge>
+  
+  <Badge dot variant="success">
+    <Button icon={<Settings size={16} />} iconOnly variant="ghost" />
+  </Badge>
+  
+  <Badge count={99} max={99} variant="warning">
+    <Button icon={<Bell size={16} />} iconOnly variant="ghost" />
+  </Badge>
+  
+  <Badge text="New" variant="success">
+    <Button size="sm">Product</Button>
+  </Badge>
+  
+  <Badge text="Sale" variant="error">
+    <Button size="sm" variant="outline">Item</Button>
+  </Badge>
+</div>
+
+```tsx
+<Badge count={3} variant="error">
+  <Button icon={<ShoppingCart size={16} />} iconOnly variant="ghost" />
+</Badge>
+
+<Badge count={12} variant="info">
+  <Button icon={<MessageCircle size={16} />} iconOnly variant="ghost" />
+</Badge>
+
+<Badge dot variant="success">
+  <Button icon={<Settings size={16} />} iconOnly variant="ghost" />
+</Badge>
+
+<Badge count={99} max={99} variant="warning">
+  <Button icon={<Bell size={16} />} iconOnly variant="ghost" />
+</Badge>
+
+<Badge text="New" variant="success">
+  <Button size="sm">Product</Button>
+</Badge>
+
+<Badge text="Sale" variant="error">
+  <Button size="sm" variant="outline">Item</Button>
+</Badge>
 ```
 
 ## Props

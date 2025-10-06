@@ -60,6 +60,15 @@
       "description": "A tooltip component for contextual information"
     },
     {
+      "id": "badge",
+      "title": "Badge",
+      "path": "/docs/components/elements/badge",
+      "component": "Badge",
+      "category": "components",
+      "subcategory": "elements",
+      "description": "A badge component for notification counts and indicators"
+    },
+    {
       "id": "input",
       "title": "Input", 
       "path": "/docs/components/forms/input",
@@ -103,7 +112,7 @@
           "id": "elements",
           "title": "Elements",
           "description": "Basic UI elements",
-          "items": ["button", "divider", "label", "loader", "tooltip"]
+          "items": ["button", "divider", "label", "loader", "tooltip", "badge"]
         },
         {
           "id": "forms",

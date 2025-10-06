@@ -5,6 +5,17 @@
   "structure": {
     "components": {
       "elements": {
+        "badge": {
+          "name": "BadgeWrapper",
+          "path": "./components/elements/badge",
+          "exports": [
+            "BadgeWrapper"
+          ],
+          "props": {},
+          "css": "./components/elements/badge/index.css",
+          "category": "elements",
+          "subcategory": "general"
+        },
         "button": {
           "name": "ButtonGroup",
           "path": "./components/elements/button",
@@ -110,15 +121,15 @@
     }
   },
   "metadata": {
-    "totalComponents": 5,
+    "totalComponents": 6,
     "categories": [
       "elements"
     ],
     "subcategories": [
-      "interactive",
-      "general"
+      "general",
+      "interactive"
     ],
-    "generatedAt": "2025-10-06T08:33:40.016Z",
+    "generatedAt": "2025-10-06T08:45:30.568Z",
     "buildTool": "vite",
     "framework": "react"
   }

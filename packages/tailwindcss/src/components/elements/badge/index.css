@@ -1,0 +1,234 @@
+/* Badge component styles */
+.web-badge-wrapper {
+  @apply relative inline-block;
+}
+
+.web-badge {
+  @apply absolute inline-flex items-center justify-center font-medium text-white rounded-full pointer-events-none select-none;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  font-size: 0.75rem;
+  line-height: 1;
+  z-index: 10;
+}
+
+/* Size variants */
+.web-badge-sm {
+  min-width: 1rem;
+  height: 1rem;
+  font-size: 0.625rem;
+  padding: 0 0.25rem;
+}
+
+.web-badge-md {
+  min-width: 1.25rem;
+  height: 1.25rem;
+  font-size: 0.75rem;
+  padding: 0 0.375rem;
+}
+
+.web-badge-lg {
+  min-width: 1.5rem;
+  height: 1.5rem;
+  font-size: 0.875rem;
+  padding: 0 0.5rem;
+}
+
+/* Position variants */
+.web-badge-top-right {
+  top: -0.5rem;
+  right: -0.5rem;
+}
+
+.web-badge-top-left {
+  top: -0.5rem;
+  left: -0.5rem;
+}
+
+.web-badge-bottom-right {
+  bottom: -0.5rem;
+  right: -0.5rem;
+}
+
+.web-badge-bottom-left {
+  bottom: -0.5rem;
+  left: -0.5rem;
+}
+
+/* Dot variant */
+.web-badge-dot {
+  min-width: 0.5rem;
+  height: 0.5rem;
+  padding: 0;
+  border-radius: 50%;
+}
+
+/* Text variant - more padding for text content */
+.web-badge-text {
+  padding: 0 0.5rem;
+  border-radius: 0.75rem;
+  white-space: nowrap;
+}
+
+.web-badge-text.web-badge-sm {
+  padding: 0 0.375rem;
+  font-size: 0.625rem;
+  border-radius: 0.5rem;
+}
+
+.web-badge-text.web-badge-md {
+  padding: 0 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 0.75rem;
+}
+
+.web-badge-text.web-badge-lg {
+  padding: 0 0.625rem;
+  font-size: 0.875rem;
+  border-radius: 1rem;
+}
+
+.web-badge-dot.web-badge-sm {
+  min-width: 0.375rem;
+  height: 0.375rem;
+}
+
+.web-badge-dot.web-badge-md {
+  min-width: 0.5rem;
+  height: 0.5rem;
+}
+
+.web-badge-dot.web-badge-lg {
+  min-width: 0.625rem;
+  height: 0.625rem;
+}
+
+/* Color variants */
+.web-badge-default {
+  @apply bg-gray-600 text-white;
+}
+
+.web-badge-success {
+  @apply bg-green-500 text-white;
+}
+
+.web-badge-warning {
+  @apply bg-amber-500 text-white;
+}
+
+.web-badge-error {
+  @apply bg-red-500 text-white;
+}
+
+.web-badge-info {
+  @apply bg-blue-500 text-white;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .web-badge-default {
+    @apply bg-gray-400 text-gray-900;
+  }
+  
+  .web-badge-success {
+    @apply bg-green-400 text-gray-900;
+  }
+  
+  .web-badge-warning {
+    @apply bg-amber-400 text-gray-900;
+  }
+  
+  .web-badge-error {
+    @apply bg-red-400 text-gray-900;
+  }
+  
+  .web-badge-info {
+    @apply bg-blue-400 text-gray-900;
+  }
+}
+
+/* Manual dark mode class */
+.dark .web-badge-default {
+  @apply bg-gray-400 text-gray-900;
+}
+
+.dark .web-badge-success {
+  @apply bg-green-400 text-gray-900;
+}
+
+.dark .web-badge-warning {
+  @apply bg-amber-400 text-gray-900;
+}
+
+.dark .web-badge-error {
+  @apply bg-red-400 text-gray-900;
+}
+
+.dark .web-badge-info {
+  @apply bg-blue-400 text-gray-900;
+}
+
+/* Customizable badge content */
+.web-badge.web-badge-light {
+  @apply bg-white text-gray-900 border border-gray-200;
+}
+
+.web-badge.web-badge-outline {
+  @apply bg-transparent text-gray-600 border border-gray-300;
+}
+
+.web-badge.web-badge-outline.web-badge-success {
+  @apply text-green-600 border-green-300;
+}
+
+.web-badge.web-badge-outline.web-badge-warning {
+  @apply text-amber-600 border-amber-300;
+}
+
+.web-badge.web-badge-outline.web-badge-error {
+  @apply text-red-600 border-red-300;
+}
+
+.web-badge.web-badge-outline.web-badge-info {
+  @apply text-blue-600 border-blue-300;
+}
+
+/* Animation for new badges */
+.web-badge.web-badge-animate {
+  animation: badge-pulse 0.3s ease-in-out;
+}
+
+@keyframes badge-pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .web-badge {
+    min-width: 1rem;
+    height: 1rem;
+    font-size: 0.625rem;
+  }
+  
+  .web-badge-sm {
+    min-width: 0.875rem;
+    height: 0.875rem;
+    font-size: 0.5rem;
+  }
+  
+  .web-badge-lg {
+    min-width: 1.25rem;
+    height: 1.25rem;
+    font-size: 0.75rem;
+  }
+}

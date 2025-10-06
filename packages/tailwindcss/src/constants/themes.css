@@ -1,0 +1,124 @@
+/* 
+ * Project-Specific Color Themes
+ * 
+ * Override these CSS variables to create custom themes for your project.
+ * All components will automatically use these new colors!
+ */
+
+/* Default Blue Theme (already in tokens.css) */
+:root {
+  --color-primary-500: #2563eb;
+  --color-primary-600: #1d4ed8;
+  --color-primary-700: #1e40af;
+  --color-success: #10b981;
+  --color-success-hover: #059669;
+  --color-info: #06b6d4;
+  --color-info-hover: #0891b2;
+  --color-warning: #f59e0b;
+  --color-warning-hover: #d97706;
+  --color-error: #ef4444;
+  --color-error-hover: #dc2626;
+}
+
+/* Purple Theme */
+.theme-purple {
+  --color-primary-500: #8b5cf6;
+  --color-primary-600: #7c3aed;
+  --color-primary-700: #6d28d9;
+  --color-success: #059669;
+  --color-success-hover: #047857;
+  --color-info: #0ea5e9;
+  --color-info-hover: #0284c7;
+  --color-warning: #d97706;
+  --color-warning-hover: #b45309;
+  --color-error: #dc2626;
+  --color-error-hover: #b91c1c;
+}
+
+/* Green Theme */
+.theme-green {
+  --color-primary-500: #10b981;
+  --color-primary-600: #059669;
+  --color-primary-700: #047857;
+  --color-success: #22c55e;
+  --color-success-hover: #16a34a;
+  --color-info: #06b6d4;
+  --color-info-hover: #0891b2;
+  --color-warning: #eab308;
+  --color-warning-hover: #ca8a04;
+  --color-error: #f87171;
+  --color-error-hover: #ef4444;
+}
+
+/* Orange Theme */
+.theme-orange {
+  --color-primary-500: #f97316;
+  --color-primary-600: #ea580c;
+  --color-primary-700: #c2410c;
+  --color-success: #10b981;
+  --color-success-hover: #059669;
+  --color-info: #06b6d4;
+  --color-info-hover: #0891b2;
+  --color-warning: #eab308;
+  --color-warning-hover: #ca8a04;
+  --color-error: #ef4444;
+  --color-error-hover: #dc2626;
+}
+
+/* Pink Theme */
+.theme-pink {
+  --color-primary-500: #ec4899;
+  --color-primary-600: #db2777;
+  --color-primary-700: #be185d;
+  --color-success: #10b981;
+  --color-success-hover: #059669;
+  --color-info: #06b6d4;
+  --color-info-hover: #0891b2;
+  --color-warning: #f59e0b;
+  --color-warning-hover: #d97706;
+  --color-error: #ef4444;
+  --color-error-hover: #dc2626;
+}
+
+/* Dark Theme */
+.theme-dark {
+  --color-primary-500: #60a5fa;
+  --color-primary-600: #3b82f6;
+  --color-primary-700: #2563eb;
+  --color-success: #34d399;
+  --color-success-hover: #10b981;
+  --color-info: #22d3ee;
+  --color-info-hover: #06b6d4;
+  --color-warning: #fbbf24;
+  --color-warning-hover: #f59e0b;
+  --color-error: #f87171;
+  --color-error-hover: #ef4444;
+  
+  /* Override neutral colors for dark theme */
+  --color-gray-100: #1f2937;
+  --color-gray-200: #374151;
+  --color-gray-300: #4b5563;
+  --color-gray-400: #6b7280;
+  --color-gray-500: #9ca3af;
+  --color-gray-600: #d1d5db;
+  --color-gray-700: #e5e7eb;
+  --color-gray-800: #f3f4f6;
+  --color-gray-900: #ffffff;
+}
+
+/* Usage Examples:
+ * 
+ * 1. Apply theme to entire app:
+ *    <html class="theme-purple">
+ * 
+ * 2. Apply theme to specific section:
+ *    <div class="theme-green">...</div>
+ * 
+ * 3. Dynamic theme switching:
+ *    document.documentElement.className = 'theme-orange';
+ * 
+ * 4. Custom project colors:
+ *    :root {
+ *      --color-primary-500: #your-brand-color;
+ *    }
+ */
