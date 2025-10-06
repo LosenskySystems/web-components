@@ -57,6 +57,17 @@
           "category": "elements",
           "subcategory": "general"
         },
+        "icon": {
+          "name": "Icon",
+          "path": "./components/elements/icon",
+          "exports": [
+            "Icon"
+          ],
+          "props": {},
+          "css": "./components/elements/icon/index.css",
+          "category": "elements",
+          "subcategory": "general"
+        },
         "label": {
           "name": "LabelGroup",
           "path": "./components/elements/label",
@@ -126,7 +137,7 @@
     }
   },
   "metadata": {
-    "totalComponents": 7,
+    "totalComponents": 8,
     "categories": [
       "elements"
     ],
@@ -134,7 +145,7 @@
       "general",
       "interactive"
     ],
-    "generatedAt": "2025-10-06T15:05:04.928Z",
+    "generatedAt": "2025-10-06T15:08:05.961Z",
     "buildTool": "vite",
     "framework": "react"
   }

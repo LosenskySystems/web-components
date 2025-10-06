@@ -87,6 +87,15 @@
       "description": "A simple avatar component that displays user profile images with fallback support"
     },
     {
+      "id": "icon",
+      "title": "Icon",
+      "path": "/docs/components/elements/icon",
+      "component": "Icon",
+      "category": "components",
+      "subcategory": "elements",
+      "description": "A flexible icon component that supports custom SVG content and built-in icon names"
+    },
+    {
       "id": "input",
       "title": "Input", 
       "path": "/docs/components/forms/input",
@@ -130,7 +139,7 @@
           "id": "elements",
           "title": "Elements",
           "description": "Basic UI elements",
-          "items": ["button", "divider", "label", "loader", "tooltip", "badge", "avatar"]
+          "items": ["button", "divider", "label", "loader", "tooltip", "badge", "avatar", "icon"]
         },
         {
           "id": "forms",

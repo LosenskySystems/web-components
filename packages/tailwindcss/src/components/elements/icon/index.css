@@ -1,0 +1,196 @@
+/* Icon component styles */
+.web-icon {
+  @apply inline-flex items-center justify-center;
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+/* Size variants */
+.web-icon-xs {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.web-icon-sm {
+  width: 1rem;
+  height: 1rem;
+}
+
+.web-icon-md {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.web-icon-lg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.web-icon-xl {
+  width: 2rem;
+  height: 2rem;
+}
+
+.web-icon-2xl {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+/* SVG styling */
+.web-icon svg {
+  @apply w-full h-full;
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+/* Color variants */
+.web-icon-default {
+  @apply text-gray-600;
+}
+
+.web-icon-primary {
+  @apply text-blue-600;
+}
+
+.web-icon-success {
+  @apply text-green-600;
+}
+
+.web-icon-warning {
+  @apply text-amber-600;
+}
+
+.web-icon-error {
+  @apply text-red-600;
+}
+
+.web-icon-info {
+  @apply text-cyan-600;
+}
+
+.web-icon-muted {
+  @apply text-gray-400;
+}
+
+.web-icon-white {
+  @apply text-white;
+}
+
+.web-icon-black {
+  @apply text-black;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .web-icon-default {
+    @apply text-gray-300;
+  }
+  
+  .web-icon-primary {
+    @apply text-blue-400;
+  }
+  
+  .web-icon-success {
+    @apply text-green-400;
+  }
+  
+  .web-icon-warning {
+    @apply text-amber-400;
+  }
+  
+  .web-icon-error {
+    @apply text-red-400;
+  }
+  
+  .web-icon-info {
+    @apply text-cyan-400;
+  }
+  
+  .web-icon-muted {
+    @apply text-gray-500;
+  }
+}
+
+/* Manual dark mode class */
+.dark .web-icon-default {
+  @apply text-gray-300;
+}
+
+.dark .web-icon-primary {
+  @apply text-blue-400;
+}
+
+.dark .web-icon-success {
+  @apply text-green-400;
+}
+
+.dark .web-icon-warning {
+  @apply text-amber-400;
+}
+
+.dark .web-icon-error {
+  @apply text-red-400;
+}
+
+.dark .web-icon-info {
+  @apply text-cyan-400;
+}
+
+.dark .web-icon-muted {
+  @apply text-gray-500;
+}
+
+/* Animation variants */
+.web-icon-spin {
+  animation: icon-spin 1s linear infinite;
+}
+
+.web-icon-pulse {
+  animation: icon-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.web-icon-bounce {
+  animation: icon-bounce 1s infinite;
+}
+
+@keyframes icon-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes icon-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes icon-bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .web-icon-xl {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  .web-icon-2xl {
+    width: 2rem;
+    height: 2rem;
+  }
+}
