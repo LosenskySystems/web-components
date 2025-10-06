@@ -3,7 +3,7 @@
     {
       "id": "overview",
       "title": "Overview",
-      "path": "/",
+      "path": "/docs/get-started/overview",
       "category": "get-started",
       "description": "Introduction to the component library"
     },
