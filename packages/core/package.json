@@ -1,6 +1,6 @@
 {
   "name": "@losensky-systems/web-components-core",
-  "version": "0.0.12",
+  "version": "0.1.0",
   "description": "Web components library - Losensky Systems",
   "type": "module",
   "main": "dist/index.js",
