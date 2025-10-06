@@ -433,16 +433,16 @@ The Badge component includes proper accessibility features:
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `children` | `React.ReactNode` | - | Element to overlay with badge |
-| `count` | `number` | - | Number to display in badge |
-| `text` | `string` | - | Text to display in badge |
-| `max` | `number` | `99` | Maximum number before showing "+" |
-| `showZero` | `boolean` | `false` | Show badge when count is 0 |
-| `variant` | `'default' \| 'success' \| 'warning' \| 'error' \| 'info'` | `'default'` | Badge color variant |
-| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Badge size |
-| `position` | `'top-right' \| 'top-left' \| 'bottom-right' \| 'bottom-left'` | `'top-right'` | Badge position |
-| `className` | `string` | `''` | Additional CSS classes |
-| `dot` | `boolean` | `false` | Show as dot instead of number |
-| `offset` | `{ x?: number; y?: number }` | `{ x: 0, y: 0 }` | Custom position offset |
+<PropsTable props={[
+  { name: 'children', type: 'React.ReactNode', default: '-', description: 'Element to overlay with badge' },
+  { name: 'count', type: 'number', default: '-', description: 'Number to display in badge' },
+  { name: 'text', type: 'string', default: '-', description: 'Text to display in badge' },
+  { name: 'max', type: 'number', default: '99', description: 'Maximum number before showing "+"' },
+  { name: 'showZero', type: 'boolean', default: 'false', description: 'Show badge when count is 0' },
+  { name: 'variant', type: "'default' | 'success' | 'warning' | 'error' | 'info'", default: "'default'", description: 'Badge color variant' },
+  { name: 'size', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Badge size' },
+  { name: 'position', type: "'top-right' | 'top-left' | 'bottom-right' | 'bottom-left'", default: "'top-right'", description: 'Badge position' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' },
+  { name: 'dot', type: 'boolean', default: 'false', description: 'Show as dot instead of number' },
+  { name: 'offset', type: '{ x?: number; y?: number }', default: '{ x: 0, y: 0 }', description: 'Custom position offset' }
+]} />

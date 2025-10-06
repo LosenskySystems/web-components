@@ -384,30 +384,30 @@ You can customize the select using Tailwind classes:
 
 ### Select Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Select size |
-| `variant` | `'default' \| 'error' \| 'success' \| 'warning'` | `'default'` | Select variant |
-| `error` | `boolean` | `false` | Error state |
-| `errorText` | `string` | - | Error message |
-| `successText` | `string` | - | Success message |
-| `helperText` | `string` | - | Helper text |
-| `loading` | `boolean` | `false` | Loading state |
-| `disabled` | `boolean` | `false` | Disabled state |
-| `required` | `boolean` | `false` | Required field |
-| `autoFocus` | `boolean` | `false` | Auto-focus on mount |
-| `placeholder` | `string` | `'Select an option...'` | Placeholder text |
-| `value` | `string` | - | Selected value (controlled) |
-| `onChange` | `(value: string) => void` | - | Change handler |
-| `name` | `string` | - | Form field name |
-| `id` | `string` | - | Element ID |
-| `className` | `string` | `''` | Additional CSS classes |
+<PropsTable props={[
+  { name: 'size', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Select size' },
+  { name: 'variant', type: "'default' | 'error' | 'success' | 'warning'", default: "'default'", description: 'Select variant' },
+  { name: 'error', type: 'boolean', default: 'false', description: 'Error state' },
+  { name: 'errorText', type: 'string', default: '-', description: 'Error message' },
+  { name: 'successText', type: 'string', default: '-', description: 'Success message' },
+  { name: 'helperText', type: 'string', default: '-', description: 'Helper text' },
+  { name: 'loading', type: 'boolean', default: 'false', description: 'Loading state' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Disabled state' },
+  { name: 'required', type: 'boolean', default: 'false', description: 'Required field' },
+  { name: 'autoFocus', type: 'boolean', default: 'false', description: 'Auto-focus on mount' },
+  { name: 'placeholder', type: 'string', default: "'Select an option...'", description: 'Placeholder text' },
+  { name: 'value', type: 'string', default: '-', description: 'Selected value (controlled)' },
+  { name: 'onChange', type: '(value: string) => void', default: '-', description: 'Change handler' },
+  { name: 'name', type: 'string', default: '-', description: 'Form field name' },
+  { name: 'id', type: 'string', default: '-', description: 'Element ID' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' }
+]} />
 
 ### Select.Item Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `value` | `string` | - | Option value |
-| `disabled` | `boolean` | `false` | Disabled state |
-| `children` | `React.ReactNode` | - | Option content |
-| `className` | `string` | `''` | Additional CSS classes |
+<PropsTable props={[
+  { name: 'value', type: 'string', default: '-', description: 'Option value' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Disabled state' },
+  { name: 'children', type: 'React.ReactNode', default: '-', description: 'Option content' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' }
+]} />

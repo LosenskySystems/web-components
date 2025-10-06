@@ -89,14 +89,14 @@ A simple alert component for displaying important messages and notifications.
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `children` | `React.ReactNode` | - | Custom content |
-| `title` | `string` | - | Alert title |
-| `description` | `string` | - | Alert description |
-| `variant` | `'default' \| 'success' \| 'warning' \| 'error' \| 'info'` | `'default'` | Alert variant |
-| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Alert size |
-| `closable` | `boolean` | `false` | Whether to show close button |
-| `onClose` | `() => void` | - | Callback when alert is closed |
-| `icon` | `React.ReactNode` | - | Custom icon |
-| `className` | `string` | - | Additional CSS classes |
+<PropsTable props={[
+  { name: 'children', type: 'React.ReactNode', default: '-', description: 'Custom content' },
+  { name: 'title', type: 'string', default: '-', description: 'Alert title' },
+  { name: 'description', type: 'string', default: '-', description: 'Alert description' },
+  { name: 'variant', type: "'default' | 'success' | 'warning' | 'error' | 'info'", default: "'default'", description: 'Alert variant' },
+  { name: 'size', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Alert size' },
+  { name: 'closable', type: 'boolean', default: 'false', description: 'Whether to show close button' },
+  { name: 'onClose', type: '() => void', default: '-', description: 'Callback when alert is closed' },
+  { name: 'icon', type: 'React.ReactNode', default: '-', description: 'Custom icon' },
+  { name: 'className', type: 'string', default: '-', description: 'Additional CSS classes' }
+]} />

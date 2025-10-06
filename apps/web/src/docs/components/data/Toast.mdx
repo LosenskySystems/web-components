@@ -301,16 +301,16 @@ const showToast = () => {
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `children` | `React.ReactNode` | - | Custom content |
-| `title` | `string` | - | Toast title |
-| `description` | `string` | - | Toast description |
-| `variant` | `'default' \| 'success' \| 'warning' \| 'error' \| 'info'` | `'default'` | Toast variant |
-| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Toast size |
-| `position` | `'top-left' \| 'top-right' \| 'top-center' \| 'bottom-left' \| 'bottom-right' \| 'bottom-center'` | `'top-right'` | Toast position |
-| `closable` | `boolean` | `true` | Whether to show close button |
-| `duration` | `number` | `5000` | Auto dismiss duration in milliseconds (0 = no auto dismiss) |
-| `onClose` | `() => void` | - | Callback when toast is closed |
-| `icon` | `React.ReactNode` | - | Custom icon |
-| `className` | `string` | - | Additional CSS classes |
+<PropsTable props={[
+  { name: 'children', type: 'React.ReactNode', default: '-', description: 'Custom content' },
+  { name: 'title', type: 'string', default: '-', description: 'Toast title' },
+  { name: 'description', type: 'string', default: '-', description: 'Toast description' },
+  { name: 'variant', type: "'default' | 'success' | 'warning' | 'error' | 'info'", default: "'default'", description: 'Toast variant' },
+  { name: 'size', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Toast size' },
+  { name: 'position', type: "'top-left' | 'top-right' | 'top-center' | 'bottom-left' | 'bottom-right' | 'bottom-center'", default: "'top-right'", description: 'Toast position' },
+  { name: 'closable', type: 'boolean', default: 'true', description: 'Whether to show close button' },
+  { name: 'duration', type: 'number', default: '5000', description: 'Auto dismiss duration in milliseconds (0 = no auto dismiss)' },
+  { name: 'onClose', type: '() => void', default: '-', description: 'Callback when toast is closed' },
+  { name: 'icon', type: 'React.ReactNode', default: '-', description: 'Custom icon' },
+  { name: 'className', type: 'string', default: '-', description: 'Additional CSS classes' }
+]} />

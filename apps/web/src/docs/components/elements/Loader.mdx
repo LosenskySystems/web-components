@@ -102,3 +102,13 @@ You can customize loaders using Tailwind classes:
     <Loader className="text-green-500" type="text" text="Custom Color" />
   </div>
 </CodeBlock>
+
+## Props
+
+<PropsTable props={[
+  { name: 'type', type: "'spinner' | 'text' | 'both'", default: "'spinner'", description: 'Type of loader to display' },
+  { name: 'size', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Loader size' },
+  { name: 'variant', type: "'primary' | 'secondary' | 'white'", default: "'primary'", description: 'Loader color variant' },
+  { name: 'text', type: 'string', default: "'Loading...'", description: 'Loading text to display' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' }
+]} />

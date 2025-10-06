@@ -173,12 +173,12 @@ Control how quickly tooltips appear:
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `children` | `React.ReactNode` | - | The element that triggers the tooltip |
-| `content` | `React.ReactNode` | - | The content to display inside the tooltip |
-| `placement` | `'top' \| 'bottom' \| 'left' \| 'right'` | `'top'` | Position of the tooltip relative to the trigger |
-| `trigger` | `'hover' \| 'click' \| 'focus'` | `'hover'` | Event that triggers the tooltip |
-| `delay` | `number` | `200` | Delay in milliseconds before tooltip appears |
-| `disabled` | `boolean` | `false` | Disable the tooltip |
-| `className` | `string` | `''` | Additional CSS classes |
+<PropsTable props={[
+  { name: 'children', type: 'React.ReactNode', default: '-', description: 'The element that triggers the tooltip' },
+  { name: 'content', type: 'React.ReactNode', default: '-', description: 'The content to display inside the tooltip' },
+  { name: 'placement', type: "'top' | 'bottom' | 'left' | 'right'", default: "'top'", description: 'Position of the tooltip relative to the trigger' },
+  { name: 'trigger', type: "'hover' | 'click' | 'focus'", default: "'hover'", description: 'Event that triggers the tooltip' },
+  { name: 'delay', type: 'number', default: '200', description: 'Delay in milliseconds before tooltip appears' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Disable the tooltip' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' }
+]} />

@@ -78,15 +78,15 @@ import { Label } from '@losensky-systems/web-components-core'
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `children` | `React.ReactNode` | - | Label text content |
-| `htmlFor` | `string` | - | ID of associated form element |
-| `required` | `boolean` | `false` | Show required asterisk |
-| `disabled` | `boolean` | `false` | Disabled state |
-| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Label size |
-| `color` | `'default' \| 'muted' \| 'primary' \| 'success' \| 'warning' \| 'error' \| 'info'` | `'default'` | Label color |
-| `helperText` | `string` | - | Helper text below label |
-| `errorText` | `string` | - | Error text below label |
-| `successText` | `string` | - | Success text below label |
-| `className` | `string` | `''` | Additional CSS classes |
+<PropsTable props={[
+  { name: 'children', type: 'React.ReactNode', default: '-', description: 'Label text content' },
+  { name: 'htmlFor', type: 'string', default: '-', description: 'ID of associated form element' },
+  { name: 'required', type: 'boolean', default: 'false', description: 'Show required asterisk' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Disabled state' },
+  { name: 'size', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Label size' },
+  { name: 'color', type: "'default' | 'muted' | 'primary' | 'success' | 'warning' | 'error' | 'info'", default: "'default'", description: 'Label color' },
+  { name: 'helperText', type: 'string', default: '-', description: 'Helper text below label' },
+  { name: 'errorText', type: 'string', default: '-', description: 'Error text below label' },
+  { name: 'successText', type: 'string', default: '-', description: 'Success text below label' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' }
+]} />

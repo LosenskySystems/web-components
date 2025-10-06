@@ -1,5 +1,6 @@
 import { Button, Input, Divider, Label, LabelGroup, Loader, Select, Textarea, Tooltip, Badge, Card, Avatar, Icon, Dropdown, DropdownItem, DropdownDivider, DropdownMenu, Alert, Toast, Checkbox, Radio, Tabs, TabsList, TabsTrigger, TabsContent, TabsPanel } from '@losensky-systems/web-components-core'
 import { CodeBlock } from './CodeBlock'
+import { PropsTable } from './PropsTable'
 
 // MDX components mapping with Tailwind classes
 export const mdxComponents = {
@@ -30,6 +31,7 @@ export const mdxComponents = {
   TabsContent,
   TabsPanel,
   CodeBlock,
+  PropsTable,
   // Typography
   h1: (props: any) => (
     <h1 

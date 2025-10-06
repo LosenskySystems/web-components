@@ -287,11 +287,11 @@ The Divider component includes proper accessibility features:
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `orientation` | `'horizontal' \| 'vertical'` | `'horizontal'` | Divider direction |
-| `variant` | `'solid' \| 'dashed' \| 'dotted'` | `'solid'` | Border style |
-| `spacing` | `'sm' \| 'md' \| 'lg' \| 'xl'` | `'md'` | Margin around divider |
-| `color` | `'default' \| 'primary' \| 'success' \| 'warning' \| 'error' \| 'info'` | `'default'` | Divider color |
-| `className` | `string` | `''` | Additional CSS classes |
-| `children` | `React.ReactNode` | - | Label text for labeled dividers |
+<PropsTable props={[
+  { name: 'orientation', type: "'horizontal' | 'vertical'", default: "'horizontal'", description: 'Divider direction' },
+  { name: 'variant', type: "'solid' | 'dashed' | 'dotted'", default: "'solid'", description: 'Border style' },
+  { name: 'spacing', type: "'sm' | 'md' | 'lg' | 'xl'", default: "'md'", description: 'Margin around divider' },
+  { name: 'color', type: "'default' | 'primary' | 'success' | 'warning' | 'error' | 'info'", default: "'default'", description: 'Divider color' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' },
+  { name: 'children', type: 'React.ReactNode', default: '-', description: 'Label text for labeled dividers' }
+]} />

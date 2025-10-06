@@ -590,21 +590,21 @@ Buttons work great with Badge components for notification counts:
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `children` | `React.ReactNode` | - | Button content |
-| `variant` | `'primary' \| 'secondary' \| 'outline' \| 'ghost' \| 'text' \| 'destructive' \| 'custom'` | `'primary'` | Button style variant |
-| `color` | `'default' \| 'success' \| 'info' \| 'warning' \| 'error'` | `'default'` | Semantic color theme |
-| `size` | `'sm' \| 'md' \| 'lg' \| 'xl'` | `'md'` | Button size |
-| `onClick` | `(event: React.MouseEvent<HTMLButtonElement>) => void` | - | Click handler |
-| `className` | `string` | `''` | Additional CSS classes |
-| `disabled` | `boolean` | `false` | Disabled state |
-| `type` | `'button' \| 'submit' \| 'reset'` | `'button'` | Button type |
-| `loading` | `boolean` | `false` | Loading state |
-| `loadingText` | `string` | `'Loading...'` | Loading text |
-| `icon` | `React.ReactNode` | - | Icon element |
-| `iconPosition` | `'left' \| 'right'` | `'left'` | Icon position |
-| `iconOnly` | `boolean` | `false` | Show only icon |
-| `href` | `string` | - | Link URL (renders as anchor) |
-| `target` | `'_blank' \| '_self' \| '_parent' \| '_top'` | - | Link target |
-| `rel` | `string` | - | Link relationship |
+<PropsTable props={[
+  { name: 'children', type: 'React.ReactNode', default: '-', description: 'Button content' },
+  { name: 'variant', type: "'primary' | 'secondary' | 'outline' | 'ghost' | 'text' | 'destructive' | 'custom'", default: "'primary'", description: 'Button style variant' },
+  { name: 'color', type: "'default' | 'success' | 'info' | 'warning' | 'error'", default: "'default'", description: 'Semantic color theme' },
+  { name: 'size', type: "'sm' | 'md' | 'lg' | 'xl'", default: "'md'", description: 'Button size' },
+  { name: 'onClick', type: '(event: React.MouseEvent<HTMLButtonElement>) => void', default: '-', description: 'Click handler' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Disabled state' },
+  { name: 'type', type: "'button' | 'submit' | 'reset'", default: "'button'", description: 'Button type' },
+  { name: 'loading', type: 'boolean', default: 'false', description: 'Loading state' },
+  { name: 'loadingText', type: 'string', default: "'Loading...'", description: 'Loading text' },
+  { name: 'icon', type: 'React.ReactNode', default: '-', description: 'Icon element' },
+  { name: 'iconPosition', type: "'left' | 'right'", default: "'left'", description: 'Icon position' },
+  { name: 'iconOnly', type: 'boolean', default: 'false', description: 'Show only icon' },
+  { name: 'href', type: 'string', default: '-', description: 'Link URL (renders as anchor)' },
+  { name: 'target', type: "'_blank' | '_self' | '_parent' | '_top'", default: '-', description: 'Link target' },
+  { name: 'rel', type: 'string', default: '-', description: 'Link relationship' }
+]} />

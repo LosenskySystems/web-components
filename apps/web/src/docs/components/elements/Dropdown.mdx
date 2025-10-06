@@ -126,7 +126,7 @@ A simple dropdown menu component for displaying a list of actions or options.
 
 ## Sizes
 
-<div className="flex gap-4">
+<CodeBlock code={`<div className="flex gap-4">
   <Dropdown 
     size="sm"
     items={[
@@ -153,11 +153,40 @@ A simple dropdown menu component for displaying a list of actions or options.
   >
     <Button size="sm">Large</Button>
   </Dropdown>
-</div>
+</div>`}>
+  <div className="flex gap-4">
+    <Dropdown 
+      size="sm"
+      items={[
+        { children: 'Small', onClick: () => console.log('Small') }
+      ]}
+    >
+      <Button size="sm">Small</Button>
+    </Dropdown>
+    
+    <Dropdown 
+      size="md"
+      items={[
+        { children: 'Medium', onClick: () => console.log('Medium') }
+      ]}
+    >
+      <Button size="sm">Medium</Button>
+    </Dropdown>
+    
+    <Dropdown 
+      size="lg"
+      items={[
+        { children: 'Large', onClick: () => console.log('Large') }
+      ]}
+    >
+      <Button size="sm">Large</Button>
+    </Dropdown>
+  </div>
+</CodeBlock>
 
 ## With Disabled Items
 
-<Dropdown 
+<CodeBlock code={`<Dropdown 
   items={[
     { children: 'Enabled', onClick: () => console.log('Enabled') },
     { children: 'Disabled', disabled: true, onClick: () => console.log('Disabled') },
@@ -165,37 +194,54 @@ A simple dropdown menu component for displaying a list of actions or options.
   ]}
 >
   <Button variant="secondary">With Disabled</Button>
-</Dropdown>
+</Dropdown>`}>
+  <Dropdown 
+    items={[
+      { children: 'Enabled', onClick: () => console.log('Enabled') },
+      { children: 'Disabled', disabled: true, onClick: () => console.log('Disabled') },
+      { children: 'Another Enabled', onClick: () => console.log('Another') }
+    ]}
+  >
+    <Button variant="secondary">With Disabled</Button>
+  </Dropdown>
+</CodeBlock>
 
 ## Manual Components
 
-<DropdownMenu placement="bottom" size="md">
+<CodeBlock code={`<DropdownMenu placement="bottom" size="md">
   <DropdownItem icon={<Icon name="user" size="sm" />}>Profile</DropdownItem>
   <DropdownItem icon={<Icon name="settings" size="sm" />}>Settings</DropdownItem>
   <DropdownDivider />
   <DropdownItem icon={<Icon name="close" size="sm" />}>Logout</DropdownItem>
-</DropdownMenu>
+</DropdownMenu>`}>
+  <DropdownMenu placement="bottom" size="md">
+    <DropdownItem icon={<Icon name="user" size="sm" />}>Profile</DropdownItem>
+    <DropdownItem icon={<Icon name="settings" size="sm" />}>Settings</DropdownItem>
+    <DropdownDivider />
+    <DropdownItem icon={<Icon name="close" size="sm" />}>Logout</DropdownItem>
+  </DropdownMenu>
+</CodeBlock>
 
 ## Props
 
 ### Dropdown Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `children` | `React.ReactNode` | - | The trigger element |
-| `items` | `DropdownItemProps[]` | - | Array of dropdown items |
-| `placement` | `'top' \| 'bottom' \| 'left' \| 'right'` | `'bottom'` | Placement of the dropdown |
-| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Size variant |
-| `isOpen` | `boolean` | - | Whether the dropdown is open (controlled) |
-| `onOpenChange` | `(isOpen: boolean) => void` | - | Callback when dropdown open state changes |
-| `className` | `string` | - | Additional CSS classes |
+<PropsTable props={[
+  { name: 'children', type: 'React.ReactNode', default: '-', description: 'The trigger element' },
+  { name: 'items', type: 'DropdownItemProps[]', default: '-', description: 'Array of dropdown items' },
+  { name: 'placement', type: "'top' | 'bottom' | 'left' | 'right'", default: "'bottom'", description: 'Placement of the dropdown' },
+  { name: 'size', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Size variant' },
+  { name: 'isOpen', type: 'boolean', default: '-', description: 'Whether the dropdown is open (controlled)' },
+  { name: 'onOpenChange', type: '(isOpen: boolean) => void', default: '-', description: 'Callback when dropdown open state changes' },
+  { name: 'className', type: 'string', default: '-', description: 'Additional CSS classes' }
+]} />
 
 ### DropdownItem Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `children` | `React.ReactNode` | - | Item content |
-| `icon` | `React.ReactNode` | - | Icon to display before the text |
-| `disabled` | `boolean` | `false` | Whether the item is disabled |
-| `onClick` | `() => void` | - | Click handler |
-| `className` | `string` | - | Additional CSS classes |
+<PropsTable props={[
+  { name: 'children', type: 'React.ReactNode', default: '-', description: 'Item content' },
+  { name: 'icon', type: 'React.ReactNode', default: '-', description: 'Icon to display before the text' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Whether the item is disabled' },
+  { name: 'onClick', type: '() => void', default: '-', description: 'Click handler' },
+  { name: 'className', type: 'string', default: '-', description: 'Additional CSS classes' }
+]} />

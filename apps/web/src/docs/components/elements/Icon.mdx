@@ -123,12 +123,12 @@ A flexible icon component that supports custom SVG content and built-in icon nam
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `name` | `string` | - | The icon name (home, user, settings, etc.) |
-| `children` | `React.ReactNode` | - | Custom SVG content |
-| `size` | `'xs' \| 'sm' \| 'md' \| 'lg' \| 'xl' \| '2xl'` | `'md'` | Size variant |
-| `color` | `'default' \| 'primary' \| 'success' \| 'warning' \| 'error' \| 'info' \| 'muted' \| 'white' \| 'black'` | `'default'` | Color variant |
-| `animation` | `'none' \| 'spin' \| 'pulse' \| 'bounce'` | `'none'` | Animation variant |
-| `className` | `string` | - | Additional CSS classes |
-| `onClick` | `(event: React.MouseEvent<HTMLDivElement>) => void` | - | Click handler |
+<PropsTable props={[
+  { name: 'name', type: 'string', default: '-', description: 'The icon name (home, user, settings, etc.)' },
+  { name: 'children', type: 'React.ReactNode', default: '-', description: 'Custom SVG content' },
+  { name: 'size', type: "'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'", default: "'md'", description: 'Size variant' },
+  { name: 'color', type: "'default' | 'primary' | 'success' | 'warning' | 'error' | 'info' | 'muted' | 'white' | 'black'", default: "'default'", description: 'Color variant' },
+  { name: 'animation', type: "'none' | 'spin' | 'pulse' | 'bounce'", default: "'none'", description: 'Animation variant' },
+  { name: 'className', type: 'string', default: '-', description: 'Additional CSS classes' },
+  { name: 'onClick', type: '(event: React.MouseEvent<HTMLDivElement>) => void', default: '-', description: 'Click handler' }
+]} />

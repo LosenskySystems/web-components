@@ -252,28 +252,28 @@ You can customize textareas using Tailwind classes:
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Textarea size |
-| `variant` | `'default' \| 'error' \| 'success' \| 'warning'` | `'default'` | Textarea variant |
-| `error` | `boolean` | `false` | Error state |
-| `errorText` | `string` | - | Error message |
-| `successText` | `string` | - | Success message |
-| `helperText` | `string` | - | Helper text |
-| `resize` | `'none' \| 'vertical' \| 'horizontal' \| 'both'` | `'vertical'` | Resize behavior |
-| `loading` | `boolean` | `false` | Loading state |
-| `disabled` | `boolean` | `false` | Disabled state |
-| `readOnly` | `boolean` | `false` | Read-only state |
-| `required` | `boolean` | `false` | Required field |
-| `autoFocus` | `boolean` | `false` | Auto-focus on mount |
-| `maxLength` | `number` | - | Maximum length |
-| `minLength` | `number` | - | Minimum length |
-| `rows` | `number` | - | Number of visible text lines |
-| `cols` | `number` | - | Number of visible character widths |
-| `placeholder` | `string` | - | Placeholder text |
-| `value` | `string` | - | Textarea value (controlled) |
-| `defaultValue` | `string` | - | Default value (uncontrolled) |
-| `onChange` | `(event: React.ChangeEvent<HTMLTextAreaElement>) => void` | - | Change handler |
-| `onFocus` | `(event: React.FocusEvent<HTMLTextAreaElement>) => void` | - | Focus handler |
-| `onBlur` | `(event: React.FocusEvent<HTMLTextAreaElement>) => void` | - | Blur handler |
-| `className` | `string` | `''` | Additional CSS classes |
+<PropsTable props={[
+  { name: 'size', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Textarea size' },
+  { name: 'variant', type: "'default' | 'error' | 'success' | 'warning'", default: "'default'", description: 'Textarea variant' },
+  { name: 'error', type: 'boolean', default: 'false', description: 'Error state' },
+  { name: 'errorText', type: 'string', default: '-', description: 'Error message' },
+  { name: 'successText', type: 'string', default: '-', description: 'Success message' },
+  { name: 'helperText', type: 'string', default: '-', description: 'Helper text' },
+  { name: 'resize', type: "'none' | 'vertical' | 'horizontal' | 'both'", default: "'vertical'", description: 'Resize behavior' },
+  { name: 'loading', type: 'boolean', default: 'false', description: 'Loading state' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Disabled state' },
+  { name: 'readOnly', type: 'boolean', default: 'false', description: 'Read-only state' },
+  { name: 'required', type: 'boolean', default: 'false', description: 'Required field' },
+  { name: 'autoFocus', type: 'boolean', default: 'false', description: 'Auto-focus on mount' },
+  { name: 'maxLength', type: 'number', default: '-', description: 'Maximum length' },
+  { name: 'minLength', type: 'number', default: '-', description: 'Minimum length' },
+  { name: 'rows', type: 'number', default: '-', description: 'Number of visible text lines' },
+  { name: 'cols', type: 'number', default: '-', description: 'Number of visible character widths' },
+  { name: 'placeholder', type: 'string', default: '-', description: 'Placeholder text' },
+  { name: 'value', type: 'string', default: '-', description: 'Textarea value (controlled)' },
+  { name: 'defaultValue', type: 'string', default: '-', description: 'Default value (uncontrolled)' },
+  { name: 'onChange', type: '(event: React.ChangeEvent<HTMLTextAreaElement>) => void', default: '-', description: 'Change handler' },
+  { name: 'onFocus', type: '(event: React.FocusEvent<HTMLTextAreaElement>) => void', default: '-', description: 'Focus handler' },
+  { name: 'onBlur', type: '(event: React.FocusEvent<HTMLTextAreaElement>) => void', default: '-', description: 'Blur handler' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' }
+]} />

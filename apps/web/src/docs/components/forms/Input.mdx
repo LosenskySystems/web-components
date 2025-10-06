@@ -251,31 +251,31 @@ import { Input } from '@losensky-systems/web-components-core'
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `type` | `'text' \| 'email' \| 'password' \| 'number' \| 'tel' \| 'url' \| 'search'` | `'text'` | Input type |
-| `placeholder` | `string` | - | Placeholder text |
-| `value` | `string` | - | Input value (controlled) |
-| `defaultValue` | `string` | - | Default value (uncontrolled) |
-| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Input size |
-| `variant` | `'default' \| 'error' \| 'success' \| 'warning'` | `'default'` | Input variant |
-| `error` | `boolean` | `false` | Error state |
-| `errorText` | `string` | - | Error message |
-| `successText` | `string` | - | Success message |
-| `helperText` | `string` | - | Helper text |
-| `icon` | `React.ReactNode` | - | Icon element |
-| `iconPosition` | `'left' \| 'right'` | `'left'` | Icon position |
-| `clearable` | `boolean` | `false` | Show clear button |
-| `loading` | `boolean` | `false` | Loading state |
-| `disabled` | `boolean` | `false` | Disabled state |
-| `required` | `boolean` | `false` | Required field |
-| `readOnly` | `boolean` | `false` | Read-only state |
-| `autoComplete` | `string` | - | Autocomplete attribute |
-| `autoFocus` | `boolean` | `false` | Auto-focus on mount |
-| `maxLength` | `number` | - | Maximum length |
-| `minLength` | `number` | - | Minimum length |
-| `pattern` | `string` | - | Input pattern |
-| `onChange` | `(event: React.ChangeEvent<HTMLInputElement>) => void` | - | Change handler |
-| `onFocus` | `(event: React.FocusEvent<HTMLInputElement>) => void` | - | Focus handler |
-| `onBlur` | `(event: React.FocusEvent<HTMLInputElement>) => void` | - | Blur handler |
-| `className` | `string` | `''` | Additional CSS classes |
+<PropsTable props={[
+  { name: 'type', type: "'text' | 'email' | 'password' | 'number' | 'tel' | 'url' | 'search'", default: "'text'", description: 'Input type' },
+  { name: 'placeholder', type: 'string', default: '-', description: 'Placeholder text' },
+  { name: 'value', type: 'string', default: '-', description: 'Input value (controlled)' },
+  { name: 'defaultValue', type: 'string', default: '-', description: 'Default value (uncontrolled)' },
+  { name: 'size', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Input size' },
+  { name: 'variant', type: "'default' | 'error' | 'success' | 'warning'", default: "'default'", description: 'Input variant' },
+  { name: 'error', type: 'boolean', default: 'false', description: 'Error state' },
+  { name: 'errorText', type: 'string', default: '-', description: 'Error message' },
+  { name: 'successText', type: 'string', default: '-', description: 'Success message' },
+  { name: 'helperText', type: 'string', default: '-', description: 'Helper text' },
+  { name: 'icon', type: 'React.ReactNode', default: '-', description: 'Icon element' },
+  { name: 'iconPosition', type: "'left' | 'right'", default: "'left'", description: 'Icon position' },
+  { name: 'clearable', type: 'boolean', default: 'false', description: 'Show clear button' },
+  { name: 'loading', type: 'boolean', default: 'false', description: 'Loading state' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Disabled state' },
+  { name: 'required', type: 'boolean', default: 'false', description: 'Required field' },
+  { name: 'readOnly', type: 'boolean', default: 'false', description: 'Read-only state' },
+  { name: 'autoComplete', type: 'string', default: '-', description: 'Autocomplete attribute' },
+  { name: 'autoFocus', type: 'boolean', default: 'false', description: 'Auto-focus on mount' },
+  { name: 'maxLength', type: 'number', default: '-', description: 'Maximum length' },
+  { name: 'minLength', type: 'number', default: '-', description: 'Minimum length' },
+  { name: 'pattern', type: 'string', default: '-', description: 'Input pattern' },
+  { name: 'onChange', type: '(event: React.ChangeEvent<HTMLInputElement>) => void', default: '-', description: 'Change handler' },
+  { name: 'onFocus', type: '(event: React.FocusEvent<HTMLInputElement>) => void', default: '-', description: 'Focus handler' },
+  { name: 'onBlur', type: '(event: React.FocusEvent<HTMLInputElement>) => void', default: '-', description: 'Blur handler' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' }
+]} />

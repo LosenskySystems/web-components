@@ -502,43 +502,43 @@ You can customize cards using Tailwind classes:
 
 ### Card Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `variant` | `'default' \| 'outlined' \| 'elevated' \| 'filled'` | `'default'` | Card visual variant |
-| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Card size |
-| `padding` | `'none' \| 'sm' \| 'md' \| 'lg'` | `'md'` | Card padding |
-| `rounded` | `'none' \| 'sm' \| 'md' \| 'lg' \| 'xl'` | `'md'` | Border radius |
-| `hover` | `boolean` | `false` | Enable hover effect |
-| `clickable` | `boolean` | `false` | Make card clickable |
-| `onClick` | `(event: React.MouseEvent<HTMLDivElement>) => void` | - | Click handler |
-| `className` | `string` | `''` | Additional CSS classes |
+<PropsTable props={[
+  { name: 'variant', type: "'default' | 'outlined' | 'elevated' | 'filled'", default: "'default'", description: 'Card visual variant' },
+  { name: 'size', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Card size' },
+  { name: 'padding', type: "'none' | 'sm' | 'md' | 'lg'", default: "'md'", description: 'Card padding' },
+  { name: 'rounded', type: "'none' | 'sm' | 'md' | 'lg' | 'xl'", default: "'md'", description: 'Border radius' },
+  { name: 'hover', type: 'boolean', default: 'false', description: 'Enable hover effect' },
+  { name: 'clickable', type: 'boolean', default: 'false', description: 'Make card clickable' },
+  { name: 'onClick', type: '(event: React.MouseEvent<HTMLDivElement>) => void', default: '-', description: 'Click handler' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' }
+]} />
 
 ### Card.Header Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `title` | `string` | - | Header title |
-| `subtitle` | `string` | - | Header subtitle |
-| `avatar` | `React.ReactNode` | - | Avatar element |
-| `action` | `React.ReactNode` | - | Action element |
-| `className` | `string` | `''` | Additional CSS classes |
+<PropsTable props={[
+  { name: 'title', type: 'string', default: '-', description: 'Header title' },
+  { name: 'subtitle', type: 'string', default: '-', description: 'Header subtitle' },
+  { name: 'avatar', type: 'React.ReactNode', default: '-', description: 'Avatar element' },
+  { name: 'action', type: 'React.ReactNode', default: '-', description: 'Action element' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' }
+]} />
 
 ### Card.Body Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `className` | `string` | `''` | Additional CSS classes |
+<PropsTable props={[
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' }
+]} />
 
 ### Card.Footer Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `className` | `string` | `''` | Additional CSS classes |
+<PropsTable props={[
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' }
+]} />
 
 ### Card.Actions Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `align` | `'left' \| 'center' \| 'right' \| 'between'` | `'right'` | Action alignment |
-| `spacing` | `'none' \| 'sm' \| 'md' \| 'lg'` | `'md'` | Action spacing |
-| `className` | `string` | `''` | Additional CSS classes |
+<PropsTable props={[
+  { name: 'align', type: "'left' | 'center' | 'right' | 'between'", default: "'right'", description: 'Action alignment' },
+  { name: 'spacing', type: "'none' | 'sm' | 'md' | 'lg'", default: "'md'", description: 'Action spacing' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' }
+]} />

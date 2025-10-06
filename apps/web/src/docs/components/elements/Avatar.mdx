@@ -64,13 +64,13 @@ A simple avatar component that displays user profile images with fallback suppor
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `src` | `string` | - | The image source URL |
-| `alt` | `string` | - | Alternative text for the image |
-| `fallback` | `string` | - | Fallback text to display when image fails to load |
-| `size` | `'sm' \| 'md' \| 'lg' \| 'xl'` | `'md'` | Size variant |
-| `shape` | `'circle' \| 'square'` | `'circle'` | Shape variant |
-| `color` | `'default' \| 'primary' \| 'success' \| 'warning' \| 'error' \| 'info'` | `'default'` | Color variant for fallback background |
-| `className` | `string` | - | Additional CSS classes |
-| `onClick` | `(event: React.MouseEvent<HTMLDivElement>) => void` | - | Click handler |
+<PropsTable props={[
+  { name: 'src', type: 'string', default: '-', description: 'The image source URL' },
+  { name: 'alt', type: 'string', default: '-', description: 'Alternative text for the image' },
+  { name: 'fallback', type: 'string', default: '-', description: 'Fallback text to display when image fails to load' },
+  { name: 'size', type: "'sm' | 'md' | 'lg' | 'xl'", default: "'md'", description: 'Size variant' },
+  { name: 'shape', type: "'circle' | 'square'", default: "'circle'", description: 'Shape variant' },
+  { name: 'color', type: "'default' | 'primary' | 'success' | 'warning' | 'error' | 'info'", default: "'default'", description: 'Color variant for fallback background' },
+  { name: 'className', type: 'string', default: '-', description: 'Additional CSS classes' },
+  { name: 'onClick', type: '(event: React.MouseEvent<HTMLDivElement>) => void', default: '-', description: 'Click handler' }
+]} />

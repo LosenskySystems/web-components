@@ -521,32 +521,32 @@ A tabs component for organizing content into separate views that can be switched
 
 ### Tabs Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `defaultValue` | `string` | - | Default active tab value |
-| `value` | `string` | - | Controlled active tab value |
-| `onValueChange` | `(value: string) => void` | - | Callback when active tab changes |
-| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Tabs size |
-| `variant` | `'default' \| 'pills' \| 'underline'` | `'default'` | Tabs variant |
-| `orientation` | `'horizontal' \| 'vertical'` | `'horizontal'` | Tabs orientation |
-| `className` | `string` | - | Additional CSS classes |
-| `children` | `React.ReactNode` | - | Tab children |
+<PropsTable props={[
+  { name: 'defaultValue', type: 'string', default: '-', description: 'Default active tab value' },
+  { name: 'value', type: 'string', default: '-', description: 'Controlled active tab value' },
+  { name: 'onValueChange', type: '(value: string) => void', default: '-', description: 'Callback when active tab changes' },
+  { name: 'size', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Tabs size' },
+  { name: 'variant', type: "'default' | 'pills' | 'underline'", default: "'default'", description: 'Tabs variant' },
+  { name: 'orientation', type: "'horizontal' | 'vertical'", default: "'horizontal'", description: 'Tabs orientation' },
+  { name: 'className', type: 'string', default: '-', description: 'Additional CSS classes' },
+  { name: 'children', type: 'React.ReactNode', default: '-', description: 'Tab children' }
+]} />
 
 ### TabsTrigger Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `value` | `string` | - | Tab value |
-| `disabled` | `boolean` | `false` | Whether the tab is disabled |
-| `className` | `string` | - | Additional CSS classes |
-| `children` | `React.ReactNode` | - | Tab content |
-| `icon` | `React.ReactNode` | - | Icon to display before content |
+<PropsTable props={[
+  { name: 'value', type: 'string', default: '-', description: 'Tab value' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Whether the tab is disabled' },
+  { name: 'className', type: 'string', default: '-', description: 'Additional CSS classes' },
+  { name: 'children', type: 'React.ReactNode', default: '-', description: 'Tab content' },
+  { name: 'icon', type: 'React.ReactNode', default: '-', description: 'Icon to display before content' }
+]} />
 
 ### TabsContent Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `value` | `string` | - | Tab value |
-| `className` | `string` | - | Additional CSS classes |
-| `children` | `React.ReactNode` | - | Content children |
-| `forceMount` | `boolean` | `false` | Whether to force mount the content |
+<PropsTable props={[
+  { name: 'value', type: 'string', default: '-', description: 'Tab value' },
+  { name: 'className', type: 'string', default: '-', description: 'Additional CSS classes' },
+  { name: 'children', type: 'React.ReactNode', default: '-', description: 'Content children' },
+  { name: 'forceMount', type: 'boolean', default: 'false', description: 'Whether to force mount the content' }
+]} />
