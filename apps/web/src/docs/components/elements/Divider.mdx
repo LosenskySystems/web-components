@@ -1,6 +1,8 @@
+import { Divider } from '@losensky-systems/web-components-core'
+
 # Divider Component
 
-The Divider component creates visual separation between content sections with various styles and orientations.
+The Divider component creates visual separation between content sections. It supports horizontal and vertical orientations, different styles, and can include labels.
 
 ## Import
 
@@ -10,100 +12,275 @@ import { Divider } from '@losensky-systems/web-components-core'
 
 ## Basic Usage
 
+Simple dividers for content separation:
+
 <div style={{ marginBottom: '2rem' }}>
+  <p>Content above the divider</p>
   <Divider />
+  <p>Content below the divider</p>
 </div>
 
 ```tsx
+<p>Content above the divider</p>
 <Divider />
+<p>Content below the divider</p>
+```
+
+## Orientations
+
+### Horizontal (Default)
+Horizontal dividers separate content vertically:
+
+<div style={{ marginBottom: '2rem' }}>
+  <div style={{ padding: '1rem', background: '#f8fafc', borderRadius: '0.5rem', marginBottom: '1rem' }}>
+    Section 1
+  </div>
+  <Divider />
+  <div style={{ padding: '1rem', background: '#f8fafc', borderRadius: '0.5rem', marginTop: '1rem' }}>
+    Section 2
+  </div>
+</div>
+
+```tsx
+<div>Section 1</div>
+<Divider />
+<div>Section 2</div>
+```
+
+### Vertical
+Vertical dividers separate content horizontally:
+
+<div style={{ display: 'flex', alignItems: 'center', marginBottom: '2rem', height: '4rem' }}>
+  <div style={{ padding: '0.5rem 1rem', background: '#f8fafc', borderRadius: '0.5rem' }}>
+    Left Content
+  </div>
+  <Divider orientation="vertical" />
+  <div style={{ padding: '0.5rem 1rem', background: '#f8fafc', borderRadius: '0.5rem' }}>
+    Right Content
+  </div>
+</div>
+
+```tsx
+<div style={{ display: 'flex', alignItems: 'center' }}>
+  <div>Left Content</div>
+  <Divider orientation="vertical" />
+  <div>Right Content</div>
+</div>
 ```
 
 ## Variants
 
-The Divider component supports different visual styles:
+Different border styles for visual variety:
 
 <div style={{ marginBottom: '2rem' }}>
+  <p>Solid divider (default):</p>
   <Divider variant="solid" />
+  
+  <p style={{ marginTop: '1rem' }}>Dashed divider:</p>
   <Divider variant="dashed" />
+  
+  <p style={{ marginTop: '1rem' }}>Dotted divider:</p>
   <Divider variant="dotted" />
 </div>
 
 ```tsx
-<Divider variant="solid" />
+<Divider variant="solid" />   {/* Default */}
 <Divider variant="dashed" />
 <Divider variant="dotted" />
 ```
 
-## Orientation
-
-Dividers can be horizontal (default) or vertical:
-
-<div style={{ display: 'flex', gap: '2rem', marginBottom: '2rem', alignItems: 'center' }}>
-  <div style={{ flex: 1 }}>
-    <p>Content before horizontal divider</p>
-    <Divider orientation="horizontal" />
-    <p>Content after horizontal divider</p>
-  </div>
-  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-    <span>Left</span>
-    <Divider orientation="vertical" />
-    <span>Right</span>
-  </div>
-</div>
-
-```tsx
-<Divider orientation="horizontal" />
-<Divider orientation="vertical" />
-```
-
 ## Spacing
 
-Control the vertical spacing around dividers:
+Control the margin around dividers:
 
 <div style={{ marginBottom: '2rem' }}>
-  <p>Content before</p>
+  <p>Small spacing:</p>
   <Divider spacing="sm" />
-  <p>Small spacing</p>
+  <p>Medium spacing (default):</p>
   <Divider spacing="md" />
-  <p>Medium spacing (default)</p>
+  <p>Large spacing:</p>
   <Divider spacing="lg" />
-  <p>Large spacing</p>
+  <p>Extra large spacing:</p>
+  <Divider spacing="xl" />
 </div>
 
 ```tsx
-<Divider spacing="sm" />
-<Divider spacing="md" />
-<Divider spacing="lg" />
+<Divider spacing="sm" />   {/* 0.25rem margin */}
+<Divider spacing="md" />    {/* 0.5rem margin - default */}
+<Divider spacing="lg" />   {/* 1rem margin */}
+<Divider spacing="xl" />   {/* 1.5rem margin */}
+```
+
+## Colors
+
+Use semantic colors for different contexts:
+
+<div style={{ marginBottom: '2rem' }}>
+  <p>Default divider:</p>
+  <Divider color="default" />
+  
+  <p style={{ marginTop: '1rem' }}>Primary divider:</p>
+  <Divider color="primary" />
+  
+  <p style={{ marginTop: '1rem' }}>Success divider:</p>
+  <Divider color="success" />
+  
+  <p style={{ marginTop: '1rem' }}>Warning divider:</p>
+  <Divider color="warning" />
+  
+  <p style={{ marginTop: '1rem' }}>Error divider:</p>
+  <Divider color="error" />
+  
+  <p style={{ marginTop: '1rem' }}>Info divider:</p>
+  <Divider color="info" />
+</div>
+
+```tsx
+<Divider color="default" />
+<Divider color="primary" />
+<Divider color="success" />
+<Divider color="warning" />
+<Divider color="error" />
+<Divider color="info" />
 ```
 
 ## Labeled Dividers
 
-Add text content to create labeled dividers:
+Add text labels to dividers for better context:
 
 <div style={{ marginBottom: '2rem' }}>
   <Divider>OR</Divider>
-  <Divider>Continue with</Divider>
-  <Divider variant="dashed">Section Break</Divider>
+  
+  <Divider color="primary">Section Break</Divider>
+  
+  <Divider color="success">Success Message</Divider>
+  
+  <Divider color="warning">Important Notice</Divider>
 </div>
 
 ```tsx
 <Divider>OR</Divider>
-<Divider>Continue with</Divider>
-<Divider variant="dashed">Section Break</Divider>
+<Divider color="primary">Section Break</Divider>
+<Divider color="success">Success Message</Divider>
+<Divider color="warning">Important Notice</Divider>
 ```
 
-## Customization
+## Real-World Examples
 
-You can customize dividers using Tailwind classes:
+Common use cases for dividers:
 
 <div style={{ marginBottom: '2rem' }}>
-  <Divider className="border-red-500" />
-  <Divider className="border-2 border-blue-500" />
-  <Divider className="border-dashed border-green-500">Custom Styled</Divider>
+  <div style={{ padding: '1rem', background: '#f8fafc', borderRadius: '0.5rem' }}>
+    <h3 style={{ margin: '0 0 0.5rem 0' }}>User Profile</h3>
+    <p style={{ margin: 0 }}>Personal information and settings</p>
+  </div>
+  
+  <Divider spacing="lg" />
+  
+  <div style={{ padding: '1rem', background: '#f8fafc', borderRadius: '0.5rem' }}>
+    <h3 style={{ margin: '0 0 0.5rem 0' }}>Account Settings</h3>
+    <p style={{ margin: 0 }}>Security and privacy options</p>
+  </div>
+  
+  <Divider spacing="lg" />
+  
+  <div style={{ padding: '1rem', background: '#f8fafc', borderRadius: '0.5rem' }}>
+    <h3 style={{ margin: '0 0 0.5rem 0' }}>Billing</h3>
+    <p style={{ margin: 0 }}>Payment methods and subscription</p>
+  </div>
 </div>
 
 ```tsx
-<Divider className="border-red-500" />
-<Divider className="border-2 border-blue-500" />
-<Divider className="border-dashed border-green-500">Custom Styled</Divider>
+<div>
+  <h3>User Profile</h3>
+  <p>Personal information and settings</p>
+</div>
+
+<Divider spacing="lg" />
+
+<div>
+  <h3>Account Settings</h3>
+  <p>Security and privacy options</p>
+</div>
+
+<Divider spacing="lg" />
+
+<div>
+  <h3>Billing</h3>
+  <p>Payment methods and subscription</p>
+</div>
 ```
+
+### Navigation Menu Example
+
+<div style={{ display: 'flex', alignItems: 'center', marginBottom: '2rem', padding: '0.5rem', background: '#f8fafc', borderRadius: '0.5rem' }}>
+  <span style={{ padding: '0.5rem 1rem' }}>Home</span>
+  <Divider orientation="vertical" spacing="sm" />
+  <span style={{ padding: '0.5rem 1rem' }}>Products</span>
+  <Divider orientation="vertical" spacing="sm" />
+  <span style={{ padding: '0.5rem 1rem' }}>About</span>
+  <Divider orientation="vertical" spacing="sm" />
+  <span style={{ padding: '0.5rem 1rem' }}>Contact</span>
+</div>
+
+```tsx
+<div style={{ display: 'flex', alignItems: 'center' }}>
+  <span>Home</span>
+  <Divider orientation="vertical" spacing="sm" />
+  <span>Products</span>
+  <Divider orientation="vertical" spacing="sm" />
+  <span>About</span>
+  <Divider orientation="vertical" spacing="sm" />
+  <span>Contact</span>
+</div>
+```
+
+### Form Section Example
+
+<div style={{ marginBottom: '2rem' }}>
+  <div style={{ padding: '1rem', background: '#f8fafc', borderRadius: '0.5rem' }}>
+    <h4 style={{ margin: '0 0 0.5rem 0' }}>Personal Information</h4>
+    <p style={{ margin: 0, fontSize: '0.875rem', color: '#6b7280' }}>Enter your basic details</p>
+  </div>
+  
+  <Divider color="primary" spacing="md" />
+  
+  <div style={{ padding: '1rem', background: '#f8fafc', borderRadius: '0.5rem' }}>
+    <h4 style={{ margin: '0 0 0.5rem 0' }}>Contact Details</h4>
+    <p style={{ margin: 0, fontSize: '0.875rem', color: '#6b7280' }}>Phone and email information</p>
+  </div>
+</div>
+
+```tsx
+<div>
+  <h4>Personal Information</h4>
+  <p>Enter your basic details</p>
+</div>
+
+<Divider color="primary" spacing="md" />
+
+<div>
+  <h4>Contact Details</h4>
+  <p>Phone and email information</p>
+</div>
+```
+
+## Accessibility
+
+The Divider component includes proper accessibility features:
+
+- **ARIA attributes**: `role="separator"` and `aria-orientation`
+- **Semantic meaning**: Clear indication of content separation
+- **Screen reader friendly**: Proper announcements for content structure
+- **Keyboard accessible**: Works with focus management
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `orientation` | `'horizontal' \| 'vertical'` | `'horizontal'` | Divider direction |
+| `variant` | `'solid' \| 'dashed' \| 'dotted'` | `'solid'` | Border style |
+| `spacing` | `'sm' \| 'md' \| 'lg' \| 'xl'` | `'md'` | Margin around divider |
+| `color` | `'default' \| 'primary' \| 'success' \| 'warning' \| 'error' \| 'info'` | `'default'` | Divider color |
+| `className` | `string` | `''` | Additional CSS classes |
+| `children` | `React.ReactNode` | - | Label text for labeled dividers |

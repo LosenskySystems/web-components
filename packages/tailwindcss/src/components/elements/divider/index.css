@@ -1,47 +1,144 @@
-/* Divider component styles using Tailwind @apply */
-@layer components {
+/* Divider component styles */
+.web-divider {
+  border: 0;
+  border-top: 1px solid var(--color-gray-200);
+  margin: 0;
+  padding: 0;
+}
+
+/* Vertical divider */
+.web-divider-vertical {
+  border-top: 0;
+  border-left: 1px solid var(--color-gray-200);
+  height: 100%;
+  width: 0;
+  margin: 0;
+}
+
+/* Variants */
+.web-divider-dashed {
+  border-style: dashed;
+}
+
+.web-divider-dotted {
+  border-style: dotted;
+}
+
+/* Spacing variants */
+.web-divider-spacing-sm {
+  margin: 0.25rem 0;
+}
+
+.web-divider-spacing-md {
+  margin: 0.5rem 0;
+}
+
+.web-divider-spacing-lg {
+  margin: 1rem 0;
+}
+
+.web-divider-spacing-xl {
+  margin: 1.5rem 0;
+}
+
+/* Vertical spacing */
+.web-divider-vertical.web-divider-spacing-sm {
+  margin: 0 0.25rem;
+}
+
+.web-divider-vertical.web-divider-spacing-md {
+  margin: 0 0.5rem;
+}
+
+.web-divider-vertical.web-divider-spacing-lg {
+  margin: 0 1rem;
+}
+
+.web-divider-vertical.web-divider-spacing-xl {
+  margin: 0 1.5rem;
+}
+
+/* Labeled divider */
+.web-divider-with-children {
+  display: flex;
+  align-items: center;
+  color: var(--color-gray-500);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  margin: 0.5rem 0;
+}
+
+.web-divider-with-children::before,
+.web-divider-with-children::after {
+  content: '';
+  flex: 1;
+  border-top: 1px solid var(--color-gray-200);
+}
+
+.web-divider-with-children::before {
+  margin-right: 1rem;
+}
+
+.web-divider-with-children::after {
+  margin-left: 1rem;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
   .web-divider {
-    @apply border-0 border-t border-gray-200;
+    border-color: var(--color-gray-700);
   }
-
+  
   .web-divider-vertical {
-    @apply border-0 border-l border-gray-200 h-full w-0;
+    border-color: var(--color-gray-700);
   }
-
-  .web-divider-dashed {
-    @apply border-dashed;
-  }
-
-  .web-divider-dotted {
-    @apply border-dotted;
-  }
-
-  .web-divider-spacing-sm {
-    @apply my-1;
-  }
-
-  .web-divider-spacing-md {
-    @apply my-2;
-  }
-
-  .web-divider-spacing-lg {
-    @apply my-4;
-  }
-
+  
   .web-divider-with-children {
-    @apply flex items-center text-gray-500 text-sm;
+    color: var(--color-gray-400);
   }
-
+  
   .web-divider-with-children::before,
   .web-divider-with-children::after {
-    @apply flex-1 border-t border-gray-200;
+    border-color: var(--color-gray-700);
   }
+}
 
-  .web-divider-with-children::before {
-    @apply mr-4;
-  }
+/* Manual dark mode class */
+.dark .web-divider {
+  border-color: var(--color-gray-700);
+}
 
-  .web-divider-with-children::after {
-    @apply ml-4;
-  }
+.dark .web-divider-vertical {
+  border-color: var(--color-gray-700);
+}
+
+.dark .web-divider-with-children {
+  color: var(--color-gray-400);
+}
+
+.dark .web-divider-with-children::before,
+.dark .web-divider-with-children::after {
+  border-color: var(--color-gray-700);
+}
+
+/* Customizable divider colors */
+.web-divider.web-divider-primary {
+  border-color: var(--color-primary-500);
+}
+
+.web-divider.web-divider-success {
+  border-color: var(--color-success);
+}
+
+.web-divider.web-divider-warning {
+  border-color: var(--color-warning);
+}
+
+.web-divider.web-divider-error {
+  border-color: var(--color-error);
+}
+
+.web-divider.web-divider-info {
+  border-color: var(--color-info);
 }
