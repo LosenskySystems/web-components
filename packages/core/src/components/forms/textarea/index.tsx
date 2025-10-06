@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 import type { TextareaProps } from './textarea.types';
 
 export { type TextareaProps } from './textarea.types';
@@ -81,7 +81,6 @@ export const Textarea: React.FC<TextareaProps> = ({
           maxLength={maxLength}
           minLength={minLength}
           readOnly={readOnly}
-          onChange={handleChange}
           {...props}
         />
         

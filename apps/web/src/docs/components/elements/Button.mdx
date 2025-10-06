@@ -79,33 +79,82 @@ Icon-only buttons scale appropriately:
 <Button size="xl" icon={<Settings size={20} />} iconOnly variant="ghost" />
 ```
 
-## Loading State
+## Link Buttons
 
-The Button component supports a loading state with proper accessibility:
+The Button component can render as a link when `href` is provided, maintaining all button styling and functionality:
 
 <div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
-  <Button loading>
-    Loading Button
+  <Button href="https://example.com" variant="primary">
+    External Link
   </Button>
-  <Button loading loadingText="Saving data...">
-    Custom Loading Text
+  <Button href="/docs" variant="outline">
+    Internal Link
   </Button>
-  <Button variant="outline" loading>
-    Outline Loading
+  <Button href="https://github.com" target="_blank" rel="noopener noreferrer" variant="secondary">
+    GitHub
   </Button>
 </div>
 
 ```tsx
-<Button loading>
-  Loading Button
+<Button href="https://example.com" variant="primary">
+  External Link
 </Button>
 
-<Button loading loadingText="Saving data...">
-  Custom Loading Text
+<Button href="/docs" variant="outline">
+  Internal Link
 </Button>
 
-<Button variant="outline" loading>
-  Outline Loading
+<Button href="https://github.com" target="_blank" rel="noopener noreferrer" variant="secondary">
+  GitHub
+</Button>
+```
+
+### Link Buttons with Icons
+
+Link buttons work perfectly with icons:
+
+<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
+  <Button href="/download" icon={<Download size={16} />} iconPosition="left" variant="primary">
+    Download
+  </Button>
+  <Button href="/search" icon={<Search size={16} />} iconPosition="right" variant="outline">
+    Search
+  </Button>
+  <Button href="/docs" icon={<FileText size={16} />} iconOnly variant="ghost" />
+</div>
+
+```tsx
+<Button href="/download" icon={<Download size={16} />} iconPosition="left" variant="primary">
+  Download
+</Button>
+
+<Button href="/search" icon={<Search size={16} />} iconPosition="right" variant="outline">
+  Search
+</Button>
+
+<Button href="/docs" icon={<FileText size={16} />} iconOnly variant="ghost" />
+```
+
+### Disabled Link Buttons
+
+Disabled link buttons won't navigate and maintain disabled styling:
+
+<div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
+  <Button href="/disabled" disabled variant="primary">
+    Disabled Link
+  </Button>
+  <Button href="/loading" loading variant="outline">
+    Loading Link
+  </Button>
+</div>
+
+```tsx
+<Button href="/disabled" disabled variant="primary">
+  Disabled Link
+</Button>
+
+<Button href="/loading" loading variant="outline">
+  Loading Link
 </Button>
 ```
 
@@ -538,3 +587,6 @@ Buttons work great with Badge components for notification counts:
 | `icon` | `React.ReactNode` | - | Icon element |
 | `iconPosition` | `'left' \| 'right'` | `'left'` | Icon position |
 | `iconOnly` | `boolean` | `false` | Show only icon |
+| `href` | `string` | - | Link URL (renders as anchor) |
+| `target` | `'_blank' \| '_self' \| '_parent' \| '_top'` | - | Link target |
+| `rel` | `string` | - | Link relationship |

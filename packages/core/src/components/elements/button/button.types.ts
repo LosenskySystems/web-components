@@ -15,6 +15,10 @@ export interface ButtonProps {
   icon?: React.ReactNode;
   iconPosition?: 'left' | 'right';
   iconOnly?: boolean;
+  // Link support
+  href?: string;
+  target?: '_blank' | '_self' | '_parent' | '_top';
+  rel?: string;
 }
 
 export interface ButtonGroupProps {

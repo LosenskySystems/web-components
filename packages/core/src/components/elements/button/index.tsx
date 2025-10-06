@@ -46,18 +46,22 @@ const ButtonComponent: React.FC<ButtonProps> = ({
   icon,
   iconPosition = 'left',
   iconOnly = false,
+  href,
+  target,
+  rel,
   ...props
 }) => {
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const anchorRef = useRef<HTMLAnchorElement>(null);
 
   // Ripple effect handler
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
     if (disabled || loading) return;
 
-    const button = buttonRef.current;
-    if (!button) return;
+    const element = buttonRef.current || anchorRef.current;
+    if (!element) return;
 
-    const rect = button.getBoundingClientRect();
+    const rect = element.getBoundingClientRect();
     const size = Math.max(rect.width, rect.height);
     const x = event.clientX - rect.left - size / 2;
     const y = event.clientY - rect.top - size / 2;
@@ -68,7 +72,7 @@ const ButtonComponent: React.FC<ButtonProps> = ({
     ripple.style.left = x + 'px';
     ripple.style.top = y + 'px';
 
-    button.appendChild(ripple);
+    element.appendChild(ripple);
 
     // Remove ripple after animation
     setTimeout(() => {
@@ -79,7 +83,7 @@ const ButtonComponent: React.FC<ButtonProps> = ({
 
     // Call original onClick
     if (onClick) {
-      onClick(event);
+      onClick(event as React.MouseEvent<HTMLButtonElement>);
     }
   };
   // Component-first approach - complete styles in CSS, Tailwind for overrides
@@ -151,17 +155,38 @@ const ButtonComponent: React.FC<ButtonProps> = ({
     return children;
   };
 
+  // Common props for both button and anchor
+  const commonProps = {
+    className: classes,
+    onClick: handleClick,
+    'aria-busy': loading,
+    'aria-disabled': disabled || loading,
+    'aria-label': loading ? loadingText : (iconOnly ? String(children) : undefined),
+    ...props
+  };
+
+  // Render as link if href is provided
+  if (href) {
+    return (
+      <a
+        ref={anchorRef}
+        href={disabled || loading ? undefined : href}
+        target={target}
+        rel={rel}
+        {...commonProps}
+      >
+        {renderContent()}
+      </a>
+    );
+  }
+
+  // Render as button
   return (
     <button
       ref={buttonRef}
       type={type}
-      className={classes}
-      onClick={handleClick}
       disabled={disabled || loading}
-      aria-busy={loading}
-      aria-disabled={disabled || loading}
-      aria-label={loading ? loadingText : (iconOnly ? String(children) : undefined)}
-      {...props}
+      {...commonProps}
     >
       {renderContent()}
     </button>
