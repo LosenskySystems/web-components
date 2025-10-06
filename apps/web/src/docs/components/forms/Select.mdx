@@ -1,11 +1,13 @@
+import { Select, Label } from '@losensky-systems/web-components-core'
+
 # Select Component
 
-The Select component provides a dropdown selection interface with custom options and compound component architecture.
+The Select component provides a flexible, accessible dropdown selection interface with compound component architecture, various states, sizes, and styling options.
 
 ## Import
 
 ```tsx
-import { Select } from '@losensky-systems/web-components-core'
+import { Select, Label } from '@losensky-systems/web-components-core'
 ```
 
 ## Basic Usage
@@ -23,6 +25,184 @@ import { Select } from '@losensky-systems/web-components-core'
   <Select.Item value="option1">Option 1</Select.Item>
   <Select.Item value="option2">Option 2</Select.Item>
   <Select.Item value="option3">Option 3</Select.Item>
+</Select>
+```
+
+## Sizes
+
+<div style={{ marginBottom: '2rem' }}>
+  <div style={{ marginBottom: '1rem' }}>
+    <Label>Small Select</Label>
+    <Select size="sm" placeholder="Small select">
+      <Select.Item value="option1">Option 1</Select.Item>
+      <Select.Item value="option2">Option 2</Select.Item>
+    </Select>
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Label>Medium Select (default)</Label>
+    <Select size="md" placeholder="Medium select">
+      <Select.Item value="option1">Option 1</Select.Item>
+      <Select.Item value="option2">Option 2</Select.Item>
+    </Select>
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Label>Large Select</Label>
+    <Select size="lg" placeholder="Large select">
+      <Select.Item value="option1">Option 1</Select.Item>
+      <Select.Item value="option2">Option 2</Select.Item>
+    </Select>
+  </div>
+</div>
+
+```tsx
+<Select size="sm" placeholder="Small select">
+  <Select.Item value="option1">Option 1</Select.Item>
+  <Select.Item value="option2">Option 2</Select.Item>
+</Select>
+
+<Select size="md" placeholder="Medium select">
+  <Select.Item value="option1">Option 1</Select.Item>
+  <Select.Item value="option2">Option 2</Select.Item>
+</Select>
+
+<Select size="lg" placeholder="Large select">
+  <Select.Item value="option1">Option 1</Select.Item>
+  <Select.Item value="option2">Option 2</Select.Item>
+</Select>
+```
+
+## Variants
+
+<div style={{ marginBottom: '2rem' }}>
+  <div style={{ marginBottom: '1rem' }}>
+    <Label>Default Select</Label>
+    <Select variant="default" placeholder="Default select">
+      <Select.Item value="option1">Option 1</Select.Item>
+      <Select.Item value="option2">Option 2</Select.Item>
+    </Select>
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Label>Error Select</Label>
+    <Select variant="error" placeholder="Error select">
+      <Select.Item value="option1">Option 1</Select.Item>
+      <Select.Item value="option2">Option 2</Select.Item>
+    </Select>
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Label>Success Select</Label>
+    <Select variant="success" placeholder="Success select">
+      <Select.Item value="option1">Option 1</Select.Item>
+      <Select.Item value="option2">Option 2</Select.Item>
+    </Select>
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Label>Warning Select</Label>
+    <Select variant="warning" placeholder="Warning select">
+      <Select.Item value="option1">Option 1</Select.Item>
+      <Select.Item value="option2">Option 2</Select.Item>
+    </Select>
+  </div>
+</div>
+
+```tsx
+<Select variant="default" placeholder="Default select">
+  <Select.Item value="option1">Option 1</Select.Item>
+  <Select.Item value="option2">Option 2</Select.Item>
+</Select>
+
+<Select variant="error" placeholder="Error select">
+  <Select.Item value="option1">Option 1</Select.Item>
+  <Select.Item value="option2">Option 2</Select.Item>
+</Select>
+
+<Select variant="success" placeholder="Success select">
+  <Select.Item value="option1">Option 1</Select.Item>
+  <Select.Item value="option2">Option 2</Select.Item>
+</Select>
+
+<Select variant="warning" placeholder="Warning select">
+  <Select.Item value="option1">Option 1</Select.Item>
+  <Select.Item value="option2">Option 2</Select.Item>
+</Select>
+```
+
+## With Labels and Helper Text
+
+<div style={{ marginBottom: '2rem' }}>
+  <div style={{ marginBottom: '1rem' }}>
+    <Label htmlFor="country-select">Country</Label>
+    <Select 
+      id="country-select"
+      placeholder="Select your country"
+      helperText="Choose your country of residence"
+    >
+      <Select.Item value="us">United States</Select.Item>
+      <Select.Item value="ca">Canada</Select.Item>
+      <Select.Item value="uk">United Kingdom</Select.Item>
+    </Select>
+  </div>
+  
+  <div style={{ marginBottom: '1rem' }}>
+    <Label htmlFor="error-select">Priority</Label>
+    <Select 
+      id="error-select"
+      placeholder="Select priority"
+      errorText="Priority is required"
+      error
+    >
+      <Select.Item value="low">Low</Select.Item>
+      <Select.Item value="medium">Medium</Select.Item>
+      <Select.Item value="high">High</Select.Item>
+    </Select>
+  </div>
+  
+  <div style={{ marginBottom: '1rem' }}>
+    <Label htmlFor="success-select">Status</Label>
+    <Select 
+      id="success-select"
+      placeholder="Select status"
+      successText="Status updated successfully!"
+      variant="success"
+    >
+      <Select.Item value="active">Active</Select.Item>
+      <Select.Item value="inactive">Inactive</Select.Item>
+    </Select>
+  </div>
+</div>
+
+```tsx
+<Label htmlFor="country-select">Country</Label>
+<Select 
+  id="country-select"
+  placeholder="Select your country"
+  helperText="Choose your country of residence"
+>
+  <Select.Item value="us">United States</Select.Item>
+  <Select.Item value="ca">Canada</Select.Item>
+  <Select.Item value="uk">United Kingdom</Select.Item>
+</Select>
+
+<Label htmlFor="error-select">Priority</Label>
+<Select 
+  id="error-select"
+  placeholder="Select priority"
+  errorText="Priority is required"
+  error
+>
+  <Select.Item value="low">Low</Select.Item>
+  <Select.Item value="medium">Medium</Select.Item>
+  <Select.Item value="high">High</Select.Item>
+</Select>
+
+<Label htmlFor="success-select">Status</Label>
+<Select 
+  id="success-select"
+  placeholder="Select status"
+  successText="Status updated successfully!"
+  variant="success"
+>
+  <Select.Item value="active">Active</Select.Item>
+  <Select.Item value="inactive">Inactive</Select.Item>
 </Select>
 ```
 
@@ -86,29 +266,121 @@ The entire select can be disabled:
 </Select>
 ```
 
-## With Label
-
-Combine with Label component for better UX:
+## Loading State
 
 <div style={{ marginBottom: '2rem' }}>
-  <Label htmlFor="country-select" required>Country</Label>
-  <Select id="country-select" placeholder="Select your country">
-    <Select.Item value="us">United States</Select.Item>
-    <Select.Item value="ca">Canada</Select.Item>
-    <Select.Item value="uk">United Kingdom</Select.Item>
-    <Select.Item value="de">Germany</Select.Item>
-    <Select.Item value="fr">France</Select.Item>
+  <Select loading placeholder="Loading options...">
+    <Select.Item value="option1">Option 1</Select.Item>
+    <Select.Item value="option2">Option 2</Select.Item>
   </Select>
 </div>
 
 ```tsx
-<Label htmlFor="country-select" required>Country</Label>
-<Select id="country-select" placeholder="Select your country">
-  <Select.Item value="us">United States</Select.Item>
-  <Select.Item value="ca">Canada</Select.Item>
-  <Select.Item value="uk">United Kingdom</Select.Item>
-  <Select.Item value="de">Germany</Select.Item>
-  <Select.Item value="fr">France</Select.Item>
+<Select loading placeholder="Loading options...">
+  <Select.Item value="option1">Option 1</Select.Item>
+  <Select.Item value="option2">Option 2</Select.Item>
+</Select>
+```
+
+## States
+
+<div style={{ marginBottom: '2rem' }}>
+  <div style={{ marginBottom: '1rem' }}>
+    <Label>Default Select</Label>
+    <Select placeholder="Default select">
+      <Select.Item value="option1">Option 1</Select.Item>
+      <Select.Item value="option2">Option 2</Select.Item>
+    </Select>
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Label>Disabled Select</Label>
+    <Select placeholder="This select is disabled" disabled>
+      <Select.Item value="option1">Option 1</Select.Item>
+      <Select.Item value="option2">Option 2</Select.Item>
+    </Select>
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Label>Required Select</Label>
+    <Select placeholder="Required select" required>
+      <Select.Item value="option1">Option 1</Select.Item>
+      <Select.Item value="option2">Option 2</Select.Item>
+    </Select>
+  </div>
+</div>
+
+```tsx
+<Select placeholder="Default select">
+  <Select.Item value="option1">Option 1</Select.Item>
+  <Select.Item value="option2">Option 2</Select.Item>
+</Select>
+
+<Select placeholder="This select is disabled" disabled>
+  <Select.Item value="option1">Option 1</Select.Item>
+  <Select.Item value="option2">Option 2</Select.Item>
+</Select>
+
+<Select placeholder="Required select" required>
+  <Select.Item value="option1">Option 1</Select.Item>
+  <Select.Item value="option2">Option 2</Select.Item>
+</Select>
+```
+
+## Form Integration
+
+Selects work well in forms with proper labels and validation:
+
+<div style={{ marginBottom: '2rem' }}>
+  <div style={{ marginBottom: '1rem' }}>
+    <Label htmlFor="category-select" required>Category</Label>
+    <Select 
+      id="category-select"
+      placeholder="Select a category"
+      helperText="Choose the most appropriate category"
+    >
+      <Select.Item value="tech">Technology</Select.Item>
+      <Select.Item value="design">Design</Select.Item>
+      <Select.Item value="business">Business</Select.Item>
+    </Select>
+  </div>
+  <div>
+    <Label htmlFor="priority-select" required>Priority Level</Label>
+    <Select 
+      id="priority-select"
+      placeholder="Select priority"
+      errorText="Please select a priority level"
+      error
+    >
+      <Select.Item value="low">Low Priority</Select.Item>
+      <Select.Item value="medium">Medium Priority</Select.Item>
+      <Select.Item value="high">High Priority</Select.Item>
+      <Select.Item value="urgent">Urgent</Select.Item>
+    </Select>
+  </div>
+</div>
+
+```tsx
+<Label htmlFor="category-select" required>Category</Label>
+<Select 
+  id="category-select"
+  placeholder="Select a category"
+  helperText="Choose the most appropriate category"
+>
+  <Select.Item value="tech">Technology</Select.Item>
+  <Select.Item value="design">Design</Select.Item>
+  <Select.Item value="business">Business</Select.Item>
+</Select>
+
+<Label htmlFor="priority-select" required>Priority Level</Label>
+<Select 
+  id="priority-select"
+  placeholder="Select priority"
+  errorText="Please select a priority level"
+  error
+>
+  <Select.Item value="low">Low Priority</Select.Item>
+  <Select.Item value="medium">Medium Priority</Select.Item>
+  <Select.Item value="high">High Priority</Select.Item>
+  <Select.Item value="urgent">Urgent</Select.Item>
 </Select>
 ```
 
@@ -129,3 +401,35 @@ You can customize the select using Tailwind classes:
   <Select.Item value="option2">Option 2</Select.Item>
 </Select>
 ```
+
+## Props
+
+### Select Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Select size |
+| `variant` | `'default' \| 'error' \| 'success' \| 'warning'` | `'default'` | Select variant |
+| `error` | `boolean` | `false` | Error state |
+| `errorText` | `string` | - | Error message |
+| `successText` | `string` | - | Success message |
+| `helperText` | `string` | - | Helper text |
+| `loading` | `boolean` | `false` | Loading state |
+| `disabled` | `boolean` | `false` | Disabled state |
+| `required` | `boolean` | `false` | Required field |
+| `autoFocus` | `boolean` | `false` | Auto-focus on mount |
+| `placeholder` | `string` | `'Select an option...'` | Placeholder text |
+| `value` | `string` | - | Selected value (controlled) |
+| `onChange` | `(value: string) => void` | - | Change handler |
+| `name` | `string` | - | Form field name |
+| `id` | `string` | - | Element ID |
+| `className` | `string` | `''` | Additional CSS classes |
+
+### Select.Item Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `value` | `string` | - | Option value |
+| `disabled` | `boolean` | `false` | Disabled state |
+| `children` | `React.ReactNode` | - | Option content |
+| `className` | `string` | `''` | Additional CSS classes |

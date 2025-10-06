@@ -20,7 +20,6 @@ export const Textarea: React.FC<TextareaProps> = ({
   readOnly = false,
   ...props
 }) => {
-  const [internalValue, setInternalValue] = useState(props.defaultValue || '');
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   
   // Determine variant based on error state
@@ -44,16 +43,6 @@ export const Textarea: React.FC<TextareaProps> = ({
     className
   ].filter(Boolean).join(' ');
 
-  // Handle value changes
-  const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    const newValue = event.target.value;
-    
-    if (props.value === undefined) {
-      setInternalValue(newValue);
-    }
-    
-    props.onChange?.(event);
-  };
 
   // Get helper text content and styling
   const getHelperText = () => {
