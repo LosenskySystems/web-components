@@ -166,6 +166,15 @@
       "category": "components",
       "subcategory": "forms",
       "description": "A radio button component for single selection in forms"
+    },
+    {
+      "id": "tabs",
+      "title": "Tabs",
+      "path": "/docs/components/navigation/tabs",
+      "component": "Tabs",
+      "category": "components",
+      "subcategory": "navigation",
+      "description": "A tabs component for organizing content into separate views that can be switched between"
     }
   ],
   "categories": [
@@ -191,6 +200,12 @@
           "title": "Forms",
           "description": "Form input components",
           "items": ["input", "select", "textarea", "checkbox", "radio"]
+        },
+        {
+          "id": "navigation",
+          "title": "Navigation",
+          "description": "Navigation and routing components",
+          "items": ["tabs"]
         },
         {
           "id": "data",

@@ -1,0 +1,313 @@
+# Tabs
+
+A tabs component for organizing content into separate views that can be switched between.
+
+## Basic Usage
+
+<Tabs defaultValue="tab1">
+  <TabsList>
+    <TabsTrigger value="tab1">Tab 1</TabsTrigger>
+    <TabsTrigger value="tab2">Tab 2</TabsTrigger>
+    <TabsTrigger value="tab3">Tab 3</TabsTrigger>
+  </TabsList>
+  <TabsContent value="tab1">
+    <div className="p-4">
+      <h3 className="text-lg font-semibold mb-2">Tab 1 Content</h3>
+      <p>This is the content for the first tab.</p>
+    </div>
+  </TabsContent>
+  <TabsContent value="tab2">
+    <div className="p-4">
+      <h3 className="text-lg font-semibold mb-2">Tab 2 Content</h3>
+      <p>This is the content for the second tab.</p>
+    </div>
+  </TabsContent>
+  <TabsContent value="tab3">
+    <div className="p-4">
+      <h3 className="text-lg font-semibold mb-2">Tab 3 Content</h3>
+      <p>This is the content for the third tab.</p>
+    </div>
+  </TabsContent>
+</Tabs>
+
+## Variants
+
+<div className="space-y-8">
+  <div>
+    <h4 className="text-sm font-medium mb-4">Default Variant</h4>
+    <Tabs defaultValue="default1" variant="default">
+      <TabsList>
+        <TabsTrigger value="default1">Overview</TabsTrigger>
+        <TabsTrigger value="default2">Settings</TabsTrigger>
+        <TabsTrigger value="default3">Billing</TabsTrigger>
+      </TabsList>
+      <TabsContent value="default1">
+        <div className="p-4 border rounded-lg">
+          <p>Default tab content with underline indicator.</p>
+        </div>
+      </TabsContent>
+      <TabsContent value="default2">
+        <div className="p-4 border rounded-lg">
+          <p>Settings content here.</p>
+        </div>
+      </TabsContent>
+      <TabsContent value="default3">
+        <div className="p-4 border rounded-lg">
+          <p>Billing content here.</p>
+        </div>
+      </TabsContent>
+    </Tabs>
+  </div>
+
+  <div>
+    <h4 className="text-sm font-medium mb-4">Pills Variant</h4>
+    <Tabs defaultValue="pills1" variant="pills">
+      <TabsList>
+        <TabsTrigger value="pills1">Dashboard</TabsTrigger>
+        <TabsTrigger value="pills2">Analytics</TabsTrigger>
+        <TabsTrigger value="pills3">Reports</TabsTrigger>
+      </TabsList>
+      <TabsContent value="pills1">
+        <div className="p-4 border rounded-lg">
+          <p>Pills variant with rounded background.</p>
+        </div>
+      </TabsContent>
+      <TabsContent value="pills2">
+        <div className="p-4 border rounded-lg">
+          <p>Analytics content here.</p>
+        </div>
+      </TabsContent>
+      <TabsContent value="pills3">
+        <div className="p-4 border rounded-lg">
+          <p>Reports content here.</p>
+        </div>
+      </TabsContent>
+    </Tabs>
+  </div>
+
+  <div>
+    <h4 className="text-sm font-medium mb-4">Underline Variant</h4>
+    <Tabs defaultValue="underline1" variant="underline">
+      <TabsList>
+        <TabsTrigger value="underline1">Profile</TabsTrigger>
+        <TabsTrigger value="underline2">Security</TabsTrigger>
+        <TabsTrigger value="underline3">Notifications</TabsTrigger>
+      </TabsList>
+      <TabsContent value="underline1">
+        <div className="p-4 border rounded-lg">
+          <p>Underline variant with bottom border indicator.</p>
+        </div>
+      </TabsContent>
+      <TabsContent value="underline2">
+        <div className="p-4 border rounded-lg">
+          <p>Security content here.</p>
+        </div>
+      </TabsContent>
+      <TabsContent value="underline3">
+        <div className="p-4 border rounded-lg">
+          <p>Notifications content here.</p>
+        </div>
+      </TabsContent>
+    </Tabs>
+  </div>
+</div>
+
+## Sizes
+
+<div className="space-y-8">
+  <div>
+    <h4 className="text-sm font-medium mb-4">Small Size</h4>
+    <Tabs defaultValue="small1" size="sm">
+      <TabsList>
+        <TabsTrigger value="small1">Small Tab 1</TabsTrigger>
+        <TabsTrigger value="small2">Small Tab 2</TabsTrigger>
+        <TabsTrigger value="small3">Small Tab 3</TabsTrigger>
+      </TabsList>
+      <TabsContent value="small1">
+        <div className="p-4 border rounded-lg">
+          <p>Small size tabs content.</p>
+        </div>
+      </TabsContent>
+      <TabsContent value="small2">
+        <div className="p-4 border rounded-lg">
+          <p>Second small tab content.</p>
+        </div>
+      </TabsContent>
+      <TabsContent value="small3">
+        <div className="p-4 border rounded-lg">
+          <p>Third small tab content.</p>
+        </div>
+      </TabsContent>
+    </Tabs>
+  </div>
+
+  <div>
+    <h4 className="text-sm font-medium mb-4">Medium Size (Default)</h4>
+    <Tabs defaultValue="medium1" size="md">
+      <TabsList>
+        <TabsTrigger value="medium1">Medium Tab 1</TabsTrigger>
+        <TabsTrigger value="medium2">Medium Tab 2</TabsTrigger>
+        <TabsTrigger value="medium3">Medium Tab 3</TabsTrigger>
+      </TabsList>
+      <TabsContent value="medium1">
+        <div className="p-4 border rounded-lg">
+          <p>Medium size tabs content.</p>
+        </div>
+      </TabsContent>
+      <TabsContent value="medium2">
+        <div className="p-4 border rounded-lg">
+          <p>Second medium tab content.</p>
+        </div>
+      </TabsContent>
+      <TabsContent value="medium3">
+        <div className="p-4 border rounded-lg">
+          <p>Third medium tab content.</p>
+        </div>
+      </TabsContent>
+    </Tabs>
+  </div>
+
+  <div>
+    <h4 className="text-sm font-medium mb-4">Large Size</h4>
+    <Tabs defaultValue="large1" size="lg">
+      <TabsList>
+        <TabsTrigger value="large1">Large Tab 1</TabsTrigger>
+        <TabsTrigger value="large2">Large Tab 2</TabsTrigger>
+        <TabsTrigger value="large3">Large Tab 3</TabsTrigger>
+      </TabsList>
+      <TabsContent value="large1">
+        <div className="p-4 border rounded-lg">
+          <p>Large size tabs content.</p>
+        </div>
+      </TabsContent>
+      <TabsContent value="large2">
+        <div className="p-4 border rounded-lg">
+          <p>Second large tab content.</p>
+        </div>
+      </TabsContent>
+      <TabsContent value="large3">
+        <div className="p-4 border rounded-lg">
+          <p>Third large tab content.</p>
+        </div>
+      </TabsContent>
+    </Tabs>
+  </div>
+</div>
+
+## With Icons
+
+<Tabs defaultValue="icon1">
+  <TabsList>
+    <TabsTrigger value="icon1" icon="🏠">Home</TabsTrigger>
+    <TabsTrigger value="icon2" icon="⚙️">Settings</TabsTrigger>
+    <TabsTrigger value="icon3" icon="📊">Analytics</TabsTrigger>
+  </TabsList>
+  <TabsContent value="icon1">
+    <div className="p-4 border rounded-lg">
+      <h3 className="text-lg font-semibold mb-2">Home Dashboard</h3>
+      <p>Welcome to your home dashboard with icons in tabs.</p>
+    </div>
+  </TabsContent>
+  <TabsContent value="icon2">
+    <div className="p-4 border rounded-lg">
+      <h3 className="text-lg font-semibold mb-2">Settings</h3>
+      <p>Configure your application settings here.</p>
+    </div>
+  </TabsContent>
+  <TabsContent value="icon3">
+    <div className="p-4 border rounded-lg">
+      <h3 className="text-lg font-semibold mb-2">Analytics</h3>
+      <p>View your application analytics and metrics.</p>
+    </div>
+  </TabsContent>
+</Tabs>
+
+## Controlled Tabs
+
+<div>
+  <h4 className="text-sm font-medium mb-4">Controlled Example</h4>
+  <Tabs 
+    value="controlled1" 
+    onValueChange={(value) => console.log('Tab changed to:', value)}
+  >
+    <TabsList>
+      <TabsTrigger value="controlled1">Controlled Tab 1</TabsTrigger>
+      <TabsTrigger value="controlled2">Controlled Tab 2</TabsTrigger>
+      <TabsTrigger value="controlled3">Controlled Tab 3</TabsTrigger>
+    </TabsList>
+    <TabsContent value="controlled1">
+      <div className="p-4 border rounded-lg">
+        <p>This tab is controlled externally. Check console for changes.</p>
+      </div>
+    </TabsContent>
+    <TabsContent value="controlled2">
+      <div className="p-4 border rounded-lg">
+        <p>Second controlled tab content.</p>
+      </div>
+    </TabsContent>
+    <TabsContent value="controlled3">
+      <div className="p-4 border rounded-lg">
+        <p>Third controlled tab content.</p>
+      </div>
+    </TabsContent>
+  </Tabs>
+</div>
+
+## Disabled Tabs
+
+<Tabs defaultValue="enabled1">
+  <TabsList>
+    <TabsTrigger value="enabled1">Enabled Tab</TabsTrigger>
+    <TabsTrigger value="disabled1" disabled>Disabled Tab</TabsTrigger>
+    <TabsTrigger value="enabled2">Another Enabled</TabsTrigger>
+  </TabsList>
+  <TabsContent value="enabled1">
+    <div className="p-4 border rounded-lg">
+      <p>This tab is enabled and clickable.</p>
+    </div>
+  </TabsContent>
+  <TabsContent value="disabled1">
+    <div className="p-4 border rounded-lg">
+      <p>This content won't be accessible due to disabled tab.</p>
+    </div>
+  </TabsContent>
+  <TabsContent value="enabled2">
+    <div className="p-4 border rounded-lg">
+      <p>This tab is also enabled and clickable.</p>
+    </div>
+  </TabsContent>
+</Tabs>
+
+## Props
+
+### Tabs Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `defaultValue` | `string` | - | Default active tab value |
+| `value` | `string` | - | Controlled active tab value |
+| `onValueChange` | `(value: string) => void` | - | Callback when active tab changes |
+| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Tabs size |
+| `variant` | `'default' \| 'pills' \| 'underline'` | `'default'` | Tabs variant |
+| `orientation` | `'horizontal' \| 'vertical'` | `'horizontal'` | Tabs orientation |
+| `className` | `string` | - | Additional CSS classes |
+| `children` | `React.ReactNode` | - | Tab children |
+
+### TabsTrigger Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `value` | `string` | - | Tab value |
+| `disabled` | `boolean` | `false` | Whether the tab is disabled |
+| `className` | `string` | - | Additional CSS classes |
+| `children` | `React.ReactNode` | - | Tab content |
+| `icon` | `React.ReactNode` | - | Icon to display before content |
+
+### TabsContent Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `value` | `string` | - | Tab value |
+| `className` | `string` | - | Additional CSS classes |
+| `children` | `React.ReactNode` | - | Content children |
+| `forceMount` | `boolean` | `false` | Whether to force mount the content |

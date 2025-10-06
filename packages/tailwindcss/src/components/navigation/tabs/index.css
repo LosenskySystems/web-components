@@ -1,0 +1,189 @@
+/* Tabs component styles */
+.web-tabs {
+  @apply w-full;
+}
+
+.web-tabs-list {
+  @apply flex border-b border-gray-200;
+  background-color: #ffffff !important;
+}
+
+.web-tabs-trigger {
+  @apply relative inline-flex items-center justify-center px-4 py-2 text-sm font-medium transition-all duration-200;
+  color: #6b7280 !important;
+  background-color: #ffffff !important;
+  border: none;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  min-height: 44px;
+}
+
+.web-tabs-trigger:hover {
+  color: #374151 !important;
+  background-color: #f9fafb !important;
+}
+
+.web-tabs-trigger:focus {
+  @apply outline-none;
+  box-shadow: none !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+.web-tabs-trigger[data-state="active"] {
+  color: #3b82f6 !important;
+  border-bottom-color: #3b82f6 !important;
+  background-color: #ffffff !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+.web-tabs-trigger[data-state="active"]:hover {
+  color: #3b82f6 !important;
+  background-color: #f8fafc !important;
+}
+
+.web-tabs-trigger[data-state="inactive"] {
+  color: #6b7280 !important;
+  background-color: #ffffff !important;
+}
+
+.web-tabs-trigger[data-state="inactive"]:hover {
+  color: #374151 !important;
+  background-color: #f9fafb !important;
+}
+
+.web-tabs-trigger:disabled {
+  @apply cursor-not-allowed opacity-50;
+  color: #9ca3af !important;
+}
+
+.web-tabs-trigger:disabled:hover {
+  color: #9ca3af !important;
+  background-color: transparent !important;
+}
+
+.web-tabs-content {
+  @apply mt-4;
+}
+
+.web-tabs-panel {
+  @apply outline-none;
+}
+
+/* Size variants */
+.web-tabs-sm .web-tabs-trigger {
+  @apply px-3 py-1.5 text-xs;
+  min-height: 36px;
+}
+
+.web-tabs-md .web-tabs-trigger {
+  @apply px-4 py-2 text-sm;
+  min-height: 44px;
+}
+
+.web-tabs-lg .web-tabs-trigger {
+  @apply px-6 py-3 text-base;
+  min-height: 52px;
+}
+
+/* Variant styles */
+.web-tabs-pills .web-tabs-list {
+  @apply border-b-0 gap-1;
+  background-color: #f3f4f6 !important;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.web-tabs-pills .web-tabs-trigger {
+  @apply rounded-md border-0;
+  border-bottom: none !important;
+  background-color: transparent !important;
+  color: #6b7280 !important;
+}
+
+.web-tabs-pills .web-tabs-trigger[data-state="inactive"] {
+  background-color: transparent !important;
+  color: #6b7280 !important;
+}
+
+.web-tabs-pills .web-tabs-trigger[data-state="inactive"]:hover {
+  background-color: #e5e7eb !important;
+  color: #374151 !important;
+}
+
+.web-tabs-pills .web-tabs-trigger[data-state="active"] {
+  background-color: #ffffff !important;
+  color: #374151 !important;
+  border-bottom: none !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.web-tabs-pills .web-tabs-trigger[data-state="active"]:hover {
+  background-color: #ffffff !important;
+  color: #374151 !important;
+}
+
+.web-tabs-underline .web-tabs-list {
+  @apply border-b-2;
+  border-color: #e5e7eb !important;
+}
+
+.web-tabs-underline .web-tabs-trigger {
+  border-bottom: 2px solid transparent;
+}
+
+.web-tabs-underline .web-tabs-trigger[data-state="active"] {
+  border-bottom-color: #3b82f6 !important;
+}
+
+/* Icon support */
+.web-tabs-trigger-icon {
+  @apply mr-2;
+  width: 16px;
+  height: 16px;
+}
+
+.web-tabs-sm .web-tabs-trigger-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.web-tabs-lg .web-tabs-trigger-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .web-tabs-list {
+    @apply overflow-x-auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .web-tabs-list::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .web-tabs-trigger {
+    @apply whitespace-nowrap;
+    min-width: fit-content;
+  }
+  
+  .web-tabs-sm .web-tabs-trigger {
+    @apply px-2 py-1.5 text-xs;
+  }
+  
+  .web-tabs-md .web-tabs-trigger {
+    @apply px-3 py-2 text-sm;
+  }
+  
+  .web-tabs-lg .web-tabs-trigger {
+    @apply px-4 py-2.5 text-sm;
+  }
+}
+
+/* Light mode only - no dark mode styles */
