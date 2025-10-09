@@ -21,8 +21,8 @@ importers:
   apps/demo:
     dependencies:
       '@losensky-systems/web-components-core':
-        specifier: ^0.1.0
-        version: 0.1.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+        specifier: ^0.1.1
+        version: 0.1.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@losensky-systems/web-components-tailwindcss':
         specifier: ^0.0.1
         version: 0.0.1
@@ -799,6 +799,12 @@ packages:
     peerDependencies:
       react: '>=17.0.0'
       react-dom: '>=17.0.0'
+
+  '@losensky-systems/web-components-core@0.1.1':
+    resolution: {integrity: sha512-PRvhr7nvuvk1bBFf97W0RE/3/VsQ/NARCCtFjZmsErTRd5XAf+Tb9n8hKZSwquArEe0R5xItAnrGRLse3ZS4AA==}
+    peerDependencies:
+      react: '>=18.0.0'
+      react-dom: '>=18.0.0'
 
   '@losensky-systems/web-components-tailwindcss@0.0.1':
     resolution: {integrity: sha512-8lCqTVdY+nw88jTcOyU7ljtVujX67nBoPL+P/LxyL9e1jErRhMLiMjko4difSZ6rjbt+sHmYZm0aLXuWcfaHMQ==}
@@ -3943,6 +3949,12 @@ snapshots:
       '@jridgewell/sourcemap-codec': 1.5.5
 
   '@losensky-systems/web-components-core@0.1.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
+    dependencies:
+      '@losensky-systems/web-components-tailwindcss': link:packages/tailwindcss
+      react: 19.2.0
+      react-dom: 19.2.0(react@19.2.0)
+
+  '@losensky-systems/web-components-core@0.1.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
     dependencies:
       '@losensky-systems/web-components-tailwindcss': link:packages/tailwindcss
       react: 19.2.0
