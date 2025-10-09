@@ -1,4 +1,3 @@
-import React from 'react'
 import { 
   Button, 
   Divider, 
@@ -8,10 +7,7 @@ import {
   Badge, 
   Avatar, 
   Icon, 
-  Dropdown, 
-  DropdownItem, 
-  DropdownDivider, 
-  DropdownMenu,
+  Dropdown,
   Alert,
   Card,
   Input,
@@ -23,7 +19,6 @@ import {
   TabsList,
   TabsTrigger,
   TabsContent,
-  TabsPanel,
   Accordion,
   AccordionItem,
   Toast
@@ -52,7 +47,7 @@ export function ComponentPreview({ componentName, className = '' }: ComponentPre
         return (
           <div className="space-y-2">
             <Label>Label Text</Label>
-            <Label variant="secondary">Secondary Label</Label>
+            <Label variant="primary">Primary Label</Label>
           </div>
         )
       
@@ -75,8 +70,8 @@ export function ComponentPreview({ componentName, className = '' }: ComponentPre
       case 'badge':
         return (
           <div className="flex gap-2">
-            <Badge variant="primary">New</Badge>
-            <Badge variant="secondary">5</Badge>
+            <Badge variant="success">New</Badge>
+            <Badge variant="info">5</Badge>
           </div>
         )
       
@@ -99,13 +94,14 @@ export function ComponentPreview({ componentName, className = '' }: ComponentPre
       
       case 'dropdown':
         return (
-          <Dropdown>
-            <DropdownMenu>
-              <DropdownItem>Action 1</DropdownItem>
-              <DropdownItem>Action 2</DropdownItem>
-              <DropdownDivider />
-              <DropdownItem>Action 3</DropdownItem>
-            </DropdownMenu>
+          <Dropdown
+            items={[
+              { children: 'Action 1' },
+              { children: 'Action 2' },
+              { children: 'Action 3' }
+            ]}
+          >
+            <Button size="sm">Menu</Button>
           </Dropdown>
         )
       
@@ -183,7 +179,7 @@ export function ComponentPreview({ componentName, className = '' }: ComponentPre
       
       case 'accordion':
         return (
-          <Accordion size="sm">
+          <Accordion>
             <AccordionItem value="item-1" title="Item 1">
               <p className="text-xs">Accordion content</p>
             </AccordionItem>

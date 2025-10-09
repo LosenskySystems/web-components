@@ -111,7 +111,7 @@ export function SearchBar({ routes }: SearchBarProps) {
       case 'Enter':
         e.preventDefault()
         if (selectedIndex >= 0 && results[selectedIndex]) {
-          handleResultClick(results[selectedIndex].route)
+          handleResultClick()
         }
         break
       case 'Escape':
@@ -123,7 +123,7 @@ export function SearchBar({ routes }: SearchBarProps) {
   }
 
   // Handle result click
-  const handleResultClick = (route: DocRoute) => {
+  const handleResultClick = () => {
     setIsOpen(false)
     setQuery('')
     inputRef.current?.blur()
@@ -192,7 +192,7 @@ export function SearchBar({ routes }: SearchBarProps) {
                 <Link
                   key={result.route.id}
                   to={result.route.path}
-                  onClick={() => handleResultClick(result.route)}
+                  onClick={handleResultClick}
                   className={`
                     block px-4 py-3 hover:bg-gray-50 transition-colors
                     ${index === selectedIndex ? 'bg-gray-50' : ''}

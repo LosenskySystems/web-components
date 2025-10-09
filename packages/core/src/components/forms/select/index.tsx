@@ -64,9 +64,9 @@ export const Select: React.FC<SelectProps> & {
 
   // Get selected item label
   const getSelectedLabel = () => {
-    const items = React.Children.toArray(children) as React.ReactElement[];
-    const selectedItem = items.find(item => item.props.value === value);
-    return selectedItem?.props.children || placeholder;
+    const items = React.Children.toArray(children) as React.ReactElement<SelectItemProps>[];
+    const selectedItem = items.find(item => (item.props as SelectItemProps).value === value);
+    return (selectedItem?.props as SelectItemProps | undefined)?.children || placeholder;
   };
 
   // Generate CSS classes

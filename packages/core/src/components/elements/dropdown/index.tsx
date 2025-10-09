@@ -137,14 +137,14 @@ export const Dropdown: React.FC<DropdownProps> = ({
     };
   }, [isOpen]);
 
-  const triggerElement = React.Children.only(children) as React.ReactElement;
+  const triggerElement = React.Children.only(children) as React.ReactElement<any>;
   
   const enhancedTrigger = React.cloneElement(triggerElement, {
     onClick: (event: React.MouseEvent) => {
-      triggerElement.props.onClick?.(event);
+      (triggerElement.props as any).onClick?.(event);
       handleTriggerClick();
     }
-  });
+  } as any);
 
   return (
     <div ref={dropdownRef} className={`web-dropdown ${className}`}>

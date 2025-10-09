@@ -1,6 +1,6 @@
 {
   "name": "@losensky-systems/web-components-core",
-  "version": "0.0.12",
+  "version": "0.1.0",
   "description": "Web components library - Losensky Systems",
   "structure": {
     "components": {
@@ -167,7 +167,7 @@
       "general",
       "interactive"
     ],
-    "generatedAt": "2025-10-06T19:18:24.767Z",
+    "generatedAt": "2025-10-07T15:19:58.265Z",
     "buildTool": "vite",
     "framework": "react"
   }

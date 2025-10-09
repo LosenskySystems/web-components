@@ -2,8 +2,7 @@
   "name": "web-components",
   "private": true,
   "workspaces": [
-    "packages/*",
-    "apps/*"
+    "packages/*"
   ],
   "scripts": {
     "build": "turbo run build",
