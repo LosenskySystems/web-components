@@ -1,6 +1,6 @@
 {
   "name": "@losensky-systems/web-components-core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Web components library - Losensky Systems",
   "structure": {
     "components": {
@@ -119,6 +119,17 @@
           "category": "elements",
           "subcategory": "general"
         },
+        "progress": {
+          "name": "Progress",
+          "path": "./components/elements/progress",
+          "exports": [
+            "Progress"
+          ],
+          "props": {},
+          "css": "./components/elements/progress/index.css",
+          "category": "elements",
+          "subcategory": "general"
+        },
         "tooltip": {
           "name": "TooltipTrigger",
           "path": "./components/elements/tooltip",
@@ -159,7 +170,7 @@
     }
   },
   "metadata": {
-    "totalComponents": 10,
+    "totalComponents": 11,
     "categories": [
       "elements"
     ],
@@ -167,7 +178,7 @@
       "general",
       "interactive"
     ],
-    "generatedAt": "2025-10-09T17:09:14.544Z",
+    "generatedAt": "2025-10-09T20:07:02.681Z",
     "buildTool": "vite",
     "framework": "react"
   }

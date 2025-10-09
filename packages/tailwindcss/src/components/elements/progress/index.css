@@ -1,0 +1,101 @@
+/* Progress Component - Tailwind CSS */
+
+@layer components {
+  .progress {
+    @apply inline-flex items-center gap-2;
+  }
+
+  /* Bar variant */
+  .progress--bar {
+    @apply w-full;
+  }
+
+  .progress__track {
+    @apply relative rounded-full overflow-hidden flex-1;
+    background-color: var(--color-gray-200);
+  }
+
+  .progress--sm .progress__track {
+    @apply h-1;
+  }
+
+  .progress--md .progress__track {
+    @apply h-2;
+  }
+
+  .progress--lg .progress__track {
+    @apply h-3;
+  }
+
+  .progress__fill {
+    @apply h-full rounded-full transition-all duration-300 ease-in-out;
+    background-color: var(--color-primary-500);
+  }
+
+  /* Circular variant */
+  .progress--circular {
+    @apply relative inline-flex items-center justify-center;
+  }
+
+  .progress__svg {
+    @apply -rotate-90;
+  }
+
+  .progress__circle {
+    @apply fill-none transition-all duration-300 ease-in-out;
+  }
+
+  .progress__circle--bg {
+    stroke: var(--color-gray-200);
+  }
+
+  .progress__circle--progress {
+    @apply stroke-2;
+    stroke: var(--color-primary-500);
+    stroke-linecap: round;
+  }
+
+  /* Size variants */
+  .progress--sm {
+    @apply text-xs;
+  }
+
+  .progress--md {
+    @apply text-sm;
+  }
+
+  .progress--lg {
+    @apply text-base;
+  }
+
+  /* Color variants */
+  .progress--primary .progress__fill,
+  .progress--primary .progress__circle--progress {
+    background-color: var(--color-primary-500);
+    stroke: var(--color-primary-500);
+  }
+
+  .progress--success .progress__fill,
+  .progress--success .progress__circle--progress {
+    background-color: var(--color-success);
+    stroke: var(--color-success);
+  }
+
+  .progress--warning .progress__fill,
+  .progress--warning .progress__circle--progress {
+    background-color: var(--color-warning);
+    stroke: var(--color-warning);
+  }
+
+  .progress--error .progress__fill,
+  .progress--error .progress__circle--progress {
+    background-color: var(--color-error);
+    stroke: var(--color-error);
+  }
+
+  /* Label */
+  .progress__label {
+    @apply font-medium min-w-10 text-right;
+    color: var(--color-gray-600);
+  }
+}
