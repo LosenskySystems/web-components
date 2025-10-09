@@ -8,7 +8,10 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "dev:local": "npm run workspace:enable && pnpm install && turbo run dev",
+    "workspace:enable": "node scripts/toggle-workspace.js enable",
+    "workspace:disable": "node scripts/toggle-workspace.js disable"
   },
   "devDependencies": {
     "prettier": "^3.6.2",

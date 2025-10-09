@@ -21,11 +21,11 @@ importers:
   apps/demo:
     dependencies:
       '@losensky-systems/web-components-core':
-        specifier: workspace:*
-        version: link:../../packages/core
+        specifier: ^0.1.0
+        version: 0.1.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@losensky-systems/web-components-tailwindcss':
-        specifier: workspace:*
-        version: link:../../packages/tailwindcss
+        specifier: ^0.0.1
+        version: 0.0.1
       '@tailwindcss/vite':
         specifier: ^4.1.14
         version: 4.1.14(vite@7.1.9(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.8.1))
@@ -79,11 +79,11 @@ importers:
   apps/web:
     dependencies:
       '@losensky-systems/web-components-core':
-        specifier: workspace:*
-        version: link:../../packages/core
+        specifier: ^0.1.0
+        version: 0.1.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@losensky-systems/web-components-tailwindcss':
-        specifier: workspace:*
-        version: link:../../packages/tailwindcss
+        specifier: ^0.0.1
+        version: 0.0.1
       '@mdx-js/react':
         specifier: ^3.1.1
         version: 3.1.1(@types/react@19.2.0)(react@19.2.0)
@@ -793,6 +793,15 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
+
+  '@losensky-systems/web-components-core@0.1.0':
+    resolution: {integrity: sha512-07b1PeR9tBgdbYATOxKe/ewlI4J7GmkOBv3uTfrwpTBaIg1kEyXHsHpN3YW9LXvp5jn1MbLPl6o1Ov4FWK+KcA==}
+    peerDependencies:
+      react: '>=17.0.0'
+      react-dom: '>=17.0.0'
+
+  '@losensky-systems/web-components-tailwindcss@0.0.1':
+    resolution: {integrity: sha512-8lCqTVdY+nw88jTcOyU7ljtVujX67nBoPL+P/LxyL9e1jErRhMLiMjko4difSZ6rjbt+sHmYZm0aLXuWcfaHMQ==}
 
   '@mdx-js/mdx@3.1.1':
     resolution: {integrity: sha512-f6ZO2ifpwAQIpzGWaBQT2TXxPv6z3RBzQKpVftEWN78Vl/YweF1uwussDx8ECAXVtr3Rs89fKyG9YlzUs9DyGQ==}
@@ -3932,6 +3941,14 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
+
+  '@losensky-systems/web-components-core@0.1.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
+    dependencies:
+      '@losensky-systems/web-components-tailwindcss': link:packages/tailwindcss
+      react: 19.2.0
+      react-dom: 19.2.0(react@19.2.0)
+
+  '@losensky-systems/web-components-tailwindcss@0.0.1': {}
 
   '@mdx-js/mdx@3.1.1':
     dependencies:

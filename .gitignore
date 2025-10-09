@@ -48,3 +48,6 @@ apps/web-core/*
 
 # Apps - moved to separate repo, kept locally for testing
 apps/
+
+# Workspace backup for local development mode
+pnpm-workspace.backup.yaml
