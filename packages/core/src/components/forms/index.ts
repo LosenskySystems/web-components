@@ -4,3 +4,4 @@ export { Select, type SelectProps, type SelectItemProps } from './select';
 export { Textarea, type TextareaProps } from './textarea';
 export { Checkbox, type CheckboxProps } from './checkbox';
 export { Radio, type RadioProps } from './radio';
+export { Slider, type SliderProps } from './slider';

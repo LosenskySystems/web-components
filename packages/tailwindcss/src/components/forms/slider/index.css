@@ -1,0 +1,225 @@
+/* Slider component styles */
+.web-slider {
+  @apply relative w-full;
+  user-select: none;
+}
+
+.web-slider-track {
+  @apply relative w-full bg-gray-200 rounded-full cursor-pointer;
+  height: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.web-slider-track:hover {
+  background-color: #e5e7eb;
+}
+
+.web-slider-fill {
+  @apply absolute top-0 bg-blue-400 rounded-full transition-all duration-200;
+  height: 100%;
+  pointer-events: none;
+}
+
+.web-slider-thumb {
+  @apply absolute top-1/2 transform -translate-y-1/2 -translate-x-1/2 bg-white border-2 border-blue-400 rounded-full cursor-pointer transition-all duration-200;
+  width: 20px;
+  height: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.web-slider-thumb:hover {
+  @apply border-blue-500;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.web-slider-thumb:active {
+  @apply border-blue-600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.web-slider-value {
+  @apply absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-white text-gray-900 text-xs rounded border border-gray-300;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.web-slider-value::after {
+  content: '';
+  @apply absolute top-full left-1/2 transform -translate-x-1/2;
+  border: 4px solid transparent;
+  border-top-color: #d1d5db;
+}
+
+/* Size variants */
+.web-slider-sm .web-slider-track {
+  height: 4px;
+}
+
+.web-slider-sm .web-slider-thumb {
+  width: 16px;
+  height: 16px;
+}
+
+.web-slider-sm .web-slider-value {
+  @apply text-xs px-1.5 py-0.5;
+}
+
+.web-slider-md .web-slider-track {
+  height: 6px;
+}
+
+.web-slider-md .web-slider-thumb {
+  width: 20px;
+  height: 20px;
+}
+
+.web-slider-lg .web-slider-track {
+  height: 8px;
+}
+
+.web-slider-lg .web-slider-thumb {
+  width: 24px;
+  height: 24px;
+}
+
+.web-slider-lg .web-slider-value {
+  @apply text-sm px-3 py-1.5;
+}
+
+/* Range mode */
+.web-slider-range .web-slider-thumb-max {
+  @apply border-blue-400;
+}
+
+.web-slider-range .web-slider-thumb-max:hover {
+  @apply border-blue-500;
+}
+
+.web-slider-range .web-slider-thumb-max:active {
+  @apply border-blue-600;
+}
+
+/* Disabled state */
+.web-slider-disabled {
+  @apply cursor-not-allowed opacity-50;
+}
+
+.web-slider-disabled .web-slider-track {
+  @apply cursor-not-allowed;
+  background-color: #f3f4f6;
+}
+
+.web-slider-disabled .web-slider-fill {
+  background-color: #9ca3af;
+}
+
+.web-slider-disabled .web-slider-thumb {
+  @apply cursor-not-allowed border-gray-400;
+  background-color: #f9fafb;
+}
+
+.web-slider-disabled .web-slider-thumb:hover {
+  @apply border-gray-400;
+  transform: translateY(-50%) translateX(-50%) scale(1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.web-slider-disabled .web-slider-value {
+  @apply bg-gray-500;
+}
+
+.web-slider-disabled .web-slider-value::after {
+  border-top-color: #6b7280;
+}
+
+/* Dragging state */
+.web-slider-dragging .web-slider-thumb {
+  @apply border-blue-600;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.web-slider-dragging .web-slider-value {
+  @apply bg-blue-50 border-blue-300 text-blue-900;
+}
+
+.web-slider-dragging .web-slider-value::after {
+  border-top-color: #93c5fd;
+}
+
+/* Focus state for accessibility */
+.web-slider-thumb:focus {
+  @apply outline-none ring-2 ring-blue-500;
+  --tw-ring-opacity: 0.5;
+}
+
+/* Touch support */
+@media (hover: none) and (pointer: coarse) {
+  .web-slider-thumb {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .web-slider-track {
+    background-color: #374151;
+  }
+  
+  .web-slider-track:hover {
+    background-color: #4b5563;
+  }
+  
+  .web-slider-thumb {
+    @apply bg-gray-800 border-blue-400;
+  }
+  
+  .web-slider-thumb:hover {
+    @apply border-blue-300;
+  }
+  
+  .web-slider-thumb:active {
+    @apply border-blue-200;
+  }
+  
+  .web-slider-disabled .web-slider-track {
+    background-color: #1f2937;
+  }
+  
+  .web-slider-disabled .web-slider-thumb {
+    @apply border-gray-600;
+    background-color: #111827;
+  }
+}
+
+/* Manual dark mode class */
+.dark .web-slider-track {
+  background-color: #374151;
+}
+
+.dark .web-slider-track:hover {
+  background-color: #4b5563;
+}
+
+.dark .web-slider-thumb {
+  @apply bg-gray-800 border-blue-400;
+}
+
+.dark .web-slider-thumb:hover {
+  @apply border-blue-300;
+}
+
+.dark .web-slider-thumb:active {
+  @apply border-blue-200;
+}
+
+.dark .web-slider-disabled .web-slider-track {
+  background-color: #1f2937;
+}
+
+.dark .web-slider-disabled .web-slider-thumb {
+  @apply border-gray-600;
+  background-color: #111827;
+}
