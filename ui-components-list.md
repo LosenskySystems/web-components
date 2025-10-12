@@ -20,7 +20,7 @@
 - ✅ Select 
 - ✅ Checkbox
 - ✅ Radio Button
-- ❌ Toggle / Switch
+- ✅ Toggle / Switch
 - ✅ Range Slider
 - ❌ File Upload (drag & drop + input)
 - ❌ Date Picker / Time Picker
@@ -105,7 +105,7 @@ The **Advanced** set is optional but useful for full-featured apps.
 
 ## 📊 Progress Summary
 
-**✅ COMPLETED (19 components):**
+**✅ COMPLETED (20 components):**
 
 **Elements (9):**
 - Button (with variants, sizes, colors, loading, icons, links)
@@ -119,12 +119,13 @@ The **Advanced** set is optional but useful for full-featured apps.
 - Dropdown (with items, icons, placements, sizes)
 - Alert (with variants, sizes, closable, custom icons)
 
-**Forms (6):**
+**Forms (7):**
 - Input (with sizes, variants, states, helper text)
 - Select (with compound components: Item)
 - Textarea (with sizes, variants, states, helper text)
 - Checkbox (with sizes, variants, states, controlled/uncontrolled)
 - Radio Button (with sizes, variants, states, grouping, uncheckable)
+- Toggle (with optional labels, sizes, controlled/uncontrolled, custom label text)
 - Slider (with single/range modes, sizes, value display, custom min/max/step)
 
 **Navigation (1):**
@@ -135,19 +136,18 @@ The **Advanced** set is optional but useful for full-featured apps.
 - Toast (with variants, sizes, positions, auto-dismiss, custom icons)
 - Accordion (with single/multiple open, controlled state, disabled items, smooth animations)
 
-**❌ NOT DONE (87 components):**
+**❌ NOT DONE (86 components):**
 - Most Navigation components
 - All Layout components  
 - All Utilities/Overlays
 - All Advanced components
 - Remaining Elements (Popover)
-- Most remaining Forms (Toggle, etc.)
+- Most remaining Forms (File Upload, etc.)
 
 **🎯 Next Priority Recommendations:**
-1. **Toggle/Switch** - Common form element
-2. **Modal/Dialog** - Essential for interactions
-3. **Breadcrumbs** - Navigation component
-4. **Table** - Essential for data display
-5. **Progress Bar** - Important for user feedback
+1. **Modal/Dialog** - Essential for interactions
+2. **Breadcrumbs** - Navigation component
+3. **Table** - Essential for data display
+4. **Progress Bar** - Important for user feedback
 
-**Progress: 19/106 components completed (17.9%)**
+**Progress: 20/106 components completed (18.9%)**

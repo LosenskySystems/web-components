@@ -28,6 +28,7 @@
 @import './components/forms/checkbox/index.css';
 @import './components/forms/radio/index.css';
 @import './components/forms/slider/index.css';
+@import './components/forms/toggle/index.css';
 
 /* Import navigation styles */
 @import './components/navigation/tabs/index.css';
