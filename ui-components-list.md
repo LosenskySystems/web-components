@@ -56,7 +56,7 @@
 ## 📐 Layout / Sections
 
 - ❌ Grid system
-- ❌ Container
+- ✅ Container
 - ❌ Stack (vertical/horizontal spacing)
 - ❌ Flex utilities (alignment helpers)
 - ❌ Page Header (title + actions)
@@ -102,7 +102,7 @@ The **Advanced** set is optional but useful for full-featured apps.
 
 ## 📊 Progress Summary
 
-**✅ COMPLETED (24 components):**
+**✅ COMPLETED (25 components):**
 
 **Elements (9):**
 - Button (with variants, sizes, colors, loading, icons, links)
@@ -139,7 +139,10 @@ The **Advanced** set is optional but useful for full-featured apps.
 **Overlays (1):**
 - Modal (with compound components: Header, Body, Footer, controlled state, accessibility features)
 
-**❌ NOT DONE (82 components):**
+**Layout (1):**
+- Container (with responsive sizes, configurable padding, polymorphic rendering, centering control)
+
+**❌ NOT DONE (81 components):**
 - Most Navigation components
 - All Layout components  
 - All Utilities/Overlays
@@ -153,4 +156,4 @@ The **Advanced** set is optional but useful for full-featured apps.
 3. **File Upload** - Important for forms
 4. **Drawer/Off-canvas** - Side panel component
 
-**Progress: 24/106 components completed (22.6%)**
+**Progress: 25/106 components completed (23.6%)**

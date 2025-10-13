@@ -1,0 +1,139 @@
+/* Container Component Styles */
+
+/* Base container */
+.web-container {
+  @apply w-full;
+}
+
+/* Size variants */
+.web-container-sm {
+  max-width: 640px;
+}
+
+.web-container-md {
+  max-width: 768px;
+}
+
+.web-container-lg {
+  max-width: 1024px;
+}
+
+.web-container-xl {
+  max-width: 1280px;
+}
+
+.web-container-2xl {
+  max-width: 1536px;
+}
+
+.web-container-full {
+  max-width: 100%;
+}
+
+.web-container-fluid {
+  max-width: 90%;
+}
+
+/* Centering */
+.web-container-centered {
+  @apply mx-auto;
+}
+
+/* Padding variants - All sides */
+.web-container-padding-none {
+  padding: 0;
+}
+
+.web-container-padding-sm {
+  @apply p-2;
+}
+
+.web-container-padding-md {
+  @apply p-4;
+}
+
+.web-container-padding-lg {
+  @apply p-6;
+}
+
+.web-container-padding-xl {
+  @apply p-8;
+}
+
+/* Padding variants - Horizontal only */
+.web-container-padding-x-none {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.web-container-padding-x-sm {
+  @apply px-2;
+}
+
+.web-container-padding-x-md {
+  @apply px-4;
+}
+
+.web-container-padding-x-lg {
+  @apply px-6;
+}
+
+.web-container-padding-x-xl {
+  @apply px-8;
+}
+
+/* Padding variants - Vertical only */
+.web-container-padding-y-none {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.web-container-padding-y-sm {
+  @apply py-2;
+}
+
+.web-container-padding-y-md {
+  @apply py-4;
+}
+
+.web-container-padding-y-lg {
+  @apply py-6;
+}
+
+.web-container-padding-y-xl {
+  @apply py-8;
+}
+
+/* Responsive behavior for fluid container */
+@media (min-width: 640px) {
+  .web-container-fluid {
+    max-width: 85%;
+  }
+}
+
+@media (min-width: 768px) {
+  .web-container-fluid {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .web-container-fluid {
+    max-width: 75%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .web-container-fluid {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 1536px) {
+  .web-container-fluid {
+    max-width: 65%;
+  }
+}
+
+/* Dark mode support - Container doesn't need theme-specific colors as it's primarily layout-focused */
+/* The component uses transparent background and relies on content for theming */

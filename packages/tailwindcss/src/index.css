@@ -40,3 +40,6 @@
 
 /* Import overlay styles */
 @import './components/overlays/modal/index.css';
+
+/* Import layout styles */
+@import './components/layout/container/index.css';
