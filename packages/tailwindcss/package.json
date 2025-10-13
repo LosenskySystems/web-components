@@ -1,6 +1,6 @@
 {
   "name": "@losensky-systems/web-components-tailwindcss",
-  "version": "0.0.1",
+  "version": "0.1.2",
   "description": "Tailwind CSS components for Losensky Systems web components",
   "type": "module",
   "main": "dist/index.css",
