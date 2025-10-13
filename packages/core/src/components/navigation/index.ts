@@ -11,3 +11,13 @@ export {
   type TabsContentProps,
   type TabsPanelProps
 } from './tabs';
+
+export {
+  Navbar,
+  type NavbarProps,
+  type NavbarBrandProps,
+  type NavbarNavProps,
+  type NavbarItemProps,
+  type NavbarActionsProps,
+  type NavbarToggleProps,
+} from './navbar';
