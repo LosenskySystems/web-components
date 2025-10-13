@@ -56,7 +56,7 @@
 
 - ✅ Grid system
 - ✅ Container
-- ❌ Stack (vertical/horizontal spacing)
+- ✅ Stack (vertical/horizontal spacing)
 - ❌ Flex utilities (alignment helpers)
 - ❌ Page Header (title + actions)
 - ❌ Footer
@@ -89,4 +89,4 @@
 - ❌ Admin Tables (CRUD)
 
 ------------------------------------------------------------------------
-**Progress: 27/55 components completed (49.1%)**
+**Progress: 28/55 components completed (50.9%)**
