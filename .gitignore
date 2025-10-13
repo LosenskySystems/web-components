@@ -49,5 +49,8 @@ apps/web-core/*
 # Apps - web moved to separate repo, kept locally for testing
 apps/web/
 
+# Apps - docs removed from git tracking
+apps/docs/
+
 # Workspace backup for local development mode
 pnpm-workspace.backup.yaml
