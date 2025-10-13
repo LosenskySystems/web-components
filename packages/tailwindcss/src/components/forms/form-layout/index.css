@@ -1,0 +1,157 @@
+/* Form Layout Components Styles */
+
+/* Base Form */
+.web-form {
+  @apply relative;
+}
+
+.web-form-loading {
+  @apply pointer-events-none;
+}
+
+.web-form-disabled {
+  @apply opacity-60 pointer-events-none;
+}
+
+.web-form-loading-overlay {
+  @apply absolute inset-0 flex items-center justify-center bg-white z-10 rounded-lg;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.web-form-content {
+  @apply space-y-6;
+}
+
+/* Form Field */
+.web-form-field {
+  @apply flex flex-col space-y-2;
+}
+
+.web-form-field-sm {
+  @apply space-y-1;
+}
+
+.web-form-field-md {
+  @apply space-y-2;
+}
+
+.web-form-field-lg {
+  @apply space-y-3;
+}
+
+.web-form-field-disabled {
+  @apply opacity-60;
+}
+
+.web-form-field-control {
+  @apply w-full;
+}
+
+/* Form Section */
+.web-form-section {
+  @apply space-y-4;
+}
+
+.web-form-section-spacing-sm {
+  @apply space-y-3;
+}
+
+.web-form-section-spacing-md {
+  @apply space-y-4;
+}
+
+.web-form-section-spacing-lg {
+  @apply space-y-6;
+}
+
+.web-form-section-disabled {
+  @apply opacity-60;
+}
+
+.web-form-section-header {
+  @apply space-y-2;
+}
+
+.web-form-section-title {
+  @apply text-lg font-semibold text-gray-900;
+}
+
+.web-form-section-description {
+  @apply text-sm text-gray-600;
+}
+
+.web-form-section-fields {
+  @apply space-y-4;
+}
+
+.web-form-section-separator {
+  @apply mt-6 mb-4;
+}
+
+/* Form Actions */
+.web-form-actions {
+  @apply flex items-center gap-3;
+}
+
+.web-form-actions-left {
+  @apply justify-start;
+}
+
+.web-form-actions-right {
+  @apply justify-end;
+}
+
+.web-form-actions-center {
+  @apply justify-center;
+}
+
+.web-form-actions-space-between {
+  @apply justify-between;
+}
+
+.web-form-actions-spacing-sm {
+  @apply gap-2;
+}
+
+.web-form-actions-spacing-md {
+  @apply gap-3;
+}
+
+.web-form-actions-spacing-lg {
+  @apply gap-4;
+}
+
+.web-form-actions-stack-mobile {
+  @apply flex-col sm:flex-row;
+}
+
+.web-form-actions-disabled {
+  @apply opacity-60;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .web-form-loading-overlay {
+    background-color: rgba(17, 24, 39, 0.75);
+  }
+  
+  .web-form-section-title {
+    @apply text-gray-100;
+  }
+  
+  .web-form-section-description {
+    @apply text-gray-400;
+  }
+}
+
+.dark .web-form-loading-overlay {
+  background-color: rgba(17, 24, 39, 0.75);
+}
+
+.dark .web-form-section-title {
+  @apply text-gray-100;
+}
+
+.dark .web-form-section-description {
+  @apply text-gray-400;
+}

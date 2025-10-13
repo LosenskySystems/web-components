@@ -30,6 +30,7 @@
 @import './components/forms/slider/index.css';
 @import './components/forms/toggle/index.css';
 @import './components/forms/datepicker/index.css';
+@import './components/forms/form-layout/index.css';
 
 /* Import navigation styles */
 @import './components/navigation/tabs/index.css';
