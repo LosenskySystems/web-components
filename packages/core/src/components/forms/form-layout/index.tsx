@@ -1,4 +1,4 @@
-import { Form } from './Form';
+import { Form as FormComponent } from './Form';
 import { FormField } from './FormField';
 import { FormSection } from './FormSection';
 import { FormActions } from './FormActions';
@@ -13,14 +13,17 @@ export type {
 } from './form-layout.types';
 
 // Main Form component with compound components
-export const FormComponent = Object.assign(Form, {
+const FormWithSubComponents = Object.assign(FormComponent, {
   Field: FormField,
   Section: FormSection,
   Actions: FormActions,
 });
 
+// Export the compound component as Form
+export { FormWithSubComponents as Form };
+
 // Individual exports for flexibility
-export { Form, FormField, FormSection, FormActions };
+export { FormField, FormSection, FormActions };
 
 // Default export is the compound component
-export default FormComponent;
+export default FormWithSubComponents;

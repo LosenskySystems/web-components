@@ -1,0 +1,204 @@
+/* Drawer Component - Tailwind CSS */
+
+@layer components {
+  /* Backdrop */
+  .web-drawer-backdrop {
+    @apply fixed inset-0 z-50 flex items-center justify-center;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: backdropFadeIn 200ms ease-out;
+  }
+
+  /* Drawer Container */
+  .web-drawer {
+    @apply fixed top-0 h-full shadow-2xl flex flex-col;
+    background-color: var(--color-white);
+    border-color: var(--color-gray-200);
+    max-width: 100vw;
+  }
+
+  /* Side Variants */
+  .web-drawer-left {
+    @apply left-0;
+    animation: drawerSlideInLeft 300ms ease-out;
+    border-right: 1px solid;
+  }
+
+  .web-drawer-right {
+    @apply right-0;
+    animation: drawerSlideInRight 300ms ease-out;
+    border-left: 1px solid;
+  }
+
+  /* Size Variants */
+  .web-drawer-sm {
+    @apply w-80; /* 320px */
+  }
+
+  .web-drawer-md {
+    @apply w-112; /* 448px */
+  }
+
+  .web-drawer-lg {
+    @apply w-160; /* 640px */
+  }
+
+  .web-drawer-xl {
+    @apply w-192; /* 768px */
+  }
+
+  .web-drawer-full {
+    @apply w-full;
+  }
+
+  /* Drawer Header */
+  .web-drawer-header {
+    @apply flex items-start justify-between px-6 py-4;
+  }
+
+  .web-drawer-header-content {
+    @apply flex-1 pr-4;
+  }
+
+  .web-drawer-header-title {
+    @apply text-lg font-semibold m-0;
+    color: var(--color-gray-900);
+  }
+
+  .web-drawer-header-close {
+    @apply flex-shrink-0;
+  }
+
+  .web-drawer-header-with-divider {
+    border-bottom: 1px solid var(--color-gray-200);
+  }
+
+  .web-drawer-close-button {
+    @apply inline-flex items-center justify-center w-8 h-8 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors duration-200;
+    color: var(--color-gray-400);
+    background-color: transparent;
+  }
+
+  .web-drawer-close-button:hover {
+    color: var(--color-gray-600);
+    background-color: var(--color-gray-100);
+  }
+
+  /* Drawer Body */
+  .web-drawer-body {
+    @apply flex-1 px-6 py-4;
+    color: var(--color-gray-700);
+  }
+
+  .web-drawer-body-scrollable {
+    @apply overflow-y-auto;
+  }
+
+  /* Drawer Footer */
+  .web-drawer-footer {
+    @apply flex px-6 py-4;
+  }
+
+  .web-drawer-footer-align-left {
+    @apply justify-start;
+  }
+
+  .web-drawer-footer-align-right {
+    @apply justify-end;
+  }
+
+  .web-drawer-footer-align-center {
+    @apply justify-center;
+  }
+
+  .web-drawer-footer-align-space-between {
+    @apply justify-between;
+  }
+
+  .web-drawer-footer-spacing-sm {
+    @apply gap-2;
+  }
+
+  .web-drawer-footer-spacing-md {
+    @apply gap-3;
+  }
+
+  .web-drawer-footer-spacing-lg {
+    @apply gap-4;
+  }
+
+  .web-drawer-footer-with-divider {
+    border-top: 1px solid var(--color-gray-200);
+  }
+
+  /* Disabled State */
+  .web-drawer-disabled {
+    @apply opacity-60 pointer-events-none;
+  }
+
+  .web-drawer-header-disabled,
+  .web-drawer-body-disabled,
+  .web-drawer-footer-disabled {
+    @apply opacity-60 pointer-events-none;
+  }
+
+  /* Animations */
+  @keyframes backdropFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes drawerSlideInLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes drawerSlideInRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  /* Dark mode support */
+  .dark .web-drawer {
+    background-color: var(--color-gray-900);
+    border-color: var(--color-gray-700);
+  }
+
+  .dark .web-drawer-header-title {
+    color: var(--color-gray-100);
+  }
+
+  .dark .web-drawer-header-with-divider {
+    border-bottom-color: var(--color-gray-700);
+  }
+
+  .dark .web-drawer-body {
+    color: var(--color-gray-300);
+  }
+
+  .dark .web-drawer-close-button {
+    color: var(--color-gray-400);
+    background-color: transparent;
+  }
+
+  .dark .web-drawer-close-button:hover {
+    color: var(--color-gray-200);
+    background-color: var(--color-gray-800);
+  }
+
+  .dark .web-drawer-footer-with-divider {
+    border-top-color: var(--color-gray-700);
+  }
+}
+
