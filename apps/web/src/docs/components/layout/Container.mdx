@@ -1,0 +1,202 @@
+# Container
+
+A flexible layout container component that provides responsive max-width constraints, configurable padding, and useful layout variants for consistent content wrapping.
+
+## Basic Usage
+
+<CodeBlock code={`<Container>
+  <p>This is basic container content with default settings.</p>
+</Container>`}>
+  <div className="w-full">
+    <Container>
+      <div className="bg-gray-100 p-4 rounded">
+        <p>This is basic container content with default settings.</p>
+      </div>
+    </Container>
+  </div>
+</CodeBlock>
+
+## Size Variants
+
+<CodeBlock code={`<Container size="sm">
+  <p>Small container (640px max-width)</p>
+</Container>
+
+<Container size="md">
+  <p>Medium container (768px max-width)</p>
+</Container>
+
+<Container size="lg">
+  <p>Large container (1024px max-width) - Default</p>
+</Container>
+
+<Container size="xl">
+  <p>Extra large container (1280px max-width)</p>
+</Container>
+
+<Container size="2xl">
+  <p>2X large container (1536px max-width)</p>
+</Container>
+
+<Container size="full">
+  <p>Full width container (100% max-width)</p>
+</Container>
+
+<Container size="fluid">
+  <p>Fluid container (responsive 90%-65% max-width)</p>
+</Container>`}>
+  <div className="space-y-4">
+    <Container size="sm">
+      <div className="bg-blue-100 p-2 rounded text-sm">Small (640px)</div>
+    </Container>
+    <Container size="md">
+      <div className="bg-green-100 p-2 rounded text-sm">Medium (768px)</div>
+    </Container>
+    <Container size="lg">
+      <div className="bg-yellow-100 p-2 rounded text-sm">Large (1024px) - Default</div>
+    </Container>
+    <Container size="xl">
+      <div className="bg-purple-100 p-2 rounded text-sm">Extra Large (1280px)</div>
+    </Container>
+    <Container size="2xl">
+      <div className="bg-pink-100 p-2 rounded text-sm">2X Large (1536px)</div>
+    </Container>
+    <Container size="full">
+      <div className="bg-gray-200 p-2 rounded text-sm">Full Width (100%)</div>
+    </Container>
+    <Container size="fluid">
+      <div className="bg-indigo-100 p-2 rounded text-sm">Fluid (90%-65%)</div>
+    </Container>
+  </div>
+</CodeBlock>
+
+## Padding Options
+
+<CodeBlock code={`<Container padding="sm">
+  <p>Container with small padding on all sides</p>
+</Container>
+
+<Container paddingX="md" paddingY="lg">
+  <p>Container with medium horizontal and large vertical padding</p>
+</Container>
+
+<Container padding="none">
+  <p>Container with no padding</p>
+</Container>`}>
+  <div className="space-y-4">
+    <Container padding="sm">
+      <div className="bg-blue-50 p-2 rounded border border-blue-200">
+        Small padding on all sides
+      </div>
+    </Container>
+    <Container paddingX="md" paddingY="lg">
+      <div className="bg-green-50 p-2 rounded border border-green-200">
+        Medium horizontal, large vertical padding
+      </div>
+    </Container>
+    <Container padding="none">
+      <div className="bg-yellow-50 p-2 rounded border border-yellow-200">
+        No padding
+      </div>
+    </Container>
+  </div>
+</CodeBlock>
+
+## Centering Control
+
+<CodeBlock code={`<Container centered={true}>
+  <p>Centered container (default)</p>
+</Container>
+
+<Container centered={false}>
+  <p>Left-aligned container</p>
+</Container>`}>
+  <div className="space-y-4">
+    <Container centered={true}>
+      <div className="bg-purple-50 p-4 rounded border border-purple-200">
+        Centered container (default)
+      </div>
+    </Container>
+    <Container centered={false}>
+      <div className="bg-pink-50 p-4 rounded border border-pink-200">
+        Left-aligned container
+      </div>
+    </Container>
+  </div>
+</CodeBlock>
+
+## Polymorphic Component
+
+<CodeBlock code={`<Container as="section" padding="lg">
+  <h2>Section Container</h2>
+  <p>This container renders as a section element.</p>
+</Container>
+
+<Container as="article" padding="md">
+  <h3>Article Container</h3>
+  <p>This container renders as an article element.</p>
+</Container>
+
+<Container as="main" padding="xl">
+  <h1>Main Container</h1>
+  <p>This container renders as a main element.</p>
+</Container>`}>
+  <div className="space-y-4">
+    <Container as="section" padding="lg">
+      <div className="bg-blue-50 p-4 rounded border border-blue-200">
+        <h3 className="font-semibold text-blue-900 mb-2">Section Container</h3>
+        <p className="text-blue-700">This container renders as a section element.</p>
+      </div>
+    </Container>
+    <Container as="article" padding="md">
+      <div className="bg-green-50 p-4 rounded border border-green-200">
+        <h3 className="font-semibold text-green-900 mb-2">Article Container</h3>
+        <p className="text-green-700">This container renders as an article element.</p>
+      </div>
+    </Container>
+    <Container as="main" padding="xl">
+      <div className="bg-purple-50 p-4 rounded border border-purple-200">
+        <h3 className="font-semibold text-purple-900 mb-2">Main Container</h3>
+        <p className="text-purple-700">This container renders as a main element.</p>
+      </div>
+    </Container>
+  </div>
+</CodeBlock>
+
+## Nested Containers
+
+<CodeBlock code={`<Container size="xl" padding="lg">
+  <h2>Outer Container</h2>
+  <Container size="md" padding="md">
+    <h3>Nested Container</h3>
+    <p>You can nest containers for complex layouts.</p>
+  </Container>
+</Container>`}>
+  <div className="w-full">
+    <Container size="xl" padding="lg">
+      <div className="bg-gray-100 p-4 rounded">
+        <h3 className="font-semibold text-gray-900 mb-4">Outer Container</h3>
+        <Container size="md" padding="md">
+          <div className="bg-white p-4 rounded border border-gray-200">
+            <h4 className="font-semibold text-gray-800 mb-2">Nested Container</h4>
+            <p className="text-gray-600">You can nest containers for complex layouts.</p>
+          </div>
+        </Container>
+      </div>
+    </Container>
+  </div>
+</CodeBlock>
+
+## Props
+
+### ContainerProps
+<PropsTable props={[
+  { name: 'size', type: "'sm' | 'md' | 'lg' | 'xl' | '2xl' | 'full' | 'fluid'", default: "'lg'", description: 'Container size variant with corresponding max-width.' },
+  { name: 'padding', type: "'none' | 'sm' | 'md' | 'lg' | 'xl'", description: 'Padding applied to all sides of the container.' },
+  { name: 'paddingX', type: "'none' | 'sm' | 'md' | 'lg' | 'xl'", description: 'Horizontal padding (left and right) only.' },
+  { name: 'paddingY', type: "'none' | 'sm' | 'md' | 'lg' | 'xl'", description: 'Vertical padding (top and bottom) only.' },
+  { name: 'centered', type: 'boolean', default: 'true', description: 'Whether to center the container horizontally with auto margins.' },
+  { name: 'as', type: 'React.ElementType', default: "'div'", description: 'HTML element to render as (div, section, article, main, etc.).' },
+  { name: 'className', type: 'string', description: 'Additional CSS classes to apply to the container.' },
+  { name: 'children', type: 'React.ReactNode', description: 'Content to render inside the container.' }
+]} />

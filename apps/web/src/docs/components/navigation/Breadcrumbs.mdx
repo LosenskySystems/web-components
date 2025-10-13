@@ -1,0 +1,141 @@
+# Breadcrumbs
+
+A flexible breadcrumb navigation component for displaying hierarchical navigation paths. Supports customizable separators, icons, active states, and responsive behavior.
+
+## Basic Usage
+
+<CodeBlock code={`<Breadcrumbs>
+  <Breadcrumbs.Item href="/">Home</Breadcrumbs.Item>
+  <Breadcrumbs.Item href="/products">Products</Breadcrumbs.Item>
+  <Breadcrumbs.Item href="/products/electronics">Electronics</Breadcrumbs.Item>
+  <Breadcrumbs.Item active>Laptop</Breadcrumbs.Item>
+</Breadcrumbs>`}>
+  <BasicBreadcrumbsExample />
+</CodeBlock>
+
+## With Icons
+
+<CodeBlock code={`<Breadcrumbs>
+  <Breadcrumbs.Item href="/" icon={<HomeIcon />}>
+    Home
+  </Breadcrumbs.Item>
+  <Breadcrumbs.Item href="/products" icon={<ProductsIcon />}>
+    Products
+  </Breadcrumbs.Item>
+  <Breadcrumbs.Item href="/products/electronics" icon={<ElectronicsIcon />}>
+    Electronics
+  </Breadcrumbs.Item>
+  <Breadcrumbs.Item active icon={<LaptopIcon />}>
+    Laptop
+  </Breadcrumbs.Item>
+</Breadcrumbs>`}>
+  <BreadcrumbsWithIconsExample />
+</CodeBlock>
+
+## Custom Separator
+
+<CodeBlock code={`<Breadcrumbs separator=">">
+  <Breadcrumbs.Item href="/">Home</Breadcrumbs.Item>
+  <Breadcrumbs.Item href="/products">Products</Breadcrumbs.Item>
+  <Breadcrumbs.Item href="/products/electronics">Electronics</Breadcrumbs.Item>
+  <Breadcrumbs.Item active>Laptop</Breadcrumbs.Item>
+</Breadcrumbs>
+
+<Breadcrumbs separator="•">
+  <Breadcrumbs.Item href="/">Home</Breadcrumbs.Item>
+  <Breadcrumbs.Item href="/products">Products</Breadcrumbs.Item>
+  <Breadcrumbs.Item active>Laptop</Breadcrumbs.Item>
+</Breadcrumbs>`}>
+  <BreadcrumbsSeparatorExample />
+</CodeBlock>
+
+## Size Variants
+
+<CodeBlock code={`<Breadcrumbs size="sm">
+  <Breadcrumbs.Item href="/">Home</Breadcrumbs.Item>
+  <Breadcrumbs.Item href="/products">Products</Breadcrumbs.Item>
+  <Breadcrumbs.Item active>Laptop</Breadcrumbs.Item>
+</Breadcrumbs>
+
+<Breadcrumbs size="md">
+  <Breadcrumbs.Item href="/">Home</Breadcrumbs.Item>
+  <Breadcrumbs.Item href="/products">Products</Breadcrumbs.Item>
+  <Breadcrumbs.Item active>Laptop</Breadcrumbs.Item>
+</Breadcrumbs>
+
+<Breadcrumbs size="lg">
+  <Breadcrumbs.Item href="/">Home</Breadcrumbs.Item>
+  <Breadcrumbs.Item href="/products">Products</Breadcrumbs.Item>
+  <Breadcrumbs.Item active>Laptop</Breadcrumbs.Item>
+</Breadcrumbs>`}>
+  <BreadcrumbsSizeExample />
+</CodeBlock>
+
+## With Max Items
+
+<CodeBlock code={`<Breadcrumbs maxItems={3}>
+  <Breadcrumbs.Item href="/">Home</Breadcrumbs.Item>
+  <Breadcrumbs.Item href="/products">Products</Breadcrumbs.Item>
+  <Breadcrumbs.Item href="/products/electronics">Electronics</Breadcrumbs.Item>
+  <Breadcrumbs.Item href="/products/electronics/laptops">Laptops</Breadcrumbs.Item>
+  <Breadcrumbs.Item href="/products/electronics/laptops/gaming">Gaming</Breadcrumbs.Item>
+  <Breadcrumbs.Item active>High-End Gaming Laptop</Breadcrumbs.Item>
+</Breadcrumbs>`}>
+  <BreadcrumbsMaxItemsExample />
+</CodeBlock>
+
+## Clickable Handlers
+
+<CodeBlock code={`function MyBreadcrumbs() {
+  const handleNavigate = (path: string) => {
+    console.log('Navigate to:', path);
+  };
+
+  return (
+    <Breadcrumbs>
+      <Breadcrumbs.Item onClick={() => handleNavigate('/')}>
+        Home
+      </Breadcrumbs.Item>
+      <Breadcrumbs.Item onClick={() => handleNavigate('/products')}>
+        Products
+      </Breadcrumbs.Item>
+      <Breadcrumbs.Item active>Current Page</Breadcrumbs.Item>
+    </Breadcrumbs>
+  );
+}`}>
+  <BreadcrumbsClickableExample />
+</CodeBlock>
+
+## Disabled State
+
+<CodeBlock code={`<Breadcrumbs>
+  <Breadcrumbs.Item href="/">Home</Breadcrumbs.Item>
+  <Breadcrumbs.Item disabled>Disabled Item</Breadcrumbs.Item>
+  <Breadcrumbs.Item href="/products">Products</Breadcrumbs.Item>
+  <Breadcrumbs.Item active>Current Page</Breadcrumbs.Item>
+</Breadcrumbs>`}>
+  <BreadcrumbsDisabledExample />
+</CodeBlock>
+
+## Props
+
+### BreadcrumbsProps
+<PropsTable props={[
+  { name: 'separator', type: 'React.ReactNode', default: "'/'", description: 'Separator between breadcrumb items.' },
+  { name: 'size', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Size variant of the breadcrumbs.' },
+  { name: 'maxItems', type: 'number', description: 'Maximum number of items to show before collapsing middle items.' },
+  { name: 'className', type: 'string', description: 'Additional CSS classes.' },
+  { name: 'children', type: 'React.ReactNode', description: 'Breadcrumb items.' }
+]} />
+
+### BreadcrumbItemProps
+<PropsTable props={[
+  { name: 'href', type: 'string', description: 'Link URL for the breadcrumb item.' },
+  { name: 'active', type: 'boolean', default: 'false', description: 'Active/current page state (non-clickable).' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Disabled state.' },
+  { name: 'icon', type: 'React.ReactNode', description: 'Icon element to display before text.' },
+  { name: 'as', type: 'React.ElementType', description: 'HTML element to render as.' },
+  { name: 'onClick', type: '() => void', description: 'Click handler function.' },
+  { name: 'className', type: 'string', description: 'Additional CSS classes.' },
+  { name: 'children', type: 'React.ReactNode', description: 'Item content.' }
+]} />

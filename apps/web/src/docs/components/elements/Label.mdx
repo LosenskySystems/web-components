@@ -1,0 +1,92 @@
+import { Label } from '@losensky-systems/web-components-core'
+
+# Label Component
+
+The Label component provides accessible labels for form elements with proper contrast and styling.
+
+## Import
+
+```tsx
+import { Label } from '@losensky-systems/web-components-core'
+```
+
+## Basic Usage
+
+<CodeBlock code={`<Label htmlFor="email">Email Address</Label>
+<Label htmlFor="password">Password</Label>
+<Label htmlFor="name" required>Full Name</Label>`}>
+  <div className="mb-8">
+    <Label htmlFor="email">Email Address</Label>
+    <Label htmlFor="password">Password</Label>
+    <Label htmlFor="name" required>Full Name</Label>
+  </div>
+</CodeBlock>
+
+## Sizes
+
+<CodeBlock code={`<Label size="sm" htmlFor="small">Small Label</Label>
+<Label size="md" htmlFor="medium">Medium Label (Default)</Label>
+<Label size="lg" htmlFor="large">Large Label</Label>`}>
+  <div className="mb-8">
+    <Label size="sm" htmlFor="small">Small Label</Label>
+    <Label size="md" htmlFor="medium">Medium Label (Default)</Label>
+    <Label size="lg" htmlFor="large">Large Label</Label>
+  </div>
+</CodeBlock>
+
+## Colors
+
+<CodeBlock code={`<Label color="default" htmlFor="default">Default Label</Label>
+<Label color="primary" htmlFor="primary">Primary Label</Label>
+<Label color="success" htmlFor="success">Success Label</Label>
+<Label color="warning" htmlFor="warning">Warning Label</Label>
+<Label color="error" htmlFor="error">Error Label</Label>
+<Label color="muted" htmlFor="muted">Muted Label</Label>`}>
+  <div className="mb-8">
+    <Label color="default" htmlFor="default">Default Label</Label>
+    <Label color="primary" htmlFor="primary">Primary Label</Label>
+    <Label color="success" htmlFor="success">Success Label</Label>
+    <Label color="warning" htmlFor="warning">Warning Label</Label>
+    <Label color="error" htmlFor="error">Error Label</Label>
+    <Label color="muted" htmlFor="muted">Muted Label</Label>
+  </div>
+</CodeBlock>
+
+## Helper Text
+
+<CodeBlock code={`<Label htmlFor="username" helperText="Choose a unique username">
+  Username
+</Label>
+<Label htmlFor="password" errorText="Password must be at least 8 characters">
+  Password
+</Label>
+<Label htmlFor="email" successText="Email address is valid">
+  Email Address
+</Label>`}>
+  <div className="mb-8">
+    <Label htmlFor="username" helperText="Choose a unique username">
+      Username
+    </Label>
+    <Label htmlFor="password" errorText="Password must be at least 8 characters">
+      Password
+    </Label>
+    <Label htmlFor="email" successText="Email address is valid">
+      Email Address
+    </Label>
+  </div>
+</CodeBlock>
+
+## Props
+
+<PropsTable props={[
+  { name: 'children', type: 'React.ReactNode', default: '-', description: 'Label text content' },
+  { name: 'htmlFor', type: 'string', default: '-', description: 'ID of associated form element' },
+  { name: 'required', type: 'boolean', default: 'false', description: 'Show required asterisk' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Disabled state' },
+  { name: 'size', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Label size' },
+  { name: 'color', type: "'default' | 'muted' | 'primary' | 'success' | 'warning' | 'error' | 'info'", default: "'default'", description: 'Label color' },
+  { name: 'helperText', type: 'string', default: '-', description: 'Helper text below label' },
+  { name: 'errorText', type: 'string', default: '-', description: 'Error text below label' },
+  { name: 'successText', type: 'string', default: '-', description: 'Success text below label' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' }
+]} />

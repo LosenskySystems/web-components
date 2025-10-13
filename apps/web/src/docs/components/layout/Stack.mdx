@@ -1,0 +1,354 @@
+# Stack
+
+A flexible layout component for arranging children vertically or horizontally with consistent spacing and alignment options.
+
+## Basic Usage
+
+<CodeBlock code={`<Stack spacing="md">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+</Stack>`}>
+  <Stack spacing="md">
+    <div className="bg-blue-100 p-4 rounded">Item 1</div>
+    <div className="bg-blue-100 p-4 rounded">Item 2</div>
+    <div className="bg-blue-100 p-4 rounded">Item 3</div>
+  </Stack>
+</CodeBlock>
+
+## Direction
+
+<CodeBlock code={`<Stack direction="vertical" spacing="md">
+  <div className="bg-purple-100 p-4 rounded">Vertical Item 1</div>
+  <div className="bg-purple-100 p-4 rounded">Vertical Item 2</div>
+  <div className="bg-purple-100 p-4 rounded">Vertical Item 3</div>
+</Stack>
+
+<Stack direction="horizontal" spacing="md">
+  <div className="bg-green-100 p-4 rounded">Horizontal 1</div>
+  <div className="bg-green-100 p-4 rounded">Horizontal 2</div>
+  <div className="bg-green-100 p-4 rounded">Horizontal 3</div>
+</Stack>`}>
+  <div className="space-y-6">
+    <div>
+      <p className="text-sm text-gray-600 mb-2">Vertical Stack (default)</p>
+      <Stack direction="vertical" spacing="md">
+        <div className="bg-purple-100 p-4 rounded">Vertical Item 1</div>
+        <div className="bg-purple-100 p-4 rounded">Vertical Item 2</div>
+        <div className="bg-purple-100 p-4 rounded">Vertical Item 3</div>
+      </Stack>
+    </div>
+    <div>
+      <p className="text-sm text-gray-600 mb-2">Horizontal Stack</p>
+      <Stack direction="horizontal" spacing="md">
+        <div className="bg-green-100 p-4 rounded">Horizontal 1</div>
+        <div className="bg-green-100 p-4 rounded">Horizontal 2</div>
+        <div className="bg-green-100 p-4 rounded">Horizontal 3</div>
+      </Stack>
+    </div>
+  </div>
+</CodeBlock>
+
+## Spacing Variants
+
+<CodeBlock code={`<Stack spacing="xs">
+  <div>Extra Small Spacing</div>
+  <div>Extra Small Spacing</div>
+</Stack>
+
+<Stack spacing="sm">
+  <div>Small Spacing</div>
+  <div>Small Spacing</div>
+</Stack>
+
+<Stack spacing="md">
+  <div>Medium Spacing (default)</div>
+  <div>Medium Spacing (default)</div>
+</Stack>
+
+<Stack spacing="lg">
+  <div>Large Spacing</div>
+  <div>Large Spacing</div>
+</Stack>
+
+<Stack spacing="xl">
+  <div>Extra Large Spacing</div>
+  <div>Extra Large Spacing</div>
+</Stack>
+
+<Stack spacing="2xl">
+  <div>2X Large Spacing</div>
+  <div>2X Large Spacing</div>
+</Stack>`}>
+  <div className="space-y-6">
+    <div>
+      <p className="text-sm text-gray-600 mb-2">Extra Small (xs)</p>
+      <Stack spacing="xs">
+        <div className="bg-blue-100 p-3 rounded text-sm">Item 1</div>
+        <div className="bg-blue-100 p-3 rounded text-sm">Item 2</div>
+      </Stack>
+    </div>
+    <div>
+      <p className="text-sm text-gray-600 mb-2">Small (sm)</p>
+      <Stack spacing="sm">
+        <div className="bg-green-100 p-3 rounded text-sm">Item 1</div>
+        <div className="bg-green-100 p-3 rounded text-sm">Item 2</div>
+      </Stack>
+    </div>
+    <div>
+      <p className="text-sm text-gray-600 mb-2">Medium (md) - Default</p>
+      <Stack spacing="md">
+        <div className="bg-yellow-100 p-3 rounded text-sm">Item 1</div>
+        <div className="bg-yellow-100 p-3 rounded text-sm">Item 2</div>
+      </Stack>
+    </div>
+    <div>
+      <p className="text-sm text-gray-600 mb-2">Large (lg)</p>
+      <Stack spacing="lg">
+        <div className="bg-purple-100 p-3 rounded text-sm">Item 1</div>
+        <div className="bg-purple-100 p-3 rounded text-sm">Item 2</div>
+      </Stack>
+    </div>
+    <div>
+      <p className="text-sm text-gray-600 mb-2">Extra Large (xl)</p>
+      <Stack spacing="xl">
+        <div className="bg-pink-100 p-3 rounded text-sm">Item 1</div>
+        <div className="bg-pink-100 p-3 rounded text-sm">Item 2</div>
+      </Stack>
+    </div>
+    <div>
+      <p className="text-sm text-gray-600 mb-2">2X Large (2xl)</p>
+      <Stack spacing="2xl">
+        <div className="bg-indigo-100 p-3 rounded text-sm">Item 1</div>
+        <div className="bg-indigo-100 p-3 rounded text-sm">Item 2</div>
+      </Stack>
+    </div>
+  </div>
+</CodeBlock>
+
+## Alignment
+
+<CodeBlock code={`<Stack direction="horizontal" spacing="md" align="start">
+  <div className="bg-blue-100 p-4 rounded h-20">Align Start</div>
+  <div className="bg-blue-100 p-4 rounded h-16">Different Heights</div>
+  <div className="bg-blue-100 p-4 rounded h-24">Align Start</div>
+</Stack>
+
+<Stack direction="horizontal" spacing="md" align="center">
+  <div className="bg-green-100 p-4 rounded h-20">Align Center</div>
+  <div className="bg-green-100 p-4 rounded h-16">Different Heights</div>
+  <div className="bg-green-100 p-4 rounded h-24">Align Center</div>
+</Stack>
+
+<Stack direction="horizontal" spacing="md" align="end">
+  <div className="bg-purple-100 p-4 rounded h-20">Align End</div>
+  <div className="bg-purple-100 p-4 rounded h-16">Different Heights</div>
+  <div className="bg-purple-100 p-4 rounded h-24">Align End</div>
+</Stack>`}>
+  <div className="space-y-6">
+    <div>
+      <p className="text-sm text-gray-600 mb-2">Align: Start</p>
+      <Stack direction="horizontal" spacing="md" align="start">
+        <div className="bg-blue-100 p-4 rounded h-20 flex items-center">Start</div>
+        <div className="bg-blue-100 p-4 rounded h-16 flex items-center">Start</div>
+        <div className="bg-blue-100 p-4 rounded h-24 flex items-center">Start</div>
+      </Stack>
+    </div>
+    <div>
+      <p className="text-sm text-gray-600 mb-2">Align: Center</p>
+      <Stack direction="horizontal" spacing="md" align="center">
+        <div className="bg-green-100 p-4 rounded h-20 flex items-center">Center</div>
+        <div className="bg-green-100 p-4 rounded h-16 flex items-center">Center</div>
+        <div className="bg-green-100 p-4 rounded h-24 flex items-center">Center</div>
+      </Stack>
+    </div>
+    <div>
+      <p className="text-sm text-gray-600 mb-2">Align: End</p>
+      <Stack direction="horizontal" spacing="md" align="end">
+        <div className="bg-purple-100 p-4 rounded h-20 flex items-center">End</div>
+        <div className="bg-purple-100 p-4 rounded h-16 flex items-center">End</div>
+        <div className="bg-purple-100 p-4 rounded h-24 flex items-center">End</div>
+      </Stack>
+    </div>
+  </div>
+</CodeBlock>
+
+## Justify Content
+
+<CodeBlock code={`<Stack direction="horizontal" spacing="md" justify="start">
+  <div className="bg-orange-100 p-4 rounded">Start</div>
+  <div className="bg-orange-100 p-4 rounded">Start</div>
+</Stack>
+
+<Stack direction="horizontal" spacing="md" justify="center">
+  <div className="bg-teal-100 p-4 rounded">Center</div>
+  <div className="bg-teal-100 p-4 rounded">Center</div>
+</Stack>
+
+<Stack direction="horizontal" spacing="md" justify="between">
+  <div className="bg-pink-100 p-4 rounded">Between</div>
+  <div className="bg-pink-100 p-4 rounded">Between</div>
+</Stack>
+
+<Stack direction="horizontal" spacing="md" justify="around">
+  <div className="bg-indigo-100 p-4 rounded">Around</div>
+  <div className="bg-indigo-100 p-4 rounded">Around</div>
+</Stack>`}>
+  <div className="space-y-6">
+    <div>
+      <p className="text-sm text-gray-600 mb-2">Justify: Start</p>
+      <Stack direction="horizontal" spacing="md" justify="start">
+        <div className="bg-orange-100 p-4 rounded">Start</div>
+        <div className="bg-orange-100 p-4 rounded">Start</div>
+      </Stack>
+    </div>
+    <div>
+      <p className="text-sm text-gray-600 mb-2">Justify: Center</p>
+      <Stack direction="horizontal" spacing="md" justify="center">
+        <div className="bg-teal-100 p-4 rounded">Center</div>
+        <div className="bg-teal-100 p-4 rounded">Center</div>
+      </Stack>
+    </div>
+    <div>
+      <p className="text-sm text-gray-600 mb-2">Justify: Between</p>
+      <Stack direction="horizontal" spacing="md" justify="between">
+        <div className="bg-pink-100 p-4 rounded">Between</div>
+        <div className="bg-pink-100 p-4 rounded">Between</div>
+      </Stack>
+    </div>
+    <div>
+      <p className="text-sm text-gray-600 mb-2">Justify: Around</p>
+      <Stack direction="horizontal" spacing="md" justify="around">
+        <div className="bg-indigo-100 p-4 rounded">Around</div>
+        <div className="bg-indigo-100 p-4 rounded">Around</div>
+      </Stack>
+    </div>
+  </div>
+</CodeBlock>
+
+## With Dividers
+
+<CodeBlock code={`<Stack spacing="md" divider>
+  <div className="p-4">Item with divider below</div>
+  <div className="p-4">Item with divider below</div>
+  <div className="p-4">Last item (no divider)</div>
+</Stack>
+
+<Stack direction="horizontal" spacing="md" divider>
+  <div className="p-4">Item 1</div>
+  <div className="p-4">Item 2</div>
+  <div className="p-4">Item 3</div>
+</Stack>`}>
+  <div className="space-y-6">
+    <div>
+      <p className="text-sm text-gray-600 mb-2">Vertical Stack with Dividers</p>
+      <div className="bg-gray-50 p-4 rounded">
+        <Stack spacing="md" divider>
+          <div className="p-4 bg-white rounded">Item with divider below</div>
+          <div className="p-4 bg-white rounded">Item with divider below</div>
+          <div className="p-4 bg-white rounded">Last item (no divider)</div>
+        </Stack>
+      </div>
+    </div>
+    <div>
+      <p className="text-sm text-gray-600 mb-2">Horizontal Stack with Dividers</p>
+      <div className="bg-gray-50 p-4 rounded">
+        <Stack direction="horizontal" spacing="md" divider>
+          <div className="p-4 bg-white rounded">Item 1</div>
+          <div className="p-4 bg-white rounded">Item 2</div>
+          <div className="p-4 bg-white rounded">Item 3</div>
+        </Stack>
+      </div>
+    </div>
+  </div>
+</CodeBlock>
+
+## Wrapping (Horizontal)
+
+<CodeBlock code={`<Stack direction="horizontal" spacing="md" wrap>
+  <div className="bg-blue-100 p-4 rounded">Item 1</div>
+  <div className="bg-blue-100 p-4 rounded">Item 2</div>
+  <div className="bg-blue-100 p-4 rounded">Item 3</div>
+  <div className="bg-blue-100 p-4 rounded">Item 4</div>
+  <div className="bg-blue-100 p-4 rounded">Item 5</div>
+  <div className="bg-blue-100 p-4 rounded">Item 6</div>
+  <div className="bg-blue-100 p-4 rounded">Item 7</div>
+  <div className="bg-blue-100 p-4 rounded">Item 8</div>
+</Stack>`}>
+  <Stack direction="horizontal" spacing="md" wrap>
+    <div className="bg-blue-100 p-4 rounded">Item 1</div>
+    <div className="bg-blue-100 p-4 rounded">Item 2</div>
+    <div className="bg-blue-100 p-4 rounded">Item 3</div>
+    <div className="bg-blue-100 p-4 rounded">Item 4</div>
+    <div className="bg-blue-100 p-4 rounded">Item 5</div>
+    <div className="bg-blue-100 p-4 rounded">Item 6</div>
+    <div className="bg-blue-100 p-4 rounded">Item 7</div>
+    <div className="bg-blue-100 p-4 rounded">Item 8</div>
+  </Stack>
+</CodeBlock>
+
+## Nested Stacks
+
+<CodeBlock code={`<Stack spacing="lg">
+  <Stack direction="horizontal" spacing="md" justify="between">
+    <div className="bg-blue-100 p-4 rounded">Left</div>
+    <div className="bg-blue-100 p-4 rounded">Right</div>
+  </Stack>
+  <Stack spacing="sm">
+    <div className="bg-green-100 p-3 rounded">Nested Item 1</div>
+    <div className="bg-green-100 p-3 rounded">Nested Item 2</div>
+    <div className="bg-green-100 p-3 rounded">Nested Item 3</div>
+  </Stack>
+</Stack>`}>
+  <Stack spacing="lg">
+    <Stack direction="horizontal" spacing="md" justify="between">
+      <div className="bg-blue-100 p-4 rounded">Left</div>
+      <div className="bg-blue-100 p-4 rounded">Right</div>
+    </Stack>
+    <Stack spacing="sm">
+      <div className="bg-green-100 p-3 rounded">Nested Item 1</div>
+      <div className="bg-green-100 p-3 rounded">Nested Item 2</div>
+      <div className="bg-green-100 p-3 rounded">Nested Item 3</div>
+    </Stack>
+  </Stack>
+</CodeBlock>
+
+## Polymorphic Component
+
+<CodeBlock code={`<Stack as="section" spacing="md">
+  <article className="bg-gray-100 p-4 rounded">
+    <h3 className="font-semibold mb-2">Article 1</h3>
+    <p>This Stack renders as a section element.</p>
+  </article>
+  <article className="bg-gray-100 p-4 rounded">
+    <h3 className="font-semibold mb-2">Article 2</h3>
+    <p>Perfect for semantic HTML structure.</p>
+  </article>
+</Stack>`}>
+  <Stack as="section" spacing="md">
+    <article className="bg-gray-100 p-4 rounded">
+      <h3 className="font-semibold mb-2 text-gray-900">Article 1</h3>
+      <p className="text-gray-600 text-sm">This Stack renders as a section element.</p>
+    </article>
+    <article className="bg-gray-100 p-4 rounded">
+      <h3 className="font-semibold mb-2 text-gray-900">Article 2</h3>
+      <p className="text-gray-600 text-sm">Perfect for semantic HTML structure.</p>
+    </article>
+  </Stack>
+</CodeBlock>
+
+## Props
+
+### StackProps
+<PropsTable props={[
+  { name: 'direction', type: "'vertical' | 'horizontal' | 'row' | 'column'", default: "'vertical'", description: 'Direction of the stack layout.' },
+  { name: 'spacing', type: "'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'", default: "'md'", description: 'Spacing between stack items.' },
+  { name: 'align', type: "'start' | 'center' | 'end' | 'stretch'", description: 'Align items on the cross axis.' },
+  { name: 'justify', type: "'start' | 'center' | 'end' | 'between' | 'around' | 'evenly'", description: 'Justify content on the main axis.' },
+  { name: 'wrap', type: 'boolean', default: 'false', description: 'Whether to wrap items (useful for horizontal stacks).' },
+  { name: 'divider', type: 'boolean', default: 'false', description: 'Show divider lines between stack items.' },
+  { name: 'as', type: 'React.ElementType', default: "'div'", description: 'HTML element to render as.' },
+  { name: 'className', type: 'string', description: 'Additional CSS classes.' },
+  { name: 'children', type: 'React.ReactNode', description: 'Stack items to render.' }
+]} />
+

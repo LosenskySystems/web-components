@@ -1,0 +1,341 @@
+# Grid
+
+A flexible CSS Grid-based layout system with responsive column support, gap spacing, and alignment options for building complex layouts.
+
+## Basic Usage
+
+<CodeBlock code={`<Grid cols={3} gap="md">
+  <Grid.Item>Item 1</Grid.Item>
+  <Grid.Item>Item 2</Grid.Item>
+  <Grid.Item>Item 3</Grid.Item>
+  <Grid.Item>Item 4</Grid.Item>
+  <Grid.Item>Item 5</Grid.Item>
+  <Grid.Item>Item 6</Grid.Item>
+</Grid>`}>
+  <Grid cols={3} gap="md">
+    <Grid.Item>
+      <div className="bg-blue-100 p-4 rounded text-center">Item 1</div>
+    </Grid.Item>
+    <Grid.Item>
+      <div className="bg-blue-100 p-4 rounded text-center">Item 2</div>
+    </Grid.Item>
+    <Grid.Item>
+      <div className="bg-blue-100 p-4 rounded text-center">Item 3</div>
+    </Grid.Item>
+    <Grid.Item>
+      <div className="bg-blue-100 p-4 rounded text-center">Item 4</div>
+    </Grid.Item>
+    <Grid.Item>
+      <div className="bg-blue-100 p-4 rounded text-center">Item 5</div>
+    </Grid.Item>
+    <Grid.Item>
+      <div className="bg-blue-100 p-4 rounded text-center">Item 6</div>
+    </Grid.Item>
+  </Grid>
+</CodeBlock>
+
+## Responsive Columns
+
+<CodeBlock code={`<Grid cols={{ sm: 1, md: 2, lg: 3, xl: 4 }} gap="md">
+  <Grid.Item>
+    <div className="bg-purple-100 p-4 rounded">
+      Responsive Grid Item 1
+    </div>
+  </Grid.Item>
+  <Grid.Item>
+    <div className="bg-purple-100 p-4 rounded">
+      Responsive Grid Item 2
+    </div>
+  </Grid.Item>
+  <Grid.Item>
+    <div className="bg-purple-100 p-4 rounded">
+      Responsive Grid Item 3
+    </div>
+  </Grid.Item>
+  <Grid.Item>
+    <div className="bg-purple-100 p-4 rounded">
+      Responsive Grid Item 4
+    </div>
+  </Grid.Item>
+</Grid>`}>
+  <Grid cols={{ sm: 1, md: 2, lg: 3, xl: 4 }} gap="md">
+    <Grid.Item>
+      <div className="bg-purple-100 p-4 rounded text-center">
+        Responsive Grid Item 1
+      </div>
+    </Grid.Item>
+    <Grid.Item>
+      <div className="bg-purple-100 p-4 rounded text-center">
+        Responsive Grid Item 2
+      </div>
+    </Grid.Item>
+    <Grid.Item>
+      <div className="bg-purple-100 p-4 rounded text-center">
+        Responsive Grid Item 3
+      </div>
+    </Grid.Item>
+    <Grid.Item>
+      <div className="bg-purple-100 p-4 rounded text-center">
+        Responsive Grid Item 4
+      </div>
+    </Grid.Item>
+  </Grid>
+</CodeBlock>
+
+## Gap Spacing
+
+<CodeBlock code={`<Grid cols={3} gap="xs">
+  <Grid.Item>
+    <div className="bg-green-100 p-3 rounded text-center">XS Gap</div>
+  </Grid.Item>
+  <Grid.Item>
+    <div className="bg-green-100 p-3 rounded text-center">XS Gap</div>
+  </Grid.Item>
+  <Grid.Item>
+    <div className="bg-green-100 p-3 rounded text-center">XS Gap</div>
+  </Grid.Item>
+</Grid>
+
+<Grid cols={3} gap="lg">
+  <Grid.Item>
+    <div className="bg-blue-100 p-3 rounded text-center">LG Gap</div>
+  </Grid.Item>
+  <Grid.Item>
+    <div className="bg-blue-100 p-3 rounded text-center">LG Gap</div>
+  </Grid.Item>
+  <Grid.Item>
+    <div className="bg-blue-100 p-3 rounded text-center">LG Gap</div>
+  </Grid.Item>
+</Grid>
+
+<Grid cols={3} gapX="lg" gapY="sm">
+  <Grid.Item>
+    <div className="bg-yellow-100 p-3 rounded text-center">Custom Gap</div>
+  </Grid.Item>
+  <Grid.Item>
+    <div className="bg-yellow-100 p-3 rounded text-center">Custom Gap</div>
+  </Grid.Item>
+  <Grid.Item>
+    <div className="bg-yellow-100 p-3 rounded text-center">Custom Gap</div>
+  </Grid.Item>
+</Grid>`}>
+  <div className="space-y-6">
+    <div>
+      <p className="text-sm text-gray-600 mb-2">Extra Small Gap (xs)</p>
+      <Grid cols={3} gap="xs">
+        <Grid.Item>
+          <div className="bg-green-100 p-3 rounded text-center text-sm">XS Gap</div>
+        </Grid.Item>
+        <Grid.Item>
+          <div className="bg-green-100 p-3 rounded text-center text-sm">XS Gap</div>
+        </Grid.Item>
+        <Grid.Item>
+          <div className="bg-green-100 p-3 rounded text-center text-sm">XS Gap</div>
+        </Grid.Item>
+      </Grid>
+    </div>
+    <div>
+      <p className="text-sm text-gray-600 mb-2">Large Gap (lg)</p>
+      <Grid cols={3} gap="lg">
+        <Grid.Item>
+          <div className="bg-blue-100 p-3 rounded text-center text-sm">LG Gap</div>
+        </Grid.Item>
+        <Grid.Item>
+          <div className="bg-blue-100 p-3 rounded text-center text-sm">LG Gap</div>
+        </Grid.Item>
+        <Grid.Item>
+          <div className="bg-blue-100 p-3 rounded text-center text-sm">LG Gap</div>
+        </Grid.Item>
+      </Grid>
+    </div>
+    <div>
+      <p className="text-sm text-gray-600 mb-2">Custom Gap (gapX: lg, gapY: sm)</p>
+      <Grid cols={3} gapX="lg" gapY="sm">
+        <Grid.Item>
+          <div className="bg-yellow-100 p-3 rounded text-center text-sm">Custom</div>
+        </Grid.Item>
+        <Grid.Item>
+          <div className="bg-yellow-100 p-3 rounded text-center text-sm">Custom</div>
+        </Grid.Item>
+        <Grid.Item>
+          <div className="bg-yellow-100 p-3 rounded text-center text-sm">Custom</div>
+        </Grid.Item>
+      </Grid>
+    </div>
+  </div>
+</CodeBlock>
+
+## Column & Row Spanning
+
+<CodeBlock code={`<Grid cols={3} gap="md">
+  <Grid.Item colSpan={2}>
+    <div className="bg-pink-100 p-4 rounded">Spans 2 columns</div>
+  </Grid.Item>
+  <Grid.Item>
+    <div className="bg-pink-100 p-4 rounded">Regular</div>
+  </Grid.Item>
+  <Grid.Item>
+    <div className="bg-pink-100 p-4 rounded">Regular</div>
+  </Grid.Item>
+  <Grid.Item colSpan="full">
+    <div className="bg-pink-100 p-4 rounded">Spans full width</div>
+  </Grid.Item>
+</Grid>`}>
+  <Grid cols={3} gap="md">
+    <Grid.Item colSpan={2}>
+      <div className="bg-pink-100 p-4 rounded text-center">Spans 2 columns</div>
+    </Grid.Item>
+    <Grid.Item>
+      <div className="bg-pink-100 p-4 rounded text-center">Regular</div>
+    </Grid.Item>
+    <Grid.Item>
+      <div className="bg-pink-100 p-4 rounded text-center">Regular</div>
+    </Grid.Item>
+    <Grid.Item colSpan="full">
+      <div className="bg-pink-100 p-4 rounded text-center">Spans full width</div>
+    </Grid.Item>
+  </Grid>
+</CodeBlock>
+
+## Alignment
+
+<CodeBlock code={`<Grid cols={3} gap="md" align="center" justify="center">
+  <Grid.Item>
+    <div className="bg-indigo-100 p-4 rounded h-20">Center Aligned</div>
+  </Grid.Item>
+  <Grid.Item>
+    <div className="bg-indigo-100 p-4 rounded h-16">Center Aligned</div>
+  </Grid.Item>
+  <Grid.Item>
+    <div className="bg-indigo-100 p-4 rounded h-24">Center Aligned</div>
+  </Grid.Item>
+</Grid>
+
+<Grid cols={3} gap="md" align="start" justify="between">
+  <Grid.Item>
+    <div className="bg-teal-100 p-4 rounded h-20">Start / Between</div>
+  </Grid.Item>
+  <Grid.Item>
+    <div className="bg-teal-100 p-4 rounded h-16">Start / Between</div>
+  </Grid.Item>
+  <Grid.Item>
+    <div className="bg-teal-100 p-4 rounded h-24">Start / Between</div>
+  </Grid.Item>
+</Grid>`}>
+  <div className="space-y-6">
+    <div>
+      <p className="text-sm text-gray-600 mb-2">Centered (align: center, justify: center)</p>
+      <Grid cols={3} gap="md" align="center" justify="center">
+        <Grid.Item>
+          <div className="bg-indigo-100 p-4 rounded h-20 flex items-center justify-center text-sm">Center</div>
+        </Grid.Item>
+        <Grid.Item>
+          <div className="bg-indigo-100 p-4 rounded h-16 flex items-center justify-center text-sm">Center</div>
+        </Grid.Item>
+        <Grid.Item>
+          <div className="bg-indigo-100 p-4 rounded h-24 flex items-center justify-center text-sm">Center</div>
+        </Grid.Item>
+      </Grid>
+    </div>
+    <div>
+      <p className="text-sm text-gray-600 mb-2">Start / Between (align: start, justify: between)</p>
+      <Grid cols={3} gap="md" align="start" justify="between">
+        <Grid.Item>
+          <div className="bg-teal-100 p-4 rounded h-20 flex items-start justify-center text-sm">Start</div>
+        </Grid.Item>
+        <Grid.Item>
+          <div className="bg-teal-100 p-4 rounded h-16 flex items-start justify-center text-sm">Start</div>
+        </Grid.Item>
+        <Grid.Item>
+          <div className="bg-teal-100 p-4 rounded h-24 flex items-start justify-center text-sm">Start</div>
+        </Grid.Item>
+      </Grid>
+    </div>
+  </div>
+</CodeBlock>
+
+## Grid Item Placement
+
+<CodeBlock code={`<Grid cols={4} rows={3} gap="md">
+  <Grid.Item colStart={2} rowStart={1}>
+    <div className="bg-orange-100 p-4 rounded">Col 2, Row 1</div>
+  </Grid.Item>
+  <Grid.Item colStart={1} rowStart={2} colSpan={2}>
+    <div className="bg-orange-100 p-4 rounded">Positioned & Spanning</div>
+  </Grid.Item>
+  <Grid.Item colStart={4} rowStart={2} rowSpan={2}>
+    <div className="bg-orange-100 p-4 rounded">Row Span 2</div>
+  </Grid.Item>
+</Grid>`}>
+  <Grid cols={4} rows={3} gap="md">
+    <Grid.Item colStart={2} rowStart={1}>
+      <div className="bg-orange-100 p-4 rounded text-center text-sm">Col 2, Row 1</div>
+    </Grid.Item>
+    <Grid.Item colStart={1} rowStart={2} colSpan={2}>
+      <div className="bg-orange-100 p-4 rounded text-center text-sm">Positioned & Spanning</div>
+    </Grid.Item>
+    <Grid.Item colStart={4} rowStart={2} rowSpan={2}>
+      <div className="bg-orange-100 p-4 rounded text-center text-sm">Row Span 2</div>
+    </Grid.Item>
+  </Grid>
+</CodeBlock>
+
+## Polymorphic Component
+
+<CodeBlock code={`<Grid as="section" cols={2} gap="md">
+  <Grid.Item as="article">
+    <div className="bg-gray-100 p-4 rounded">
+      <h3 className="font-semibold mb-2">Article 1</h3>
+      <p>This Grid renders as a section element.</p>
+    </div>
+  </Grid.Item>
+  <Grid.Item as="article">
+    <div className="bg-gray-100 p-4 rounded">
+      <h3 className="font-semibold mb-2">Article 2</h3>
+      <p>Grid items render as article elements.</p>
+    </div>
+  </Grid.Item>
+</Grid>`}>
+  <Grid as="section" cols={2} gap="md">
+    <Grid.Item as="article">
+      <div className="bg-gray-100 p-4 rounded">
+        <h3 className="font-semibold mb-2 text-gray-900">Article 1</h3>
+        <p className="text-gray-600 text-sm">This Grid renders as a section element.</p>
+      </div>
+    </Grid.Item>
+    <Grid.Item as="article">
+      <div className="bg-gray-100 p-4 rounded">
+        <h3 className="font-semibold mb-2 text-gray-900">Article 2</h3>
+        <p className="text-gray-600 text-sm">Grid items render as article elements.</p>
+      </div>
+    </Grid.Item>
+  </Grid>
+</CodeBlock>
+
+## Props
+
+### GridProps
+<PropsTable props={[
+  { name: 'cols', type: "number | { sm?: number; md?: number; lg?: number; xl?: number; '2xl'?: number }", default: '1', description: 'Number of columns or responsive column configuration.' },
+  { name: 'rows', type: "number | 'auto'", description: 'Number of rows (optional).' },
+  { name: 'gap', type: "'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl'", description: 'Gap spacing for both directions.' },
+  { name: 'gapX', type: "'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl'", description: 'Horizontal gap spacing only.' },
+  { name: 'gapY', type: "'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl'", description: 'Vertical gap spacing only.' },
+  { name: 'align', type: "'start' | 'center' | 'end' | 'stretch'", description: 'Align items on the cross axis.' },
+  { name: 'justify', type: "'start' | 'center' | 'end' | 'stretch' | 'between' | 'around'", description: 'Justify items on the main axis.' },
+  { name: 'as', type: 'React.ElementType', default: "'div'", description: 'HTML element to render as.' },
+  { name: 'className', type: 'string', description: 'Additional CSS classes.' },
+  { name: 'children', type: 'React.ReactNode', description: 'Grid items to render.' }
+]} />
+
+### GridItemProps
+<PropsTable props={[
+  { name: 'colSpan', type: "number | 'full'", description: 'Number of columns this item should span.' },
+  { name: 'rowSpan', type: "number | 'full'", description: 'Number of rows this item should span.' },
+  { name: 'colStart', type: 'number', description: 'Column start position (1-based).' },
+  { name: 'rowStart', type: 'number', description: 'Row start position (1-based).' },
+  { name: 'as', type: 'React.ElementType', default: "'div'", description: 'HTML element to render as.' },
+  { name: 'className', type: 'string', description: 'Additional CSS classes.' },
+  { name: 'children', type: 'React.ReactNode', description: 'Content to render inside the grid item.' }
+]} />
+

@@ -1,0 +1,157 @@
+import { ModalExample, ModalSizesExample, CustomWidthExample, SimpleModalExample, ScrollableModalExample } from './ModalExamples';
+
+# Modal
+
+A comprehensive modal/dialog overlay component with compound components for flexible content structure, controlled state management, and accessibility features.
+
+## Basic Usage
+
+<CodeBlock code={`const [isOpen, setIsOpen] = useState(false);
+
+<Button onClick={() => setIsOpen(true)}>Open Modal</Button>
+
+<Modal open={isOpen} onOpenChange={setIsOpen}>
+  <Modal.Header title="Modal Title">
+    This is the modal content
+  </Modal.Header>
+  <Modal.Body>
+    <p>This is the modal body content.</p>
+  </Modal.Body>
+  <Modal.Footer>
+    <Button variant="ghost" onClick={() => setIsOpen(false)}>Cancel</Button>
+    <Button variant="primary">Save</Button>
+  </Modal.Footer>
+</Modal>`}>
+  <div className="w-64">
+    <ModalExample />
+  </div>
+</CodeBlock>
+
+## Modal Sizes
+
+<CodeBlock code={`const [isOpen, setIsOpen] = useState(false);
+const [size, setSize] = useState('md');
+
+<Button onClick={() => setIsOpen(true)}>Open {size} Modal</Button>
+
+<Modal open={isOpen} onOpenChange={setIsOpen} size={size}>
+  <Modal.Header title="Modal Title" />
+  <Modal.Body>
+    <p>This is a {size} modal.</p>
+  </Modal.Body>
+  <Modal.Footer>
+    <Button variant="ghost" onClick={() => setIsOpen(false)}>Close</Button>
+  </Modal.Footer>
+</Modal>`}>
+  <div className="w-80">
+    <ModalSizesExample />
+  </div>
+</CodeBlock>
+
+## Custom Width
+
+<CodeBlock code={`const [isOpen, setIsOpen] = useState(false);
+
+<Button onClick={() => setIsOpen(true)}>Custom Width Modal</Button>
+
+<Modal open={isOpen} onOpenChange={setIsOpen} width="700px">
+  <Modal.Header title="Custom Width Modal" />
+  <Modal.Body>
+    <p>This modal has a custom width of 700px.</p>
+  </Modal.Body>
+  <Modal.Footer>
+    <Button variant="ghost" onClick={() => setIsOpen(false)}>Close</Button>
+  </Modal.Footer>
+</Modal>`}>
+  <div className="w-64">
+    <CustomWidthExample />
+  </div>
+</CodeBlock>
+
+## Modal Without Header/Footer
+
+<CodeBlock code={`const [isOpen, setIsOpen] = useState(false);
+
+<Button onClick={() => setIsOpen(true)}>Simple Modal</Button>
+
+<Modal open={isOpen} onOpenChange={setIsOpen}>
+  <Modal.Body>
+    <h2 className="text-lg font-semibold mb-4">Simple Modal</h2>
+    <p>This modal doesn't have a header or footer component.</p>
+  </Modal.Body>
+</Modal>`}>
+  <div className="w-64">
+    <SimpleModalExample />
+  </div>
+</CodeBlock>
+
+## Scrollable Content
+
+<CodeBlock code={`const [isOpen, setIsOpen] = useState(false);
+
+<Button onClick={() => setIsOpen(true)}>Scrollable Modal</Button>
+
+<Modal open={isOpen} onOpenChange={setIsOpen}>
+  <Modal.Header title="Scrollable Content" />
+  <Modal.Body>
+    <div className="space-y-4">
+      {Array.from({ length: 15 }, (_, i) => (
+        <p key={i}>This is paragraph {i + 1} in a long scrollable content.</p>
+      ))}
+    </div>
+  </Modal.Body>
+  <Modal.Footer>
+    <Button variant="ghost" onClick={() => setIsOpen(false)}>Close</Button>
+  </Modal.Footer>
+</Modal>`}>
+  <div className="w-64">
+    <ScrollableModalExample />
+  </div>
+</CodeBlock>
+
+## Props
+
+### ModalProps
+<PropsTable props={[
+  { name: 'open', type: 'boolean', description: 'Whether the modal is open.' },
+  { name: 'onOpenChange', type: '(open: boolean) => void', description: 'Callback when modal open state changes.' },
+  { name: 'size', type: "'sm' | 'md' | 'lg' | 'xl' | 'full'", default: "'md'", description: 'Modal size variant.' },
+  { name: 'width', type: 'string | number', description: 'Custom width (overrides size).' },
+  { name: 'closeOnOverlayClick', type: 'boolean', default: 'true', description: 'Whether clicking outside closes the modal.' },
+  { name: 'closeOnEsc', type: 'boolean', default: 'true', description: 'Whether pressing ESC closes the modal.' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Whether the modal is disabled.' },
+  { name: 'className', type: 'string', description: 'Additional CSS classes.' },
+  { name: 'backdropClassName', type: 'string', description: 'Custom backdrop CSS classes.' },
+  { name: 'children', type: 'React.ReactNode', description: 'Modal content (typically Modal.Header, Modal.Body, Modal.Footer).' }
+]} />
+
+### ModalHeaderProps
+<PropsTable props={[
+  { name: 'title', type: 'string', description: 'Header title text.' },
+  { name: 'showCloseButton', type: 'boolean', default: 'true', description: 'Whether to show close button.' },
+  { name: 'showDivider', type: 'boolean', default: 'true', description: 'Whether to show divider below header.' },
+  { name: 'closeButton', type: 'React.ReactNode', description: 'Custom close button element.' },
+  { name: 'children', type: 'React.ReactNode', description: 'Additional header content.' },
+  { name: 'headingLevel', type: '1 | 2 | 3 | 4 | 5 | 6', default: '2', description: 'Heading level for title element.' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Whether the header is disabled.' },
+  { name: 'className', type: 'string', description: 'Additional CSS classes.' }
+]} />
+
+### ModalBodyProps
+<PropsTable props={[
+  { name: 'children', type: 'React.ReactNode', description: 'Body content.' },
+  { name: 'scrollable', type: 'boolean', default: 'true', description: 'Whether content is scrollable.' },
+  { name: 'maxHeight', type: 'string | number', description: 'Maximum height before scrolling.' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Whether the body is disabled.' },
+  { name: 'className', type: 'string', description: 'Additional CSS classes.' }
+]} />
+
+### ModalFooterProps
+<PropsTable props={[
+  { name: 'children', type: 'React.ReactNode', description: 'Footer content (typically action buttons).' },
+  { name: 'align', type: "'left' | 'right' | 'center' | 'space-between'", default: "'right'", description: 'Button alignment.' },
+  { name: 'showDivider', type: 'boolean', default: 'true', description: 'Whether to show divider above footer.' },
+  { name: 'spacing', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Spacing between buttons.' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Whether the footer is disabled.' },
+  { name: 'className', type: 'string', description: 'Additional CSS classes.' }
+]} />

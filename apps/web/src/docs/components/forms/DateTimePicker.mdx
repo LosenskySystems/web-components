@@ -1,0 +1,133 @@
+# DateTimePicker
+
+A comprehensive date and time picker component with calendar dropdown, time selection, and range support.
+
+## Basic Usage
+
+<CodeBlock code={`<DateTimePicker mode="date">Select a date</DateTimePicker>`}>
+  <div className="w-64">
+    <DateTimePicker mode="date">Select a date</DateTimePicker>
+  </div>
+</CodeBlock>
+
+## Modes
+
+### Date Only
+
+<CodeBlock code={`<DateTimePicker mode="date" />`}>
+  <div className="w-64">
+    <DateTimePicker mode="date" />
+  </div>
+</CodeBlock>
+
+### Time Only
+
+<CodeBlock code={`<DateTimePicker mode="time" />`}>
+  <div className="w-64">
+    <DateTimePicker mode="time" />
+  </div>
+</CodeBlock>
+
+### Date and Time
+
+<CodeBlock code={`<DateTimePicker mode="datetime" />`}>
+  <div className="w-80">
+    <DateTimePicker mode="datetime" />
+  </div>
+</CodeBlock>
+
+## Range Selection
+
+<CodeBlock code={`<DateTimePicker rangeMode="range" />`}>
+  <div className="w-80">
+    <DateTimePicker rangeMode="range" />
+  </div>
+</CodeBlock>
+
+## Custom Format
+
+<CodeBlock code={`<DateTimePicker format="MM/DD/YYYY" />`}>
+  <div className="w-64">
+    <DateTimePicker format="MM/DD/YYYY" />
+  </div>
+</CodeBlock>
+
+## Time Format
+
+<CodeBlock code={`<DateTimePicker mode="time" timeFormat="12h" />`}>
+  <div className="w-64">
+    <DateTimePicker mode="time" timeFormat="12h" />
+  </div>
+</CodeBlock>
+
+## Sizes
+
+<CodeBlock code={`<div className="space-y-4">
+  <DateTimePicker size="sm" mode="date" />
+  <DateTimePicker size="md" mode="date" />
+  <DateTimePicker size="lg" mode="date" />
+</div>`}>
+  <div className="space-y-4 w-64">
+    <DateTimePicker size="sm" mode="date" />
+    <DateTimePicker size="md" mode="date" />
+    <DateTimePicker size="lg" mode="date" />
+  </div>
+</CodeBlock>
+
+## States
+
+<CodeBlock code={`<div className="space-y-4">
+  <DateTimePicker mode="date" />
+  <DateTimePicker mode="date" defaultValue={new Date()} />
+  <DateTimePicker mode="date" disabled />
+</div>`}>
+  <div className="space-y-4 w-64">
+    <DateTimePicker mode="date" />
+    <DateTimePicker mode="date" defaultValue={new Date()} />
+    <DateTimePicker mode="date" disabled />
+  </div>
+</CodeBlock>
+
+## Controlled vs Uncontrolled
+
+### Uncontrolled (default)
+
+<CodeBlock code={`<DateTimePicker mode="date" defaultValue={new Date()} />`}>
+  <div className="w-64">
+    <DateTimePicker mode="date" defaultValue={new Date()} />
+  </div>
+</CodeBlock>
+
+### Controlled
+
+<CodeBlock code={`const [selectedDate, setSelectedDate] = useState(null);
+
+<DateTimePicker 
+  mode="date"
+  value={selectedDate} 
+  onChange={setSelectedDate}
+/>`}>
+  <div className="w-64">
+    <DateTimePicker mode="date" />
+  </div>
+</CodeBlock>
+
+## Props
+
+<PropsTable props={[
+  { name: 'mode', type: "'date' | 'time' | 'datetime'", default: "'date'", description: 'Picker mode' },
+  { name: 'rangeMode', type: "'single' | 'range'", default: "'single'", description: 'Selection mode' },
+  { name: 'value', type: 'Date | { start: Date | null; end: Date | null } | null', default: 'undefined', description: 'Controlled value' },
+  { name: 'defaultValue', type: 'Date | { start: Date | null; end: Date | null } | null', default: 'null', description: 'Uncontrolled default value' },
+  { name: 'onChange', type: '(value: Date | { start: Date | null; end: Date | null } | null) => void', default: 'undefined', description: 'Change callback' },
+  { name: 'format', type: 'string', default: "'DD/MM/YYYY'", description: 'Date format string (e.g., "DD/MM/YYYY")' },
+  { name: 'minDate', type: 'Date', default: 'undefined', description: 'Minimum selectable date' },
+  { name: 'maxDate', type: 'Date', default: 'undefined', description: 'Maximum selectable date' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Whether the picker is disabled' },
+  { name: 'size', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Picker size' },
+  { name: 'placeholder', type: 'string', default: 'undefined', description: 'Placeholder text' },
+  { name: 'showTime', type: 'boolean', default: 'false', description: 'Show time picker (shortcut for mode="datetime")' },
+  { name: 'timeFormat', type: "'12h' | '24h'", default: "'24h'", description: 'Time format' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' },
+  { name: 'inputProps', type: 'React.InputHTMLAttributes<HTMLInputElement>', default: '{}', description: 'Native input props' }
+]} />

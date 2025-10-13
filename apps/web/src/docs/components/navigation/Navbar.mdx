@@ -1,0 +1,357 @@
+# Navbar
+
+A flexible navigation bar component with compound architecture for building responsive headers with brand, navigation links, and action buttons.
+
+## Basic Usage
+
+<CodeBlock code={`<Navbar>
+  <Navbar.Brand href="/">MyApp</Navbar.Brand>
+  <Navbar.Nav>
+    <Navbar.Item href="/" active>Home</Navbar.Item>
+    <Navbar.Item href="/about">About</Navbar.Item>
+    <Navbar.Item href="/services">Services</Navbar.Item>
+    <Navbar.Item href="/contact">Contact</Navbar.Item>
+  </Navbar.Nav>
+</Navbar>`}>
+  <Navbar>
+    <Navbar.Brand href="/">MyApp</Navbar.Brand>
+    <Navbar.Nav>
+      <Navbar.Item href="/" active>Home</Navbar.Item>
+      <Navbar.Item href="/about">About</Navbar.Item>
+      <Navbar.Item href="/services">Services</Navbar.Item>
+      <Navbar.Item href="/contact">Contact</Navbar.Item>
+    </Navbar.Nav>
+  </Navbar>
+</CodeBlock>
+
+## Position Variants
+
+<CodeBlock code={`<Navbar position="static">
+  <Navbar.Brand>Static Navbar</Navbar.Brand>
+  <Navbar.Nav>
+    <Navbar.Item href="/">Home</Navbar.Item>
+  </Navbar.Nav>
+</Navbar>
+
+<Navbar position="sticky" shadow>
+  <Navbar.Brand>Sticky Navbar</Navbar.Brand>
+  <Navbar.Nav>
+    <Navbar.Item href="/">Home</Navbar.Item>
+  </Navbar.Nav>
+</Navbar>
+
+<Navbar position="fixed" shadow>
+  <Navbar.Brand>Fixed Navbar</Navbar.Brand>
+  <Navbar.Nav>
+    <Navbar.Item href="/">Home</Navbar.Item>
+  </Navbar.Nav>
+</Navbar>`}>
+  <div className="space-y-6">
+    <div>
+      <p className="text-sm text-gray-600 mb-2">Static Position</p>
+      <Navbar position="static">
+        <Navbar.Brand>Static Navbar</Navbar.Brand>
+        <Navbar.Nav>
+          <Navbar.Item href="/">Home</Navbar.Item>
+          <Navbar.Item href="/about">About</Navbar.Item>
+        </Navbar.Nav>
+      </Navbar>
+    </div>
+    <div>
+      <p className="text-sm text-gray-600 mb-2">Sticky Position (with shadow)</p>
+      <Navbar position="sticky" shadow>
+        <Navbar.Brand>Sticky Navbar</Navbar.Brand>
+        <Navbar.Nav>
+          <Navbar.Item href="/">Home</Navbar.Item>
+          <Navbar.Item href="/about">About</Navbar.Item>
+        </Navbar.Nav>
+      </Navbar>
+    </div>
+  </div>
+</CodeBlock>
+
+## Color Variants
+
+<CodeBlock code={`<Navbar variant="light" bordered>
+  <Navbar.Brand>Light Navbar</Navbar.Brand>
+  <Navbar.Nav>
+    <Navbar.Item href="/" active>Home</Navbar.Item>
+    <Navbar.Item href="/about">About</Navbar.Item>
+  </Navbar.Nav>
+</Navbar>
+
+<Navbar variant="dark">
+  <Navbar.Brand>Dark Navbar</Navbar.Brand>
+  <Navbar.Nav>
+    <Navbar.Item href="/" active>Home</Navbar.Item>
+    <Navbar.Item href="/about">About</Navbar.Item>
+  </Navbar.Nav>
+</Navbar>
+
+<Navbar variant="transparent">
+  <Navbar.Brand>Transparent Navbar</Navbar.Brand>
+  <Navbar.Nav>
+    <Navbar.Item href="/" active>Home</Navbar.Item>
+    <Navbar.Item href="/about">About</Navbar.Item>
+  </Navbar.Nav>
+</Navbar>`}>
+  <div className="space-y-6">
+    <div>
+      <p className="text-sm text-gray-600 mb-2">Light Variant (with border)</p>
+      <Navbar variant="light" bordered>
+        <Navbar.Brand>Light Navbar</Navbar.Brand>
+        <Navbar.Nav>
+          <Navbar.Item href="/" active>Home</Navbar.Item>
+          <Navbar.Item href="/about">About</Navbar.Item>
+          <Navbar.Item href="/contact">Contact</Navbar.Item>
+        </Navbar.Nav>
+      </Navbar>
+    </div>
+    <div>
+      <p className="text-sm text-gray-600 mb-2">Dark Variant</p>
+      <Navbar variant="dark">
+        <Navbar.Brand>Dark Navbar</Navbar.Brand>
+        <Navbar.Nav>
+          <Navbar.Item href="/" active>Home</Navbar.Item>
+          <Navbar.Item href="/about">About</Navbar.Item>
+          <Navbar.Item href="/contact">Contact</Navbar.Item>
+        </Navbar.Nav>
+      </Navbar>
+    </div>
+    <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-8 rounded-lg">
+      <p className="text-sm text-white mb-2">Transparent Variant (on colored background)</p>
+      <Navbar variant="transparent">
+        <Navbar.Brand className="text-white">Transparent Navbar</Navbar.Brand>
+        <Navbar.Nav>
+          <Navbar.Item className="text-white hover:text-gray-200" href="/" active>Home</Navbar.Item>
+          <Navbar.Item className="text-white hover:text-gray-200" href="/about">About</Navbar.Item>
+          <Navbar.Item className="text-white hover:text-gray-200" href="/contact">Contact</Navbar.Item>
+        </Navbar.Nav>
+      </Navbar>
+    </div>
+  </div>
+</CodeBlock>
+
+## With Actions
+
+<CodeBlock code={`<Navbar bordered shadow>
+  <Navbar.Brand href="/">MyApp</Navbar.Brand>
+  <Navbar.Nav>
+    <Navbar.Item href="/" active>Home</Navbar.Item>
+    <Navbar.Item href="/about">About</Navbar.Item>
+    <Navbar.Item href="/pricing">Pricing</Navbar.Item>
+  </Navbar.Nav>
+  <Navbar.Actions>
+    <Button variant="outline" size="sm">Sign In</Button>
+    <Button variant="primary" size="sm">Sign Up</Button>
+  </Navbar.Actions>
+</Navbar>`}>
+  <Navbar bordered shadow>
+    <Navbar.Brand href="/">MyApp</Navbar.Brand>
+    <Navbar.Nav>
+      <Navbar.Item href="/" active>Home</Navbar.Item>
+      <Navbar.Item href="/about">About</Navbar.Item>
+      <Navbar.Item href="/pricing">Pricing</Navbar.Item>
+    </Navbar.Nav>
+    <Navbar.Actions>
+      <Button variant="outline" size="sm">Sign In</Button>
+      <Button variant="primary" size="sm">Sign Up</Button>
+    </Navbar.Actions>
+  </Navbar>
+</CodeBlock>
+
+## Navigation Alignment
+
+<CodeBlock code={`<Navbar bordered>
+  <Navbar.Brand>Brand</Navbar.Brand>
+  <Navbar.Nav align="start">
+    <Navbar.Item href="/">Start</Navbar.Item>
+    <Navbar.Item href="/about">Aligned</Navbar.Item>
+  </Navbar.Nav>
+</Navbar>
+
+<Navbar bordered>
+  <Navbar.Brand>Brand</Navbar.Brand>
+  <Navbar.Nav align="center">
+    <Navbar.Item href="/">Center</Navbar.Item>
+    <Navbar.Item href="/about">Aligned</Navbar.Item>
+  </Navbar.Nav>
+</Navbar>
+
+<Navbar bordered>
+  <Navbar.Brand>Brand</Navbar.Brand>
+  <Navbar.Nav align="end">
+    <Navbar.Item href="/">End</Navbar.Item>
+    <Navbar.Item href="/about">Aligned</Navbar.Item>
+  </Navbar.Nav>
+</Navbar>`}>
+  <div className="space-y-6">
+    <div>
+      <p className="text-sm text-gray-600 mb-2">Start Alignment</p>
+      <Navbar bordered>
+        <Navbar.Brand>Brand</Navbar.Brand>
+        <Navbar.Nav align="start">
+          <Navbar.Item href="/">Start</Navbar.Item>
+          <Navbar.Item href="/about">Aligned</Navbar.Item>
+        </Navbar.Nav>
+      </Navbar>
+    </div>
+    <div>
+      <p className="text-sm text-gray-600 mb-2">Center Alignment</p>
+      <Navbar bordered>
+        <Navbar.Brand>Brand</Navbar.Brand>
+        <Navbar.Nav align="center">
+          <Navbar.Item href="/">Center</Navbar.Item>
+          <Navbar.Item href="/about">Aligned</Navbar.Item>
+        </Navbar.Nav>
+      </Navbar>
+    </div>
+    <div>
+      <p className="text-sm text-gray-600 mb-2">End Alignment</p>
+      <Navbar bordered>
+        <Navbar.Brand>Brand</Navbar.Brand>
+        <Navbar.Nav align="end">
+          <Navbar.Item href="/">End</Navbar.Item>
+          <Navbar.Item href="/about">Aligned</Navbar.Item>
+        </Navbar.Nav>
+      </Navbar>
+    </div>
+  </div>
+</CodeBlock>
+
+## Active & Disabled States
+
+<CodeBlock code={`<Navbar bordered>
+  <Navbar.Brand>MyApp</Navbar.Brand>
+  <Navbar.Nav>
+    <Navbar.Item href="/" active>Active Item</Navbar.Item>
+    <Navbar.Item href="/normal">Normal Item</Navbar.Item>
+    <Navbar.Item href="/disabled" disabled>Disabled Item</Navbar.Item>
+  </Navbar.Nav>
+</Navbar>`}>
+  <Navbar bordered>
+    <Navbar.Brand>MyApp</Navbar.Brand>
+    <Navbar.Nav>
+      <Navbar.Item href="/" active>Active Item</Navbar.Item>
+      <Navbar.Item href="/normal">Normal Item</Navbar.Item>
+      <Navbar.Item href="/disabled" disabled>Disabled Item</Navbar.Item>
+    </Navbar.Nav>
+  </Navbar>
+</CodeBlock>
+
+## With Mobile Toggle
+
+<CodeBlock code={`function MobileNavbar() {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  return (
+    <Navbar bordered shadow>
+      <Navbar.Brand href="/">MyApp</Navbar.Brand>
+      <Navbar.Toggle 
+        onClick={() => setIsOpen(!isOpen)} 
+        isOpen={isOpen} 
+      />
+      <Navbar.Nav>
+        <Navbar.Item href="/" active>Home</Navbar.Item>
+        <Navbar.Item href="/about">About</Navbar.Item>
+        <Navbar.Item href="/services">Services</Navbar.Item>
+      </Navbar.Nav>
+      <Navbar.Actions>
+        <Button size="sm">Sign In</Button>
+      </Navbar.Actions>
+    </Navbar>
+  );
+}`}>
+  <div className="bg-gray-50 p-4 rounded">
+    <p className="text-sm text-gray-600 mb-4">Toggle button appears on mobile. Navigation items are hidden on mobile by default.</p>
+    <Navbar bordered shadow>
+      <Navbar.Brand href="/">MyApp</Navbar.Brand>
+      <Navbar.Toggle onClick={() => {}} />
+      <Navbar.Nav>
+        <Navbar.Item href="/" active>Home</Navbar.Item>
+        <Navbar.Item href="/about">About</Navbar.Item>
+        <Navbar.Item href="/services">Services</Navbar.Item>
+      </Navbar.Nav>
+      <Navbar.Actions>
+        <Button size="sm">Sign In</Button>
+      </Navbar.Actions>
+    </Navbar>
+  </div>
+</CodeBlock>
+
+## Full Width
+
+<CodeBlock code={`<Navbar fluid bordered shadow>
+  <Navbar.Brand href="/">Full Width Navbar</Navbar.Brand>
+  <Navbar.Nav>
+    <Navbar.Item href="/" active>Home</Navbar.Item>
+    <Navbar.Item href="/about">About</Navbar.Item>
+  </Navbar.Nav>
+  <Navbar.Actions>
+    <Button size="sm">Action</Button>
+  </Navbar.Actions>
+</Navbar>`}>
+  <Navbar fluid bordered shadow>
+    <Navbar.Brand href="/">Full Width Navbar</Navbar.Brand>
+    <Navbar.Nav>
+      <Navbar.Item href="/" active>Home</Navbar.Item>
+      <Navbar.Item href="/about">About</Navbar.Item>
+    </Navbar.Nav>
+    <Navbar.Actions>
+      <Button size="sm">Action</Button>
+    </Navbar.Actions>
+  </Navbar>
+</CodeBlock>
+
+## Props
+
+### NavbarProps
+<PropsTable props={[
+  { name: 'position', type: "'static' | 'sticky' | 'fixed'", default: "'static'", description: 'Position variant of the navbar.' },
+  { name: 'variant', type: "'light' | 'dark' | 'transparent'", default: "'light'", description: 'Color theme variant.' },
+  { name: 'bordered', type: 'boolean', default: 'false', description: 'Show bottom border.' },
+  { name: 'shadow', type: 'boolean', default: 'false', description: 'Show shadow effect.' },
+  { name: 'fluid', type: 'boolean', default: 'false', description: 'Full width navbar (no container constraint).' },
+  { name: 'className', type: 'string', description: 'Additional CSS classes.' },
+  { name: 'children', type: 'React.ReactNode', description: 'Navbar content.' }
+]} />
+
+### NavbarBrandProps
+<PropsTable props={[
+  { name: 'href', type: 'string', description: 'Link URL for the brand.' },
+  { name: 'as', type: 'React.ElementType', description: 'HTML element to render as.' },
+  { name: 'className', type: 'string', description: 'Additional CSS classes.' },
+  { name: 'children', type: 'React.ReactNode', description: 'Brand content (logo, text).' }
+]} />
+
+### NavbarNavProps
+<PropsTable props={[
+  { name: 'align', type: "'start' | 'center' | 'end'", default: "'start'", description: 'Alignment of navigation items.' },
+  { name: 'className', type: 'string', description: 'Additional CSS classes.' },
+  { name: 'children', type: 'React.ReactNode', description: 'Navigation items.' }
+]} />
+
+### NavbarItemProps
+<PropsTable props={[
+  { name: 'href', type: 'string', description: 'Link URL.' },
+  { name: 'active', type: 'boolean', default: 'false', description: 'Active/current page state.' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Disabled state.' },
+  { name: 'as', type: 'React.ElementType', description: 'HTML element to render as.' },
+  { name: 'onClick', type: '() => void', description: 'Click handler.' },
+  { name: 'className', type: 'string', description: 'Additional CSS classes.' },
+  { name: 'children', type: 'React.ReactNode', description: 'Item content.' }
+]} />
+
+### NavbarActionsProps
+<PropsTable props={[
+  { name: 'className', type: 'string', description: 'Additional CSS classes.' },
+  { name: 'children', type: 'React.ReactNode', description: 'Action buttons or elements.' }
+]} />
+
+### NavbarToggleProps
+<PropsTable props={[
+  { name: 'onClick', type: '() => void', description: 'Click handler for toggle.' },
+  { name: 'isOpen', type: 'boolean', default: 'false', description: 'Open state for icon animation.' },
+  { name: 'className', type: 'string', description: 'Additional CSS classes.' }
+]} />
+

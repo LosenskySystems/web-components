@@ -1,0 +1,378 @@
+# Form Layout
+
+A comprehensive form layout system with components for organizing and structuring forms with consistent spacing, labels, validation states, and error messages.
+
+## Basic Usage
+
+<CodeBlock code={`<Form onSubmit={handleSubmit}>
+  <FormField label="Email" required>
+    <Input type="email" placeholder="Enter your email" />
+  </FormField>
+  
+  <FormField label="Password" required>
+    <Input type="password" placeholder="Enter your password" />
+  </FormField>
+  
+  <FormActions>
+    <Button type="submit">Submit</Button>
+  </FormActions>
+</Form>`}>
+  <div className="w-80">
+    <Form onSubmit={(e) => e.preventDefault()}>
+      <FormField label="Email" required>
+        <Input type="email" placeholder="Enter your email" />
+      </FormField>
+      
+      <FormField label="Password" required>
+        <Input type="password" placeholder="Enter your password" />
+      </FormField>
+      
+      <FormActions>
+        <Button type="submit">Submit</Button>
+      </FormActions>
+    </Form>
+  </div>
+</CodeBlock>
+
+## Form Sections
+
+<CodeBlock code={`<Form>
+  <FormSection title="Personal Information" description="Enter your personal details">
+    <FormField label="First Name" required>
+      <Input placeholder="John" />
+    </FormField>
+    <FormField label="Last Name" required>
+      <Input placeholder="Doe" />
+    </FormField>
+  </FormSection>
+  
+  <FormSection title="Contact Details">
+    <FormField label="Email" required>
+      <Input type="email" placeholder="john@example.com" />
+    </FormField>
+    <FormField label="Phone">
+      <Input type="tel" placeholder="+1 (555) 123-4567" />
+    </FormField>
+  </FormSection>
+</Form>`}>
+  <div className="w-80">
+    <Form>
+      <FormSection title="Personal Information" description="Enter your personal details">
+        <FormField label="First Name" required>
+          <Input placeholder="John" />
+        </FormField>
+        <FormField label="Last Name" required>
+          <Input placeholder="Doe" />
+        </FormField>
+      </FormSection>
+      
+      <FormSection title="Contact Details">
+        <FormField label="Email" required>
+          <Input type="email" placeholder="john@example.com" />
+        </FormField>
+        <FormField label="Phone">
+          <Input type="tel" placeholder="+1 (555) 123-4567" />
+        </FormField>
+      </FormSection>
+    </Form>
+  </div>
+</CodeBlock>
+
+## Validation States
+
+<CodeBlock code={`<Form>
+  <FormField label="Email" helperText="We'll never share your email">
+    <Input type="email" placeholder="Valid email" />
+  </FormField>
+  
+  <FormField label="Username" errorText="Username is already taken" error>
+    <Input placeholder="Invalid username" />
+  </FormField>
+  
+  <FormField label="Password" successText="Strong password" success>
+    <Input type="password" placeholder="Valid password" />
+  </FormField>
+</Form>`}>
+  <div className="w-80">
+    <Form>
+      <FormField label="Email" helperText="We'll never share your email">
+        <Input type="email" placeholder="Valid email" />
+      </FormField>
+      
+      <FormField label="Username" errorText="Username is already taken" error>
+        <Input placeholder="Invalid username" />
+      </FormField>
+      
+      <FormField label="Password" successText="Strong password" success>
+        <Input type="password" placeholder="Valid password" />
+      </FormField>
+    </Form>
+  </div>
+</CodeBlock>
+
+## Form Actions Alignment
+
+<CodeBlock code={`<div className="space-y-6">
+  <Form>
+    <FormField label="Input">
+      <Input placeholder="Left aligned actions" />
+    </FormField>
+    <FormActions align="left">
+      <Button variant="primary">Submit</Button>
+      <Button variant="ghost">Cancel</Button>
+    </FormActions>
+  </Form>
+  
+  <Form>
+    <FormField label="Input">
+      <Input placeholder="Center aligned actions" />
+    </FormField>
+    <FormActions align="center">
+      <Button variant="primary">Submit</Button>
+      <Button variant="ghost">Cancel</Button>
+    </FormActions>
+  </Form>
+  
+  <Form>
+    <FormField label="Input">
+      <Input placeholder="Space between actions" />
+    </FormField>
+    <FormActions align="space-between">
+      <Button variant="ghost">Cancel</Button>
+      <Button variant="primary">Submit</Button>
+    </FormActions>
+  </Form>
+</div>`}>
+  <div className="w-80 space-y-6">
+    <Form>
+      <FormField label="Input">
+        <Input placeholder="Left aligned actions" />
+      </FormField>
+      <FormActions align="left">
+        <Button variant="primary">Submit</Button>
+        <Button variant="ghost">Cancel</Button>
+      </FormActions>
+    </Form>
+    
+    <Form>
+      <FormField label="Input">
+        <Input placeholder="Center aligned actions" />
+      </FormField>
+      <FormActions align="center">
+        <Button variant="primary">Submit</Button>
+        <Button variant="ghost">Cancel</Button>
+      </FormActions>
+    </Form>
+    
+    <Form>
+      <FormField label="Input">
+        <Input placeholder="Space between actions" />
+      </FormField>
+      <FormActions align="space-between">
+        <Button variant="ghost">Cancel</Button>
+        <Button variant="primary">Submit</Button>
+      </FormActions>
+    </Form>
+  </div>
+</CodeBlock>
+
+## Loading State
+
+<CodeBlock code={`<Form loading onSubmit={handleSubmit}>
+  <FormField label="Email">
+    <Input type="email" placeholder="Enter your email" />
+  </FormField>
+  
+  <FormField label="Message">
+    <Textarea placeholder="Enter your message" />
+  </FormField>
+  
+  <FormActions>
+    <Button type="submit">Submit</Button>
+  </FormActions>
+</Form>`}>
+  <div className="w-80">
+    <Form loading onSubmit={(e) => e.preventDefault()}>
+      <FormField label="Email">
+        <Input type="email" placeholder="Enter your email" />
+      </FormField>
+      
+      <FormField label="Message">
+        <Textarea placeholder="Enter your message" />
+      </FormField>
+      
+      <FormActions>
+        <Button type="submit">Submit</Button>
+      </FormActions>
+    </Form>
+  </div>
+</CodeBlock>
+
+## Disabled State
+
+<CodeBlock code={`<Form disabled>
+  <FormField label="Email">
+    <Input type="email" placeholder="Disabled field" />
+  </FormField>
+  
+  <FormField label="Message">
+    <Textarea placeholder="Disabled textarea" />
+  </FormField>
+  
+  <FormActions>
+    <Button type="submit">Submit</Button>
+    <Button variant="ghost">Cancel</Button>
+  </FormActions>
+</Form>`}>
+  <div className="w-80">
+    <Form disabled>
+      <FormField label="Email">
+        <Input type="email" placeholder="Disabled field" />
+      </FormField>
+      
+      <FormField label="Message">
+        <Textarea placeholder="Disabled textarea" />
+      </FormField>
+      
+      <FormActions>
+        <Button type="submit">Submit</Button>
+        <Button variant="ghost">Cancel</Button>
+      </FormActions>
+    </Form>
+  </div>
+</CodeBlock>
+
+## Complete Form Example
+
+<CodeBlock code={`<Form onSubmit={handleSubmit}>
+  <FormSection title="Account Setup" description="Create your account">
+    <FormField label="Username" required errorText="Username is required" error>
+      <Input placeholder="Choose a username" />
+    </FormField>
+    
+    <FormField label="Email" required helperText="We'll use this for notifications">
+      <Input type="email" placeholder="your@email.com" />
+    </FormField>
+    
+    <FormField label="Password" required>
+      <Input type="password" placeholder="Create a password" />
+    </FormField>
+  </FormSection>
+  
+  <FormSection title="Preferences">
+    <FormField label="Newsletter">
+      <Checkbox>Subscribe to newsletter</Checkbox>
+    </FormField>
+    
+    <FormField label="Country">
+      <Select>
+        <Select.Item value="us">United States</Select.Item>
+        <Select.Item value="ca">Canada</Select.Item>
+        <Select.Item value="uk">United Kingdom</Select.Item>
+      </Select>
+    </FormField>
+  </FormSection>
+  
+  <FormActions>
+    <Button variant="ghost">Cancel</Button>
+    <Button type="submit" variant="primary">Create Account</Button>
+  </FormActions>
+</Form>`}>
+  <div className="w-96">
+    <Form onSubmit={(e) => e.preventDefault()}>
+      <FormSection title="Account Setup" description="Create your account">
+        <FormField label="Username" required errorText="Username is required" error>
+          <Input placeholder="Choose a username" />
+        </FormField>
+        
+        <FormField label="Email" required helperText="We'll use this for notifications">
+          <Input type="email" placeholder="your@email.com" />
+        </FormField>
+        
+        <FormField label="Password" required>
+          <Input type="password" placeholder="Create a password" />
+        </FormField>
+      </FormSection>
+      
+      <FormSection title="Preferences">
+        <FormField label="Newsletter">
+          <Checkbox>Subscribe to newsletter</Checkbox>
+        </FormField>
+        
+        <FormField label="Country">
+          <Select>
+            <Select.Item value="us">United States</Select.Item>
+            <Select.Item value="ca">Canada</Select.Item>
+            <Select.Item value="uk">United Kingdom</Select.Item>
+          </Select>
+        </FormField>
+      </FormSection>
+      
+      <FormActions>
+        <Button variant="ghost">Cancel</Button>
+        <Button type="submit" variant="primary">Create Account</Button>
+      </FormActions>
+    </Form>
+  </div>
+</CodeBlock>
+
+## Props
+
+<PropsTable props={[
+  { name: 'Form', type: 'FormProps', default: '', description: 'Main form wrapper component' },
+  { name: 'FormField', type: 'FormFieldProps', default: '', description: 'Field wrapper with label and validation' },
+  { name: 'FormSection', type: 'FormSectionProps', default: '', description: 'Section grouping component' },
+  { name: 'FormActions', type: 'FormActionsProps', default: '', description: 'Action buttons container' }
+]} />
+
+### Form Props
+
+<PropsTable props={[
+  { name: 'children', type: 'React.ReactNode', default: '', description: 'Form content' },
+  { name: 'onSubmit', type: '(event: FormEvent) => void', default: 'undefined', description: 'Form submission handler' },
+  { name: 'loading', type: 'boolean', default: 'false', description: 'Whether the form is in loading state' },
+  { name: 'showLoadingSpinner', type: 'boolean', default: 'true', description: 'Whether to show loading spinner' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Whether the form is disabled' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' }
+]} />
+
+### FormField Props
+
+<PropsTable props={[
+  { name: 'children', type: 'React.ReactNode', default: '', description: 'Form control (Input, Select, etc.)' },
+  { name: 'label', type: 'string', default: 'undefined', description: 'Field label text' },
+  { name: 'labelFor', type: 'string', default: 'undefined', description: 'Label HTML for attribute' },
+  { name: 'required', type: 'boolean', default: 'false', description: 'Whether the field is required' },
+  { name: 'helperText', type: 'string', default: 'undefined', description: 'Helper text below the field' },
+  { name: 'errorText', type: 'string', default: 'undefined', description: 'Error text below the field' },
+  { name: 'successText', type: 'string', default: 'undefined', description: 'Success text below the field' },
+  { name: 'tooltip', type: 'string', default: 'undefined', description: 'Tooltip text for the label' },
+  { name: 'error', type: 'boolean', default: 'false', description: 'Whether the field has an error state' },
+  { name: 'success', type: 'boolean', default: 'false', description: 'Whether the field has a success state' },
+  { name: 'size', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Field size' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Whether the field is disabled' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' }
+]} />
+
+### FormSection Props
+
+<PropsTable props={[
+  { name: 'children', type: 'React.ReactNode', default: '', description: 'Section content' },
+  { name: 'title', type: 'string', default: 'undefined', description: 'Section title' },
+  { name: 'description', type: 'string', default: 'undefined', description: 'Section description' },
+  { name: 'showSeparator', type: 'boolean', default: 'false', description: 'Whether to show visual separator' },
+  { name: 'fieldSpacing', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Spacing between fields' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Whether the section is disabled' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' }
+]} />
+
+### FormActions Props
+
+<PropsTable props={[
+  { name: 'children', type: 'React.ReactNode', default: '', description: 'Action buttons' },
+  { name: 'align', type: "'left' | 'right' | 'center' | 'space-between'", default: "'right'", description: 'Button alignment' },
+  { name: 'spacing', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Spacing between buttons' },
+  { name: 'stackOnMobile', type: 'boolean', default: 'true', description: 'Whether buttons stack on mobile' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Whether the actions are disabled' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' }
+]} />

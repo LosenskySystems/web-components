@@ -1,0 +1,3 @@
+# Mark MDX files as documentation to exclude from language statistics
+*.mdx linguist-documentation
+

@@ -1,0 +1,184 @@
+import { Tooltip, Button } from '@losensky-systems/web-components-core'
+import { Settings, Save, Heart, Info } from 'lucide-react'
+
+# Tooltip Component
+
+The Tooltip component provides contextual information when users interact with elements.
+
+## Import
+
+```tsx
+import { Tooltip } from '@losensky-systems/web-components-core'
+```
+
+## Basic Usage
+
+<CodeBlock code={`<Tooltip content="This is a tooltip">
+  <Button>Hover me</Button>
+</Tooltip>
+
+<Tooltip content="Another tooltip example">
+  <span className="px-2 py-1 bg-gray-100 rounded cursor-pointer">
+    Hover over this text
+  </span>
+</Tooltip>`}>
+  <div className="flex gap-4 mb-8 flex-wrap items-center">
+    <Tooltip content="This is a tooltip">
+      <Button>Hover me</Button>
+    </Tooltip>
+    
+    <Tooltip content="Another tooltip example">
+      <span className="px-2 py-1 bg-gray-100 rounded cursor-pointer">
+        Hover over this text
+      </span>
+    </Tooltip>
+  </div>
+</CodeBlock>
+
+## Placements
+
+Control where the tooltip appears:
+
+<CodeBlock code={`<Tooltip content="Top tooltip" placement="top">
+  <Button size="sm">Top</Button>
+</Tooltip>
+
+<Tooltip content="Bottom tooltip" placement="bottom">
+  <Button size="sm">Bottom</Button>
+</Tooltip>
+
+<Tooltip content="Left tooltip" placement="left">
+  <Button size="sm">Left</Button>
+</Tooltip>
+
+<Tooltip content="Right tooltip" placement="right">
+  <Button size="sm">Right</Button>
+</Tooltip>`}>
+  <div className="flex gap-4 mb-8 flex-wrap items-center">
+    <Tooltip content="Top tooltip" placement="top">
+      <Button size="sm">Top</Button>
+    </Tooltip>
+    
+    <Tooltip content="Bottom tooltip" placement="bottom">
+      <Button size="sm">Bottom</Button>
+    </Tooltip>
+    
+    <Tooltip content="Left tooltip" placement="left">
+      <Button size="sm">Left</Button>
+    </Tooltip>
+    
+    <Tooltip content="Right tooltip" placement="right">
+      <Button size="sm">Right</Button>
+    </Tooltip>
+  </div>
+</CodeBlock>
+
+## Triggers
+
+Different ways to trigger tooltips:
+
+<CodeBlock code={`<Tooltip content="Hover to see" trigger="hover">
+  <Button>Hover</Button>
+</Tooltip>
+
+<Tooltip content="Click to toggle" trigger="click">
+  <Button variant="outline">Click</Button>
+</Tooltip>
+
+<Tooltip content="Focus to see" trigger="focus">
+  <Button variant="ghost">Focus</Button>
+</Tooltip>`}>
+  <div className="flex gap-4 mb-8 flex-wrap items-center">
+    <Tooltip content="Hover to see" trigger="hover">
+      <Button>Hover</Button>
+    </Tooltip>
+    
+    <Tooltip content="Click to toggle" trigger="click">
+      <Button variant="outline">Click</Button>
+    </Tooltip>
+    
+    <Tooltip content="Focus to see" trigger="focus">
+      <Button variant="ghost">Focus</Button>
+    </Tooltip>
+  </div>
+</CodeBlock>
+
+## With Icons
+
+Tooltips work great with icon buttons:
+
+<CodeBlock code={`<Tooltip content="Save changes">
+  <Button icon={<Save size={16} />} iconOnly variant="ghost" />
+</Tooltip>
+
+<Tooltip content="Settings" placement="top">
+  <Button icon={<Settings size={16} />} iconOnly variant="ghost" />
+</Tooltip>
+
+<Tooltip content="Like this post">
+  <Button icon={<Heart size={16} />} iconOnly variant="ghost" color="error" />
+</Tooltip>
+
+<Tooltip content="More information">
+  <Button icon={<Info size={16} />} iconOnly variant="ghost" color="info" />
+</Tooltip>`}>
+  <div className="flex gap-4 mb-8 flex-wrap items-center">
+    <Tooltip content="Save changes">
+      <Button icon={<Save size={16} />} iconOnly variant="ghost" />
+    </Tooltip>
+    
+    <Tooltip content="Settings" placement="top">
+      <Button icon={<Settings size={16} />} iconOnly variant="ghost" />
+    </Tooltip>
+    
+    <Tooltip content="Like this post">
+      <Button icon={<Heart size={16} />} iconOnly variant="ghost" color="error" />
+    </Tooltip>
+    
+    <Tooltip content="More information">
+      <Button icon={<Info size={16} />} iconOnly variant="ghost" color="info" />
+    </Tooltip>
+  </div>
+</CodeBlock>
+
+## Delay
+
+Control how quickly tooltips appear:
+
+<CodeBlock code={`<Tooltip content="Appears immediately" delay={0}>
+  <Button>No Delay</Button>
+</Tooltip>
+
+<Tooltip content="Appears after 500ms" delay={500}>
+  <Button>Slow Hover</Button>
+</Tooltip>
+
+<Tooltip content="Appears after 1 second" delay={1000}>
+  <Button>Very Slow</Button>
+</Tooltip>`}>
+  <div className="flex gap-4 mb-8 flex-wrap items-center">
+    <Tooltip content="Appears immediately" delay={0}>
+      <Button>No Delay</Button>
+    </Tooltip>
+    
+    <Tooltip content="Appears after 500ms" delay={500}>
+      <Button>Slow Hover</Button>
+    </Tooltip>
+    
+    <Tooltip content="Appears after 1 second" delay={1000}>
+      <Button>Very Slow</Button>
+    </Tooltip>
+  </div>
+</CodeBlock>
+
+## Props
+
+<PropsTable props={[
+  { name: 'children', type: 'React.ReactNode', default: '-', description: 'The element that triggers the tooltip' },
+  { name: 'content', type: 'React.ReactNode', default: '-', description: 'The content to display inside the tooltip' },
+  { name: 'placement', type: "'top' | 'bottom' | 'left' | 'right'", default: "'top'", description: 'Position of the tooltip relative to the trigger' },
+  { name: 'trigger', type: "'hover' | 'click' | 'focus'", default: "'hover'", description: 'Event that triggers the tooltip' },
+  { name: 'delay', type: 'number', default: '200', description: 'Delay in milliseconds before tooltip appears' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Disable the tooltip' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' }
+]} />

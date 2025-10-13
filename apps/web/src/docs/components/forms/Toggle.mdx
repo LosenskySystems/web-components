@@ -1,0 +1,105 @@
+# Toggle
+
+A toggle switch component for boolean values with optional labels and size variants.
+
+## Basic Usage
+
+<CodeBlock code={`<Toggle>Enable notifications</Toggle>`}>
+  <Toggle>Enable notifications</Toggle>
+</CodeBlock>
+
+## States
+
+<CodeBlock code={`<div className="space-y-4">
+  <Toggle>Unchecked</Toggle>
+  <Toggle defaultChecked>Checked</Toggle>
+  <Toggle disabled>Disabled</Toggle>
+  <Toggle defaultChecked disabled>Checked & Disabled</Toggle>
+</div>`}>
+  <div className="space-y-4">
+    <Toggle>Unchecked</Toggle>
+    <Toggle defaultChecked>Checked</Toggle>
+    <Toggle disabled>Disabled</Toggle>
+    <Toggle defaultChecked disabled>Checked & Disabled</Toggle>
+  </div>
+</CodeBlock>
+
+## Sizes
+
+<CodeBlock code={`<div className="space-y-4">
+  <Toggle size="sm" showLabels>Small toggle</Toggle>
+  <Toggle size="md" showLabels>Medium toggle (default)</Toggle>
+  <Toggle size="lg" showLabels>Large toggle</Toggle>
+</div>`}>
+  <div className="space-y-4">
+    <Toggle size="sm" showLabels>Small toggle</Toggle>
+    <Toggle size="md" showLabels>Medium toggle (default)</Toggle>
+    <Toggle size="lg" showLabels>Large toggle</Toggle>
+  </div>
+</CodeBlock>
+
+## With Labels
+
+Show on/off labels inside the toggle track:
+
+<CodeBlock code={`<div className="space-y-4">
+  <Toggle showLabels>Default labels</Toggle>
+  <Toggle showLabels onLabel="Yes" offLabel="No">Custom labels</Toggle>
+</div>`}>
+  <div className="space-y-4">
+    <Toggle showLabels>Default labels</Toggle>
+    <Toggle showLabels onLabel="Yes" offLabel="No">Custom labels</Toggle>
+  </div>
+</CodeBlock>
+
+## Label Position
+
+Labels can be positioned inside the track or outside:
+
+<CodeBlock code={`<div className="space-y-4">
+  <Toggle showLabels labelPosition="inside">Inside labels</Toggle>
+  <Toggle showLabels labelPosition="outside">Outside labels</Toggle>
+</div>`}>
+  <div className="space-y-4">
+    <Toggle showLabels labelPosition="inside">Inside labels</Toggle>
+    <Toggle showLabels labelPosition="outside">Outside labels</Toggle>
+  </div>
+</CodeBlock>
+
+## Controlled vs Uncontrolled
+
+### Uncontrolled (default)
+
+<CodeBlock code={`<Toggle defaultChecked>Auto-save</Toggle>`}>
+  <Toggle defaultChecked>Auto-save</Toggle>
+</CodeBlock>
+
+### Controlled
+
+<CodeBlock code={`const [enabled, setEnabled] = useState(false);
+
+<Toggle 
+  checked={enabled} 
+  onChange={setEnabled}
+>
+  Dark mode
+</Toggle>`}>
+  <Toggle>Dark mode (controlled)</Toggle>
+</CodeBlock>
+
+## Props
+
+<PropsTable props={[
+  { name: 'checked', type: 'boolean', default: 'undefined', description: 'Controlled checked state' },
+  { name: 'defaultChecked', type: 'boolean', default: 'false', description: 'Default checked state (uncontrolled)' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Whether the toggle is disabled' },
+  { name: 'size', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Toggle size' },
+  { name: 'showLabels', type: 'boolean', default: 'false', description: 'Show on/off labels' },
+  { name: 'labelPosition', type: "'inside' | 'outside'", default: "'inside'", description: 'Label position' },
+  { name: 'onLabel', type: 'string', default: "'On'", description: 'Custom "on" label text' },
+  { name: 'offLabel', type: 'string', default: "'Off'", description: 'Custom "off" label text' },
+  { name: 'children', type: 'React.ReactNode', default: 'undefined', description: 'Optional label/description next to toggle' },
+  { name: 'onChange', type: '(checked: boolean) => void', default: 'undefined', description: 'Change callback' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' },
+  { name: 'inputProps', type: 'React.InputHTMLAttributes<HTMLInputElement>', default: '{}', description: 'Native input props' }
+]} />

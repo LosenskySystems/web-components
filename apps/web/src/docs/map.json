@@ -1,0 +1,372 @@
+{
+  "routes": [
+    {
+      "id": "overview",
+      "title": "Overview",
+      "path": "/docs/get-started/overview",
+      "category": "get-started",
+      "description": "Introduction to the component library"
+    },
+    {
+      "id": "installation",
+      "title": "Installation",
+      "path": "/docs/get-started/installation",
+      "category": "get-started", 
+      "description": "How to install and setup the library"
+    },
+    {
+      "id": "button",
+      "title": "Button",
+      "path": "/docs/components/elements/button",
+      "component": "Button",
+      "category": "components",
+      "subcategory": "elements",
+      "description": "A versatile button component with multiple variants and states"
+    },
+    {
+      "id": "card",
+      "title": "Card",
+      "path": "/docs/components/data/card",
+      "component": "Card",
+      "category": "components",
+      "subcategory": "data",
+      "description": "A flexible card component with compound architecture for content layouts"
+    },
+    {
+      "id": "divider",
+      "title": "Divider",
+      "path": "/docs/components/elements/divider",
+      "component": "Divider",
+      "category": "components",
+      "subcategory": "elements",
+      "description": "A divider component for separating content sections"
+    },
+    {
+      "id": "label",
+      "title": "Label",
+      "path": "/docs/components/elements/label",
+      "component": "Label",
+      "category": "components",
+      "subcategory": "elements",
+      "description": "A label component for form fields and content"
+    },
+    {
+      "id": "loader",
+      "title": "Loader",
+      "path": "/docs/components/elements/loader",
+      "component": "Loader",
+      "category": "components",
+      "subcategory": "elements",
+      "description": "A loading spinner component with multiple variants"
+    },
+    {
+      "id": "tooltip",
+      "title": "Tooltip",
+      "path": "/docs/components/elements/tooltip",
+      "component": "Tooltip",
+      "category": "components",
+      "subcategory": "elements",
+      "description": "A tooltip component for contextual information"
+    },
+    {
+      "id": "badge",
+      "title": "Badge",
+      "path": "/docs/components/elements/badge",
+      "component": "Badge",
+      "category": "components",
+      "subcategory": "elements",
+      "description": "A badge component for notification counts and indicators"
+    },
+    {
+      "id": "avatar",
+      "title": "Avatar",
+      "path": "/docs/components/elements/avatar",
+      "component": "Avatar",
+      "category": "components",
+      "subcategory": "elements",
+      "description": "A simple avatar component that displays user profile images with fallback support"
+    },
+    {
+      "id": "icon",
+      "title": "Icon",
+      "path": "/docs/components/elements/icon",
+      "component": "Icon",
+      "category": "components",
+      "subcategory": "elements",
+      "description": "A flexible icon component that supports custom SVG content and built-in icon names"
+    },
+    {
+      "id": "dropdown",
+      "title": "Dropdown",
+      "path": "/docs/components/elements/dropdown",
+      "component": "Dropdown",
+      "category": "components",
+      "subcategory": "elements",
+      "description": "A simple dropdown menu component for displaying a list of actions or options"
+    },
+    {
+      "id": "alert",
+      "title": "Alert",
+      "path": "/docs/components/elements/alert",
+      "component": "Alert",
+      "category": "components",
+      "subcategory": "elements",
+      "description": "A simple alert component for displaying important messages and notifications"
+    },
+    {
+      "id": "progress",
+      "title": "Progress",
+      "path": "/docs/components/elements/progress",
+      "component": "Progress",
+      "category": "components",
+      "subcategory": "elements",
+      "description": "Display progress indicators with bar or circular variants"
+    },
+    {
+      "id": "accordion",
+      "title": "Accordion",
+      "path": "/docs/components/data/accordion",
+      "component": "Accordion",
+      "category": "components",
+      "subcategory": "data",
+      "description": "A collapsible content area that allows users to expand and collapse sections of information"
+    },
+    {
+      "id": "toast",
+      "title": "Toast",
+      "path": "/docs/components/data/toast",
+      "component": "Toast",
+      "category": "components",
+      "subcategory": "data",
+      "description": "A floating notification component for displaying temporary messages and feedback"
+    },
+    {
+      "id": "input",
+      "title": "Input", 
+      "path": "/docs/components/forms/input",
+      "component": "Input",
+      "category": "components",
+      "subcategory": "forms",
+      "description": "A flexible text input field with various states and styling options"
+    },
+    {
+      "id": "select",
+      "title": "Select",
+      "path": "/docs/components/forms/select",
+      "component": "Select",
+      "category": "components",
+      "subcategory": "forms",
+      "description": "A dropdown selection component with custom options"
+    },
+    {
+      "id": "textarea",
+      "title": "Textarea",
+      "path": "/docs/components/forms/textarea",
+      "component": "Textarea",
+      "category": "components",
+      "subcategory": "forms",
+      "description": "A multi-line text input component"
+    },
+    {
+      "id": "checkbox",
+      "title": "Checkbox",
+      "path": "/docs/components/forms/checkbox",
+      "component": "Checkbox",
+      "category": "components",
+      "subcategory": "forms",
+      "description": "A checkbox component for form inputs and selections"
+    },
+    {
+      "id": "radio",
+      "title": "Radio",
+      "path": "/docs/components/forms/radio",
+      "component": "Radio",
+      "category": "components",
+      "subcategory": "forms",
+      "description": "A radio button component for single selection in forms"
+    },
+    {
+      "id": "slider",
+      "title": "Slider",
+      "path": "/docs/components/forms/slider",
+      "component": "Slider",
+      "category": "components",
+      "subcategory": "forms",
+      "description": "A range slider component for selecting numeric values"
+    },
+    {
+      "id": "toggle",
+      "title": "Toggle",
+      "path": "/docs/components/forms/toggle",
+      "component": "Toggle",
+      "category": "components",
+      "subcategory": "forms",
+      "description": "A toggle switch component for boolean values with optional labels"
+    },
+    {
+      "id": "datepicker",
+      "title": "DateTimePicker",
+      "path": "/docs/components/forms/datepicker",
+      "component": "DateTimePicker",
+      "category": "components",
+      "subcategory": "forms",
+      "description": "A comprehensive date and time picker with calendar dropdown and range support"
+    },
+    {
+      "id": "formlayout",
+      "title": "Form Layout",
+      "path": "/docs/components/forms/formlayout",
+      "component": "FormLayout",
+      "category": "components",
+      "subcategory": "forms",
+      "description": "Form layout system with components for organizing forms with consistent spacing and validation states"
+    },
+    {
+      "id": "modal",
+      "title": "Modal",
+      "path": "/docs/components/overlays/modal",
+      "component": "Modal",
+      "category": "components",
+      "subcategory": "overlays",
+      "description": "Modal/dialog overlay component with compound components, controlled state, and accessibility features"
+    },
+    {
+      "id": "container",
+      "title": "Container",
+      "path": "/docs/components/layout/container",
+      "component": "Container",
+      "category": "components",
+      "subcategory": "layout",
+      "description": "Flexible layout container with responsive max-widths, configurable padding, and layout variants"
+    },
+    {
+      "id": "grid",
+      "title": "Grid",
+      "path": "/docs/components/layout/grid",
+      "component": "Grid",
+      "category": "components",
+      "subcategory": "layout",
+      "description": "CSS Grid-based layout system with responsive columns, gap spacing, and alignment options"
+    },
+    {
+      "id": "stack",
+      "title": "Stack",
+      "path": "/docs/components/layout/stack",
+      "component": "Stack",
+      "category": "components",
+      "subcategory": "layout",
+      "description": "Flexible layout component for arranging children vertically or horizontally with consistent spacing"
+    },
+    {
+      "id": "drawer",
+      "title": "Drawer",
+      "path": "/docs/components/overlays/drawer",
+      "component": "Drawer",
+      "category": "components",
+      "subcategory": "overlays",
+      "description": "Slide-out panel component with compound components, configurable positioning, and controlled/uncontrolled modes"
+    },
+    {
+      "id": "navbar",
+      "title": "Navbar",
+      "path": "/docs/components/navigation/navbar",
+      "component": "Navbar",
+      "category": "components",
+      "subcategory": "navigation",
+      "description": "Flexible navigation bar component with compound architecture for building responsive headers"
+    },
+    {
+      "id": "sidebar",
+      "title": "Sidebar",
+      "path": "/docs/components/navigation/sidebar",
+      "component": "Sidebar",
+      "category": "components",
+      "subcategory": "navigation",
+      "description": "Flexible collapsible sidebar component with compound architecture for navigation interfaces"
+    },
+    {
+      "id": "breadcrumbs",
+      "title": "Breadcrumbs",
+      "path": "/docs/components/navigation/breadcrumbs",
+      "component": "Breadcrumbs",
+      "category": "components",
+      "subcategory": "navigation",
+      "description": "Flexible breadcrumb navigation component for displaying hierarchical navigation paths"
+    },
+    {
+      "id": "tabs",
+      "title": "Tabs",
+      "path": "/docs/components/navigation/tabs",
+      "component": "Tabs",
+      "category": "components",
+      "subcategory": "navigation",
+      "description": "A tabs component for organizing content into separate views that can be switched between"
+    },
+    {
+      "id": "get-started-category",
+      "title": "Get Started",
+      "path": "/docs/get-started",
+      "category": "get-started",
+      "description": "Getting started with the component library"
+    },
+    {
+      "id": "components-category",
+      "title": "Components",
+      "path": "/docs/components",
+      "category": "components",
+      "description": "Browse all component categories and their contents"
+    }
+  ],
+  "categories": [
+    {
+      "id": "get-started",
+      "title": "Get Started",
+      "description": "Getting started with the component library",
+      "items": ["overview", "installation"]
+    },
+    {
+      "id": "components",
+      "title": "Components",
+      "description": "Core UI components for building interfaces",
+      "subcategories": [
+        {
+          "id": "elements",
+          "title": "Elements",
+          "description": "Basic UI elements",
+          "items": ["button", "divider", "label", "loader", "tooltip", "badge", "avatar", "icon", "dropdown", "alert", "progress"]
+        },
+        {
+          "id": "forms",
+          "title": "Forms",
+          "description": "Form input components",
+          "items": ["input", "select", "textarea", "checkbox", "radio", "slider", "toggle", "datepicker", "formlayout"]
+        },
+    {
+      "id": "navigation",
+      "title": "Navigation",
+      "description": "Navigation and routing components",
+      "items": ["navbar", "sidebar", "breadcrumbs", "tabs"]
+    },
+        {
+          "id": "data",
+          "title": "Data",
+          "description": "Components for displaying data and content",
+          "items": ["card", "toast", "accordion"]
+        },
+        {
+          "id": "overlays",
+          "title": "Overlays",
+          "description": "Overlay and dialog components",
+          "items": ["modal", "drawer"]
+        },
+        {
+          "id": "layout",
+          "title": "Layout",
+          "description": "Layout and section components",
+          "items": ["container", "grid", "stack"]
+        }
+      ]
+    }
+  ]
+}
+  

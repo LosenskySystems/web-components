@@ -1,0 +1,271 @@
+import { Accordion, AccordionItem } from '@losensky-systems/web-components-core'
+import { CodeBlock } from '../../../components/docs/CodeBlock'
+import { PropsTable } from '../../../components/docs/PropsTable'
+import { useState } from 'react'
+
+# Accordion Component
+
+The Accordion component provides a collapsible content area that allows users to expand and collapse sections of information. Perfect for FAQs, settings panels, and organizing content into digestible sections.
+
+## Import
+
+```tsx
+import { Accordion, AccordionItem } from '@losensky-systems/web-components-core'
+```
+
+## Basic Usage
+
+<CodeBlock code={`<Accordion>
+  <AccordionItem value="item-1" title="Is it accessible?">
+    Yes. It adheres to the WAI-ARIA design pattern.
+  </AccordionItem>
+  <AccordionItem value="item-2" title="Is it styled?">
+    Yes. It comes with default styling.
+  </AccordionItem>
+</Accordion>`}>
+  <Accordion>
+    <AccordionItem value="item-1" title="Is it accessible?">
+      Yes. It adheres to the WAI-ARIA design pattern.
+    </AccordionItem>
+    <AccordionItem value="item-2" title="Is it styled?">
+      Yes. It comes with default styling.
+    </AccordionItem>
+  </Accordion>
+</CodeBlock>
+
+## Multiple Items Open
+
+Use the `allowMultiple` prop to enable multiple accordion items to be open simultaneously.
+
+<CodeBlock code={`<Accordion allowMultiple>
+  <AccordionItem value="item-1" title="Section A">
+    Content for section A.
+  </AccordionItem>
+  <AccordionItem value="item-2" title="Section B">
+    Content for section B.
+  </AccordionItem>
+  <AccordionItem value="item-3" title="Section C">
+    Content for section C.
+  </AccordionItem>
+</Accordion>`}>
+  <Accordion allowMultiple>
+    <AccordionItem value="item-1" title="Section A">
+      Content for section A.
+    </AccordionItem>
+    <AccordionItem value="item-2" title="Section B">
+      Content for section B.
+    </AccordionItem>
+    <AccordionItem value="item-3" title="Section C">
+      Content for section C.
+    </AccordionItem>
+  </Accordion>
+</CodeBlock>
+
+## Default Open Items
+
+Set items to be expanded by default using the `defaultOpen` prop.
+
+<CodeBlock code={`<Accordion defaultOpen={['item-1']}>
+  <AccordionItem value="item-1" title="This item is open by default">
+    This content is visible when the accordion loads.
+  </AccordionItem>
+  <AccordionItem value="item-2" title="This item is closed by default">
+    This content is hidden when the accordion loads.
+  </AccordionItem>
+</Accordion>`}>
+  <Accordion defaultOpen={['item-1']}>
+    <AccordionItem value="item-1" title="This item is open by default">
+      This content is visible when the accordion loads.
+    </AccordionItem>
+    <AccordionItem value="item-2" title="This item is closed by default">
+      This content is hidden when the accordion loads.
+    </AccordionItem>
+  </Accordion>
+</CodeBlock>
+
+## Disabled Items
+
+Disable specific accordion items using the `disabled` prop.
+
+<CodeBlock code={`<Accordion>
+  <AccordionItem value="item-1" title="Enabled Item">
+    This item can be clicked and expanded.
+  </AccordionItem>
+  <AccordionItem value="item-2" title="Disabled Item" disabled>
+    This item is disabled and cannot be expanded.
+  </AccordionItem>
+  <AccordionItem value="item-3" title="Another Enabled Item">
+    This item is also enabled.
+  </AccordionItem>
+</Accordion>`}>
+  <Accordion>
+    <AccordionItem value="item-1" title="Enabled Item">
+      This item can be clicked and expanded.
+    </AccordionItem>
+    <AccordionItem value="item-2" title="Disabled Item" disabled>
+      This item is disabled and cannot be expanded.
+    </AccordionItem>
+    <AccordionItem value="item-3" title="Another Enabled Item">
+      This item is also enabled.
+    </AccordionItem>
+  </Accordion>
+</CodeBlock>
+
+## Controlled State
+
+Use controlled state for more complex interactions.
+
+<CodeBlock code={`const [openItems, setOpenItems] = useState(['item-1'])
+
+<Accordion 
+  defaultOpen={openItems} 
+  onOpenChange={setOpenItems}
+>
+  <AccordionItem value="item-1" title="Controlled Item 1">
+    This item is controlled by external state.
+  </AccordionItem>
+  <AccordionItem value="item-2" title="Controlled Item 2">
+    This item is also controlled by external state.
+  </AccordionItem>
+</Accordion>`}>
+  {(() => {
+    const [openItems, setOpenItems] = useState(['item-1'])
+    return (
+      <Accordion 
+        defaultOpen={openItems} 
+        onOpenChange={setOpenItems}
+      >
+        <AccordionItem value="item-1" title="Controlled Item 1">
+          This item is controlled by external state.
+        </AccordionItem>
+        <AccordionItem value="item-2" title="Controlled Item 2">
+          This item is also controlled by external state.
+        </AccordionItem>
+      </Accordion>
+    )
+  })()}
+</CodeBlock>
+
+## Real-World Examples
+
+### FAQ Section
+
+<CodeBlock code={`<Accordion>
+  <AccordionItem value="faq-1" title="How do I get started?">
+    Getting started is easy! Simply create an account, verify your email, and you're ready to go. You can start by exploring our dashboard and setting up your first project.
+  </AccordionItem>
+  <AccordionItem value="faq-2" title="What payment methods do you accept?">
+    We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers. All payments are processed securely through our encrypted payment system.
+  </AccordionItem>
+  <AccordionItem value="faq-3" title="Can I cancel my subscription anytime?">
+    Yes, you can cancel your subscription at any time. Your access will continue until the end of your current billing period, and you won't be charged again.
+  </AccordionItem>
+</Accordion>`}>
+  <Accordion>
+    <AccordionItem value="faq-1" title="How do I get started?">
+      Getting started is easy! Simply create an account, verify your email, and you're ready to go. You can start by exploring our dashboard and setting up your first project.
+    </AccordionItem>
+    <AccordionItem value="faq-2" title="What payment methods do you accept?">
+      We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers. All payments are processed securely through our encrypted payment system.
+    </AccordionItem>
+    <AccordionItem value="faq-3" title="Can I cancel my subscription anytime?">
+      Yes, you can cancel your subscription at any time. Your access will continue until the end of your current billing period, and you won't be charged again.
+    </AccordionItem>
+  </Accordion>
+</CodeBlock>
+
+### Settings Panel
+
+<CodeBlock code={`<Accordion>
+  <AccordionItem value="account-settings" title="Account Settings">
+    <div className="space-y-3">
+      <div className="flex items-center justify-between">
+        <span className="text-sm">Profile Visibility</span>
+        <select className="text-sm border rounded px-2 py-1">
+          <option>Public</option>
+          <option>Private</option>
+          <option>Friends Only</option>
+        </select>
+      </div>
+      <div className="flex items-center justify-between">
+        <span className="text-sm">Email Notifications</span>
+        <input type="checkbox" defaultChecked className="rounded" />
+      </div>
+    </div>
+  </AccordionItem>
+  <AccordionItem value="privacy-settings" title="Privacy Settings">
+    <div className="space-y-3">
+      <div className="flex items-center justify-between">
+        <span className="text-sm">Data Collection</span>
+        <input type="checkbox" className="rounded" />
+      </div>
+      <div className="flex items-center justify-between">
+        <span className="text-sm">Analytics Tracking</span>
+        <input type="checkbox" defaultChecked className="rounded" />
+      </div>
+    </div>
+  </AccordionItem>
+</Accordion>`}>
+  <Accordion>
+    <AccordionItem value="account-settings" title="Account Settings">
+      <div className="space-y-3">
+        <div className="flex items-center justify-between">
+          <span className="text-sm">Profile Visibility</span>
+          <select className="text-sm border rounded px-2 py-1">
+            <option>Public</option>
+            <option>Private</option>
+            <option>Friends Only</option>
+          </select>
+        </div>
+        <div className="flex items-center justify-between">
+          <span className="text-sm">Email Notifications</span>
+          <input type="checkbox" defaultChecked className="rounded" />
+        </div>
+      </div>
+    </AccordionItem>
+    <AccordionItem value="privacy-settings" title="Privacy Settings">
+      <div className="space-y-3">
+        <div className="flex items-center justify-between">
+          <span className="text-sm">Data Collection</span>
+          <input type="checkbox" className="rounded" />
+        </div>
+        <div className="flex items-center justify-between">
+          <span className="text-sm">Analytics Tracking</span>
+          <input type="checkbox" defaultChecked className="rounded" />
+        </div>
+      </div>
+    </AccordionItem>
+  </Accordion>
+</CodeBlock>
+
+## Accessibility
+
+The Accordion component includes comprehensive accessibility features:
+
+- **ARIA attributes**: Proper `aria-expanded`, `aria-controls`, and `aria-labelledby` attributes
+- **Keyboard navigation**: Full keyboard support with Enter and Space keys
+- **Screen reader friendly**: Clear announcements for expand/collapse actions
+- **Focus management**: Proper focus handling and visual indicators
+- **Semantic structure**: Uses proper heading and region roles
+
+## Props
+
+### Accordion Props
+
+<PropsTable props={[
+  { name: 'children', type: 'React.ReactNode', default: '-', description: 'Accordion items' },
+  { name: 'className', type: 'string', default: '-', description: 'Additional CSS classes' },
+  { name: 'defaultOpen', type: 'string[]', default: '[]', description: 'Array of values for initially open items' },
+  { name: 'onOpenChange', type: '(openItems: string[]) => void', default: '-', description: 'Callback when open items change' },
+  { name: 'allowMultiple', type: 'boolean', default: 'false', description: 'Allow multiple items to be open' }
+]} />
+
+### AccordionItem Props
+
+<PropsTable props={[
+  { name: 'children', type: 'React.ReactNode', default: '-', description: 'Content of the accordion item' },
+  { name: 'value', type: 'string', default: '-', description: 'Unique value for the item' },
+  { name: 'title', type: 'React.ReactNode', default: '-', description: 'Title of the accordion item' },
+  { name: 'className', type: 'string', default: '-', description: 'Additional CSS classes' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Disable the accordion item' }
+]} />

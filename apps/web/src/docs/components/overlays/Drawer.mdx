@@ -1,0 +1,288 @@
+import { CodeBlock } from '../../../components/docs/CodeBlock';
+import { PropsTable } from '../../../components/docs/PropsTable';
+import { BasicDrawerExample, DrawerSidesExample, DrawerSizesExample, CustomWidthDrawerExample, DrawerWithFormExample, ScrollableDrawerExample } from './DrawerExamples';
+
+# Drawer
+
+A slide-out panel component that can be opened from the left or right side of the screen. Perfect for navigation menus, settings panels, or detailed content views.
+
+## Basic Usage
+
+<CodeBlock code={`import { Drawer, Button } from '@losensky-systems/web-components-core';
+
+function BasicDrawer() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <>
+      <Button onClick={() => setIsOpen(true)}>Open Drawer</Button>
+
+      <Drawer open={isOpen} onOpenChange={setIsOpen}>
+        <Drawer.Header title="Drawer Title" />
+        <Drawer.Body>
+          <p>This is the drawer content.</p>
+        </Drawer.Body>
+        <Drawer.Footer>
+          <Button variant="ghost" onClick={() => setIsOpen(false)}>Cancel</Button>
+          <Button variant="primary">Save</Button>
+        </Drawer.Footer>
+      </Drawer>
+    </>
+  );
+}
+
+export default BasicDrawer;
+`}>
+  <BasicDrawerExample />
+</CodeBlock>
+
+## Side Positioning
+
+Drawers can slide in from either the left or right side of the screen.
+
+<CodeBlock code={`import { Drawer, Button } from '@losensky-systems/web-components-core';
+
+function DrawerSides() {
+  const [leftOpen, setLeftOpen] = useState(false);
+  const [rightOpen, setRightOpen] = useState(false);
+
+  return (
+    <>
+      <Button onClick={() => setLeftOpen(true)}>Open Left Drawer</Button>
+      <Button onClick={() => setRightOpen(true)}>Open Right Drawer</Button>
+
+      <Drawer open={leftOpen} onOpenChange={setLeftOpen} side="left">
+        <Drawer.Header title="Left Drawer" />
+        <Drawer.Body>
+          <p>This drawer slides in from the left side.</p>
+        </Drawer.Body>
+        <Drawer.Footer>
+          <Button onClick={() => setLeftOpen(false)}>Close</Button>
+        </Drawer.Footer>
+      </Drawer>
+
+      <Drawer open={rightOpen} onOpenChange={setRightOpen} side="right">
+        <Drawer.Header title="Right Drawer" />
+        <Drawer.Body>
+          <p>This drawer slides in from the right side.</p>
+        </Drawer.Body>
+        <Drawer.Footer>
+          <Button onClick={() => setRightOpen(false)}>Close</Button>
+        </Drawer.Footer>
+      </Drawer>
+    </>
+  );
+}
+
+export default DrawerSides;
+`}>
+  <DrawerSidesExample />
+</CodeBlock>
+
+## Sizes
+
+Drawers come in predefined sizes: `sm`, `md` (default), `lg`, `xl`, and `full`.
+
+<CodeBlock code={`import { Drawer, Button } from '@losensky-systems/web-components-core';
+
+function DrawerSizes() {
+  const [size, setSize] = useState('md');
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openWithSize = (selectedSize) => {
+    setSize(selectedSize);
+    setIsOpen(true);
+  };
+
+  return (
+    <>
+      <Button onClick={() => openWithSize('sm')}>Small</Button>
+      <Button onClick={() => openWithSize('md')}>Medium</Button>
+      <Button onClick={() => openWithSize('lg')}>Large</Button>
+      <Button onClick={() => openWithSize('xl')}>Extra Large</Button>
+      <Button onClick={() => openWithSize('full')}>Full Width</Button>
+
+      <Drawer open={isOpen} onOpenChange={setIsOpen} size={size}>
+        <Drawer.Header title={\`\${size.toUpperCase()} Drawer\`} />
+        <Drawer.Body>
+          <p>This is a {size} sized drawer.</p>
+        </Drawer.Body>
+        <Drawer.Footer>
+          <Button onClick={() => setIsOpen(false)}>Close</Button>
+        </Drawer.Footer>
+      </Drawer>
+    </>
+  );
+}
+
+export default DrawerSizes;
+`}>
+  <DrawerSizesExample />
+</CodeBlock>
+
+## Custom Width
+
+You can override the predefined sizes with a custom width.
+
+<CodeBlock code={`import { Drawer, Button } from '@losensky-systems/web-components-core';
+
+function CustomWidthDrawer() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <>
+      <Button onClick={() => setIsOpen(true)}>Open Custom Width Drawer</Button>
+
+      <Drawer open={isOpen} onOpenChange={setIsOpen} width="600px">
+        <Drawer.Header title="Custom Width Drawer" />
+        <Drawer.Body>
+          <p>This drawer has a custom width of 600px.</p>
+        </Drawer.Body>
+        <Drawer.Footer>
+          <Button onClick={() => setIsOpen(false)}>Close</Button>
+        </Drawer.Footer>
+      </Drawer>
+    </>
+  );
+}
+
+export default CustomWidthDrawer;
+`}>
+  <CustomWidthDrawerExample />
+</CodeBlock>
+
+## With Form Content
+
+Drawers are perfect for forms and data entry.
+
+<CodeBlock code={`import { Drawer, Button, Form, Input } from '@losensky-systems/web-components-core';
+
+function DrawerWithForm() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form submitted');
+    setIsOpen(false);
+  };
+
+  return (
+    <>
+      <Button onClick={() => setIsOpen(true)}>Open Form Drawer</Button>
+
+      <Drawer open={isOpen} onOpenChange={setIsOpen}>
+        <Drawer.Header title="Edit Profile" />
+        <Drawer.Body>
+          <Form onSubmit={handleSubmit}>
+            <Form.Field label="Full Name" required>
+              <Input placeholder="Enter your name" />
+            </Form.Field>
+            <Form.Field label="Email" required>
+              <Input type="email" placeholder="Enter your email" />
+            </Form.Field>
+            <Form.Field label="Bio">
+              <Input placeholder="Tell us about yourself" />
+            </Form.Field>
+          </Form>
+        </Drawer.Body>
+        <Drawer.Footer>
+          <Button variant="ghost" onClick={() => setIsOpen(false)}>Cancel</Button>
+          <Button variant="primary" onClick={handleSubmit}>Save Changes</Button>
+        </Drawer.Footer>
+      </Drawer>
+    </>
+  );
+}
+
+export default DrawerWithForm;
+`}>
+  <DrawerWithFormExample />
+</CodeBlock>
+
+## Scrollable Content
+
+When content exceeds the available height, the drawer body becomes scrollable.
+
+<CodeBlock code={`import { Drawer, Button } from '@losensky-systems/web-components-core';
+
+function ScrollableDrawer() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <>
+      <Button onClick={() => setIsOpen(true)}>Open Scrollable Drawer</Button>
+
+      <Drawer open={isOpen} onOpenChange={setIsOpen}>
+        <Drawer.Header title="Long Content Drawer" />
+        <Drawer.Body scrollable maxHeight="400px">
+          <div className="space-y-4">
+            <p>This drawer has a lot of content that requires scrolling.</p>
+            {Array.from({ length: 20 }, (_, i) => (
+              <p key={i}>
+                Paragraph {i + 1}: Lorem ipsum dolor sit amet...
+              </p>
+            ))}
+          </div>
+        </Drawer.Body>
+        <Drawer.Footer>
+          <Button onClick={() => setIsOpen(false)}>Close</Button>
+        </Drawer.Footer>
+      </Drawer>
+    </>
+  );
+}
+
+export default ScrollableDrawer;
+`}>
+  <ScrollableDrawerExample />
+</CodeBlock>
+
+## Props
+
+### DrawerProps
+<PropsTable props={[
+  { name: 'open', type: 'boolean', description: 'Whether the drawer is open (controlled).' },
+  { name: 'onOpenChange', type: '(open: boolean) => void', description: 'Callback when drawer open state changes.' },
+  { name: 'defaultOpen', type: 'boolean', default: 'false', description: 'Initial open state (uncontrolled).' },
+  { name: 'side', type: "'left' | 'right'", default: "'right'", description: 'Side from which the drawer slides in.' },
+  { name: 'size', type: "'sm' | 'md' | 'lg' | 'xl' | 'full'", default: "'md'", description: 'Drawer size variant.' },
+  { name: 'width', type: 'string | number', description: 'Custom width (overrides size).' },
+  { name: 'closeOnOverlayClick', type: 'boolean', default: 'true', description: 'Whether clicking outside closes the drawer.' },
+  { name: 'closeOnEsc', type: 'boolean', default: 'true', description: 'Whether pressing ESC closes the drawer.' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Whether the drawer is disabled.' },
+  { name: 'className', type: 'string', description: 'Additional CSS classes.' },
+  { name: 'backdropClassName', type: 'string', description: 'Custom backdrop CSS classes.' },
+  { name: 'children', type: 'React.ReactNode', description: 'Drawer content (typically Drawer.Header, Drawer.Body, Drawer.Footer).' }
+]} />
+
+### DrawerHeaderProps
+<PropsTable props={[
+  { name: 'title', type: 'string', description: 'Header title text.' },
+  { name: 'showCloseButton', type: 'boolean', default: 'true', description: 'Whether to show close button.' },
+  { name: 'showDivider', type: 'boolean', default: 'true', description: 'Whether to show divider below header.' },
+  { name: 'closeButton', type: 'React.ReactNode', description: 'Custom close button element.' },
+  { name: 'children', type: 'React.ReactNode', description: 'Additional header content.' },
+  { name: 'headingLevel', type: '1 | 2 | 3 | 4 | 5 | 6', default: '2', description: 'Heading level for title element.' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Whether the header is disabled.' },
+  { name: 'className', type: 'string', description: 'Additional CSS classes.' }
+]} />
+
+### DrawerBodyProps
+<PropsTable props={[
+  { name: 'children', type: 'React.ReactNode', description: 'Body content.' },
+  { name: 'scrollable', type: 'boolean', default: 'true', description: 'Whether content is scrollable.' },
+  { name: 'maxHeight', type: 'string | number', description: 'Maximum height before scrolling.' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Whether the body is disabled.' },
+  { name: 'className', type: 'string', description: 'Additional CSS classes.' }
+]} />
+
+### DrawerFooterProps
+<PropsTable props={[
+  { name: 'children', type: 'React.ReactNode', description: 'Footer content (typically action buttons).' },
+  { name: 'align', type: "'left' | 'right' | 'center' | 'space-between'", default: "'right'", description: 'Button alignment.' },
+  { name: 'showDivider', type: 'boolean', default: 'true', description: 'Whether to show divider above footer.' },
+  { name: 'spacing', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Spacing between buttons.' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Whether the footer is disabled.' },
+  { name: 'className', type: 'string', description: 'Additional CSS classes.' }
+]} />
+

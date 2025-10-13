@@ -46,9 +46,6 @@ yarn-error.log*
 # Web Core - only for development testing
 apps/web-core/*
 
-# Apps - web moved to separate repo, kept locally for testing
-apps/web/
-
 # Apps - docs removed from git tracking
 apps/docs/
 

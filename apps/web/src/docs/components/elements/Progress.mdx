@@ -1,0 +1,22 @@
+import { Progress } from '@losensky-systems/web-components-core'
+
+# Progress
+
+Progress indicators show the completion status of a task or process.
+
+## Basic Usage
+
+<CodeBlock code={`<Progress value={75} />`}>
+  <Progress value={75} />
+</CodeBlock>
+
+## Props
+
+<PropsTable props={[
+  { name: 'value', type: 'number', default: '-', description: 'Progress value (0-100)' },
+  { name: 'variant', type: "'bar' | 'circular'", default: "'bar'", description: 'Progress variant' },
+  { name: 'size', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Size of the progress indicator' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS class' },
+  { name: 'showLabel', type: 'boolean', default: 'false', description: 'Show percentage text' },
+  { name: 'color', type: "'primary' | 'success' | 'warning' | 'error'", default: "'primary'", description: 'Color variant' }
+]} />

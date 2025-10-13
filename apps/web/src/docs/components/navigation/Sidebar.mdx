@@ -1,0 +1,280 @@
+# Sidebar
+
+A flexible collapsible sidebar component with compound architecture for building navigation interfaces with items, groups, and header/footer sections.
+
+## Basic Usage
+
+<CodeBlock code={`<Sidebar>
+  <Sidebar.Header>
+    <div className="text-xl font-bold">MyApp</div>
+  </Sidebar.Header>
+  <Sidebar.Nav>
+    <Sidebar.Item href="/" active>Dashboard</Sidebar.Item>
+    <Sidebar.Item href="/projects">Projects</Sidebar.Item>
+    <Sidebar.Item href="/team">Team</Sidebar.Item>
+    <Sidebar.Item href="/settings">Settings</Sidebar.Item>
+  </Sidebar.Nav>
+</Sidebar>`}>
+  <BasicSidebarExample />
+</CodeBlock>
+
+## With Icons
+
+<CodeBlock code={`<Sidebar>
+  <Sidebar.Header>
+    <div className="text-xl font-bold">MyApp</div>
+  </Sidebar.Header>
+  <Sidebar.Nav>
+    <Sidebar.Item href="/" active icon={<DashboardIcon />}>
+      Dashboard
+    </Sidebar.Item>
+    <Sidebar.Item href="/projects" icon={<ProjectsIcon />}>
+      Projects
+    </Sidebar.Item>
+    <Sidebar.Item href="/team" icon={<TeamIcon />}>
+      Team
+    </Sidebar.Item>
+  </Sidebar.Nav>
+</Sidebar>`}>
+  <SidebarWithIconsExample />
+</CodeBlock>
+
+## Collapsible
+
+<CodeBlock code={`function CollapsibleSidebar() {
+  const [collapsed, setCollapsed] = React.useState(false);
+
+  return (
+    <Sidebar collapsed={collapsed}>
+      <Sidebar.Header>
+        <div className="text-xl font-bold">MyApp</div>
+      </Sidebar.Header>
+      <Sidebar.Toggle 
+        collapsed={collapsed} 
+        onClick={() => setCollapsed(!collapsed)} 
+      />
+      <Sidebar.Nav>
+        <Sidebar.Item href="/" active icon={<DashboardIcon />}>
+          Dashboard
+        </Sidebar.Item>
+        <Sidebar.Item href="/projects" icon={<ProjectsIcon />}>
+          Projects
+        </Sidebar.Item>
+        <Sidebar.Item href="/team" icon={<TeamIcon />}>
+          Team
+        </Sidebar.Item>
+      </Sidebar.Nav>
+    </Sidebar>
+  );
+}`}>
+  <CollapsibleSidebarExample />
+</CodeBlock>
+
+## Position Variants
+
+<CodeBlock code={`<Sidebar position="left">
+  <Sidebar.Header>
+    <div className="text-xl font-bold">Left Sidebar</div>
+  </Sidebar.Header>
+  <Sidebar.Nav>
+    <Sidebar.Item href="/" active>Dashboard</Sidebar.Item>
+    <Sidebar.Item href="/projects">Projects</Sidebar.Item>
+  </Sidebar.Nav>
+</Sidebar>
+
+<Sidebar position="right">
+  <Sidebar.Header>
+    <div className="text-xl font-bold">Right Sidebar</div>
+  </Sidebar.Header>
+  <Sidebar.Nav>
+    <Sidebar.Item href="/" active>Dashboard</Sidebar.Item>
+    <Sidebar.Item href="/projects">Projects</Sidebar.Item>
+  </Sidebar.Nav>
+</Sidebar>`}>
+  <SidebarPositionExample />
+</CodeBlock>
+
+## Color Variants
+
+<CodeBlock code={`<Sidebar variant="light">
+  <Sidebar.Header>
+    <div className="text-xl font-bold text-gray-900">Light Sidebar</div>
+  </Sidebar.Header>
+  <Sidebar.Nav>
+    <Sidebar.Item href="/" active>Dashboard</Sidebar.Item>
+    <Sidebar.Item href="/projects">Projects</Sidebar.Item>
+  </Sidebar.Nav>
+</Sidebar>
+
+<Sidebar variant="dark">
+  <Sidebar.Header>
+    <div className="text-xl font-bold text-white">Dark Sidebar</div>
+  </Sidebar.Header>
+  <Sidebar.Nav>
+    <Sidebar.Item href="/" active>Dashboard</Sidebar.Item>
+    <Sidebar.Item href="/projects">Projects</Sidebar.Item>
+  </Sidebar.Nav>
+</Sidebar>`}>
+  <SidebarVariantExample />
+</CodeBlock>
+
+## Grouped Navigation
+
+<CodeBlock code={`<Sidebar>
+  <Sidebar.Header>
+    <div className="text-xl font-bold">MyApp</div>
+  </Sidebar.Header>
+  <Sidebar.Nav>
+    <Sidebar.Item href="/" active icon={<DashboardIcon />}>
+      Dashboard
+    </Sidebar.Item>
+    
+    <Sidebar.Group label="Project Management">
+      <Sidebar.Item href="/projects" icon={<ProjectsIcon />}>
+        Projects
+      </Sidebar.Item>
+      <Sidebar.Item href="/tasks" icon={<TasksIcon />}>
+        Tasks
+      </Sidebar.Item>
+      <Sidebar.Item href="/milestones" icon={<MilestonesIcon />}>
+        Milestones
+      </Sidebar.Item>
+    </Sidebar.Group>
+    
+    <Sidebar.Group label="Team">
+      <Sidebar.Item href="/team" icon={<TeamIcon />}>
+        Team Members
+      </Sidebar.Item>
+      <Sidebar.Item href="/reports" icon={<ReportsIcon />}>
+        Reports
+      </Sidebar.Item>
+    </Sidebar.Group>
+  </Sidebar.Nav>
+</Sidebar>`}>
+  <GroupedSidebarExample />
+</CodeBlock>
+
+## With Header & Footer
+
+<CodeBlock code={`<Sidebar>
+  <Sidebar.Header>
+    <div className="text-xl font-bold">MyApp</div>
+    <div className="text-sm text-gray-500">v2.0.0</div>
+  </Sidebar.Header>
+  
+  <Sidebar.Nav>
+    <Sidebar.Item href="/" active icon={<DashboardIcon />}>
+      Dashboard
+    </Sidebar.Item>
+    <Sidebar.Item href="/projects" icon={<ProjectsIcon />}>
+      Projects
+    </Sidebar.Item>
+    <Sidebar.Item href="/team" icon={<TeamIcon />}>
+      Team
+    </Sidebar.Item>
+  </Sidebar.Nav>
+  
+  <Sidebar.Footer>
+    <div className="flex items-center space-x-3">
+      <div className="w-8 h-8 bg-gray-300 rounded-full"></div>
+      <div>
+        <div className="text-sm font-medium">John Doe</div>
+        <div className="text-xs text-gray-500">john@example.com</div>
+      </div>
+    </div>
+  </Sidebar.Footer>
+</Sidebar>`}>
+  <CompleteSidebarExample />
+</CodeBlock>
+
+## Width Variants
+
+<CodeBlock code={`<Sidebar width="sm">
+  <Sidebar.Header>
+    <div className="text-lg font-bold">Small</div>
+  </Sidebar.Header>
+  <Sidebar.Nav>
+    <Sidebar.Item href="/" active>Dashboard</Sidebar.Item>
+    <Sidebar.Item href="/projects">Projects</Sidebar.Item>
+  </Sidebar.Nav>
+</Sidebar>
+
+<Sidebar width="md">
+  <Sidebar.Header>
+    <div className="text-xl font-bold">Medium</div>
+  </Sidebar.Header>
+  <Sidebar.Nav>
+    <Sidebar.Item href="/" active>Dashboard</Sidebar.Item>
+    <Sidebar.Item href="/projects">Projects</Sidebar.Item>
+  </Sidebar.Nav>
+</Sidebar>
+
+<Sidebar width="lg">
+  <Sidebar.Header>
+    <div className="text-xl font-bold">Large</div>
+  </Sidebar.Header>
+  <Sidebar.Nav>
+    <Sidebar.Item href="/" active>Dashboard</Sidebar.Item>
+    <Sidebar.Item href="/projects">Projects</Sidebar.Item>
+  </Sidebar.Nav>
+</Sidebar>`}>
+  <SidebarWidthExample />
+</CodeBlock>
+
+## Props
+
+### SidebarProps
+<PropsTable props={[
+  { name: 'collapsed', type: 'boolean', default: 'false', description: 'Collapsed state of the sidebar.' },
+  { name: 'position', type: "'left' | 'right'", default: "'left'", description: 'Position of the sidebar.' },
+  { name: 'variant', type: "'light' | 'dark'", default: "'light'", description: 'Color theme variant.' },
+  { name: 'width', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Width when expanded (sm: 14rem, md: 16rem, lg: 18rem).' },
+  { name: 'bordered', type: 'boolean', default: 'false', description: 'Show border on the opposite side of position.' },
+  { name: 'className', type: 'string', description: 'Additional CSS classes.' },
+  { name: 'children', type: 'React.ReactNode', description: 'Sidebar content.' }
+]} />
+
+### SidebarHeaderProps
+<PropsTable props={[
+  { name: 'className', type: 'string', description: 'Additional CSS classes.' },
+  { name: 'children', type: 'React.ReactNode', description: 'Header content (logo, brand, etc.).' }
+]} />
+
+### SidebarNavProps
+<PropsTable props={[
+  { name: 'className', type: 'string', description: 'Additional CSS classes.' },
+  { name: 'children', type: 'React.ReactNode', description: 'Navigation items and groups.' }
+]} />
+
+### SidebarItemProps
+<PropsTable props={[
+  { name: 'href', type: 'string', description: 'Link URL.' },
+  { name: 'active', type: 'boolean', default: 'false', description: 'Active/current page state.' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Disabled state.' },
+  { name: 'icon', type: 'React.ReactNode', description: 'Icon element to display.' },
+  { name: 'as', type: 'React.ElementType', description: 'HTML element to render as.' },
+  { name: 'onClick', type: '() => void', description: 'Click handler.' },
+  { name: 'className', type: 'string', description: 'Additional CSS classes.' },
+  { name: 'children', type: 'React.ReactNode', description: 'Item content.' }
+]} />
+
+### SidebarGroupProps
+<PropsTable props={[
+  { name: 'label', type: 'string', description: 'Group label text.' },
+  { name: 'collapsed', type: 'boolean', default: 'false', description: 'Collapsed state for the group.' },
+  { name: 'className', type: 'string', description: 'Additional CSS classes.' },
+  { name: 'children', type: 'React.ReactNode', description: 'Group items.' }
+]} />
+
+### SidebarFooterProps
+<PropsTable props={[
+  { name: 'className', type: 'string', description: 'Additional CSS classes.' },
+  { name: 'children', type: 'React.ReactNode', description: 'Footer content (user profile, etc.).' }
+]} />
+
+### SidebarToggleProps
+<PropsTable props={[
+  { name: 'collapsed', type: 'boolean', default: 'false', description: 'Collapsed state for icon direction.' },
+  { name: 'onClick', type: '() => void', description: 'Click handler for toggle.' },
+  { name: 'className', type: 'string', description: 'Additional CSS classes.' }
+]} />

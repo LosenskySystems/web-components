@@ -1,0 +1,143 @@
+import { Slider, Label } from '@losensky-systems/web-components-core'
+
+# Slider Component
+
+The Slider component allows users to select a numeric value or range of values by dragging thumbs along a track. It supports both single value and dual-thumb range modes.
+
+## Import
+
+```tsx
+import { Slider } from '@losensky-systems/web-components-core'
+```
+
+## Basic Usage
+
+<CodeBlock code={`<Slider />`}>
+  <div className="mb-8">
+    <Slider />
+  </div>
+</CodeBlock>
+
+## Range Mode
+
+<CodeBlock code={`<Slider range defaultValue={[20, 80]} />`}>
+  <div className="mb-8">
+    <Slider range defaultValue={[20, 80]} />
+  </div>
+</CodeBlock>
+
+## Sizes
+
+<CodeBlock code={`<Slider size="sm" defaultValue={50} />
+<Slider size="md" defaultValue={50} />
+<Slider size="lg" defaultValue={50} />`}>
+  <div className="mb-8">
+    <div className="mb-4">
+      <Slider size="sm" defaultValue={50} />
+    </div>
+    <div className="mb-4">
+      <Slider size="md" defaultValue={50} />
+    </div>
+    <div className="mb-4">
+      <Slider size="lg" defaultValue={50} />
+    </div>
+  </div>
+</CodeBlock>
+
+## With/Without Value Display
+
+<CodeBlock code={`<Slider showValue={true} defaultValue={75} />
+<Slider showValue={false} defaultValue={75} />`}>
+  <div className="mb-8">
+    <div className="mb-4">
+      <Slider showValue={true} defaultValue={75} />
+    </div>
+    <div className="mb-4">
+      <Slider showValue={false} defaultValue={75} />
+    </div>
+  </div>
+</CodeBlock>
+
+## With Labels
+
+<CodeBlock code={`<Label>Volume Level</Label>
+<Slider defaultValue={60} min={0} max={100} />
+
+<Label>Price Range</Label>
+<Slider range defaultValue={[25, 75]} min={0} max={100} />`}>
+  <div className="mb-8">
+    <div className="mb-4">
+      <Label>Volume Level</Label>
+      <Slider defaultValue={60} min={0} max={100} />
+    </div>
+    
+    <div className="mb-4">
+      <Label>Price Range</Label>
+      <Slider range defaultValue={[25, 75]} min={0} max={100} />
+    </div>
+  </div>
+</CodeBlock>
+
+## Disabled State
+
+<CodeBlock code={`<Slider disabled defaultValue={40} />
+<Slider disabled range defaultValue={[30, 70]} />`}>
+  <div className="mb-8">
+    <div className="mb-4">
+      <Slider disabled defaultValue={40} />
+    </div>
+    <div className="mb-4">
+      <Slider disabled range defaultValue={[30, 70]} />
+    </div>
+  </div>
+</CodeBlock>
+
+## Custom Min/Max/Step
+
+<CodeBlock code={`<Slider min={10} max={90} step={5} defaultValue={50} />
+<Slider min={0} max={1000} step={100} defaultValue={500} />`}>
+  <div className="mb-8">
+    <div className="mb-4">
+      <Slider min={10} max={90} step={5} defaultValue={50} />
+    </div>
+    <div className="mb-4">
+      <Slider min={0} max={1000} step={100} defaultValue={500} />
+    </div>
+  </div>
+</CodeBlock>
+
+## Controlled Usage
+
+<CodeBlock code={`const [value, setValue] = useState(50);
+const [rangeValue, setRangeValue] = useState([20, 80]);
+
+<Slider value={value} onChange={setValue} />
+<Slider range value={rangeValue} onChange={setRangeValue} />`}>
+  <div className="mb-8">
+    <div className="mb-4">
+      <Label>Controlled Single Value</Label>
+      <Slider value={50} onChange={(value) => console.log('Single value:', value)} />
+    </div>
+    
+    <div className="mb-4">
+      <Label>Controlled Range Value</Label>
+      <Slider range value={[20, 80]} onChange={(value) => console.log('Range value:', value)} />
+    </div>
+  </div>
+</CodeBlock>
+
+## Props
+
+<PropsTable props={[
+  { name: 'value', type: 'number | [number, number]', default: '-', description: 'Current value (controlled)' },
+  { name: 'defaultValue', type: 'number | [number, number]', default: '0', description: 'Default value (uncontrolled)' },
+  { name: 'min', type: 'number', default: '0', description: 'Minimum value' },
+  { name: 'max', type: 'number', default: '100', description: 'Maximum value' },
+  { name: 'step', type: 'number', default: '1', description: 'Step increment' },
+  { name: 'range', type: 'boolean', default: 'false', description: 'Enable dual-thumb range mode' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Whether the slider is disabled' },
+  { name: 'showValue', type: 'boolean', default: 'true', description: 'Display value labels above thumbs' },
+  { name: 'size', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Slider size' },
+  { name: 'onChange', type: '(value: number | [number, number]) => void', default: '-', description: 'Callback when value changes' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' }
+]} />

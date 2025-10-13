@@ -1,0 +1,281 @@
+import { Input, Label } from '@losensky-systems/web-components-core'
+import { Search, Mail, Lock, User } from 'lucide-react'
+
+# Input Component
+
+The Input component is a flexible, accessible text input field with various states, sizes, and styling options.
+
+## Import
+
+```tsx
+import { Input } from '@losensky-systems/web-components-core'
+```
+
+## Basic Usage
+
+<CodeBlock code={`<Input placeholder="Enter your text..." />`}>
+  <div className="mb-8">
+    <Input placeholder="Enter your text..." />
+  </div>
+</CodeBlock>
+
+## Sizes
+
+<CodeBlock code={`<Input size="sm" placeholder="Small input" />
+<Input size="md" placeholder="Medium input (default)" />
+<Input size="lg" placeholder="Large input" />`}>
+  <div className="mb-8">
+    <div className="mb-4">
+      <Input size="sm" placeholder="Small input" />
+    </div>
+    <div className="mb-4">
+      <Input size="md" placeholder="Medium input (default)" />
+    </div>
+    <div className="mb-4">
+      <Input size="lg" placeholder="Large input" />
+    </div>
+  </div>
+</CodeBlock>
+
+## Variants
+
+<CodeBlock code={`<Input variant="default" placeholder="Default input" />
+<Input variant="error" placeholder="Error input" />
+<Input variant="success" placeholder="Success input" />
+<Input variant="warning" placeholder="Warning input" />`}>
+  <div className="mb-8">
+    <div className="mb-4">
+      <Input variant="default" placeholder="Default input" />
+    </div>
+    <div className="mb-4">
+      <Input variant="error" placeholder="Error input" />
+    </div>
+    <div className="mb-4">
+      <Input variant="success" placeholder="Success input" />
+    </div>
+    <div className="mb-4">
+      <Input variant="warning" placeholder="Warning input" />
+    </div>
+  </div>
+</CodeBlock>
+
+## With Labels and Helper Text
+
+<CodeBlock code={`<Label htmlFor="email-input">Email Address</Label>
+<Input 
+  id="email-input"
+  placeholder="Enter your email" 
+  helperText="We'll never share your email"
+/>
+
+<Label htmlFor="password-input">Password</Label>
+<Input 
+  id="password-input"
+  type="password" 
+  placeholder="Enter your password"
+  errorText="Password must be at least 8 characters"
+  error
+/>
+
+<Label htmlFor="username-input">Username</Label>
+<Input 
+  id="username-input"
+  placeholder="Choose a username"
+  successText="Username is available!"
+  variant="success"
+/>`}>
+  <div className="mb-8">
+    <div className="mb-4">
+      <Label htmlFor="email-input">Email Address</Label>
+      <Input 
+        id="email-input"
+        placeholder="Enter your email" 
+        helperText="We'll never share your email"
+      />
+    </div>
+    
+    <div className="mb-4">
+      <Label htmlFor="password-input">Password</Label>
+      <Input 
+        id="password-input"
+        type="password" 
+        placeholder="Enter your password"
+        errorText="Password must be at least 8 characters"
+        error
+      />
+    </div>
+    
+    <div className="mb-4">
+      <Label htmlFor="username-input">Username</Label>
+      <Input 
+        id="username-input"
+        placeholder="Choose a username"
+        successText="Username is available!"
+        variant="success"
+      />
+    </div>
+  </div>
+</CodeBlock>
+
+## With Icons
+
+<CodeBlock code={`<Input 
+  icon={<Search size={16} />} 
+  placeholder="Search..." 
+/>
+
+<Input 
+  icon={<Mail size={16} />} 
+  iconPosition="left"
+  placeholder="Email address" 
+/>
+
+<Input 
+  icon={<Lock size={16} />} 
+  iconPosition="right"
+  type="password"
+  placeholder="Password" 
+/>`}>
+  <div className="mb-8">
+    <div className="mb-4">
+      <Input 
+        icon={<Search size={16} />} 
+        placeholder="Search..." 
+      />
+    </div>
+    
+    <div className="mb-4">
+      <Input 
+        icon={<Mail size={16} />} 
+        iconPosition="left"
+        placeholder="Email address" 
+      />
+    </div>
+    
+    <div className="mb-4">
+      <Input 
+        icon={<Lock size={16} />} 
+        iconPosition="right"
+        type="password"
+        placeholder="Password" 
+      />
+    </div>
+  </div>
+</CodeBlock>
+
+## Clearable Input
+
+<CodeBlock code={`<Input 
+  clearable 
+  placeholder="Type something to see clear button" 
+  defaultValue="Clearable text"
+/>`}>
+  <div className="mb-8">
+    <Input 
+      clearable 
+      placeholder="Type something to see clear button" 
+      defaultValue="Clearable text"
+    />
+  </div>
+</CodeBlock>
+
+## Loading State
+
+<CodeBlock code={`<Input 
+  loading 
+  placeholder="Loading input..." 
+/>`}>
+  <div className="mb-8">
+    <Input 
+      loading 
+      placeholder="Loading input..." 
+    />
+  </div>
+</CodeBlock>
+
+## Input Types
+
+<CodeBlock code={`<Input type="text" placeholder="Text input" />
+<Input type="email" placeholder="Email input" />
+<Input type="password" placeholder="Password input" />
+<Input type="number" placeholder="Number input" />
+<Input type="tel" placeholder="Phone input" />
+<Input type="url" placeholder="URL input" />
+<Input type="search" placeholder="Search input" />`}>
+  <div className="mb-8">
+    <div className="mb-4">
+      <Input type="text" placeholder="Text input" />
+    </div>
+    <div className="mb-4">
+      <Input type="email" placeholder="Email input" />
+    </div>
+    <div className="mb-4">
+      <Input type="password" placeholder="Password input" />
+    </div>
+    <div className="mb-4">
+      <Input type="number" placeholder="Number input" />
+    </div>
+    <div className="mb-4">
+      <Input type="tel" placeholder="Phone input" />
+    </div>
+    <div className="mb-4">
+      <Input type="url" placeholder="URL input" />
+    </div>
+    <div className="mb-4">
+      <Input type="search" placeholder="Search input" />
+    </div>
+  </div>
+</CodeBlock>
+
+## States
+
+<CodeBlock code={`<Input placeholder="Default input" />
+<Input placeholder="Disabled input" disabled />
+<Input placeholder="Read-only input" readOnly defaultValue="Read-only value" />
+<Input placeholder="Required input" required />`}>
+  <div className="mb-8">
+    <div className="mb-4">
+      <Input placeholder="Default input" />
+    </div>
+    <div className="mb-4">
+      <Input placeholder="Disabled input" disabled />
+    </div>
+    <div className="mb-4">
+      <Input placeholder="Read-only input" readOnly defaultValue="Read-only value" />
+    </div>
+    <div className="mb-4">
+      <Input placeholder="Required input" required />
+    </div>
+  </div>
+</CodeBlock>
+
+## Props
+
+<PropsTable props={[
+  { name: 'type', type: "'text' | 'email' | 'password' | 'number' | 'tel' | 'url' | 'search'", default: "'text'", description: 'Input type' },
+  { name: 'placeholder', type: 'string', default: '-', description: 'Placeholder text' },
+  { name: 'value', type: 'string', default: '-', description: 'Input value (controlled)' },
+  { name: 'defaultValue', type: 'string', default: '-', description: 'Default value (uncontrolled)' },
+  { name: 'size', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Input size' },
+  { name: 'variant', type: "'default' | 'error' | 'success' | 'warning'", default: "'default'", description: 'Input variant' },
+  { name: 'error', type: 'boolean', default: 'false', description: 'Error state' },
+  { name: 'errorText', type: 'string', default: '-', description: 'Error message' },
+  { name: 'successText', type: 'string', default: '-', description: 'Success message' },
+  { name: 'helperText', type: 'string', default: '-', description: 'Helper text' },
+  { name: 'icon', type: 'React.ReactNode', default: '-', description: 'Icon element' },
+  { name: 'iconPosition', type: "'left' | 'right'", default: "'left'", description: 'Icon position' },
+  { name: 'clearable', type: 'boolean', default: 'false', description: 'Show clear button' },
+  { name: 'loading', type: 'boolean', default: 'false', description: 'Loading state' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Disabled state' },
+  { name: 'required', type: 'boolean', default: 'false', description: 'Required field' },
+  { name: 'readOnly', type: 'boolean', default: 'false', description: 'Read-only state' },
+  { name: 'autoComplete', type: 'string', default: '-', description: 'Autocomplete attribute' },
+  { name: 'autoFocus', type: 'boolean', default: 'false', description: 'Auto-focus on mount' },
+  { name: 'maxLength', type: 'number', default: '-', description: 'Maximum length' },
+  { name: 'minLength', type: 'number', default: '-', description: 'Minimum length' },
+  { name: 'pattern', type: 'string', default: '-', description: 'Input pattern' },
+  { name: 'onChange', type: '(event: React.ChangeEvent<HTMLInputElement>) => void', default: '-', description: 'Change handler' },
+  { name: 'onFocus', type: '(event: React.FocusEvent<HTMLInputElement>) => void', default: '-', description: 'Focus handler' },
+  { name: 'onBlur', type: '(event: React.FocusEvent<HTMLInputElement>) => void', default: '-', description: 'Blur handler' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' }
+]} />
