@@ -22,9 +22,7 @@
 - ✅ Radio Button
 - ✅ Toggle / Switch
 - ✅ Range Slider
-- ❌ File Upload (drag & drop + input)
-- ❌ Date Picker / Time Picker
-- ❌ Autocomplete / Search Input
+- ✅ Date Picker / Time Picker
 - ❌ Form Layout (field groups, validation states, error messages)
 
 ------------------------------------------------------------------------
@@ -105,7 +103,7 @@ The **Advanced** set is optional but useful for full-featured apps.
 
 ## 📊 Progress Summary
 
-**✅ COMPLETED (20 components):**
+**✅ COMPLETED (21 components):**
 
 **Elements (9):**
 - Button (with variants, sizes, colors, loading, icons, links)
@@ -119,7 +117,7 @@ The **Advanced** set is optional but useful for full-featured apps.
 - Dropdown (with items, icons, placements, sizes)
 - Alert (with variants, sizes, closable, custom icons)
 
-**Forms (7):**
+**Forms (8):**
 - Input (with sizes, variants, states, helper text)
 - Select (with compound components: Item)
 - Textarea (with sizes, variants, states, helper text)
@@ -127,6 +125,7 @@ The **Advanced** set is optional but useful for full-featured apps.
 - Radio Button (with sizes, variants, states, grouping, uncheckable)
 - Toggle (with optional labels, sizes, controlled/uncontrolled, custom label text)
 - Slider (with single/range modes, sizes, value display, custom min/max/step)
+- DateTimePicker (with calendar dropdown, time selection, single/range modes, flexible formatting)
 
 **Navigation (1):**
 - Tabs (with variants, sizes, icons, controlled/uncontrolled, accessibility)
@@ -136,7 +135,7 @@ The **Advanced** set is optional but useful for full-featured apps.
 - Toast (with variants, sizes, positions, auto-dismiss, custom icons)
 - Accordion (with single/multiple open, controlled state, disabled items, smooth animations)
 
-**❌ NOT DONE (86 components):**
+**❌ NOT DONE (85 components):**
 - Most Navigation components
 - All Layout components  
 - All Utilities/Overlays
@@ -150,4 +149,4 @@ The **Advanced** set is optional but useful for full-featured apps.
 3. **Table** - Essential for data display
 4. **Progress Bar** - Important for user feedback
 
-**Progress: 20/106 components completed (18.9%)**
+**Progress: 21/106 components completed (19.8%)**

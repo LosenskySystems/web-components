@@ -6,3 +6,4 @@ export { Checkbox, type CheckboxProps } from './checkbox';
 export { Radio, type RadioProps } from './radio';
 export { Slider, type SliderProps } from './slider';
 export { Toggle, type ToggleProps } from './toggle';
+export { DateTimePicker, type DateTimePickerProps } from './datepicker';

@@ -1,0 +1,607 @@
+/* DateTimePicker component styles */
+.web-datepicker,
+.web-timepicker,
+.web-datetimepicker {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+/* Input Container */
+.web-datepicker-input-container,
+.web-timepicker-input-container,
+.web-datetimepicker-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.web-datepicker-input,
+.web-timepicker-input,
+.web-datetimepicker-input {
+  width: 100%;
+  padding: 0.5rem 2.5rem 0.5rem 0.75rem;
+  background-color: var(--color-white) !important;
+  border: 1px solid var(--color-gray-200) !important;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  color: var(--color-gray-900);
+  cursor: pointer;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.web-datepicker-input:hover,
+.web-timepicker-input:hover,
+.web-datetimepicker-input:hover {
+  border-color: var(--color-gray-300) !important;
+}
+
+.web-datepicker-input:focus,
+.web-timepicker-input:focus,
+.web-datetimepicker-input:focus {
+  outline: none;
+  border-color: var(--color-primary-500) !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.web-datepicker-input:disabled,
+.web-timepicker-input:disabled,
+.web-datetimepicker-input:disabled {
+  background-color: var(--color-gray-50) !important;
+  color: var(--color-gray-400);
+  cursor: not-allowed;
+}
+
+/* Toggle Buttons */
+.web-datepicker-toggle-button,
+.web-timepicker-toggle-button,
+.web-datetimepicker-toggle-button {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.web-datepicker-toggle-button:hover,
+.web-timepicker-toggle-button:hover,
+.web-datetimepicker-toggle-button:hover {
+  background-color: var(--color-gray-100);
+}
+
+.web-datepicker-toggle-button:disabled,
+.web-timepicker-toggle-button:disabled,
+.web-datetimepicker-toggle-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Dropdown */
+.web-datepicker-dropdown,
+.web-timepicker-dropdown,
+.web-datetimepicker-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  margin-top: 0.25rem;
+  background-color: var(--color-white) !important;
+  border: 1px solid var(--color-gray-200) !important;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  animation: dropdown-fade-in 0.15s ease-out;
+}
+
+@keyframes dropdown-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Month/Year Selector */
+.web-monthyear-selector {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.web-monthyear-navigation {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.web-monthyear-nav-button {
+  background: none;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  color: var(--color-gray-600);
+  transition: all 0.2s ease-in-out;
+}
+
+.web-monthyear-nav-button:hover {
+  background-color: var(--color-gray-50);
+  border-color: var(--color-gray-300);
+}
+
+.web-monthyear-nav-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.web-monthyear-display {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.web-monthyear-dropdown {
+  position: relative;
+}
+
+.web-monthyear-dropdown-button {
+  background: none;
+  border: none;
+  font-weight: 600;
+  color: var(--color-gray-900);
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.web-monthyear-dropdown-button:hover {
+  background-color: var(--color-gray-50);
+}
+
+.web-monthyear-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  background-color: var(--color-white) !important;
+  border: 1px solid var(--color-gray-200) !important;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.web-monthyear-dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  background: none;
+  border: none;
+  color: var(--color-gray-700);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.web-monthyear-dropdown-item:hover {
+  background-color: var(--color-gray-50);
+}
+
+.web-monthyear-dropdown-item-active {
+  background-color: var(--color-primary-50) !important;
+  color: var(--color-primary-700);
+}
+
+.web-monthyear-year-button {
+  background: none;
+  border: none;
+  font-weight: 600;
+  color: var(--color-gray-900);
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.web-monthyear-year-button:hover {
+  background-color: var(--color-gray-50);
+}
+
+.web-monthyear-year-input {
+  width: 4rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 0.25rem;
+  text-align: center;
+  font-weight: 600;
+  color: var(--color-gray-900);
+}
+
+.web-monthyear-today-button {
+  background-color: var(--color-primary-500);
+  color: var(--color-white);
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.web-monthyear-today-button:hover {
+  background-color: var(--color-primary-600);
+}
+
+.web-monthyear-today-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Calendar */
+.web-calendar {
+  padding: 1rem;
+}
+
+.web-calendar-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.web-calendar-weekday {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-gray-500);
+  padding: 0.5rem 0;
+}
+
+.web-calendar-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0.25rem;
+}
+
+.web-calendar-day {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--color-gray-700);
+  transition: all 0.2s ease-in-out;
+}
+
+.web-calendar-day:hover {
+  background-color: var(--color-gray-100);
+}
+
+.web-calendar-day-today {
+  background-color: var(--color-blue-50);
+  color: var(--color-blue-700);
+  font-weight: 600;
+}
+
+.web-calendar-day-selected {
+  background-color: var(--color-primary-500) !important;
+  color: var(--color-white) !important;
+  font-weight: 600;
+}
+
+.web-calendar-day-range {
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-700);
+}
+
+.web-calendar-day-range-start,
+.web-calendar-day-range-end {
+  background-color: var(--color-primary-500) !important;
+  color: var(--color-white) !important;
+  font-weight: 600;
+}
+
+.web-calendar-day-other-month {
+  color: var(--color-gray-400);
+}
+
+.web-calendar-day-weekend {
+  color: var(--color-gray-500);
+}
+
+.web-calendar-day-disabled {
+  color: var(--color-gray-300);
+  cursor: not-allowed;
+}
+
+.web-calendar-day-disabled:hover {
+  background-color: transparent;
+}
+
+/* Time Input */
+.web-timeinput {
+  padding: 1rem;
+}
+
+.web-timeinput-fields {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.web-timeinput-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.web-timeinput-button {
+  background: none;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 0.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-gray-600);
+  font-size: 0.75rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.web-timeinput-button:hover {
+  background-color: var(--color-gray-50);
+  border-color: var(--color-gray-300);
+}
+
+.web-timeinput-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.web-timeinput-input {
+  width: 3rem;
+  padding: 0.25rem;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 0.25rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-gray-900);
+}
+
+.web-timeinput-input:focus {
+  outline: none;
+  border-color: var(--color-primary-500);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.web-timeinput-separator {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-gray-400);
+  margin-top: 1rem;
+}
+
+.web-timeinput-ampm {
+  display: flex;
+  gap: 0.25rem;
+  justify-content: center;
+}
+
+.web-timeinput-ampm-button {
+  background-color: var(--color-gray-100);
+  border: 1px solid var(--color-gray-200);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-gray-700);
+  transition: all 0.2s ease-in-out;
+}
+
+.web-timeinput-ampm-button:hover {
+  background-color: var(--color-gray-200);
+}
+
+.web-timeinput-ampm-button-active {
+  background-color: var(--color-primary-500) !important;
+  color: var(--color-white) !important;
+  border-color: var(--color-primary-500) !important;
+}
+
+.web-timeinput-ampm-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Time Picker Actions */
+.web-timepicker-header,
+.web-datetimepicker-time-header {
+  padding: 1rem 1rem 0.5rem 1rem;
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.web-timepicker-header h4,
+.web-datetimepicker-time-header h4 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-gray-900);
+}
+
+.web-timepicker-content {
+  padding: 1rem;
+}
+
+.web-timepicker-actions,
+.web-datetimepicker-actions {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-top: 1px solid var(--color-gray-200);
+}
+
+.web-timepicker-clear-button,
+.web-timepicker-apply-button,
+.web-datetimepicker-clear-button,
+.web-datetimepicker-apply-button {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.web-timepicker-clear-button,
+.web-datetimepicker-clear-button {
+  background-color: var(--color-gray-100);
+  border: 1px solid var(--color-gray-200);
+  color: var(--color-gray-700);
+}
+
+.web-timepicker-clear-button:hover,
+.web-datetimepicker-clear-button:hover {
+  background-color: var(--color-gray-200);
+}
+
+.web-timepicker-apply-button,
+.web-datetimepicker-apply-button {
+  background-color: var(--color-primary-500);
+  border: 1px solid var(--color-primary-500);
+  color: var(--color-white);
+}
+
+.web-timepicker-apply-button:hover,
+.web-datetimepicker-apply-button:hover {
+  background-color: var(--color-primary-600);
+  border-color: var(--color-primary-600);
+}
+
+.web-timepicker-apply-button:disabled,
+.web-datetimepicker-apply-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* DateTime Picker Layout */
+.web-datetimepicker-content {
+  display: flex;
+  min-width: 500px;
+}
+
+.web-datetimepicker-calendar-section {
+  flex: 1;
+  border-right: 1px solid var(--color-gray-200);
+}
+
+.web-datetimepicker-time-section {
+  flex: 0 0 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Size Variants */
+.web-datepicker-sm .web-datepicker-input,
+.web-timepicker-sm .web-timepicker-input,
+.web-datetimepicker-sm .web-datetimepicker-input {
+  padding: 0.375rem 2rem 0.375rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+.web-datepicker-lg .web-datepicker-input,
+.web-timepicker-lg .web-timepicker-input,
+.web-datetimepicker-lg .web-datetimepicker-input {
+  padding: 0.75rem 3rem 0.75rem 1rem;
+  font-size: 1rem;
+}
+
+.web-timeinput-sm .web-timeinput-input {
+  width: 2.5rem;
+  font-size: 0.875rem;
+}
+
+.web-timeinput-lg .web-timeinput-input {
+  width: 3.5rem;
+  font-size: 1.125rem;
+}
+
+/* Disabled State */
+.web-timeinput-disabled .web-timeinput-input,
+.web-timeinput-disabled .web-timeinput-button {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Dark Mode Support */
+.dark .web-datepicker-input,
+.dark .web-timepicker-input,
+.dark .web-datetimepicker-input {
+  background-color: var(--color-gray-800) !important;
+  border-color: var(--color-gray-700) !important;
+  color: var(--color-gray-100);
+}
+
+.dark .web-datepicker-input:hover,
+.dark .web-timepicker-input:hover,
+.dark .web-datetimepicker-input:hover {
+  border-color: var(--color-gray-600) !important;
+}
+
+.dark .web-datepicker-dropdown,
+.dark .web-timepicker-dropdown,
+.dark .web-datetimepicker-dropdown {
+  background-color: var(--color-gray-800) !important;
+  border-color: var(--color-gray-700) !important;
+}
+
+.dark .web-calendar-day {
+  color: var(--color-gray-300);
+}
+
+.dark .web-calendar-day:hover {
+  background-color: var(--color-gray-700);
+}
+
+.dark .web-calendar-day-selected {
+  background-color: var(--color-primary-500) !important;
+  color: var(--color-white) !important;
+}
+
+.dark .web-timeinput-input {
+  background-color: var(--color-gray-700);
+  border-color: var(--color-gray-600);
+  color: var(--color-gray-100);
+}
+
+.dark .web-timeinput-button {
+  background-color: var(--color-gray-700);
+  border-color: var(--color-gray-600);
+  color: var(--color-gray-300);
+}
+
+.dark .web-timeinput-button:hover {
+  background-color: var(--color-gray-600);
+}
