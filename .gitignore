@@ -46,8 +46,8 @@ yarn-error.log*
 # Web Core - only for development testing
 apps/web-core/*
 
-# Apps - moved to separate repo, kept locally for testing
-apps/
+# Apps - web moved to separate repo, kept locally for testing
+apps/web/
 
 # Workspace backup for local development mode
 pnpm-workspace.backup.yaml
