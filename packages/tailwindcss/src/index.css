@@ -37,3 +37,6 @@
 
 /* Import data display styles */
 @import './components/data/card/index.css';
+
+/* Import overlay styles */
+@import './components/overlays/modal/index.css';
