@@ -21,3 +21,14 @@ export {
   type NavbarActionsProps,
   type NavbarToggleProps,
 } from './navbar';
+
+export {
+  Sidebar,
+  type SidebarProps,
+  type SidebarHeaderProps,
+  type SidebarNavProps,
+  type SidebarItemProps,
+  type SidebarGroupProps,
+  type SidebarFooterProps,
+  type SidebarToggleProps,
+} from './sidebar';

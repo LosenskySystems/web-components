@@ -30,7 +30,7 @@
 ## 🧭 Navigation
 
 - ✅ Navbar / Header
-- ❌ Sidebar (collapsible, expandable)
+- ✅ Sidebar (collapsible, expandable)
 - ❌ Breadcrumbs
 - ✅ Tabs
 - ❌ Pagination
@@ -89,4 +89,4 @@
 - ❌ Admin Tables (CRUD)
 
 ------------------------------------------------------------------------
-**Progress: 29/55 components completed (52.7%)**
+**Progress: 30/55 components completed (54.5%)**
