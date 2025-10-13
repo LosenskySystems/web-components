@@ -10,14 +10,14 @@ export const NavbarNav: React.FC<NavbarNavProps> = ({
   // Generate alignment class
   const getAlignClass = () => {
     const alignMap = {
-      start: 'justify-start',
-      center: 'justify-center',
-      end: 'justify-end',
+      start: 'web-navbar-nav-start',
+      center: 'web-navbar-nav-center',
+      end: 'web-navbar-nav-end',
     };
     return alignMap[align];
   };
 
-  const baseClasses = 'web-navbar-nav hidden md:flex items-center gap-6 flex-1';
+  const baseClasses = 'web-navbar-nav';
   const alignClass = getAlignClass();
   const classes = [baseClasses, alignClass, className].filter(Boolean).join(' ');
 

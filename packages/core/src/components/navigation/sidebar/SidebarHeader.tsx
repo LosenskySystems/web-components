@@ -8,23 +8,23 @@ export const SidebarHeader: React.FC<SidebarHeaderProps> = ({
   ...props
 }) => {
   const { collapsed } = useSidebar();
-  const baseClasses = 'web-sidebar-header border-b border-gray-200/50';
-  const paddingClasses = collapsed ? 'px-3 py-4' : 'px-4 py-5';
-  const classes = [baseClasses, paddingClasses, className].filter(Boolean).join(' ');
+  const baseClasses = 'web-sidebar-header';
+  const collapsedClass = collapsed ? 'web-sidebar-header-collapsed' : 'web-sidebar-header-expanded';
+  const classes = [baseClasses, collapsedClass, className].filter(Boolean).join(' ');
 
   return (
     <div className={classes} {...props}>
-      <div className={collapsed ? 'flex justify-center' : ''}>
+      <div className={collapsed ? 'web-sidebar-header-content-collapsed' : 'web-sidebar-header-content-expanded'}>
         {collapsed ? (
-          <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center text-white font-bold text-sm shadow-sm">
+          <div className="web-sidebar-header-logo">
             {typeof children === 'string' ? children.charAt(0).toUpperCase() : 'A'}
           </div>
         ) : (
-          <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center text-white font-bold text-sm shadow-sm">
+          <div className="web-sidebar-header-full">
+            <div className="web-sidebar-header-logo">
               {typeof children === 'string' ? children.charAt(0).toUpperCase() : 'A'}
             </div>
-            <div className="text-gray-900 font-semibold text-lg">
+            <div className="web-sidebar-header-title">
               {children}
             </div>
           </div>

@@ -16,26 +16,26 @@ export const Stack: React.FC<StackProps> = ({
   // Generate direction class
   const getDirectionClass = () => {
     if (direction === 'horizontal' || direction === 'row') {
-      return 'flex-row';
+      return 'web-stack-horizontal';
     }
-    return 'flex-col'; // vertical or column
+    return 'web-stack-vertical'; // vertical or column
   };
 
   // Generate spacing class
   const getSpacingClass = () => {
     const spacingMap = {
-      none: '0',
-      xs: '1',
-      sm: '2',
-      md: '4',
-      lg: '6',
-      xl: '8',
-      '2xl': '12',
+      none: 'none',
+      xs: 'xs',
+      sm: 'sm',
+      md: 'md',
+      lg: 'lg',
+      xl: 'xl',
+      '2xl': '2xl',
     };
     
     // Only use gap if not using dividers
     if (!divider) {
-      return `gap-${spacingMap[spacing]}`;
+      return `web-stack-spacing-${spacingMap[spacing]}`;
     }
     return '';
   };
@@ -43,31 +43,22 @@ export const Stack: React.FC<StackProps> = ({
   // Generate alignment class
   const getAlignClass = () => {
     if (!align) return '';
-    return `items-${align}`;
+    return `web-stack-align-${align}`;
   };
 
   // Generate justify class
   const getJustifyClass = () => {
     if (!justify) return '';
-    const justifyMap = {
-      start: 'justify-start',
-      center: 'justify-center',
-      end: 'justify-end',
-      between: 'justify-between',
-      around: 'justify-around',
-      evenly: 'justify-evenly',
-      stretch: 'justify-stretch',
-    };
-    return justifyMap[justify];
+    return `web-stack-justify-${justify}`;
   };
 
   // Generate wrap class
   const getWrapClass = () => {
-    return wrap ? 'flex-wrap' : '';
+    return wrap ? 'web-stack-wrap' : '';
   };
 
   // Combine all classes
-  const baseClasses = 'flex web-stack';
+  const baseClasses = 'web-stack';
   const directionClass = getDirectionClass();
   const spacingClass = getSpacingClass();
   const alignClass = getAlignClass();
@@ -91,19 +82,19 @@ export const Stack: React.FC<StackProps> = ({
     }
 
     const spacingMap = {
-      none: '0',
-      xs: '1',
-      sm: '2',
-      md: '4',
-      lg: '6',
-      xl: '8',
-      '2xl': '12',
+      none: 'none',
+      xs: 'xs',
+      sm: 'sm',
+      md: 'md',
+      lg: 'lg',
+      xl: 'xl',
+      '2xl': '2xl',
     };
 
     const isHorizontal = direction === 'horizontal' || direction === 'row';
     const dividerClass = isHorizontal 
-      ? `border-l border-gray-300 mx-${spacingMap[spacing]}` 
-      : `border-t border-gray-300 my-${spacingMap[spacing]}`;
+      ? `web-stack-divider-horizontal web-stack-divider-spacing-${spacingMap[spacing]}` 
+      : `web-stack-divider-vertical web-stack-divider-spacing-${spacingMap[spacing]}`;
 
     const childrenArray = React.Children.toArray(children);
     

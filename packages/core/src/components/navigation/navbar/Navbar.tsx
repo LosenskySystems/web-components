@@ -14,9 +14,9 @@ export const Navbar: React.FC<NavbarProps> = ({
   // Generate position classes
   const getPositionClasses = () => {
     const positionMap = {
-      static: '',
-      sticky: 'sticky top-0 z-50',
-      fixed: 'fixed top-0 w-full z-50',
+      static: 'web-navbar-static',
+      sticky: 'web-navbar-sticky',
+      fixed: 'web-navbar-fixed',
     };
     return positionMap[position];
   };
@@ -24,9 +24,9 @@ export const Navbar: React.FC<NavbarProps> = ({
   // Generate variant classes
   const getVariantClasses = () => {
     const variantMap = {
-      light: 'bg-white text-gray-900',
-      dark: 'bg-gray-900 text-white',
-      transparent: 'bg-transparent',
+      light: 'web-navbar-light',
+      dark: 'web-navbar-dark',
+      transparent: 'web-navbar-transparent',
     };
     return variantMap[variant];
   };
@@ -34,17 +34,17 @@ export const Navbar: React.FC<NavbarProps> = ({
   // Generate border class
   const getBorderClass = () => {
     if (!bordered) return '';
-    return variant === 'dark' ? 'border-b border-gray-700' : 'border-b border-gray-200';
+    return variant === 'dark' ? 'web-navbar-bordered-dark' : 'web-navbar-bordered-light';
   };
 
   // Generate shadow class
   const getShadowClass = () => {
-    return shadow ? 'shadow-lg' : '';
+    return shadow ? 'web-navbar-shadow' : '';
   };
 
   // Generate width class
   const getWidthClass = () => {
-    return fluid ? 'w-full' : '';
+    return fluid ? 'web-navbar-fluid' : 'web-navbar-container';
   };
 
   const baseClasses = 'web-navbar';
@@ -60,13 +60,10 @@ export const Navbar: React.FC<NavbarProps> = ({
     variantClasses,
     borderClass,
     shadowClass,
-    widthClass,
     className
   ].filter(Boolean).join(' ');
 
-  const innerClasses = fluid
-    ? 'flex items-center justify-between px-4 py-3'
-    : 'container mx-auto flex items-center justify-between px-4 py-3';
+  const innerClasses = widthClass;
 
   return (
     <header className={outerClasses} {...props}>

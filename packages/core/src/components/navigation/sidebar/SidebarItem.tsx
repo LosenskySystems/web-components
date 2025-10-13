@@ -21,22 +21,22 @@ export const SidebarItem: React.FC<SidebarItemProps> = ({
     const classes = [];
     
     if (active) {
-      classes.push('bg-blue-50 text-blue-700 border-r-2 border-blue-600 shadow-sm');
+      classes.push('web-sidebar-item-active');
     } else {
-      classes.push('text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-200');
+      classes.push('web-sidebar-item-default');
     }
     
     if (disabled) {
-      classes.push('opacity-50 cursor-not-allowed hover:bg-transparent hover:text-gray-600');
+      classes.push('web-sidebar-item-disabled');
     }
     
     return classes.join(' ');
   };
 
-  const baseClasses = 'web-sidebar-item flex items-center px-3 py-2.5 text-sm font-medium rounded-lg w-full transition-all duration-200';
+  const baseClasses = 'web-sidebar-item';
   const stateClasses = getStateClasses();
-  const collapsedClasses = collapsed ? 'justify-center px-2' : '';
-  const classes = [baseClasses, stateClasses, collapsedClasses, className].filter(Boolean).join(' ');
+  const collapsedClass = collapsed ? 'web-sidebar-item-collapsed' : 'web-sidebar-item-expanded';
+  const classes = [baseClasses, stateClasses, collapsedClass, className].filter(Boolean).join(' ');
 
   const componentProps = {
     className: classes,
@@ -50,12 +50,12 @@ export const SidebarItem: React.FC<SidebarItemProps> = ({
   return (
     <Component {...componentProps}>
       {icon && (
-        <span className="flex-shrink-0 w-5 h-5 text-current">
+        <span className="web-sidebar-item-icon">
           {icon}
         </span>
       )}
       {!collapsed && (
-        <span className="truncate ml-3 font-medium">
+        <span className="web-sidebar-item-text">
           {children}
         </span>
       )}

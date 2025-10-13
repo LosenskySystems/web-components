@@ -10,7 +10,7 @@ export const NavbarBrand: React.FC<NavbarBrandProps> = ({
 }) => {
   const Component = as || (href ? 'a' : 'div');
   
-  const baseClasses = 'web-navbar-brand flex items-center font-semibold text-lg text-gray-900 hover:text-primary-600 transition-colors';
+  const baseClasses = 'web-navbar-brand';
   const classes = [baseClasses, className].filter(Boolean).join(' ');
 
   const componentProps = {

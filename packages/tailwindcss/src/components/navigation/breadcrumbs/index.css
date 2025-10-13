@@ -1,0 +1,120 @@
+/* Breadcrumbs component styles */
+.web-breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+/* Size variants */
+.web-breadcrumbs-sm {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.web-breadcrumbs-md {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.web-breadcrumbs-lg {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+/* Breadcrumb item */
+.web-breadcrumb-item {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  text-decoration: none;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Breadcrumb item states */
+.web-breadcrumb-item-default {
+  color: var(--color-gray-600);
+  transition: color 0.2s ease-in-out;
+}
+
+.web-breadcrumb-item-default:hover {
+  color: var(--color-gray-900);
+}
+
+.web-breadcrumb-item-active {
+  color: var(--color-gray-900);
+  font-weight: 500;
+  cursor: default;
+}
+
+.web-breadcrumb-item-disabled {
+  color: var(--color-gray-400);
+  cursor: not-allowed;
+}
+
+.web-breadcrumb-item-disabled:hover {
+  color: var(--color-gray-400);
+}
+
+/* Breadcrumb item icon */
+.web-breadcrumb-item-icon {
+  flex-shrink: 0;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  color: currentColor;
+}
+
+/* Breadcrumb item text */
+.web-breadcrumb-item-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Breadcrumb separator */
+.web-breadcrumbs-separator {
+  color: var(--color-gray-400);
+  margin: 0 0.25rem;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+/* Breadcrumb ellipsis */
+.web-breadcrumbs-ellipsis {
+  color: var(--color-gray-500);
+  padding: 0 0.25rem;
+  user-select: none;
+}
+
+/* Dark mode support */
+.dark .web-breadcrumb-item-default {
+  color: var(--color-gray-400);
+}
+
+.dark .web-breadcrumb-item-default:hover {
+  color: var(--color-gray-100);
+}
+
+.dark .web-breadcrumb-item-active {
+  color: var(--color-gray-100);
+}
+
+.dark .web-breadcrumb-item-disabled {
+  color: var(--color-gray-600);
+}
+
+.dark .web-breadcrumb-item-disabled:hover {
+  color: var(--color-gray-600);
+}
+
+.dark .web-breadcrumbs-separator {
+  color: var(--color-gray-500);
+}
+
+.dark .web-breadcrumbs-ellipsis {
+  color: var(--color-gray-400);
+}

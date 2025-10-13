@@ -6,7 +6,7 @@ export const NavbarActions: React.FC<NavbarActionsProps> = ({
   children,
   ...props
 }) => {
-  const baseClasses = 'web-navbar-actions hidden md:flex items-center gap-2';
+  const baseClasses = 'web-navbar-actions';
   const classes = [baseClasses, className].filter(Boolean).join(' ');
 
   return (

@@ -1,10 +1,11 @@
 import React from 'react';
-import type { NavbarItemProps } from './navbar.types';
+import type { BreadcrumbItemProps } from './breadcrumbs.types';
 
-export const NavbarItem: React.FC<NavbarItemProps> = ({
+export const BreadcrumbItem: React.FC<BreadcrumbItemProps> = ({
   href,
   active = false,
   disabled = false,
+  icon,
   as,
   onClick,
   className = '',
@@ -18,31 +19,39 @@ export const NavbarItem: React.FC<NavbarItemProps> = ({
     const classes = [];
     
     if (active) {
-      classes.push('web-navbar-item-active');
+      classes.push('web-breadcrumb-item-active');
+    } else if (disabled) {
+      classes.push('web-breadcrumb-item-disabled');
     } else {
-      classes.push('web-navbar-item-default');
-    }
-    
-    if (disabled) {
-      classes.push('web-navbar-item-disabled');
+      classes.push('web-breadcrumb-item-default');
     }
     
     return classes.join(' ');
   };
 
-  const baseClasses = 'web-navbar-item';
+  const baseClasses = 'web-breadcrumb-item';
   const stateClasses = getStateClasses();
   const classes = [baseClasses, stateClasses, className].filter(Boolean).join(' ');
 
   const componentProps = {
     className: classes,
     ...(href && Component === 'a' ? { href } : {}),
-    ...(onClick && !disabled ? { onClick } : {}),
+    ...(onClick && !disabled && !active ? { onClick } : {}),
     ...(disabled ? { 'aria-disabled': 'true' } : {}),
     ...(active ? { 'aria-current': 'page' } : {}),
     ...props,
   };
 
-  return <Component {...componentProps}>{children}</Component>;
+  return (
+    <Component {...componentProps}>
+      {icon && (
+        <span className="web-breadcrumb-item-icon">
+          {icon}
+        </span>
+      )}
+      <span className="web-breadcrumb-item-text">
+        {children}
+      </span>
+    </Component>
+  );
 };
-

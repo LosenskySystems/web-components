@@ -1,0 +1,233 @@
+/* Navbar component styles */
+.web-navbar {
+  display: block;
+  width: 100%;
+}
+
+/* Navbar positions */
+.web-navbar-static {
+  position: static;
+}
+
+.web-navbar-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.web-navbar-fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+}
+
+/* Navbar variants */
+.web-navbar-light {
+  background-color: var(--color-white);
+  color: var(--color-gray-900);
+}
+
+.web-navbar-dark {
+  background-color: var(--color-gray-900);
+  color: var(--color-white);
+}
+
+.web-navbar-transparent {
+  background-color: transparent;
+}
+
+/* Navbar borders */
+.web-navbar-bordered-light {
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.web-navbar-bordered-dark {
+  border-bottom: 1px solid var(--color-gray-700);
+}
+
+/* Navbar shadow */
+.web-navbar-shadow {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+/* Navbar container */
+.web-navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+}
+
+.web-navbar-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+}
+
+/* Navbar brand */
+.web-navbar-brand {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: var(--color-gray-900);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.web-navbar-brand:hover {
+  color: var(--color-primary-600);
+}
+
+/* Navbar navigation */
+.web-navbar-nav {
+  display: none;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .web-navbar-nav {
+    display: flex;
+  }
+}
+
+.web-navbar-nav-start {
+  justify-content: flex-start;
+}
+
+.web-navbar-nav-center {
+  justify-content: center;
+}
+
+.web-navbar-nav-end {
+  justify-content: flex-end;
+}
+
+/* Navbar item */
+.web-navbar-item {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  text-decoration: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.web-navbar-item-default {
+  color: var(--color-gray-700);
+  transition: color 0.2s ease-in-out;
+}
+
+.web-navbar-item-default:hover {
+  color: var(--color-primary-600);
+}
+
+.web-navbar-item-active {
+  color: var(--color-primary-600);
+  font-weight: 500;
+}
+
+.web-navbar-item-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Navbar actions */
+.web-navbar-actions {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .web-navbar-actions {
+    display: flex;
+  }
+}
+
+/* Navbar toggle */
+.web-navbar-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  color: var(--color-gray-700);
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.web-navbar-toggle:hover {
+  color: var(--color-primary-600);
+  background-color: var(--color-gray-100);
+}
+
+@media (min-width: 768px) {
+  .web-navbar-toggle {
+    display: none;
+  }
+}
+
+.web-navbar-toggle-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Dark mode support */
+.dark .web-navbar-light {
+  background-color: var(--color-gray-800);
+  color: var(--color-gray-100);
+}
+
+.dark .web-navbar-dark {
+  background-color: var(--color-gray-900);
+  color: var(--color-white);
+}
+
+.dark .web-navbar-bordered-light {
+  border-bottom-color: var(--color-gray-700);
+}
+
+.dark .web-navbar-bordered-dark {
+  border-bottom-color: var(--color-gray-600);
+}
+
+.dark .web-navbar-brand {
+  color: var(--color-gray-100);
+}
+
+.dark .web-navbar-brand:hover {
+  color: var(--color-primary-400);
+}
+
+.dark .web-navbar-item-default {
+  color: var(--color-gray-300);
+}
+
+.dark .web-navbar-item-default:hover {
+  color: var(--color-primary-400);
+}
+
+.dark .web-navbar-item-active {
+  color: var(--color-primary-400);
+}
+
+.dark .web-navbar-toggle {
+  color: var(--color-gray-300);
+}
+
+.dark .web-navbar-toggle:hover {
+  color: var(--color-primary-400);
+  background-color: var(--color-gray-700);
+}

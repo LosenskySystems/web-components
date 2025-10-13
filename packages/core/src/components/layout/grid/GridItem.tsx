@@ -14,27 +14,27 @@ export const GridItem: React.FC<GridItemProps> = ({
   // Generate column span classes
   const getColSpanClass = () => {
     if (!colSpan) return '';
-    if (colSpan === 'full') return 'col-span-full';
-    return `col-span-${colSpan}`;
+    if (colSpan === 'full') return 'web-grid-item-col-span-full';
+    return `web-grid-item-col-span-${colSpan}`;
   };
 
   // Generate row span classes
   const getRowSpanClass = () => {
     if (!rowSpan) return '';
-    if (rowSpan === 'full') return 'row-span-full';
-    return `row-span-${rowSpan}`;
+    if (rowSpan === 'full') return 'web-grid-item-row-span-full';
+    return `web-grid-item-row-span-${rowSpan}`;
   };
 
   // Generate column start class
   const getColStartClass = () => {
     if (!colStart) return '';
-    return `col-start-${colStart}`;
+    return `web-grid-item-col-start-${colStart}`;
   };
 
   // Generate row start class
   const getRowStartClass = () => {
     if (!rowStart) return '';
-    return `row-start-${rowStart}`;
+    return `web-grid-item-row-start-${rowStart}`;
   };
 
   // Combine all classes

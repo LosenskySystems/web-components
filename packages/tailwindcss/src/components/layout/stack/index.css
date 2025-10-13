@@ -1,0 +1,190 @@
+/* Stack component styles */
+.web-stack {
+  display: flex;
+}
+
+/* Stack directions */
+.web-stack-horizontal {
+  flex-direction: row;
+}
+
+.web-stack-vertical {
+  flex-direction: column;
+}
+
+/* Stack spacing */
+.web-stack-spacing-none {
+  gap: 0;
+}
+
+.web-stack-spacing-xs {
+  gap: 0.25rem;
+}
+
+.web-stack-spacing-sm {
+  gap: 0.5rem;
+}
+
+.web-stack-spacing-md {
+  gap: 1rem;
+}
+
+.web-stack-spacing-lg {
+  gap: 1.5rem;
+}
+
+.web-stack-spacing-xl {
+  gap: 2rem;
+}
+
+.web-stack-spacing-2xl {
+  gap: 3rem;
+}
+
+/* Stack alignment */
+.web-stack-align-start {
+  align-items: flex-start;
+}
+
+.web-stack-align-center {
+  align-items: center;
+}
+
+.web-stack-align-end {
+  align-items: flex-end;
+}
+
+.web-stack-align-stretch {
+  align-items: stretch;
+}
+
+.web-stack-align-baseline {
+  align-items: baseline;
+}
+
+/* Stack justify */
+.web-stack-justify-start {
+  justify-content: flex-start;
+}
+
+.web-stack-justify-center {
+  justify-content: center;
+}
+
+.web-stack-justify-end {
+  justify-content: flex-end;
+}
+
+.web-stack-justify-between {
+  justify-content: space-between;
+}
+
+.web-stack-justify-around {
+  justify-content: space-around;
+}
+
+.web-stack-justify-evenly {
+  justify-content: space-evenly;
+}
+
+.web-stack-justify-stretch {
+  justify-content: stretch;
+}
+
+/* Stack wrap */
+.web-stack-wrap {
+  flex-wrap: wrap;
+}
+
+/* Stack dividers */
+.web-stack-divider-horizontal {
+  border-left: 1px solid var(--color-gray-300);
+  height: 1rem;
+  align-self: center;
+}
+
+.web-stack-divider-vertical {
+  border-top: 1px solid var(--color-gray-300);
+  width: 100%;
+}
+
+/* Divider spacing - horizontal */
+.web-stack-divider-spacing-none {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.web-stack-divider-spacing-xs {
+  margin-left: 0.125rem;
+  margin-right: 0.125rem;
+}
+
+.web-stack-divider-spacing-sm {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.web-stack-divider-spacing-md {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.web-stack-divider-spacing-lg {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+.web-stack-divider-spacing-xl {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.web-stack-divider-spacing-2xl {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+/* Divider spacing - vertical */
+.web-stack-vertical .web-stack-divider-spacing-none {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.web-stack-vertical .web-stack-divider-spacing-xs {
+  margin-top: 0.125rem;
+  margin-bottom: 0.125rem;
+}
+
+.web-stack-vertical .web-stack-divider-spacing-sm {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.web-stack-vertical .web-stack-divider-spacing-md {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.web-stack-vertical .web-stack-divider-spacing-lg {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.web-stack-vertical .web-stack-divider-spacing-xl {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.web-stack-vertical .web-stack-divider-spacing-2xl {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Dark mode support */
+.dark .web-stack-divider-horizontal {
+  border-left-color: var(--color-gray-600);
+}
+
+.dark .web-stack-divider-vertical {
+  border-top-color: var(--color-gray-600);
+}

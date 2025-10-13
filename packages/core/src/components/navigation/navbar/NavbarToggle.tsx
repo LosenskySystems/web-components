@@ -7,7 +7,7 @@ export const NavbarToggle: React.FC<NavbarToggleProps> = ({
   className = '',
   ...props
 }) => {
-  const baseClasses = 'web-navbar-toggle md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary-600 hover:bg-gray-100 transition-colors';
+  const baseClasses = 'web-navbar-toggle';
   const classes = [baseClasses, className].filter(Boolean).join(' ');
 
   return (
@@ -20,7 +20,7 @@ export const NavbarToggle: React.FC<NavbarToggleProps> = ({
       {...props}
     >
       <svg
-        className="w-6 h-6"
+        className="web-navbar-toggle-icon"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"

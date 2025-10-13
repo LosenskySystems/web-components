@@ -15,14 +15,14 @@ export const Sidebar: React.FC<SidebarProps> = ({
 }) => {
   // Generate position classes
   const getPositionClasses = () => {
-    return position === 'right' ? 'right-0' : 'left-0';
+    return position === 'right' ? 'web-sidebar-right' : 'web-sidebar-left';
   };
 
   // Generate variant classes
   const getVariantClasses = () => {
     const variantMap = {
-      light: 'bg-white text-gray-900 border-r border-gray-200',
-      dark: 'bg-gray-900 text-white border-r border-gray-700',
+      light: 'web-sidebar-light',
+      dark: 'web-sidebar-dark',
     };
     return variantMap[variant];
   };
@@ -30,13 +30,13 @@ export const Sidebar: React.FC<SidebarProps> = ({
   // Generate width classes
   const getWidthClasses = () => {
     if (collapsed) {
-      return 'w-16';
+      return 'web-sidebar-collapsed';
     }
     
     const widthMap = {
-      sm: 'w-56',
-      md: 'w-64',
-      lg: 'w-72',
+      sm: 'web-sidebar-sm',
+      md: 'web-sidebar-md',
+      lg: 'web-sidebar-lg',
     };
     return widthMap[width];
   };
@@ -44,12 +44,12 @@ export const Sidebar: React.FC<SidebarProps> = ({
   // Generate border classes
   const getBorderClasses = () => {
     if (!bordered) return '';
-    return position === 'right' ? 'border-l border-gray-200' : 'border-r border-gray-200';
+    return position === 'right' ? 'web-sidebar-bordered-right' : 'web-sidebar-bordered-left';
   };
 
   const baseClasses = demo 
-    ? 'web-sidebar relative h-full transition-all duration-300 ease-in-out shadow-sm'
-    : 'web-sidebar fixed top-0 h-full z-40 transition-all duration-300 ease-in-out shadow-lg';
+    ? 'web-sidebar web-sidebar-demo'
+    : 'web-sidebar web-sidebar-fixed';
   const positionClasses = getPositionClasses();
   const variantClasses = getVariantClasses();
   const widthClasses = getWidthClasses();
@@ -67,7 +67,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
   return (
     <SidebarContext.Provider value={{ collapsed }}>
       <aside className={classes} {...props}>
-        <div className="flex flex-col h-full relative group">
+        <div className="web-sidebar-content">
           {children}
         </div>
       </aside>

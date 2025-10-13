@@ -34,6 +34,9 @@
 
 /* Import navigation styles */
 @import './components/navigation/tabs/index.css';
+@import './components/navigation/breadcrumbs/index.css';
+@import './components/navigation/navbar/index.css';
+@import './components/navigation/sidebar/index.css';
 
 /* Import data display styles */
 @import './components/data/card/index.css';
@@ -44,3 +47,5 @@
 
 /* Import layout styles */
 @import './components/layout/container/index.css';
+@import './components/layout/grid/index.css';
+@import './components/layout/stack/index.css';
