@@ -1,0 +1,502 @@
+import { List, Button, Avatar } from '@losensky-systems/web-components-core'
+import { CodeBlock } from '../../../components/docs/CodeBlock'
+import { PropsTable } from '../../../components/docs/PropsTable'
+
+# List Component
+
+The List component provides a flexible container for displaying collections of items with support for avatars, icons, descriptions, actions, and interactive states. Perfect for contact lists, menus, and data display.
+
+## Import
+
+```tsx
+import { List } from '@losensky-systems/web-components-core'
+```
+
+## Basic Usage
+
+<CodeBlock code={`<List>
+  <List.Item title="Email notifications" />
+  <List.Item title="SMS notifications" />
+  <List.Item title="Push notifications" />
+</List>`}>
+  <div style={{ marginBottom: '2rem' }}>
+    <List>
+      <List.Item title="Email notifications" />
+      <List.Item title="SMS notifications" />
+      <List.Item title="Push notifications" />
+    </List>
+  </div>
+</CodeBlock>
+
+## List with Icons
+
+Items can include icons on the left side.
+
+<CodeBlock code={`<List>
+  <List.Item 
+    icon={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{ width: '24px', height: '24px' }}><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>}
+    title="Email"
+  />
+  <List.Item 
+    icon={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{ width: '24px', height: '24px' }}><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>}
+    title="Phone"
+  />
+  <List.Item 
+    icon={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{ width: '24px', height: '24px' }}><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>}
+    title="Location"
+  />
+</List>`}>
+  <div style={{ marginBottom: '2rem' }}>
+    <List>
+      <List.Item 
+        icon={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{ width: '24px', height: '24px' }}><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>}
+        title="Email"
+      />
+      <List.Item 
+        icon={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{ width: '24px', height: '24px' }}><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>}
+        title="Phone"
+      />
+      <List.Item 
+        icon={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{ width: '24px', height: '24px' }}><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>}
+        title="Location"
+      />
+    </List>
+  </div>
+</CodeBlock>
+
+## List with Avatars and Descriptions
+
+<CodeBlock code={`<List>
+  <List.Item
+    avatar={<Avatar src="https://api.dicebear.com/7.x/avataaars/svg?seed=John" size="sm" />}
+    title="John Doe"
+    description="Senior Software Engineer"
+  />
+  <List.Item
+    avatar={<Avatar src="https://api.dicebear.com/7.x/avataaars/svg?seed=Jane" size="sm" />}
+    title="Jane Smith"
+    description="Product Designer"
+  />
+  <List.Item
+    avatar={<Avatar src="https://api.dicebear.com/7.x/avataaars/svg?seed=Bob" size="sm" />}
+    title="Bob Johnson"
+    description="Frontend Developer"
+  />
+</List>`}>
+  <div style={{ marginBottom: '2rem' }}>
+    <List>
+      <List.Item
+        avatar={<Avatar src="https://api.dicebear.com/7.x/avataaars/svg?seed=John" size="sm" />}
+        title="John Doe"
+        description="Senior Software Engineer"
+      />
+      <List.Item
+        avatar={<Avatar src="https://api.dicebear.com/7.x/avataaars/svg?seed=Jane" size="sm" />}
+        title="Jane Smith"
+        description="Product Designer"
+      />
+      <List.Item
+        avatar={<Avatar src="https://api.dicebear.com/7.x/avataaars/svg?seed=Bob" size="sm" />}
+        title="Bob Johnson"
+        description="Frontend Developer"
+      />
+    </List>
+  </div>
+</CodeBlock>
+
+## Interactive List
+
+Items can be made interactive and clickable.
+
+<CodeBlock code={`<List>
+  <List.Item
+    title="Settings"
+    description="Manage your account settings"
+    interactive
+    onClick={() => alert('Navigating to settings')}
+  />
+  <List.Item
+    title="Privacy"
+    description="Control your privacy settings"
+    interactive
+    onClick={() => alert('Navigating to privacy')}
+  />
+  <List.Item
+    title="Notifications"
+    description="Manage notification preferences"
+    interactive
+    onClick={() => alert('Navigating to notifications')}
+  />
+</List>`}>
+  <div style={{ marginBottom: '2rem' }}>
+    <List>
+      <List.Item
+        title="Settings"
+        description="Manage your account settings"
+        interactive
+        onClick={() => alert('Navigating to settings')}
+      />
+      <List.Item
+        title="Privacy"
+        description="Control your privacy settings"
+        interactive
+        onClick={() => alert('Navigating to privacy')}
+      />
+      <List.Item
+        title="Notifications"
+        description="Manage notification preferences"
+        interactive
+        onClick={() => alert('Navigating to notifications')}
+      />
+    </List>
+  </div>
+</CodeBlock>
+
+## List with Actions
+
+Items can include action buttons on the right side.
+
+<CodeBlock code={`<List>
+  <List.Item
+    avatar={<Avatar src="https://api.dicebear.com/7.x/avataaars/svg?seed=Alice" size="sm" />}
+    title="Alice Cooper"
+    description="Software Engineer"
+    actions={<Button size="sm" variant="ghost">View Profile</Button>}
+  />
+  <List.Item
+    avatar={<Avatar src="https://api.dicebear.com/7.x/avataaars/svg?seed=Bob" size="sm" />}
+    title="Bob Wilson"
+    description="Product Manager"
+    actions={<Button size="sm" variant="ghost">View Profile</Button>}
+  />
+  <List.Item
+    avatar={<Avatar src="https://api.dicebear.com/7.x/avataaars/svg?seed=Charlie" size="sm" />}
+    title="Charlie Brown"
+    description="Designer"
+    actions={<Button size="sm" variant="ghost">View Profile</Button>}
+  />
+</List>`}>
+  <div style={{ marginBottom: '2rem' }}>
+    <List>
+      <List.Item
+        avatar={<Avatar src="https://api.dicebear.com/7.x/avataaars/svg?seed=Alice" size="sm" />}
+        title="Alice Cooper"
+        description="Software Engineer"
+        actions={<Button size="sm" variant="ghost">View Profile</Button>}
+      />
+      <List.Item
+        avatar={<Avatar src="https://api.dicebear.com/7.x/avataaars/svg?seed=Bob" size="sm" />}
+        title="Bob Wilson"
+        description="Product Manager"
+        actions={<Button size="sm" variant="ghost">View Profile</Button>}
+      />
+      <List.Item
+        avatar={<Avatar src="https://api.dicebear.com/7.x/avataaars/svg?seed=Charlie" size="sm" />}
+        title="Charlie Brown"
+        description="Designer"
+        actions={<Button size="sm" variant="ghost">View Profile</Button>}
+      />
+    </List>
+  </div>
+</CodeBlock>
+
+## Horizontal Orientation
+
+Lists can be displayed horizontally.
+
+<CodeBlock code={`<List orientation="horizontal">
+  <List.Item
+    avatar={<Avatar src="https://api.dicebear.com/7.x/avataaars/svg?seed=Team1" size="sm" />}
+    title="Team Alpha"
+  />
+  <List.Item
+    avatar={<Avatar src="https://api.dicebear.com/7.x/avataaars/svg?seed=Team2" size="sm" />}
+    title="Team Beta"
+  />
+  <List.Item
+    avatar={<Avatar src="https://api.dicebear.com/7.x/avataaars/svg?seed=Team3" size="sm" />}
+    title="Team Gamma"
+  />
+</List>`}>
+  <div style={{ marginBottom: '2rem' }}>
+    <List orientation="horizontal">
+      <List.Item
+        avatar={<Avatar src="https://api.dicebear.com/7.x/avataaars/svg?seed=Team1" size="sm" />}
+        title="Team Alpha"
+      />
+      <List.Item
+        avatar={<Avatar src="https://api.dicebear.com/7.x/avataaars/svg?seed=Team2" size="sm" />}
+        title="Team Beta"
+      />
+      <List.Item
+        avatar={<Avatar src="https://api.dicebear.com/7.x/avataaars/svg?seed=Team3" size="sm" />}
+        title="Team Gamma"
+      />
+    </List>
+  </div>
+</CodeBlock>
+
+## Dividers
+
+Add visual separators between items.
+
+<CodeBlock code={`<List dividers>
+  <List.Item title="Email" description="john@example.com" />
+  <List.Item title="Phone" description="+1 234 567 890" />
+  <List.Item title="Address" description="123 Main St, City, State" />
+  <List.Item title="Website" description="www.example.com" />
+</List>`}>
+  <div style={{ marginBottom: '2rem' }}>
+    <List dividers>
+      <List.Item title="Email" description="john@example.com" />
+      <List.Item title="Phone" description="+1 234 567 890" />
+      <List.Item title="Address" description="123 Main St, City, State" />
+      <List.Item title="Website" description="www.example.com" />
+    </List>
+  </div>
+</CodeBlock>
+
+## Spacing Options
+
+<CodeBlock code={`<List spacing="sm">
+  <List.Item title="Small spacing - Item 1" />
+  <List.Item title="Small spacing - Item 2" />
+</List>
+
+<List spacing="md">
+  <List.Item title="Medium spacing - Item 1" />
+  <List.Item title="Medium spacing - Item 2" />
+</List>
+
+<List spacing="lg">
+  <List.Item title="Large spacing - Item 1" />
+  <List.Item title="Large spacing - Item 2" />
+</List>`}>
+  <div style={{ marginBottom: '2rem' }}>
+    <div style={{ marginBottom: '1rem' }}>
+      <h4>Small Spacing</h4>
+      <List spacing="sm">
+        <List.Item title="Small spacing - Item 1" />
+        <List.Item title="Small spacing - Item 2" />
+      </List>
+    </div>
+    
+    <div style={{ marginBottom: '1rem' }}>
+      <h4>Medium Spacing (default)</h4>
+      <List spacing="md">
+        <List.Item title="Medium spacing - Item 1" />
+        <List.Item title="Medium spacing - Item 2" />
+      </List>
+    </div>
+    
+    <div style={{ marginBottom: '1rem' }}>
+      <h4>Large Spacing</h4>
+      <List spacing="lg">
+        <List.Item title="Large spacing - Item 1" />
+        <List.Item title="Large spacing - Item 2" />
+      </List>
+    </div>
+  </div>
+</CodeBlock>
+
+## Disabled Items
+
+<CodeBlock code={`<List>
+  <List.Item
+    title="Active Item"
+    description="This item is enabled"
+    interactive
+    onClick={() => alert('Item clicked')}
+  />
+  <List.Item
+    title="Disabled Item"
+    description="This item is disabled"
+    disabled
+  />
+  <List.Item
+    title="Another Active Item"
+    description="This item is also enabled"
+    interactive
+    onClick={() => alert('Item clicked')}
+  />
+</List>`}>
+  <div style={{ marginBottom: '2rem' }}>
+    <List>
+      <List.Item
+        title="Active Item"
+        description="This item is enabled"
+        interactive
+        onClick={() => alert('Item clicked')}
+      />
+      <List.Item
+        title="Disabled Item"
+        description="This item is disabled"
+        disabled
+      />
+      <List.Item
+        title="Another Active Item"
+        description="This item is also enabled"
+        interactive
+        onClick={() => alert('Item clicked')}
+      />
+    </List>
+  </div>
+</CodeBlock>
+
+## Real-World Example
+
+### Contact List
+
+<CodeBlock code={`<List dividers>
+  <List.Item
+    avatar={<Avatar src="https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah" size="sm" />}
+    title="Sarah Johnson"
+    description="Head of Engineering • Online"
+    actions={
+      <div style={{ display: 'flex', gap: '0.5rem' }}>
+        <Button size="sm" variant="ghost">Call</Button>
+        <Button size="sm" variant="ghost">Message</Button>
+      </div>
+    }
+  />
+  <List.Item
+    avatar={<Avatar src="https://api.dicebear.com/7.x/avataaars/svg?seed=Mike" size="sm" />}
+    title="Mike Chen"
+    description="Product Manager • Away"
+    actions={
+      <div style={{ display: 'flex', gap: '0.5rem' }}>
+        <Button size="sm" variant="ghost">Call</Button>
+        <Button size="sm" variant="ghost">Message</Button>
+      </div>
+    }
+  />
+  <List.Item
+    avatar={<Avatar src="https://api.dicebear.com/7.x/avataaars/svg?seed=Emma" size="sm" />}
+    title="Emma Williams"
+    description="UX Designer • Offline"
+    actions={
+      <div style={{ display: 'flex', gap: '0.5rem' }}>
+        <Button size="sm" variant="ghost">Call</Button>
+        <Button size="sm" variant="ghost">Message</Button>
+      </div>
+    }
+  />
+</List>`}>
+  <div style={{ marginBottom: '2rem' }}>
+    <List dividers>
+      <List.Item
+        avatar={<Avatar src="https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah" size="sm" />}
+        title="Sarah Johnson"
+        description="Head of Engineering • Online"
+        actions={
+          <div style={{ display: 'flex', gap: '0.5rem' }}>
+            <Button size="sm" variant="ghost">Call</Button>
+            <Button size="sm" variant="ghost">Message</Button>
+          </div>
+        }
+      />
+      <List.Item
+        avatar={<Avatar src="https://api.dicebear.com/7.x/avataaars/svg?seed=Mike" size="sm" />}
+        title="Mike Chen"
+        description="Product Manager • Away"
+        actions={
+          <div style={{ display: 'flex', gap: '0.5rem' }}>
+            <Button size="sm" variant="ghost">Call</Button>
+            <Button size="sm" variant="ghost">Message</Button>
+          </div>
+        }
+      />
+      <List.Item
+        avatar={<Avatar src="https://api.dicebear.com/7.x/avataaars/svg?seed=Emma" size="sm" />}
+        title="Emma Williams"
+        description="UX Designer • Offline"
+        actions={
+          <div style={{ display: 'flex', gap: '0.5rem' }}>
+            <Button size="sm" variant="ghost">Call</Button>
+            <Button size="sm" variant="ghost">Message</Button>
+          </div>
+        }
+      />
+    </List>
+  </div>
+</CodeBlock>
+
+## Custom Content
+
+You can also use List.Item with custom children.
+
+<CodeBlock code={`<List>
+  <List.Item>
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+      <div>
+        <h4>Custom Title</h4>
+        <p>Custom description goes here</p>
+      </div>
+      <Button size="sm">Action</Button>
+    </div>
+  </List.Item>
+  <List.Item>
+    <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+      <input type="checkbox" />
+      <label>Enable notifications</label>
+    </div>
+  </List.Item>
+</List>`}>
+  <div style={{ marginBottom: '2rem' }}>
+    <List>
+      <List.Item>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+          <div>
+            <h4 style={{ margin: 0 }}>Custom Title</h4>
+            <p style={{ margin: '0.25rem 0 0 0' }}>Custom description goes here</p>
+          </div>
+          <Button size="sm">Action</Button>
+        </div>
+      </List.Item>
+      <List.Item>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+          <input type="checkbox" />
+          <label>Enable notifications</label>
+        </div>
+      </List.Item>
+    </List>
+  </div>
+</CodeBlock>
+
+## Props
+
+### List Props
+
+<PropsTable props={[
+  { name: 'children', type: 'React.ReactNode', default: '-', description: 'List items' },
+  { name: 'className', type: 'string', default: '-', description: 'Additional CSS classes' },
+  { name: 'orientation', type: "'vertical' | 'horizontal'", default: "'vertical'", description: 'List orientation' },
+  { name: 'spacing', type: "'none' | 'sm' | 'md' | 'lg'", default: "'md'", description: 'Spacing between items' },
+  { name: 'dividers', type: 'boolean', default: 'false', description: 'Show dividers between items' }
+]} />
+
+### List.Item Props
+
+<PropsTable props={[
+  { name: 'children', type: 'React.ReactNode', default: '-', description: 'Custom content (alternative to using title/description)' },
+  { name: 'className', type: 'string', default: '-', description: 'Additional CSS classes' },
+  { name: 'avatar', type: 'React.ReactNode', default: '-', description: 'Avatar element (left side)' },
+  { name: 'icon', type: 'React.ReactNode', default: '-', description: 'Icon element (left side, used when no avatar)' },
+  { name: 'title', type: 'string', default: '-', description: 'Item title' },
+  { name: 'description', type: 'string', default: '-', description: 'Item description' },
+  { name: 'actions', type: 'React.ReactNode', default: '-', description: 'Action elements (right side)' },
+  { name: 'onClick', type: '(event: React.MouseEvent<HTMLDivElement>) => void', default: '-', description: 'Click handler for interactive items' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Disable the item' },
+  { name: 'interactive', type: 'boolean', default: 'false', description: 'Make the item interactive (clickable)' }
+]} />
+
+## Accessibility
+
+The List component includes comprehensive accessibility features:
+
+- **Semantic HTML**: Uses proper `<ul>` and `<li>` elements
+- **Keyboard navigation**: Full keyboard support for interactive items (Enter and Space keys)
+- **ARIA attributes**: Proper `role` and `aria-disabled` attributes for interactive and disabled states
+- **Focus management**: Proper focus handling and visual indicators
+- **Screen reader friendly**: Clear structure for screen readers
+

@@ -132,6 +132,15 @@
       "description": "A collapsible content area that allows users to expand and collapse sections of information"
     },
     {
+      "id": "list",
+      "title": "List",
+      "path": "/docs/components/data/list",
+      "component": "List",
+      "category": "components",
+      "subcategory": "data",
+      "description": "A flexible list component with support for avatars, icons, descriptions, and actions"
+    },
+    {
       "id": "toast",
       "title": "Toast",
       "path": "/docs/components/data/toast",
@@ -351,7 +360,7 @@
           "id": "data",
           "title": "Data",
           "description": "Components for displaying data and content",
-          "items": ["card", "toast", "accordion"]
+          "items": ["card", "toast", "accordion", "list"]
         },
         {
           "id": "overlays",

@@ -1,0 +1,226 @@
+/* List component styles */
+.web-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Orientation */
+.web-list-vertical {
+  flex-direction: column;
+}
+
+.web-list-horizontal {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* Spacing */
+.web-list-spacing-none > .web-list-item {
+  margin: 0;
+}
+
+.web-list-spacing-sm > .web-list-item {
+  margin: 0.25rem 0;
+}
+
+.web-list-spacing-md > .web-list-item {
+  margin: 0.5rem 0;
+}
+
+.web-list-spacing-lg > .web-list-item {
+  margin: 1rem 0;
+}
+
+/* Horizontal spacing */
+.web-list-horizontal.web-list-spacing-sm > .web-list-item {
+  margin: 0 0.25rem;
+}
+
+.web-list-horizontal.web-list-spacing-md > .web-list-item {
+  margin: 0 0.5rem;
+}
+
+.web-list-horizontal.web-list-spacing-lg > .web-list-item {
+  margin: 0 1rem;
+}
+
+/* Dividers */
+.web-list-dividers > .web-list-item:not(:last-child) {
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.web-list-horizontal.web-list-dividers > .web-list-item:not(:last-child) {
+  border-bottom: none;
+  border-right: 1px solid var(--color-gray-200);
+}
+
+/* List Item */
+.web-list-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.75rem;
+  transition: background-color 0.15s ease-in-out;
+}
+
+/* Interactive state */
+.web-list-item-interactive {
+  cursor: pointer;
+}
+
+.web-list-item-interactive:hover {
+  background-color: var(--color-gray-50);
+}
+
+.web-list-item-interactive:focus {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: -2px;
+}
+
+.web-list-item-interactive:active {
+  background-color: var(--color-gray-100);
+}
+
+/* Disabled state */
+.web-list-item-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* List Item Content */
+.web-list-item-content {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+/* Media (Avatar/Icon) */
+.web-list-item-media {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.web-list-item-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-gray-100);
+}
+
+.web-list-item-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gray-500);
+}
+
+/* Text Content */
+.web-list-item-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.web-list-item-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--color-gray-900);
+  margin: 0;
+}
+
+.web-list-item-description {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--color-gray-600);
+  margin: 0.25rem 0 0 0;
+}
+
+/* Actions */
+.web-list-item-actions {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 0.75rem;
+}
+
+/* Horizontal list item adjustments */
+.web-list-horizontal .web-list-item {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 5rem;
+}
+
+.web-list-horizontal .web-list-item-media {
+  margin-bottom: 0.5rem;
+}
+
+.web-list-horizontal .web-list-item-actions {
+  margin-left: 0;
+  margin-top: 0.5rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.web-list-horizontal .web-list-item-content {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Dark mode support */
+.dark .web-list-dividers > .web-list-item:not(:last-child) {
+  border-bottom-color: var(--color-gray-700);
+}
+
+.dark .web-list-horizontal.web-list-dividers > .web-list-item:not(:last-child) {
+  border-right-color: var(--color-gray-700);
+}
+
+.dark .web-list-item-interactive:hover {
+  background-color: var(--color-gray-700);
+}
+
+.dark .web-list-item-interactive:active {
+  background-color: var(--color-gray-600);
+}
+
+.dark .web-list-item-interactive:focus {
+  outline-color: var(--color-primary-400);
+}
+
+.dark .web-list-item-avatar {
+  background-color: var(--color-gray-600);
+}
+
+.dark .web-list-item-icon {
+  color: var(--color-gray-400);
+}
+
+.dark .web-list-item-title {
+  color: var(--color-gray-100);
+}
+
+.dark .web-list-item-description {
+  color: var(--color-gray-400);
+}
+
+.dark .web-list-item-disabled {
+  opacity: 0.4;
+}
+

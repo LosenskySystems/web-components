@@ -42,7 +42,7 @@
 
 - ✅ Card (basic, with header/footer, media card)
 - ❌ Table (sortable, filterable, paginated)
-- ❌ List (with avatars, icons, descriptions)
+- ✅ List (with avatars, icons, descriptions)
 - ✅ Accordion
 - ✅ Modal / Dialog
 - ✅ Drawer / Off-canvas panel
@@ -89,4 +89,4 @@
 - ❌ Admin Tables (CRUD)
 
 ------------------------------------------------------------------------
-**Progress: 31/55 components completed (56.4%)**
+**Progress: 32/55 components completed (58.2%)**

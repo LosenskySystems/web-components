@@ -20,6 +20,7 @@
 @import './components/data/card/index.css';
 @import './components/data/toast/index.css';
 @import './components/data/accordion/index.css';
+@import './components/data/list/index.css';
 
 /* Import form styles */
 @import './components/forms/input/index.css';
@@ -37,9 +38,6 @@
 @import './components/navigation/breadcrumbs/index.css';
 @import './components/navigation/navbar/index.css';
 @import './components/navigation/sidebar/index.css';
-
-/* Import data display styles */
-@import './components/data/card/index.css';
 
 /* Import overlay styles */
 @import './components/overlays/modal/index.css';
