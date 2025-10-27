@@ -1,0 +1,439 @@
+import { Table } from '@losensky-systems/web-components-core'
+import { Button } from '@losensky-systems/web-components-core'
+import { CodeBlock } from '../../../components/docs/CodeBlock'
+import { PropsTable } from '../../../components/docs/PropsTable'
+
+# Table Component
+
+The Table component provides a powerful data table with sorting, filtering, pagination, and row selection capabilities. Built with a compound component architecture for maximum flexibility.
+
+## Import
+
+```tsx
+import { Table } from '@losensky-systems/web-components-core'
+```
+
+## Basic Usage
+
+<CodeBlock code={`const data = [
+  { id: 1, name: 'John Doe', email: 'john@example.com', role: 'Admin' },
+  { id: 2, name: 'Jane Smith', email: 'jane@example.com', role: 'User' },
+  { id: 3, name: 'Bob Johnson', email: 'bob@example.com', role: 'User' },
+];
+
+const columns = [
+  { key: 'name', header: 'Name', sortable: true },
+  { key: 'email', header: 'Email', sortable: true },
+  { key: 'role', header: 'Role', sortable: true },
+];
+
+<Table data={data} columns={columns} sortable>
+  <Table.Head />
+  <Table.Body />
+</Table>`}>
+  {(() => {
+    const data = [
+      { id: 1, name: 'John Doe', email: 'john@example.com', role: 'Admin' },
+      { id: 2, name: 'Jane Smith', email: 'jane@example.com', role: 'User' },
+      { id: 3, name: 'Bob Johnson', email: 'bob@example.com', role: 'User' },
+      { id: 4, name: 'Alice Brown', email: 'alice@example.com', role: 'Admin' },
+      { id: 5, name: 'Charlie Wilson', email: 'charlie@example.com', role: 'User' },
+    ];
+
+    const columns = [
+      { key: 'name', header: 'Name', sortable: true },
+      { key: 'email', header: 'Email', sortable: true },
+      { key: 'role', header: 'Role', sortable: true },
+    ];
+
+    return (
+      <div style={{ marginBottom: '2rem' }}>
+        <Table data={data} columns={columns} sortable>
+          <Table.Head />
+          <Table.Body />
+        </Table>
+      </div>
+    );
+  })()}
+</CodeBlock>
+
+## With Pagination
+
+<CodeBlock code={`<Table data={data} columns={columns} sortable pagination pageSize={3}>
+  <Table.Head />
+  <Table.Body />
+  <Table.Footer />
+</Table>`}>
+  {(() => {
+    const data = [
+      { id: 1, name: 'John Doe', email: 'john@example.com', role: 'Admin' },
+      { id: 2, name: 'Jane Smith', email: 'jane@example.com', role: 'User' },
+      { id: 3, name: 'Bob Johnson', email: 'bob@example.com', role: 'User' },
+      { id: 4, name: 'Alice Brown', email: 'alice@example.com', role: 'Admin' },
+      { id: 5, name: 'Charlie Wilson', email: 'charlie@example.com', role: 'User' },
+    ];
+
+    const columns = [
+      { key: 'name', header: 'Name', sortable: true },
+      { key: 'email', header: 'Email', sortable: true },
+      { key: 'role', header: 'Role', sortable: true },
+    ];
+
+    return (
+      <div style={{ marginBottom: '2rem' }}>
+        <Table data={data} columns={columns} sortable pagination pageSize={3}>
+          <Table.Head />
+          <Table.Body />
+          <Table.Footer />
+        </Table>
+      </div>
+    );
+  })()}
+</CodeBlock>
+
+## With Filtering
+
+<CodeBlock code={`<Table data={data} columns={columns} sortable filterable>
+  <Table.Head />
+  <Table.Body />
+</Table>`}>
+  {(() => {
+    const data = [
+      { id: 1, name: 'John Doe', email: 'john@example.com', role: 'Admin' },
+      { id: 2, name: 'Jane Smith', email: 'jane@example.com', role: 'User' },
+      { id: 3, name: 'Bob Johnson', email: 'bob@example.com', role: 'User' },
+      { id: 4, name: 'Alice Brown', email: 'alice@example.com', role: 'Admin' },
+      { id: 5, name: 'Charlie Wilson', email: 'charlie@example.com', role: 'User' },
+    ];
+
+    const columns = [
+      { key: 'name', header: 'Name', sortable: true },
+      { key: 'email', header: 'Email', sortable: true },
+      { key: 'role', header: 'Role', sortable: true },
+    ];
+
+    return (
+      <div style={{ marginBottom: '2rem' }}>
+        <Table data={data} columns={columns} sortable filterable>
+          <Table.Head />
+          <Table.Body />
+        </Table>
+      </div>
+    );
+  })()}
+</CodeBlock>
+
+## Single Row Selection
+
+<CodeBlock code={`<Table data={data} columns={columns} sortable selection="single">
+  <Table.Head />
+  <Table.Body />
+</Table>`}>
+  {(() => {
+    const data = [
+      { id: 1, name: 'John Doe', email: 'john@example.com', role: 'Admin' },
+      { id: 2, name: 'Jane Smith', email: 'jane@example.com', role: 'User' },
+      { id: 3, name: 'Bob Johnson', email: 'bob@example.com', role: 'User' },
+    ];
+
+    const columns = [
+      { key: 'name', header: 'Name', sortable: true },
+      { key: 'email', header: 'Email', sortable: true },
+      { key: 'role', header: 'Role', sortable: true },
+    ];
+
+    return (
+      <div style={{ marginBottom: '2rem' }}>
+        <Table data={data} columns={columns} sortable selection="single">
+          <Table.Head />
+          <Table.Body />
+        </Table>
+      </div>
+    );
+  })()}
+</CodeBlock>
+
+## Multiple Row Selection
+
+<CodeBlock code={`<Table data={data} columns={columns} sortable selection="multiple">
+  <Table.Head />
+  <Table.Body />
+</Table>`}>
+  {(() => {
+    const data = [
+      { id: 1, name: 'John Doe', email: 'john@example.com', role: 'Admin' },
+      { id: 2, name: 'Jane Smith', email: 'jane@example.com', role: 'User' },
+      { id: 3, name: 'Bob Johnson', email: 'bob@example.com', role: 'User' },
+    ];
+
+    const columns = [
+      { key: 'name', header: 'Name', sortable: true },
+      { key: 'email', header: 'Email', sortable: true },
+      { key: 'role', header: 'Role', sortable: true },
+    ];
+
+    return (
+      <div style={{ marginBottom: '2rem' }}>
+        <Table data={data} columns={columns} sortable selection="multiple">
+          <Table.Head />
+          <Table.Body />
+        </Table>
+      </div>
+    );
+  })()}
+</CodeBlock>
+
+## Interactive Rows
+
+<CodeBlock code={`<Table 
+  data={data} 
+  columns={columns} 
+  sortable 
+  interactive 
+  onRowClick={(row) => alert(\`Clicked: \${row.name}\`)}
+>
+  <Table.Head />
+  <Table.Body />
+</Table>`}>
+  {(() => {
+    const data = [
+      { id: 1, name: 'John Doe', email: 'john@example.com', role: 'Admin' },
+      { id: 2, name: 'Jane Smith', email: 'jane@example.com', role: 'User' },
+      { id: 3, name: 'Bob Johnson', email: 'bob@example.com', role: 'User' },
+    ];
+
+    const columns = [
+      { key: 'name', header: 'Name', sortable: true },
+      { key: 'email', header: 'Email', sortable: true },
+      { key: 'role', header: 'Role', sortable: true },
+    ];
+
+    return (
+      <div style={{ marginBottom: '2rem' }}>
+        <Table 
+          data={data} 
+          columns={columns} 
+          sortable 
+          interactive 
+        >
+          <Table.Head />
+          <Table.Body />
+        </Table>
+      </div>
+    );
+  })()}
+</CodeBlock>
+
+## Custom Cell Rendering
+
+<CodeBlock code={`const columns = [
+  { key: 'name', header: 'Name', sortable: true },
+  { key: 'status', header: 'Status', render: (value) => (
+    <span style={{ 
+      padding: '0.25rem 0.5rem', 
+      borderRadius: '0.25rem',
+      backgroundColor: value === 'Active' ? '#d1fae5' : '#fee2e2',
+      color: value === 'Active' ? '#065f46' : '#991b1b',
+      fontSize: '0.75rem',
+      fontWeight: '500'
+    }}>
+      {value}
+    </span>
+  )},
+  { key: 'actions', header: 'Actions', render: () => (
+    <Button size="sm">Edit</Button>
+  )},
+];
+
+<Table data={data} columns={columns} sortable>
+  <Table.Head />
+  <Table.Body />
+</Table>`}>
+  {(() => {
+    const data = [
+      { id: 1, name: 'John Doe', status: 'Active' },
+      { id: 2, name: 'Jane Smith', status: 'Inactive' },
+      { id: 3, name: 'Bob Johnson', status: 'Active' },
+    ];
+
+    const columns = [
+      { key: 'name', header: 'Name', sortable: true },
+      { 
+        key: 'status', 
+        header: 'Status', 
+        render: (value) => (
+          <span style={{ 
+            padding: '0.25rem 0.5rem', 
+            borderRadius: '0.25rem',
+            backgroundColor: value === 'Active' ? '#d1fae5' : '#fee2e2',
+            color: value === 'Active' ? '#065f46' : '#991b1b',
+            fontSize: '0.75rem',
+            fontWeight: '500'
+          }}>
+            {value}
+          </span>
+        )
+      },
+      { 
+        key: 'actions', 
+        header: 'Actions', 
+        render: () => (
+          <Button size="sm">Edit</Button>
+        )
+      },
+    ];
+
+    return (
+      <div style={{ marginBottom: '2rem' }}>
+        <Table data={data} columns={columns} sortable>
+          <Table.Head />
+          <Table.Body />
+        </Table>
+      </div>
+    );
+  })()}
+</CodeBlock>
+
+## Cell Alignment
+
+<CodeBlock code={`const columns = [
+  { key: 'name', header: 'Name', sortable: true, align: 'left' },
+  { key: 'quantity', header: 'Quantity', sortable: true, align: 'center' },
+  { key: 'price', header: 'Price', sortable: true, align: 'right' },
+];`}>
+  {(() => {
+    const data = [
+      { id: 1, name: 'Product A', quantity: 42, price: '$19.99' },
+      { id: 2, name: 'Product B', quantity: 28, price: '$29.99' },
+      { id: 3, name: 'Product C', quantity: 65, price: '$15.99' },
+    ];
+
+    const columns = [
+      { key: 'name', header: 'Name', sortable: true, align: 'left' },
+      { key: 'quantity', header: 'Quantity', sortable: true, align: 'center' },
+      { key: 'price', header: 'Price', sortable: true, align: 'right' },
+    ];
+
+    return (
+      <div style={{ marginBottom: '2rem' }}>
+        <Table data={data} columns={columns} sortable>
+          <Table.Head />
+          <Table.Body />
+        </Table>
+      </div>
+    );
+  })()}
+</CodeBlock>
+
+## Real-World Example
+
+<CodeBlock code={`const employees = [
+  { id: 1, name: 'John Doe', email: 'john@example.com', department: 'Engineering', status: 'Active' },
+  { id: 2, name: 'Jane Smith', email: 'jane@example.com', department: 'Marketing', status: 'Active' },
+  { id: 3, name: 'Bob Johnson', email: 'bob@example.com', department: 'Sales', status: 'On Leave' },
+  { id: 4, name: 'Alice Brown', email: 'alice@example.com', department: 'Engineering', status: 'Active' },
+  { id: 5, name: 'Charlie Wilson', email: 'charlie@example.com', department: 'HR', status: 'Active' },
+];
+
+const columns = [
+  { key: 'name', header: 'Name', sortable: true },
+  { key: 'email', header: 'Email', sortable: true },
+  { key: 'department', header: 'Department', sortable: true },
+  { key: 'status', header: 'Status', sortable: true, render: (value) => (
+    <span style={{
+      padding: '0.25rem 0.5rem',
+      borderRadius: '0.25rem',
+      backgroundColor: value === 'Active' ? '#dcfce7' : '#fef3c7',
+      color: value === 'Active' ? '#166534' : '#92400e',
+      fontSize: '0.75rem',
+      fontWeight: '500'
+    }}>
+      {value}
+    </span>
+  )},
+];
+
+<Table data={employees} columns={columns} sortable filterable pagination pageSize={5} selection="multiple">
+  <Table.Head />
+  <Table.Body />
+  <Table.Footer />
+</Table>`}>
+  {(() => {
+    const employees = [
+      { id: 1, name: 'John Doe', email: 'john@example.com', department: 'Engineering', status: 'Active' },
+      { id: 2, name: 'Jane Smith', email: 'jane@example.com', department: 'Marketing', status: 'Active' },
+      { id: 3, name: 'Bob Johnson', email: 'bob@example.com', department: 'Sales', status: 'On Leave' },
+      { id: 4, name: 'Alice Brown', email: 'alice@example.com', department: 'Engineering', status: 'Active' },
+      { id: 5, name: 'Charlie Wilson', email: 'charlie@example.com', department: 'HR', status: 'Active' },
+    ];
+
+    const columns = [
+      { key: 'name', header: 'Name', sortable: true },
+      { key: 'email', header: 'Email', sortable: true },
+      { key: 'department', header: 'Department', sortable: true },
+      { 
+        key: 'status', 
+        header: 'Status', 
+        sortable: true, 
+        render: (value) => (
+          <span style={{
+            padding: '0.25rem 0.5rem',
+            borderRadius: '0.25rem',
+            backgroundColor: value === 'Active' ? '#dcfce7' : '#fef3c7',
+            color: value === 'Active' ? '#166534' : '#92400e',
+            fontSize: '0.75rem',
+            fontWeight: '500'
+          }}>
+            {value}
+          </span>
+        )
+      },
+    ];
+
+    return (
+      <div style={{ marginBottom: '2rem' }}>
+        <Table data={employees} columns={columns} sortable filterable pagination pageSize={5} selection="multiple">
+          <Table.Head />
+          <Table.Body />
+          <Table.Footer />
+        </Table>
+      </div>
+    );
+  })()}
+</CodeBlock>
+
+## Props
+
+### Table Props
+
+<PropsTable props={[
+  { name: 'data', type: 'any[]', default: '[]', description: 'Array of row data objects' },
+  { name: 'columns', type: 'ColumnDef[]', default: '-', description: 'Column definitions' },
+  { name: 'className', type: 'string', default: '-', description: 'Additional CSS classes' },
+  { name: 'sortable', type: 'boolean', default: 'false', description: 'Enable column sorting' },
+  { name: 'onSort', type: '(key: string, direction: "asc" | "desc") => void', default: '-', description: 'Sort callback' },
+  { name: 'filterable', type: 'boolean', default: 'false', description: 'Enable search/filter' },
+  { name: 'onFilter', type: '(filterValue: string) => void', default: '-', description: 'Filter callback' },
+  { name: 'pagination', type: 'boolean | PaginationConfig', default: 'false', description: 'Enable pagination' },
+  { name: 'pageSize', type: 'number', default: '10', description: 'Rows per page' },
+  { name: 'selection', type: '"none" | "single" | "multiple"', default: '"none"', description: 'Row selection mode' },
+  { name: 'onSelectionChange', type: '(selectedRows: any[]) => void', default: '-', description: 'Selection change callback' },
+  { name: 'selectedRows', type: 'any[]', default: '-', description: 'Controlled selected rows' },
+  { name: 'onRowClick', type: '(row: any) => void', default: '-', description: 'Row click handler' },
+  { name: 'interactive', type: 'boolean', default: 'false', description: 'Make rows clickable' },
+  { name: 'emptyMessage', type: 'string', default: '"No data available"', description: 'Empty state message' },
+  { name: 'loading', type: 'boolean', default: 'false', description: 'Loading state' }
+]} />
+
+### ColumnDef Props
+
+<PropsTable props={[
+  { name: 'key', type: 'string', default: '-', description: 'Column key matching data property' },
+  { name: 'header', type: 'string | ReactNode', default: '-', description: 'Column header' },
+  { name: 'render', type: '(value: any, row: any) => ReactNode', default: '-', description: 'Custom cell renderer' },
+  { name: 'sortable', type: 'boolean', default: 'false', description: 'Allow column sorting' },
+  { name: 'align', type: '"left" | "center" | "right"', default: '"left"', description: 'Cell alignment' },
+  { name: 'width', type: 'string | number', default: '-', description: 'Column width' },
+  { name: 'filterable', type: 'boolean', default: 'false', description: 'Allow column filtering' }
+]} />
+

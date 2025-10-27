@@ -41,7 +41,7 @@
 ## 📊 Data Display
 
 - ✅ Card (basic, with header/footer, media card)
-- ❌ Table (sortable, filterable, paginated)
+- ✅ Table (sortable, filterable, paginated)
 - ✅ List (with avatars, icons, descriptions)
 - ✅ Accordion
 - ✅ Modal / Dialog
@@ -89,4 +89,4 @@
 - ❌ Admin Tables (CRUD)
 
 ------------------------------------------------------------------------
-**Progress: 32/55 components completed (58.2%)**
+**Progress: 33/55 components completed (60.0%)**

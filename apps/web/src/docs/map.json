@@ -141,6 +141,15 @@
       "description": "A flexible list component with support for avatars, icons, descriptions, and actions"
     },
     {
+      "id": "table",
+      "title": "Table",
+      "path": "/docs/components/data/table",
+      "component": "Table",
+      "category": "components",
+      "subcategory": "data",
+      "description": "A powerful data table with sorting, filtering, pagination, and row selection"
+    },
+    {
       "id": "toast",
       "title": "Toast",
       "path": "/docs/components/data/toast",
@@ -360,7 +369,7 @@
           "id": "data",
           "title": "Data",
           "description": "Components for displaying data and content",
-          "items": ["card", "toast", "accordion", "list"]
+          "items": ["card", "toast", "accordion", "list", "table"]
         },
         {
           "id": "overlays",

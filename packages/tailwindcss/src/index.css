@@ -21,6 +21,7 @@
 @import './components/data/toast/index.css';
 @import './components/data/accordion/index.css';
 @import './components/data/list/index.css';
+@import './components/data/table/index.css';
 
 /* Import form styles */
 @import './components/forms/input/index.css';

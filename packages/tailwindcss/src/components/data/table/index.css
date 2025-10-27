@@ -1,0 +1,306 @@
+/* Table component styles */
+.web-table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Filter */
+.web-table-filter {
+  margin-bottom: 1rem;
+}
+
+.web-table-filter-input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-gray-300);
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+}
+
+/* Table wrapper for responsive scroll */
+.web-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.web-table-inner {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  min-width: 100%;
+}
+
+/* Table Header */
+.web-table-header {
+  background-color: var(--color-gray-50);
+  border-bottom: 2px solid var(--color-gray-200);
+}
+
+.web-table-header-cell {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-gray-900);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.web-table-header-cell-sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.web-table-header-cell-sortable:hover {
+  background-color: var(--color-gray-100);
+}
+
+.web-table-header-cell-sorted {
+  color: var(--color-primary-600);
+}
+
+.web-table-header-cell-sort-asc .web-table-sort-icon {
+  color: var(--color-primary-600);
+}
+
+.web-table-header-cell-sort-desc .web-table-sort-icon {
+  color: var(--color-primary-600);
+}
+
+.web-table-sort-icon {
+  margin-left: 0.5rem;
+  font-size: 0.75rem;
+  display: inline-block;
+}
+
+/* Alignment */
+.web-table-header-cell-align-center {
+  text-align: center;
+}
+
+.web-table-header-cell-align-right {
+  text-align: right;
+}
+
+/* Table Body */
+.web-table-body {
+  background-color: var(--color-white);
+}
+
+/* Table Row */
+.web-table-row {
+  border-bottom: 1px solid var(--color-gray-200);
+  transition: background-color 0.15s ease-in-out;
+}
+
+.web-table-row-interactive {
+  cursor: pointer;
+}
+
+.web-table-row-interactive:hover {
+  background-color: var(--color-gray-50);
+}
+
+.web-table-row-selected {
+  background-color: var(--color-primary-50);
+}
+
+.web-table-row-selected:hover {
+  background-color: var(--color-primary-100);
+}
+
+/* Table Cell */
+.web-table-cell {
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  color: var(--color-gray-900);
+}
+
+.web-table-cell-align-center {
+  text-align: center;
+}
+
+.web-table-cell-align-right {
+  text-align: right;
+}
+
+.web-table-cell-checkbox {
+  width: 3rem;
+  padding: 0.75rem 0;
+  text-align: center;
+}
+
+/* Checkboxes */
+.web-table-checkbox {
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Empty State */
+.web-table-empty {
+  padding: 3rem 1rem;
+  text-align: center;
+  color: var(--color-gray-500);
+  font-size: 0.875rem;
+}
+
+/* Pagination */
+.web-table-pagination {
+  padding: 1rem;
+  background-color: var(--color-gray-50);
+}
+
+.web-table-pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.web-table-pagination-info {
+  font-size: 0.875rem;
+  color: var(--color-gray-600);
+}
+
+.web-table-pagination-controls {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.web-table-pagination-btn {
+  min-width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-gray-300);
+  background-color: var(--color-white);
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-gray-700);
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.web-table-pagination-btn:hover:not(:disabled) {
+  background-color: var(--color-gray-50);
+  border-color: var(--color-gray-400);
+}
+
+.web-table-pagination-btn-active {
+  background-color: var(--color-primary-600);
+  color: var(--color-white);
+  border-color: var(--color-primary-600);
+}
+
+.web-table-pagination-btn-active:hover {
+  background-color: var(--color-primary-700);
+}
+
+.web-table-pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .web-table-header-cell,
+  .web-table-cell {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8125rem;
+  }
+
+  .web-table-pagination-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .web-table-pagination-controls {
+    justify-content: center;
+  }
+}
+
+/* Dark mode */
+.dark .web-table-header {
+  background-color: var(--color-gray-800);
+  border-bottom-color: var(--color-gray-700);
+}
+
+.dark .web-table-header-cell {
+  color: var(--color-gray-100);
+}
+
+.dark .web-table-header-cell-sortable:hover {
+  background-color: var(--color-gray-700);
+}
+
+.dark .web-table-header-cell-sorted {
+  color: var(--color-primary-400);
+}
+
+.dark .web-table-body {
+  background-color: var(--color-gray-800);
+}
+
+.dark .web-table-row {
+  border-bottom-color: var(--color-gray-700);
+}
+
+.dark .web-table-row-interactive:hover {
+  background-color: var(--color-gray-700);
+}
+
+.dark .web-table-row-selected {
+  background-color: var(--color-primary-900);
+}
+
+.dark .web-table-row-selected:hover {
+  background-color: var(--color-primary-800);
+}
+
+.dark .web-table-cell {
+  color: var(--color-gray-100);
+}
+
+.dark .web-table-empty {
+  color: var(--color-gray-400);
+}
+
+.dark .web-table-pagination {
+  background-color: var(--color-gray-800);
+}
+
+.dark .web-table-pagination-info {
+  color: var(--color-gray-400);
+}
+
+.dark .web-table-pagination-btn {
+  background-color: var(--color-gray-700);
+  border-color: var(--color-gray-600);
+  color: var(--color-gray-200);
+}
+
+.dark .web-table-pagination-btn:hover:not(:disabled) {
+  background-color: var(--color-gray-600);
+  border-color: var(--color-gray-500);
+}
+
+.dark .web-table-pagination-btn-active {
+  background-color: var(--color-primary-600);
+  border-color: var(--color-primary-600);
+}
+
+.dark .web-table-pagination-btn:disabled {
+  opacity: 0.4;
+}
+
+.dark .web-table-filter-input {
+  background-color: var(--color-gray-800);
+  border-color: var(--color-gray-600);
+  color: var(--color-gray-100);
+}
+
