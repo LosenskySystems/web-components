@@ -1,4 +1,4 @@
-import { Button, Input, Divider, Label, LabelGroup, Loader, Select, Textarea, Tooltip, Badge, Card, Avatar, Icon, Dropdown, DropdownItem, DropdownDivider, DropdownMenu, Alert, Toast, Checkbox, Radio, Slider, Toggle, DateTimePicker, Form, FormField, FormSection, FormActions, Modal, ModalHeader, ModalBody, ModalFooter, Drawer, DrawerHeader, DrawerBody, DrawerFooter, Container, Grid, Stack, Progress, Navbar, Sidebar, Breadcrumbs, Tabs, TabsList, TabsTrigger, TabsContent, TabsPanel, Accordion, AccordionItem, EmptyState } from '@losensky-systems/web-components-core'
+import { Button, Input, Divider, Label, LabelGroup, Loader, Select, Textarea, Tooltip, Badge, Card, Avatar, Icon, Dropdown, DropdownItem, DropdownDivider, DropdownMenu, Alert, Toast, Checkbox, Radio, Slider, Toggle, DateTimePicker, Form, FormField, FormSection, FormActions, Modal, ModalHeader, ModalBody, ModalFooter, Drawer, DrawerHeader, DrawerBody, DrawerFooter, Container, Grid, Stack, Progress, Navbar, Sidebar, Breadcrumbs, Tabs, TabsList, TabsTrigger, TabsContent, TabsPanel, Accordion, AccordionItem, EmptyState, Callout } from '@losensky-systems/web-components-core'
 import { BasicSidebarExample, SidebarWithIconsExample, CollapsibleSidebarExample, SidebarPositionExample, SidebarVariantExample, GroupedSidebarExample, CompleteSidebarExample, SidebarWidthExample } from '../../docs/components/navigation/SidebarExamples'
 import { BasicBreadcrumbsExample, BreadcrumbsWithIconsExample, BreadcrumbsSeparatorExample, BreadcrumbsSizeExample, BreadcrumbsMaxItemsExample, BreadcrumbsClickableExample, BreadcrumbsDisabledExample } from '../../docs/components/navigation/BreadcrumbsExamples'
 import { CodeBlock } from './CodeBlock'
@@ -72,6 +72,7 @@ export const mdxComponents = {
   Accordion,
   AccordionItem,
   EmptyState,
+  Callout,
   CodeBlock,
   PropsTable,
   // Typography

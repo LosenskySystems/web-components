@@ -1,0 +1,147 @@
+import { Callout, Button, Icon } from '@losensky-systems/web-components-core'
+
+# Callout Component
+
+The Callout component is designed for emphasizing important information inline. It features a left border, optional icons, and variant support for different message types.
+
+## Import
+
+```tsx
+import { Callout } from '@losensky-systems/web-components-core'
+```
+
+## Basic Usage
+
+<CodeBlock code={`<Callout description="This is important information you should know." />`}>
+  <Callout description="This is important information you should know." />
+</CodeBlock>
+
+## With Title
+
+<CodeBlock code={`<Callout 
+  title="Note"
+  description="This is an important note about the feature."
+/>`}>
+  <Callout 
+    title="Note"
+    description="This is an important note about the feature."
+  />
+</CodeBlock>
+
+## Variants
+
+<CodeBlock code={`<Callout 
+  variant="info"
+  title="Information"
+  description="This is informational content."
+/>
+
+<Callout 
+  variant="success"
+  title="Success"
+  description="Operation completed successfully."
+/>
+
+<Callout 
+  variant="warning"
+  title="Warning"
+  description="Please review this before proceeding."
+/>
+
+<Callout 
+  variant="error"
+  title="Error"
+  description="Something went wrong. Please try again."
+/>`}>
+  <div style={{ marginBottom: '1rem' }}>
+    <Callout 
+      variant="info"
+      title="Information"
+      description="This is informational content."
+    />
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Callout 
+      variant="success"
+      title="Success"
+      description="Operation completed successfully."
+    />
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Callout 
+      variant="warning"
+      title="Warning"
+      description="Please review this before proceeding."
+    />
+  </div>
+  <div>
+    <Callout 
+      variant="error"
+      title="Error"
+      description="Something went wrong. Please try again."
+    />
+  </div>
+</CodeBlock>
+
+## With Icon
+
+<CodeBlock code={`<Callout 
+  variant="info"
+  title="Documentation"
+  icon={<Icon size="md" />}
+  description="You can find more details in our documentation."
+/>`}>
+  <Callout 
+    variant="info"
+    title="Documentation"
+    icon={<Icon size="md" />}
+    description="You can find more details in our documentation."
+  />
+</CodeBlock>
+
+## With Action
+
+<CodeBlock code={`<Callout 
+  variant="warning"
+  title="Update Available"
+  description="A new version is available with improved features."
+  action={<Button size="sm">Update Now</Button>}
+/>`}>
+  <Callout 
+    variant="warning"
+    title="Update Available"
+    description="A new version is available with improved features."
+    action={<Button size="sm">Update Now</Button>}
+  />
+</CodeBlock>
+
+## Complete Example
+
+<CodeBlock code={`<Callout 
+  variant="info"
+  title="Pro Tip"
+  icon={<Icon size="md" />}
+  description="You can use keyboard shortcuts to improve your productivity."
+  action={<Button variant="ghost" size="sm">Learn More</Button>}
+/>`}>
+  <Callout 
+    variant="info"
+    title="Pro Tip"
+    icon={<Icon size="md" />}
+    description="You can use keyboard shortcuts to improve your productivity."
+    action={<Button variant="ghost" size="sm">Learn More</Button>}
+  />
+</CodeBlock>
+
+## Props
+
+<PropsTable props={[
+  { name: 'description', type: 'string', description: 'The description text (required)' },
+  { name: 'title', type: 'string', default: 'undefined', description: 'Optional title text' },
+  { name: 'icon', type: 'ReactNode', default: 'undefined', description: 'Optional icon element' },
+  { name: 'variant', type: "'info' | 'success' | 'warning' | 'error'", default: "'info'", description: 'Visual variant of the callout' },
+  { name: 'action', type: 'ReactNode', default: 'undefined', description: 'Optional action button or element' },
+  { name: 'children', type: 'ReactNode', default: 'undefined', description: 'Optional custom content' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' }
+]} />
+

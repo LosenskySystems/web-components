@@ -53,7 +53,7 @@
 - ✅ Toast (floating notification)
 - ✅ Progress Bar / Circular Progress
 - ✅ Empty State (no data placeholder)
-- ❌ Callout / Highlight (emphasized information block)
+- ✅ Callout / Highlight (emphasized information block)
 
 ------------------------------------------------------------------------
 

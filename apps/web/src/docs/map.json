@@ -168,6 +168,15 @@
       "description": "A centered placeholder component for displaying no data or empty content states"
     },
     {
+      "id": "callout",
+      "title": "Callout",
+      "path": "/docs/components/data/callout",
+      "component": "Callout",
+      "category": "components",
+      "subcategory": "data",
+      "description": "A component for emphasizing important information with left border styling"
+    },
+    {
       "id": "toast",
       "title": "Toast",
       "path": "/docs/components/data/toast",
@@ -387,7 +396,7 @@
           "id": "data",
           "title": "Data",
           "description": "Components for displaying data and content",
-          "items": ["card", "toast", "accordion", "list", "table", "emptystate"]
+          "items": ["card", "toast", "accordion", "list", "table", "emptystate", "callout"]
         },
         {
           "id": "overlays",

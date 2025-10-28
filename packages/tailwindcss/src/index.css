@@ -24,6 +24,7 @@
 @import './components/data/list/index.css';
 @import './components/data/table/index.css';
 @import './components/data/empty-state/index.css';
+@import './components/data/callout/index.css';
 
 /* Import form styles */
 @import './components/forms/input/index.css';
