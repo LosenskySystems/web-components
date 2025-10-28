@@ -1,0 +1,138 @@
+import { PageHeader, Button, Breadcrumbs } from '@losensky-systems/web-components-core'
+
+# Page Header Component
+
+The Page Header component provides a consistent layout for page titles with optional breadcrumbs, descriptions, and action buttons. It's designed to be simple and flexible.
+
+## Import
+
+```tsx
+import { PageHeader } from '@losensky-systems/web-components-core'
+```
+
+## Basic Usage
+
+<CodeBlock code={`<PageHeader title="Dashboard" />`}>
+  <PageHeader title="Dashboard" />
+</CodeBlock>
+
+## With Subtitle and Description
+
+<CodeBlock code={`<PageHeader 
+  title="Settings"
+  subtitle="Account Preferences"
+  description="Manage your account settings and preferences here."
+/>`}>
+  <PageHeader 
+    title="Settings"
+    subtitle="Account Preferences"
+    description="Manage your account settings and preferences here."
+  />
+</CodeBlock>
+
+## With Actions
+
+<CodeBlock code={`<PageHeader 
+  title="Users"
+  description="Manage your users and permissions"
+  actions={
+    <>
+      <Button variant="secondary">Export</Button>
+      <Button variant="primary">Add User</Button>
+    </>
+  }
+/>`}>
+  <PageHeader 
+    title="Users"
+    description="Manage your users and permissions"
+    actions={
+      <>
+        <Button variant="secondary">Export</Button>
+        <Button variant="primary">Add User</Button>
+      </>
+    }
+  />
+</CodeBlock>
+
+## With Breadcrumbs
+
+<CodeBlock code={`<PageHeader 
+  title="Product Details"
+  subtitle="Edit Product"
+  description="Update product information and settings"
+  breadcrumbs={
+    <Breadcrumbs>
+      <Breadcrumbs.Item>Home</Breadcrumbs.Item>
+      <Breadcrumbs.Item>Products</Breadcrumbs.Item>
+      <Breadcrumbs.Item active>Product Details</Breadcrumbs.Item>
+    </Breadcrumbs>
+  }
+  actions={<Button variant="primary">Save Changes</Button>}
+/>`}>
+  <PageHeader 
+    title="Product Details"
+    subtitle="Edit Product"
+    description="Update product information and settings"
+    breadcrumbs={
+      <Breadcrumbs>
+        <Breadcrumbs.Item>Home</Breadcrumbs.Item>
+        <Breadcrumbs.Item>Products</Breadcrumbs.Item>
+        <Breadcrumbs.Item active>Product Details</Breadcrumbs.Item>
+      </Breadcrumbs>
+    }
+    actions={<Button variant="primary">Save Changes</Button>}
+  />
+</CodeBlock>
+
+## Complete Example
+
+<CodeBlock code={`<PageHeader 
+  breadcrumbs={
+    <Breadcrumbs>
+      <Breadcrumbs.Item>Home</Breadcrumbs.Item>
+      <Breadcrumbs.Item>Users</Breadcrumbs.Item>
+      <Breadcrumbs.Item active>John Doe</Breadcrumbs.Item>
+    </Breadcrumbs>
+  }
+  title="John Doe"
+  subtitle="Senior Developer"
+  description="Last seen 2 hours ago"
+  actions={
+    <>
+      <Button variant="ghost">Message</Button>
+      <Button variant="primary">Edit Profile</Button>
+    </>
+  }
+/>`}>
+  <PageHeader 
+    breadcrumbs={
+      <Breadcrumbs>
+        <Breadcrumbs.Item>Home</Breadcrumbs.Item>
+        <Breadcrumbs.Item>Users</Breadcrumbs.Item>
+        <Breadcrumbs.Item active>John Doe</Breadcrumbs.Item>
+      </Breadcrumbs>
+    }
+    title="John Doe"
+    subtitle="Senior Developer"
+    description="Last seen 2 hours ago"
+    actions={
+      <>
+        <Button variant="ghost">Message</Button>
+        <Button variant="primary">Edit Profile</Button>
+      </>
+    }
+  />
+</CodeBlock>
+
+## Props
+
+<PropsTable props={[
+  { name: 'title', type: 'string', description: 'The main page title (required)' },
+  { name: 'subtitle', type: 'string', default: 'undefined', description: 'Optional subtitle text' },
+  { name: 'description', type: 'string', default: 'undefined', description: 'Optional description text' },
+  { name: 'breadcrumbs', type: 'ReactNode', default: 'undefined', description: 'Optional breadcrumb navigation' },
+  { name: 'actions', type: 'ReactNode', default: 'undefined', description: 'Optional action buttons (displayed on the right)' },
+  { name: 'children', type: 'ReactNode', default: 'undefined', description: 'Optional custom content' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' }
+]} />
+

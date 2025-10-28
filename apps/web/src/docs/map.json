@@ -303,6 +303,15 @@
       "description": "Flexible layout component for arranging children vertically or horizontally with consistent spacing"
     },
     {
+      "id": "pageheader",
+      "title": "Page Header",
+      "path": "/docs/components/layout/pageheader",
+      "component": "PageHeader",
+      "category": "components",
+      "subcategory": "layout",
+      "description": "A simple page header component for titles with optional breadcrumbs and actions"
+    },
+    {
       "id": "drawer",
       "title": "Drawer",
       "path": "/docs/components/overlays/drawer",
@@ -408,7 +417,7 @@
           "id": "layout",
           "title": "Layout",
           "description": "Layout and section components",
-          "items": ["container", "grid", "stack"]
+          "items": ["container", "grid", "stack", "pageheader"]
         }
       ]
     }

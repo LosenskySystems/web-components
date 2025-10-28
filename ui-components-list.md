@@ -63,7 +63,7 @@
 - ✅ Container
 - ✅ Stack (vertical/horizontal spacing)
 - ❌ Flex utilities (alignment helpers)
-- ❌ Page Header (title + actions)
+- ✅ Page Header (title + actions)
 
 ------------------------------------------------------------------------
 

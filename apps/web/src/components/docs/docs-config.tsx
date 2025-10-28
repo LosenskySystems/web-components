@@ -38,6 +38,7 @@ import TableDocs from '../../docs/components/data/Table.mdx'
 import ChipDocs from '../../docs/components/elements/Chip.mdx'
 import EmptyStateDocs from '../../docs/components/data/EmptyState.mdx'
 import CalloutDocs from '../../docs/components/data/Callout.mdx'
+import PageHeaderDocs from '../../docs/components/layout/PageHeader.mdx'
 
 // Component mapping for dynamic imports
 export const componentMap: Record<string, React.ComponentType> = {
@@ -81,6 +82,8 @@ export const componentMap: Record<string, React.ComponentType> = {
   EmptyState: EmptyStateDocs,
   Emptystate: EmptyStateDocs,
   Callout: CalloutDocs,
+  PageHeader: PageHeaderDocs,
+  Pageheader: PageHeaderDocs,
 }
 
 // Re-export types for convenience
