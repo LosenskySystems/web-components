@@ -47,6 +47,13 @@ const componentSubcategories = [
     description: 'Layout and section components',
     count: docsMap.routes.filter(r => r.subcategory === 'layout').length,
     path: '/layout'
+  },
+  {
+    id: 'utilities',
+    title: 'Utilities',
+    description: 'Utility components',
+    count: docsMap.routes.filter(r => r.subcategory === 'utilities').length,
+    path: '/utilities'
   }
 ]
 

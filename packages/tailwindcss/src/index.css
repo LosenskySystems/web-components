@@ -54,3 +54,6 @@
 @import './components/layout/stack/index.css';
 @import './components/layout/page-header/index.css';
 @import './components/layout/flex/index.css';
+
+/* Import utility styles */
+@import './components/utilities/theme-switcher/index.css';

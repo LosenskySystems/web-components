@@ -1,0 +1,54 @@
+import { ThemeSwitcher } from '@losensky-systems/web-components-core'
+
+# Theme Switcher Component
+
+The ThemeSwitcher component allows users to toggle between light and dark themes. It automatically detects system preferences and persists user choices in localStorage.
+
+**Note**: The examples below use `mode="preview"` to prevent toggling the actual documentation page theme. In your application, omit this prop to use the live theme switcher.
+
+## Import
+
+<CodeBlock code={`import { ThemeSwitcher } from '@losensky-systems/web-components-core'`} />
+
+## Basic Usage
+
+<CodeBlock code={`<ThemeSwitcher />`}>
+  <ThemeSwitcher mode="preview" />
+</CodeBlock>
+
+## With Label
+
+<CodeBlock code={`<ThemeSwitcher showLabel />`}>
+  <ThemeSwitcher showLabel mode="preview" />
+</CodeBlock>
+
+## Size Variants
+
+<CodeBlock code={`<ThemeSwitcher size="sm" />
+<ThemeSwitcher size="md" />
+<ThemeSwitcher size="lg" />`}>
+  <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+    <ThemeSwitcher size="sm" mode="preview" />
+    <ThemeSwitcher size="md" mode="preview" />
+    <ThemeSwitcher size="lg" mode="preview" />
+  </div>
+</CodeBlock>
+
+## Implementation Details
+
+The component:
+- Automatically detects system dark mode preference on first load
+- Persists theme choice to `localStorage` with key `theme-preference`
+- Applies/removes `dark` class on `document.documentElement`
+- Updates theme when system preference changes (if user hasn't manually set a preference)
+
+## Props
+
+<PropsTable props={[
+  { name: 'size', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Size variant of the theme switcher' },
+  { name: 'showLabel', type: 'boolean', default: 'false', description: 'Show a label next to the switcher' },
+  { name: 'mode', type: "'preview' | 'live'", default: "'live'", description: "Display mode. 'preview' for non-functional demos, 'live' to actually toggle theme" },
+  { name: 'onChange', type: '(theme: "light" | "dark") => void', description: 'Callback when theme changes' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' }
+]} />
+

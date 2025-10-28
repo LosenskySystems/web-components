@@ -41,6 +41,7 @@ import CalloutDocs from '../../docs/components/data/Callout.mdx'
 import PageHeaderDocs from '../../docs/components/layout/PageHeader.mdx'
 import FlexDocs from '../../docs/components/layout/Flex.mdx'
 import PaginationDocs from '../../docs/components/navigation/Pagination.mdx'
+import ThemeSwitcherDocs from '../../docs/components/utilities/ThemeSwitcher.mdx'
 
 // Component mapping for dynamic imports
 export const componentMap: Record<string, React.ComponentType> = {
@@ -88,6 +89,8 @@ export const componentMap: Record<string, React.ComponentType> = {
   Pageheader: PageHeaderDocs,
   Flex: FlexDocs,
   Pagination: PaginationDocs,
+  ThemeSwitcher: ThemeSwitcherDocs,
+  Themeswitcher: ThemeSwitcherDocs,
 }
 
 // Re-export types for convenience

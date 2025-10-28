@@ -321,6 +321,15 @@
       "description": "Flexbox layout utilities for direction, alignment, justification, and gap control"
     },
     {
+      "id": "themeswitcher",
+      "title": "Theme Switcher",
+      "path": "/docs/components/utilities/themeswitcher",
+      "component": "ThemeSwitcher",
+      "category": "components",
+      "subcategory": "utilities",
+      "description": "Toggle between light and dark themes with automatic system preference detection"
+    },
+    {
       "id": "drawer",
       "title": "Drawer",
       "path": "/docs/components/overlays/drawer",
@@ -436,6 +445,12 @@
           "title": "Layout",
           "description": "Layout and section components",
           "items": ["container", "grid", "stack", "pageheader", "flex"]
+        },
+        {
+          "id": "utilities",
+          "title": "Utilities",
+          "description": "Utility components",
+          "items": ["themeswitcher"]
         }
       ]
     }

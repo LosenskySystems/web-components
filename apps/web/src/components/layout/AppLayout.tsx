@@ -27,6 +27,7 @@ export function AppLayout({ docsMap }: AppLayoutProps) {
           <Route path="/data" element={<CategoryPage routes={docsMap.routes} categories={docsMap.categories} categoryId="components" subcategoryId="data" />} />
           <Route path="/overlays" element={<CategoryPage routes={docsMap.routes} categories={docsMap.categories} categoryId="components" subcategoryId="overlays" />} />
           <Route path="/layout" element={<CategoryPage routes={docsMap.routes} categories={docsMap.categories} categoryId="components" subcategoryId="layout" />} />
+          <Route path="/utilities" element={<CategoryPage routes={docsMap.routes} categories={docsMap.categories} categoryId="components" subcategoryId="utilities" />} />
           
           {/* Individual component pages */}
           <Route path="/elements/:component" element={<DocPage routes={docsMap.routes} />} />
@@ -35,6 +36,7 @@ export function AppLayout({ docsMap }: AppLayoutProps) {
           <Route path="/data/:component" element={<DocPage routes={docsMap.routes} />} />
           <Route path="/overlays/:component" element={<DocPage routes={docsMap.routes} />} />
           <Route path="/layout/:component" element={<DocPage routes={docsMap.routes} />} />
+          <Route path="/utilities/:component" element={<DocPage routes={docsMap.routes} />} />
         </Routes>
       </main>
     </div>
