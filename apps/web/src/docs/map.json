@@ -123,6 +123,15 @@
       "description": "Display progress indicators with bar or circular variants"
     },
     {
+      "id": "chip",
+      "title": "Chip",
+      "path": "/docs/components/elements/chip",
+      "component": "Chip",
+      "category": "components",
+      "subcategory": "elements",
+      "description": "A chip/tag component for labels, filters, and removable items"
+    },
+    {
       "id": "accordion",
       "title": "Accordion",
       "path": "/docs/components/data/accordion",
@@ -351,7 +360,7 @@
           "id": "elements",
           "title": "Elements",
           "description": "Basic UI elements",
-          "items": ["button", "divider", "label", "loader", "tooltip", "badge", "avatar", "icon", "dropdown", "alert", "progress"]
+          "items": ["button", "divider", "label", "loader", "tooltip", "badge", "avatar", "icon", "dropdown", "alert", "progress", "chip"]
         },
         {
           "id": "forms",

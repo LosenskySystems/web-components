@@ -35,6 +35,7 @@ import InstallationDocs from '../../docs/get-started/Installation.mdx'
 import AccordionDocs from '../../docs/components/data/Accordion.mdx'
 import ProgressDocs from '../../docs/components/elements/Progress.mdx'
 import TableDocs from '../../docs/components/data/Table.mdx'
+import ChipDocs from '../../docs/components/elements/Chip.mdx'
 
 // Component mapping for dynamic imports
 export const componentMap: Record<string, React.ComponentType> = {
@@ -74,6 +75,7 @@ export const componentMap: Record<string, React.ComponentType> = {
   Installation: InstallationDocs,
   Progress: ProgressDocs,
   Table: TableDocs,
+  Chip: ChipDocs,
 }
 
 // Re-export types for convenience

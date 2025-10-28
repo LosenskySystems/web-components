@@ -15,6 +15,7 @@
 @import './components/elements/dropdown/index.css';
 @import './components/elements/alert/index.css';
 @import './components/elements/progress/index.css';
+@import './components/elements/chip/index.css';
 
 /* Import data styles */
 @import './components/data/card/index.css';

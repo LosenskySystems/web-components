@@ -1,0 +1,191 @@
+import { Chip, Avatar, Icon } from '@losensky-systems/web-components-core'
+import { CheckCircle, XCircle, AlertCircle, Info, Tag } from 'lucide-react'
+
+# Chip Component
+
+The Chip component displays compact labels or tags, perfect for filters, categories, removable items, and status indicators.
+
+## Import
+
+```tsx
+import { Chip } from '@losensky-systems/web-components-core'
+```
+
+## Basic Usage
+
+Simple chips for labels and tags:
+
+<CodeBlock code={`<Chip>Label</Chip>
+<Chip variant="success">Success</Chip>
+<Chip variant="warning">Warning</Chip>
+<Chip variant="error">Error</Chip>
+<Chip variant="info">Info</Chip>`}>
+  <div className="flex gap-4 mb-8 flex-wrap">
+    <Chip>Label</Chip>
+    <Chip variant="success">Success</Chip>
+    <Chip variant="warning">Warning</Chip>
+    <Chip variant="error">Error</Chip>
+    <Chip variant="info">Info</Chip>
+  </div>
+</CodeBlock>
+
+## Sizes
+
+Three size variants for different contexts:
+
+<CodeBlock code={`<Chip size="sm">Small Chip</Chip>
+<Chip size="md">Medium Chip</Chip>
+<Chip size="lg">Large Chip</Chip>`}>
+  <div className="flex gap-4 mb-8 flex-wrap items-center">
+    <Chip size="sm">Small Chip</Chip>
+    <Chip size="md">Medium Chip</Chip>
+    <Chip size="lg">Large Chip</Chip>
+  </div>
+</CodeBlock>
+
+## Removable Chips
+
+Default behavior includes a remove button:
+
+<CodeBlock code={`<Chip removable onRemove={() => alert('Removed!')}>Removable</Chip>
+<Chip removable variant="success" onRemove={() => alert('Removed!')}>Success</Chip>
+<Chip removable variant="error" onRemove={() => alert('Removed!')}>Error</Chip>`}>
+  <div className="flex gap-4 mb-8 flex-wrap">
+    <Chip removable onRemove={() => alert('Removed!')}>Removable</Chip>
+    <Chip removable variant="success" onRemove={() => alert('Removed!')}>Success</Chip>
+    <Chip removable variant="error" onRemove={() => alert('Removed!')}>Error</Chip>
+  </div>
+</CodeBlock>
+
+## Non-Removable Chips
+
+Disable the remove button for static labels:
+
+<CodeBlock code={`<Chip removable={false}>Always Visible</Chip>
+<Chip removable={false} variant="success">Completed</Chip>
+<Chip removable={false} variant="warning">Pending</Chip>`}>
+  <div className="flex gap-4 mb-8 flex-wrap">
+    <Chip removable={false}>Always Visible</Chip>
+    <Chip removable={false} variant="success">Completed</Chip>
+    <Chip removable={false} variant="warning">Pending</Chip>
+  </div>
+</CodeBlock>
+
+## With Icons
+
+Add icons to chips using the leftSlot:
+
+<CodeBlock code={`<Chip leftSlot={<CheckCircle size={16} />}>Verified</Chip>
+<Chip leftSlot={<XCircle size={16} />} variant="error">Failed</Chip>
+<Chip leftSlot={<AlertCircle size={16} />} variant="warning">Warning</Chip>
+<Chip leftSlot={<Info size={16} />} variant="info">Information</Chip>`}>
+  <div className="flex gap-4 mb-8 flex-wrap">
+    <Chip leftSlot={<CheckCircle size={16} />}>Verified</Chip>
+    <Chip leftSlot={<XCircle size={16} />} variant="error">Failed</Chip>
+    <Chip leftSlot={<AlertCircle size={16} />} variant="warning">Warning</Chip>
+    <Chip leftSlot={<Info size={16} />} variant="info">Information</Chip>
+  </div>
+</CodeBlock>
+
+## With Avatars
+
+Display avatars with chips for user tags:
+
+<CodeBlock code={`<Chip leftSlot={<Avatar size={20} initials="JD" />}>John Doe</Chip>
+<Chip leftSlot={<Avatar size={20} initials="JS" />}>Jane Smith</Chip>
+<Chip leftSlot={<Avatar size={20} initials="AB" />}>Alice Brown</Chip>`}>
+  <div className="flex gap-4 mb-8 flex-wrap">
+    <Chip leftSlot={<Avatar size={20} initials="JD" />}>John Doe</Chip>
+    <Chip leftSlot={<Avatar size={20} initials="JS" />}>Jane Smith</Chip>
+    <Chip leftSlot={<Avatar size={20} initials="AB" />}>Alice Brown</Chip>
+  </div>
+</CodeBlock>
+
+## Disabled State
+
+Disabled chips cannot be removed:
+
+<CodeBlock code={`<Chip disabled>Disabled Chip</Chip>
+<Chip disabled variant="success">Disabled Success</Chip>
+<Chip disabled removable onRemove={() => {}}>Cannot Remove</Chip>`}>
+  <div className="flex gap-4 mb-8 flex-wrap">
+    <Chip disabled>Disabled Chip</Chip>
+    <Chip disabled variant="success">Disabled Success</Chip>
+    <Chip disabled removable onRemove={() => {}}>Cannot Remove</Chip>
+  </div>
+</CodeBlock>
+
+## Real-World Examples
+
+Common use cases for chips:
+
+<CodeBlock code={`// Filter tags
+<div className="flex gap-2 flex-wrap">
+  <Chip removable onRemove={() => {}}>JavaScript</Chip>
+  <Chip removable onRemove={() => {}}>React</Chip>
+  <Chip removable onRemove={() => {}}>TypeScript</Chip>
+</div>
+
+// Status indicators
+<Chip variant="success">Active</Chip>
+<Chip variant="warning">Pending</Chip>
+<Chip variant="error">Failed</Chip>
+
+// Category labels
+<Chip variant="info">Technology</Chip>
+<Chip variant="info">Design</Chip>
+<Chip variant="info">Business</Chip>
+
+// User mentions with avatars
+<div className="flex gap-2 flex-wrap">
+  <Chip removable leftSlot={<Avatar size={20} initials="JD" />} onRemove={() => {}}>@johndoe</Chip>
+  <Chip removable leftSlot={<Avatar size={20} initials="JS" />} onRemove={() => {}}>@janesmith</Chip>
+</div>
+
+// Status with icons
+<Chip leftSlot={<CheckCircle size={16} />}>Approved</Chip>
+<Chip variant="warning" leftSlot={<AlertCircle size={16} />}>Needs Review</Chip>
+<Chip variant="error" leftSlot={<XCircle size={16} />}>Rejected</Chip>`}>
+  <div className="mb-8 space-y-6">
+    <div>
+      <p className="text-sm text-gray-600 mb-2">Filter tags:</p>
+      <div className="flex gap-2 flex-wrap">
+        <Chip removable onRemove={() => {}}>JavaScript</Chip>
+        <Chip removable onRemove={() => {}}>React</Chip>
+        <Chip removable onRemove={() => {}}>TypeScript</Chip>
+      </div>
+    </div>
+    
+    <div>
+      <p className="text-sm text-gray-600 mb-2">Status indicators:</p>
+      <div className="flex gap-2 flex-wrap">
+        <Chip variant="success">Active</Chip>
+        <Chip variant="warning">Pending</Chip>
+        <Chip variant="error">Failed</Chip>
+      </div>
+    </div>
+    
+    <div>
+      <p className="text-sm text-gray-600 mb-2">User mentions:</p>
+      <div className="flex gap-2 flex-wrap">
+        <Chip removable leftSlot={<Avatar size={20} initials="JD" />} onRemove={() => {}}>@johndoe</Chip>
+        <Chip removable leftSlot={<Avatar size={20} initials="JS" />} onRemove={() => {}}>@janesmith</Chip>
+      </div>
+    </div>
+  </div>
+</CodeBlock>
+
+## Props
+
+<PropsTable props={[
+  { name: 'children', type: 'React.ReactNode', default: '-', description: 'Chip text content' },
+  { name: 'variant', type: "'default' | 'success' | 'warning' | 'error' | 'info'", default: "'default'", description: 'Chip color variant' },
+  { name: 'size', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Chip size' },
+  { name: 'removable', type: 'boolean', default: 'true', description: 'Show remove button' },
+  { name: 'onRemove', type: '(event: React.MouseEvent<HTMLButtonElement>) => void', default: '-', description: 'Callback when remove button is clicked' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: 'Disabled state' },
+  { name: 'leftSlot', type: 'React.ReactNode', default: '-', description: 'Content to display before text (icons, avatars)' },
+  { name: 'rightSlot', type: 'React.ReactNode', default: '-', description: 'Content to display after text' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' }
+]} />
+

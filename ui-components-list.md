@@ -10,6 +10,7 @@
 - ✅ Tooltip
 - ✅ Dropdown / Menu
 - ✅ Alert / Notification banner
+- ✅ Chip / Tag (removable labels, filter chips)
 
 ------------------------------------------------------------------------
 
@@ -24,6 +25,8 @@
 - ✅ Range Slider
 - ✅ Date Picker / Time Picker
 - ✅ Form Layout (field groups, validation states, error messages)
+- ❌ Combobox / Autocomplete (searchable select with filtering)
+- ❌ Rating (star rating input)
 
 ------------------------------------------------------------------------
 
@@ -49,6 +52,8 @@
 - ✅ Alert / Notification banner
 - ✅ Toast (floating notification)
 - ✅ Progress Bar / Circular Progress
+- ❌ Empty State (no data placeholder)
+- ❌ Callout / Highlight (emphasized information block)
 
 ------------------------------------------------------------------------
 
@@ -59,17 +64,12 @@
 - ✅ Stack (vertical/horizontal spacing)
 - ❌ Flex utilities (alignment helpers)
 - ❌ Page Header (title + actions)
-- ❌ Footer
-- ❌ Hero Section (for landing pages)
-- ❌ Sidebar Layout (2-column)
 
 ------------------------------------------------------------------------
 
 ## ⚙️ Utilities / Overlays
 
-- ❌ Backdrop (for modals/overlays)
 - ❌ Skeleton Loader (loading state for content)
-- ❌ Scroll Area (custom scrollbars)
 - ❌ Responsive utilities (show/hide per breakpoint)
 - ❌ Theme Switcher (light/dark/system)
 
@@ -78,15 +78,8 @@
 ## 🚀 Advanced (optional, app-focused)
 
 - ❌ Charts (bar, line, pie) -- integrate with a charting lib (e.g., Chart.js)
-- ❌ Kanban Board
 - ❌ Calendar View
-- ❌ File Manager UI
-- ❌ Rich Text Editor / Markdown Editor
-- ❌ Chat / Messaging UI
-- ❌ Data Filters (multi-select, chips)
-- ❌ Authentication Screens (login, signup, reset password templates)
-- ❌ Profile Settings Section
-- ❌ Admin Tables (CRUD)
+- ❌ Tree View (hierarchical navigation structure)
 
 ------------------------------------------------------------------------
-**Progress: 33/55 components completed (60.0%)**
+**Progress: 34/52 unique components completed (65.4%)**
