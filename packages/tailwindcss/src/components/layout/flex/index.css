@@ -1,0 +1,102 @@
+/* Flex component styles */
+.web-flex {
+  display: flex;
+}
+
+/* Direction variants */
+.web-flex-row {
+  flex-direction: row;
+}
+
+.web-flex-column {
+  flex-direction: column;
+}
+
+/* Alignment variants */
+.web-flex-align-start {
+  align-items: flex-start;
+}
+
+.web-flex-align-center {
+  align-items: center;
+}
+
+.web-flex-align-end {
+  align-items: flex-end;
+}
+
+.web-flex-align-stretch {
+  align-items: stretch;
+}
+
+.web-flex-align-baseline {
+  align-items: baseline;
+}
+
+/* Justification variants */
+.web-flex-justify-start {
+  justify-content: flex-start;
+}
+
+.web-flex-justify-center {
+  justify-content: center;
+}
+
+.web-flex-justify-end {
+  justify-content: flex-end;
+}
+
+.web-flex-justify-between {
+  justify-content: space-between;
+}
+
+.web-flex-justify-around {
+  justify-content: space-around;
+}
+
+.web-flex-justify-evenly {
+  justify-content: space-evenly;
+}
+
+.web-flex-justify-stretch {
+  justify-content: stretch;
+}
+
+/* Wrap variants */
+.web-flex-wrap-nowrap {
+  flex-wrap: nowrap;
+}
+
+.web-flex-wrap-wrap {
+  flex-wrap: wrap;
+}
+
+.web-flex-wrap-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+/* Gap variants - using tokens */
+.web-flex-gap-none {
+  gap: 0;
+}
+
+.web-flex-gap-xs {
+  gap: 0.25rem;
+}
+
+.web-flex-gap-sm {
+  gap: 0.5rem;
+}
+
+.web-flex-gap-md {
+  gap: 1rem;
+}
+
+.web-flex-gap-lg {
+  gap: 1.5rem;
+}
+
+.web-flex-gap-xl {
+  gap: 2rem;
+}
+

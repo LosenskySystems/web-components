@@ -62,7 +62,7 @@
 - ✅ Grid system
 - ✅ Container
 - ✅ Stack (vertical/horizontal spacing)
-- ❌ Flex utilities (alignment helpers)
+- ✅ Flex utilities (alignment helpers)
 - ✅ Page Header (title + actions)
 
 ------------------------------------------------------------------------

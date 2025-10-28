@@ -1,0 +1,213 @@
+import { Flex, Button } from '@losensky-systems/web-components-core'
+
+# Flex Component
+
+The Flex component provides flexbox layout utilities for direction, alignment, justification, wrapping, and gap control. It's a pure layout component with no color styling.
+
+## Import
+
+```tsx
+import { Flex } from '@losensky-systems/web-components-core'
+```
+
+## Direction
+
+<CodeBlock code={`<Flex direction="row">
+  <div style={{ padding: '1rem', background: '#f3f4f6', borderRadius: '0.375rem' }}>Item 1</div>
+  <div style={{ padding: '1rem', background: '#f3f4f6', borderRadius: '0.375rem' }}>Item 2</div>
+  <div style={{ padding: '1rem', background: '#f3f4f6', borderRadius: '0.375rem' }}>Item 3</div>
+</Flex>
+
+<Flex direction="column" gap="sm">
+  <div style={{ padding: '1rem', background: '#f3f4f6', borderRadius: '0.375rem' }}>Item 1</div>
+  <div style={{ padding: '1rem', background: '#f3f4f6', borderRadius: '0.375rem' }}>Item 2</div>
+  <div style={{ padding: '1rem', background: '#f3f4f6', borderRadius: '0.375rem' }}>Item 3</div>
+</Flex>`}>
+  <div style={{ marginBottom: '1rem' }}>
+    <Flex direction="row">
+      <div style={{ padding: '1rem', background: '#f3f4f6', borderRadius: '0.375rem' }}>Item 1</div>
+      <div style={{ padding: '1rem', background: '#f3f4f6', borderRadius: '0.375rem' }}>Item 2</div>
+      <div style={{ padding: '1rem', background: '#f3f4f6', borderRadius: '0.375rem' }}>Item 3</div>
+    </Flex>
+  </div>
+  <div>
+    <Flex direction="column" gap="sm">
+      <div style={{ padding: '1rem', background: '#f3f4f6', borderRadius: '0.375rem' }}>Item 1</div>
+      <div style={{ padding: '1rem', background: '#f3f4f6', borderRadius: '0.375rem' }}>Item 2</div>
+      <div style={{ padding: '1rem', background: '#f3f4f6', borderRadius: '0.375rem' }}>Item 3</div>
+    </Flex>
+  </div>
+</CodeBlock>
+
+## Alignment
+
+<CodeBlock code={`<Flex align="start">
+  <Button>Start</Button>
+</Flex>
+<Flex align="center">
+  <Button>Center</Button>
+</Flex>
+<Flex align="end">
+  <Button>End</Button>
+</Flex>`}>
+  <div style={{ marginBottom: '1rem' }}>
+    <Flex align="start">
+      <Button>Start</Button>
+    </Flex>
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Flex align="center">
+      <Button>Center</Button>
+    </Flex>
+  </div>
+  <div>
+    <Flex align="end">
+      <Button>End</Button>
+    </Flex>
+  </div>
+</CodeBlock>
+
+## Justification
+
+<CodeBlock code={`<Flex justify="start">
+  <Button>Button 1</Button>
+  <Button>Button 2</Button>
+</Flex>
+<Flex justify="center">
+  <Button>Button 1</Button>
+  <Button>Button 2</Button>
+</Flex>
+<Flex justify="between" gap="sm">
+  <Button>Button 1</Button>
+  <Button>Button 2</Button>
+</Flex>`}>
+  <div style={{ marginBottom: '1rem' }}>
+    <Flex justify="start">
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+    </Flex>
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Flex justify="center">
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+    </Flex>
+  </div>
+  <div>
+    <Flex justify="between" gap="sm">
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+    </Flex>
+  </div>
+</CodeBlock>
+
+## Wrapping
+
+<CodeBlock code={`<Flex wrap="wrap" gap="sm">
+  <Button>Button 1</Button>
+  <Button>Button 2</Button>
+  <Button>Button 3</Button>
+  <Button>Button 4</Button>
+  <Button>Button 5</Button>
+</Flex>`}>
+  <Flex wrap="wrap" gap="sm">
+    <Button>Button 1</Button>
+    <Button>Button 2</Button>
+    <Button>Button 3</Button>
+    <Button>Button 4</Button>
+    <Button>Button 5</Button>
+  </Flex>
+</CodeBlock>
+
+## Gap Sizes
+
+<CodeBlock code={`<Flex gap="xs">
+  <Button>XS Gap</Button>
+  <Button>Item 2</Button>
+</Flex>
+<Flex gap="sm">
+  <Button>SM Gap</Button>
+  <Button>Item 2</Button>
+</Flex>
+<Flex gap="md">
+  <Button>MD Gap</Button>
+  <Button>Item 2</Button>
+</Flex>
+<Flex gap="lg">
+  <Button>LG Gap</Button>
+  <Button>Item 2</Button>
+</Flex>`}>
+  <div style={{ marginBottom: '1rem' }}>
+    <Flex gap="xs">
+      <Button>XS Gap</Button>
+      <Button>Item 2</Button>
+    </Flex>
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Flex gap="sm">
+      <Button>SM Gap</Button>
+      <Button>Item 2</Button>
+    </Flex>
+  </div>
+  <div style={{ marginBottom: '1rem' }}>
+    <Flex gap="md">
+      <Button>MD Gap</Button>
+      <Button>Item 2</Button>
+    </Flex>
+  </div>
+  <div>
+    <Flex gap="lg">
+      <Button>LG Gap</Button>
+      <Button>Item 2</Button>
+    </Flex>
+  </div>
+</CodeBlock>
+
+## Complete Example
+
+<CodeBlock code={`<Flex 
+  direction="row" 
+  justify="between" 
+  align="center" 
+  wrap="wrap" 
+  gap="md"
+>
+  <div>
+    <strong>Title</strong>
+    <p style={{ margin: 0, fontSize: '0.875rem' }}>Description text</p>
+  </div>
+  <Flex gap="sm">
+    <Button variant="secondary">Cancel</Button>
+    <Button variant="primary">Save</Button>
+  </Flex>
+</Flex>`}>
+  <Flex 
+    direction="row" 
+    justify="between" 
+    align="center" 
+    wrap="wrap" 
+    gap="md"
+  >
+    <div>
+      <strong>Title</strong>
+      <p style={{ margin: 0, fontSize: '0.875rem' }}>Description text</p>
+    </div>
+    <Flex gap="sm">
+      <Button variant="secondary">Cancel</Button>
+      <Button variant="primary">Save</Button>
+    </Flex>
+  </Flex>
+</CodeBlock>
+
+## Props
+
+<PropsTable props={[
+  { name: 'children', type: 'ReactNode', description: 'Child elements to arrange with flexbox' },
+  { name: 'direction', type: "'row' | 'column'", default: "'row'", description: 'Flex direction' },
+  { name: 'align', type: "'start' | 'center' | 'end' | 'stretch' | 'baseline'", default: 'undefined', description: 'Align items on cross-axis' },
+  { name: 'justify', type: "'start' | 'center' | 'end' | 'between' | 'around' | 'evenly' | 'stretch'", default: 'undefined', description: 'Justify content on main-axis' },
+  { name: 'wrap', type: "'nowrap' | 'wrap' | 'wrap-reverse'", default: 'undefined', description: 'Flex wrap behavior' },
+  { name: 'gap', type: "'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl'", default: 'undefined', description: 'Gap between flex items' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' }
+]} />
+
