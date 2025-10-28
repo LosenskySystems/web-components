@@ -4,3 +4,4 @@ export { Toast, type ToastProps } from './toast';
 export { Accordion, AccordionItem, type AccordionProps, type AccordionItemProps } from './accordion';
 export { List, type ListProps, type ListItemProps } from './list';
 export { Table, type TableProps, type ColumnDef, type PaginationConfig, type TableHeaderProps, type TableBodyProps, type TableRowProps, type TableCellProps, type TableFooterProps } from './table';
+export { EmptyState, type EmptyStateProps } from './empty-state';

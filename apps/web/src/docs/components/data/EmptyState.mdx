@@ -1,0 +1,120 @@
+import { EmptyState, Button, Icon } from '@losensky-systems/web-components-core'
+
+# Empty State Component
+
+The Empty State component provides a centered placeholder for displaying no data or empty content states. It supports icons, titles, descriptions, and action buttons.
+
+## Import
+
+```tsx
+import { EmptyState } from '@losensky-systems/web-components-core'
+```
+
+## Basic Usage
+
+<CodeBlock code={`<EmptyState 
+  title="No items found"
+  description="There are no items to display at this time"
+/>`}>
+  <EmptyState 
+    title="No items found"
+    description="There are no items to display at this time"
+  />
+</CodeBlock>
+
+## With Icon
+
+<CodeBlock code={`<EmptyState 
+  icon={<Icon size="xl" />}
+  title="No results"
+  description="We couldn't find anything matching your search"
+/>`}>
+  <EmptyState 
+    icon={<Icon size="xl" />}
+    title="No results"
+    description="We couldn't find anything matching your search"
+  />
+</CodeBlock>
+
+## With Action
+
+<CodeBlock code={`<EmptyState 
+  title="No data available"
+  description="Get started by creating your first item"
+  action={<Button>Create Item</Button>}
+/>`}>
+  <EmptyState 
+    title="No data available"
+    description="Get started by creating your first item"
+    action={<Button>Create Item</Button>}
+  />
+</CodeBlock>
+
+## Size Variants
+
+<CodeBlock code={`<EmptyState 
+  size="sm"
+  title="No items"
+  description="Empty content"
+/>
+<EmptyState 
+  size="md"
+  title="No items found"
+  description="There are no items to display"
+/>
+<EmptyState 
+  size="lg"
+  title="No items found"
+  description="There are no items to display at this time"
+/>`}>
+  <div style={{ marginBottom: '2rem' }}>
+    <EmptyState 
+      size="sm"
+      title="No items"
+      description="Empty content"
+    />
+  </div>
+  <div style={{ marginBottom: '2rem' }}>
+    <EmptyState 
+      size="md"
+      title="No items found"
+      description="There are no items to display"
+    />
+  </div>
+  <div>
+    <EmptyState 
+      size="lg"
+      title="No items found"
+      description="There are no items to display at this time"
+    />
+  </div>
+</CodeBlock>
+
+## Complete Example
+
+<CodeBlock code={`<EmptyState 
+  icon={<Icon size="2xl" />}
+  title="No data found"
+  description="Looks like there's nothing here. Try creating something new to get started."
+  action={<Button variant="primary">Create Now</Button>}
+/>`}>
+  <EmptyState 
+    icon={<Icon size="2xl" />}
+    title="No data found"
+    description="Looks like there's nothing here. Try creating something new to get started."
+    action={<Button variant="primary">Create Now</Button>}
+  />
+</CodeBlock>
+
+## Props
+
+<PropsTable props={[
+  { name: 'title', type: 'string', description: 'The main title text (required)' },
+  { name: 'description', type: 'string', default: 'undefined', description: 'Optional description text' },
+  { name: 'icon', type: 'ReactNode', default: 'undefined', description: 'Optional icon element' },
+  { name: 'action', type: 'ReactNode', default: 'undefined', description: 'Optional action button or element' },
+  { name: 'size', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Size variant of the empty state' },
+  { name: 'children', type: 'ReactNode', default: 'undefined', description: 'Optional custom content' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' }
+]} />
+

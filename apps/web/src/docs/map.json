@@ -159,6 +159,15 @@
       "description": "A powerful data table with sorting, filtering, pagination, and row selection"
     },
     {
+      "id": "emptystate",
+      "title": "Empty State",
+      "path": "/docs/components/data/emptystate",
+      "component": "EmptyState",
+      "category": "components",
+      "subcategory": "data",
+      "description": "A centered placeholder component for displaying no data or empty content states"
+    },
+    {
       "id": "toast",
       "title": "Toast",
       "path": "/docs/components/data/toast",
@@ -378,7 +387,7 @@
           "id": "data",
           "title": "Data",
           "description": "Components for displaying data and content",
-          "items": ["card", "toast", "accordion", "list", "table"]
+          "items": ["card", "toast", "accordion", "list", "table", "emptystate"]
         },
         {
           "id": "overlays",

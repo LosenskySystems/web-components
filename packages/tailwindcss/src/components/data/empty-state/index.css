@@ -1,0 +1,149 @@
+/* Empty State component styles */
+.web-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  min-height: 200px;
+}
+
+/* Icon */
+.web-empty-state-icon {
+  margin-bottom: 1rem;
+  color: var(--color-gray-500);
+  flex-shrink: 0;
+}
+
+/* Title */
+.web-empty-state-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--color-gray-900) !important;
+}
+
+/* Description */
+.web-empty-state-description {
+  margin: 0 0 1.5rem 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--color-gray-600);
+  max-width: 400px;
+}
+
+/* Content slot */
+.web-empty-state-content {
+  margin-bottom: 1.5rem;
+}
+
+/* Action */
+.web-empty-state-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Size variants */
+.web-empty-state-sm {
+  padding: 2rem 1.5rem;
+  min-height: 150px;
+}
+
+.web-empty-state-sm .web-empty-state-icon {
+  margin-bottom: 0.75rem;
+}
+
+.web-empty-state-sm .web-empty-state-title {
+  font-size: 0.875rem;
+}
+
+.web-empty-state-sm .web-empty-state-description {
+  font-size: 0.8125rem;
+}
+
+.web-empty-state-md {
+  padding: 3rem 1.5rem;
+  min-height: 200px;
+}
+
+.web-empty-state-md .web-empty-state-icon {
+  margin-bottom: 1rem;
+}
+
+.web-empty-state-md .web-empty-state-title {
+  font-size: 1rem;
+}
+
+.web-empty-state-md .web-empty-state-description {
+  font-size: 0.875rem;
+}
+
+.web-empty-state-lg {
+  padding: 4rem 2rem;
+  min-height: 300px;
+}
+
+.web-empty-state-lg .web-empty-state-icon {
+  margin-bottom: 1.5rem;
+}
+
+.web-empty-state-lg .web-empty-state-title {
+  font-size: 1.25rem;
+}
+
+.web-empty-state-lg .web-empty-state-description {
+  font-size: 1rem;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .web-empty-state {
+    color: var(--color-gray-100);
+  }
+  
+  .web-empty-state-icon {
+    color: var(--color-gray-500);
+  }
+  
+  .web-empty-state-title {
+    color: var(--color-gray-100);
+  }
+  
+  .web-empty-state-description {
+    color: var(--color-gray-400);
+  }
+}
+
+/* Manual dark mode class */
+.dark .web-empty-state {
+  color: var(--color-gray-100);
+}
+
+.dark .web-empty-state-icon {
+  color: var(--color-gray-500);
+}
+
+.dark .web-empty-state-title {
+  color: var(--color-gray-100);
+}
+
+.dark .web-empty-state-description {
+  color: var(--color-gray-400);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .web-empty-state {
+    padding: 2rem 1rem;
+    min-height: 180px;
+  }
+  
+  .web-empty-state-lg {
+    padding: 3rem 1.5rem;
+    min-height: 250px;
+  }
+}
+

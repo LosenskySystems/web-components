@@ -52,7 +52,7 @@
 - ✅ Alert / Notification banner
 - ✅ Toast (floating notification)
 - ✅ Progress Bar / Circular Progress
-- ❌ Empty State (no data placeholder)
+- ✅ Empty State (no data placeholder)
 - ❌ Callout / Highlight (emphasized information block)
 
 ------------------------------------------------------------------------

@@ -36,6 +36,7 @@ import AccordionDocs from '../../docs/components/data/Accordion.mdx'
 import ProgressDocs from '../../docs/components/elements/Progress.mdx'
 import TableDocs from '../../docs/components/data/Table.mdx'
 import ChipDocs from '../../docs/components/elements/Chip.mdx'
+import EmptyStateDocs from '../../docs/components/data/EmptyState.mdx'
 
 // Component mapping for dynamic imports
 export const componentMap: Record<string, React.ComponentType> = {
@@ -76,6 +77,8 @@ export const componentMap: Record<string, React.ComponentType> = {
   Progress: ProgressDocs,
   Table: TableDocs,
   Chip: ChipDocs,
+  EmptyState: EmptyStateDocs,
+  Emptystate: EmptyStateDocs,
 }
 
 // Re-export types for convenience
