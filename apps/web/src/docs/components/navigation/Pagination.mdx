@@ -1,0 +1,133 @@
+import { Pagination } from '@losensky-systems/web-components-core'
+import { PaginationBasicExample, PaginationWithInfoExample, PaginationComplexExample, PaginationWithoutNumbersExample, PaginationSizeExample } from './PaginationExamples'
+
+# Pagination Component
+
+The Pagination component provides navigation through multiple pages of data with page numbers, prev/next buttons, and optional first/last controls.
+
+## Import
+
+```tsx
+import { Pagination } from '@losensky-systems/web-components-core'
+```
+
+## Basic Usage
+
+<CodeBlock code={`function PaginationExample() {
+  const [currentPage, setCurrentPage] = useState(1)
+  const totalPages = 10
+
+  return (
+    <Pagination
+      currentPage={currentPage}
+      totalPages={totalPages}
+      onPageChange={setCurrentPage}
+    />
+  )
+}`}>
+  <PaginationBasicExample />
+</CodeBlock>
+
+## With Info and First/Last
+
+<CodeBlock code={`function PaginationExample() {
+  const [currentPage, setCurrentPage] = useState(1)
+  const totalPages = 10
+
+  return (
+    <Pagination
+      currentPage={currentPage}
+      totalPages={totalPages}
+      onPageChange={setCurrentPage}
+      showInfo
+      showFirstLast
+    />
+  )
+}`}>
+  <PaginationWithInfoExample />
+</CodeBlock>
+
+## Many Pages (with Ellipsis)
+
+<CodeBlock code={`function PaginationComplexExample() {
+  const [currentPage, setCurrentPage] = useState(1)
+  const totalPages = 20
+
+  return (
+    <Pagination
+      currentPage={currentPage}
+      totalPages={totalPages}
+      onPageChange={setCurrentPage}
+      showInfo
+      showFirstLast
+    />
+  )
+}`}>
+  <PaginationComplexExample />
+</CodeBlock>
+
+## Without Page Numbers
+
+<CodeBlock code={`function PaginationExample() {
+  const [currentPage, setCurrentPage] = useState(1)
+  const totalPages = 5
+
+  return (
+    <Pagination
+      currentPage={currentPage}
+      totalPages={totalPages}
+      onPageChange={setCurrentPage}
+      showPageNumbers={false}
+      showFirstLast
+    />
+  )
+}`}>
+  <PaginationWithoutNumbersExample />
+</CodeBlock>
+
+## Size Variants
+
+<CodeBlock code={`function PaginationSizeExample() {
+  const [currentPage, setCurrentPage] = useState(3)
+  const totalPages = 10
+
+  return (
+    <>
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={setCurrentPage}
+        size="sm"
+      />
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={setCurrentPage}
+        size="md"
+      />
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={setCurrentPage}
+        size="lg"
+      />
+    </>
+  )
+}`}>
+  <PaginationSizeExample />
+</CodeBlock>
+
+## Props
+
+<PropsTable props={[
+  { name: 'currentPage', type: 'number', description: 'Currently active page (required)' },
+  { name: 'totalPages', type: 'number', description: 'Total number of pages (required)' },
+  { name: 'onPageChange', type: '(page: number) => void', description: 'Callback when page changes (required)' },
+  { name: 'showPageNumbers', type: 'boolean', default: 'true', description: 'Show numbered page buttons' },
+  { name: 'showInfo', type: 'boolean', default: 'true', description: 'Show "Page X of Y" info text' },
+  { name: 'showFirstLast', type: 'boolean', default: 'true', description: 'Show first/last page buttons' },
+  { name: 'size', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Size variant of pagination controls' },
+  { name: 'maxVisible', type: 'number', default: '7', description: 'Maximum number of visible page numbers' },
+  { name: 'className', type: 'string', default: "''", description: 'Additional CSS classes' }
+]} />
+

@@ -357,6 +357,15 @@
       "description": "Flexible breadcrumb navigation component for displaying hierarchical navigation paths"
     },
     {
+      "id": "pagination",
+      "title": "Pagination",
+      "path": "/docs/components/navigation/pagination",
+      "component": "Pagination",
+      "category": "components",
+      "subcategory": "navigation",
+      "description": "Navigation component for paginating through multiple pages of data"
+    },
+    {
       "id": "tabs",
       "title": "Tabs",
       "path": "/docs/components/navigation/tabs",
@@ -408,7 +417,7 @@
       "id": "navigation",
       "title": "Navigation",
       "description": "Navigation and routing components",
-      "items": ["navbar", "sidebar", "breadcrumbs", "tabs"]
+          "items": ["navbar", "sidebar", "breadcrumbs", "tabs", "pagination"]
     },
         {
           "id": "data",

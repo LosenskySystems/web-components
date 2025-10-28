@@ -42,6 +42,7 @@
 @import './components/navigation/breadcrumbs/index.css';
 @import './components/navigation/navbar/index.css';
 @import './components/navigation/sidebar/index.css';
+@import './components/navigation/pagination/index.css';
 
 /* Import overlay styles */
 @import './components/overlays/modal/index.css';

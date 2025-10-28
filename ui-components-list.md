@@ -35,8 +35,8 @@
 - ✅ Navbar / Header
 - ✅ Sidebar (collapsible, expandable)
 - ✅ Breadcrumbs
+- ✅ Pagination (page navigation)
 - ✅ Tabs
-- ❌ Pagination
 - ❌ Stepper (progress steps)
 
 ------------------------------------------------------------------------

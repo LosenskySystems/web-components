@@ -39,3 +39,8 @@ export {
   type BreadcrumbsProps,
   type BreadcrumbItemProps,
 } from './breadcrumbs';
+
+export {
+  Pagination,
+  type PaginationProps,
+} from './pagination';
