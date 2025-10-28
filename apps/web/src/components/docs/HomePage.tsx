@@ -1,47 +1,51 @@
 import { Link } from 'react-router-dom'
 import { Card } from '@losensky-systems/web-components-core'
+import docsMapData from '../../docs/map.json'
+import type { DocsMap } from './types'
+
+const docsMap = docsMapData as DocsMap
 
 const componentSubcategories = [
   {
     id: 'elements',
     title: 'Elements',
     description: 'Basic UI elements',
-    count: 11,
+    count: docsMap.routes.filter(r => r.subcategory === 'elements').length,
     path: '/elements'
   },
   {
     id: 'forms',
     title: 'Forms',
     description: 'Form input components',
-    count: 9,
+    count: docsMap.routes.filter(r => r.subcategory === 'forms').length,
     path: '/forms'
   },
   {
     id: 'navigation',
     title: 'Navigation',
     description: 'Navigation and routing components',
-    count: 4,
+    count: docsMap.routes.filter(r => r.subcategory === 'navigation').length,
     path: '/navigation'
   },
   {
     id: 'data',
     title: 'Data',
     description: 'Components for displaying data and content',
-    count: 3,
+    count: docsMap.routes.filter(r => r.subcategory === 'data').length,
     path: '/data'
   },
   {
     id: 'overlays',
     title: 'Overlays',
     description: 'Overlay and dialog components',
-    count: 2,
+    count: docsMap.routes.filter(r => r.subcategory === 'overlays').length,
     path: '/overlays'
   },
   {
     id: 'layout',
     title: 'Layout',
     description: 'Layout and section components',
-    count: 3,
+    count: docsMap.routes.filter(r => r.subcategory === 'layout').length,
     path: '/layout'
   }
 ]

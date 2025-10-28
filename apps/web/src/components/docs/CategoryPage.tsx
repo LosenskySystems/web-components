@@ -27,28 +27,35 @@ export function CategoryPage({ routes, categories, categoryId, subcategoryId }: 
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {categories.map(category => (
-              <Link key={category.id} to={`/${category.id}`} className="block">
-                <Card className="h-full hover:shadow-md transition-shadow">
-                  <Card.Header>
-                    <h3 className="text-xl font-semibold text-gray-900">
-                      {category.title}
-                    </h3>
-                    <p className="text-gray-600 mt-2">
-                      {category.description}
-                    </p>
-                  </Card.Header>
-                  <Card.Body>
-                    <div className="text-sm text-gray-500">
-                      {category.subcategories ? 
-                        `${category.subcategories.length} categories` : 
-                        `${category.items?.length || 0} pages`
-                      }
-                    </div>
-                  </Card.Body>
-                </Card>
-              </Link>
-            ))}
+            {categories.map(category => {
+              const count = category.subcategories 
+                ? category.subcategories.reduce((sum, sub) => {
+                    const subRoutes = routes.filter(r => r.subcategory === sub.id)
+                    console.log(`Category: ${category.id}, Subcategory: ${sub.id}, Routes:`, subRoutes.length, subRoutes.map(r => r.id))
+                    return sum + subRoutes.length
+                  }, 0)
+                : category.items?.length || 0
+              
+              return (
+                <Link key={category.id} to={`/${category.id}`} className="block">
+                  <Card className="h-full hover:shadow-md transition-shadow">
+                    <Card.Header>
+                      <h3 className="text-xl font-semibold text-gray-900">
+                        {category.title}
+                      </h3>
+                      <p className="text-gray-600 mt-2">
+                        {category.description}
+                      </p>
+                    </Card.Header>
+                    <Card.Body>
+                      <div className="text-sm text-gray-500">
+                        {count} {category.subcategories ? 'categories' : 'pages'}
+                      </div>
+                    </Card.Body>
+                  </Card>
+                </Link>
+              )
+            })}
           </div>
         </div>
       </div>
